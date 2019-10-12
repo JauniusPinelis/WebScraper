@@ -7,5 +7,6 @@ namespace WebScraper.Infrastructure.Db
 {
     public class ScraperDbContext : DbContext
     {
+
     }
 }

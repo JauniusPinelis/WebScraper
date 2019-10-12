@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using WebScraper.Infrastructure.Db;
 using Microsoft.EntityFrameworkCore;
+using WebScraper.Infrastructure.Services;
 
 namespace WebScraper.Console
 {
@@ -9,7 +10,8 @@ namespace WebScraper.Console
         static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
-                .ConfigureDbContext();
+                .ConfigureDbContext()
+                .BuildServiceProvider();
                
         }
     }
