@@ -8,8 +8,20 @@ namespace WebScraper.Infrastructure.Db
 {
     public class ScraperDbContext : DbContext
     {
+        private readonly string _connString = "Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True";
+
         public DbSet<JobPortalPage> PortalPages { get; set; }
         public DbSet<PortalCategory> PortalCategories { get; set; }
+
+        public ScraperDbContext() : base()
+        {
+
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(_connString);
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

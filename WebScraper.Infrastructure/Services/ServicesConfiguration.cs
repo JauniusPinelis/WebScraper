@@ -11,10 +11,11 @@ namespace WebScraper.Infrastructure.Services
     public static class ServicesConfiguration
     {
 
-        public static IServiceCollection ConfigureDbContext(this IServiceCollection services)
+        public static void ConfigureDbContext(this IServiceCollection services, string connectionString)
         {
-            return services.AddDbContext<ScraperDbContext>(o =>
-                o.UseSqlServer("connectionString"));
+           
+            services.AddDbContext<ScraperDbContext>(o =>
+                o.UseSqlServer(connectionString));
         }
     }
 }
