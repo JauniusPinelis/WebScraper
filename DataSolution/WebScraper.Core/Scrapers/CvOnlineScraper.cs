@@ -57,7 +57,7 @@ namespace WebScraper.Core
             var urlsToRemove = filter.UrlsToRemove;
 
             var filtered = UrlData.Where(u => !urlsToRemove.Any(r => u.Contains(r)));
-            filtered = filtered.Where(u => u != "");
+            filtered = filtered.Where(u => u != "").Select(u => u.Replace("//",""));
 
             UrlData = filtered.ToList();
 

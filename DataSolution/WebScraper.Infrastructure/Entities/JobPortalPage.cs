@@ -12,7 +12,7 @@ namespace WebScraper.Infrastructure.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
-        public string Data { get; set; }
+        public string Url { get; set; }
 
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
