@@ -18,6 +18,10 @@ namespace WebScraper.Infrastructure.Db
 
         }
 
+        public ScraperDbContext(DbContextOptions<ScraperDbContext> options)
+            : base(options)
+        { }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_connString);

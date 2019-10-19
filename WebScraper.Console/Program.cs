@@ -5,6 +5,7 @@ using WebScraper.Infrastructure.Services;
 using System.Configuration;
 using Microsoft.Extensions.Configuration;
 using System.IO;
+using WebScraper.Core;
 
 namespace WebScraper.Console
 {
@@ -13,8 +14,8 @@ namespace WebScraper.Console
         static void Main(string[] args)
         {
             var builder = new ConfigurationBuilder()
-        .SetBasePath(Directory.GetCurrentDirectory())
-        .AddJsonFile("appsettings.json");
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json");
 
             var configuration = builder.Build();
 
@@ -24,6 +25,11 @@ namespace WebScraper.Console
             var serviceProvider = collection.BuildServiceProvider();
 
             serviceProvider.Dispose();
+
+            // will need to refactor code
+
+            var scraper = new Scraper();
+            scraper.ParseJobPortalLinks();
                
         }
 
