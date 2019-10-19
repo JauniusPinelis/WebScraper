@@ -28,8 +28,8 @@ namespace WebScraper.Console
 
             // will need to refactor code
 
-            var scraper = new Scraper();
-            scraper.ParseJobPortalLinks();
+            var scraper = new CvOnlineScraper();
+            scraper.ScrapePageUrls();
                
         }
 

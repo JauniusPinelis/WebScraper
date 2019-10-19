@@ -4,20 +4,23 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
+using WebScraper.Core.Filters;
 
 namespace WebScraper.Core
 {
-    public class Scraper : IScraper
+    public class CvOnlineScraper : IScraper
     {
+        public List<string> UrlData { get; set; }
+
         public void ScrapePageUrls()
         {
-            var urlResults = new List<String>(); 
+            var UrlData = new List<String>(); 
             var baseUrl = "https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=";
             var webClient = new HttpClient();
             int pageCounter = 0;
             var continueParsing = true;
 
-            while (continueParsing && pageCounter < 6)
+            while (continueParsing && pageCounter < 3)
             {
                 //Have some delay in parsing
                 Thread.Sleep(500);
@@ -41,13 +44,17 @@ namespace WebScraper.Core
 
                 foreach (var resultNode in resultNodes)
                 {
-                    urlResults.Add(resultNode.GetAttributeValue("href", string.Empty));
+                    UrlData.Add(resultNode.GetAttributeValue("href", string.Empty));
                 }
                 var test = "test";
 
             }
 
+        }
 
+        public void ApplyUrlFilter(IUrlFilter filter)
+        {
+            var filterout = filter.UrlsToRemove;
         }
     }
 }
