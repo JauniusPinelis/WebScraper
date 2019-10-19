@@ -6,6 +6,7 @@ using System.Configuration;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using WebScraper.Core;
+using WebScraper.Core.Filters;
 
 namespace WebScraper.Console
 {
@@ -30,6 +31,13 @@ namespace WebScraper.Console
 
             var scraper = new CvOnlineScraper();
             scraper.ScrapePageUrls();
+
+            var cvOnlineFilter = new CvOnlineUrlFilter();
+            scraper.ApplyUrlFilter(cvOnlineFilter);
+
+            var result = scraper.UrlData;
+
+            var test = "test";
                
         }
 

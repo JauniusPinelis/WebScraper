@@ -1,6 +1,7 @@
 ﻿using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
@@ -10,11 +11,10 @@ namespace WebScraper.Core
 {
     public class CvOnlineScraper : IScraper
     {
-        public List<string> UrlData { get; set; }
+        public List<string> UrlData { get; set; } = new List<String>();
 
         public void ScrapePageUrls()
         {
-            var UrlData = new List<String>(); 
             var baseUrl = "https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=";
             var webClient = new HttpClient();
             int pageCounter = 0;
@@ -54,7 +54,13 @@ namespace WebScraper.Core
 
         public void ApplyUrlFilter(IUrlFilter filter)
         {
-            var filterout = filter.UrlsToRemove;
+            var urlsToRemove = filter.UrlsToRemove;
+
+            var filtered = UrlData.Where(u => !urlsToRemove.Any(r => u.Contains(r)));
+            filtered = filtered.Where(u => u != "");
+
+            UrlData = filtered.ToList();
+
         }
     }
 }
