@@ -13,6 +13,8 @@ namespace WebScraper.Infrastructure.Services
             _context = context;
         }
 
+        public List
+
 
     }
 }

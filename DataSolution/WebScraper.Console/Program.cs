@@ -7,27 +7,19 @@ using Microsoft.Extensions.Configuration;
 using System.IO;
 using WebScraper.Core;
 using WebScraper.Core.Filters;
+using System;
 
 namespace WebScraper.Console
 {
+    // Follow this
+    // https://dzone.com/articles/dependency-injection-in-net-core-console-applicati
     public class Program
     {
+        private static IServiceProvider _serviceProvider;
+
         static void Main(string[] args)
         {
-            var builder = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json");
-
-            var configuration = builder.Build();
-
-            var collection = new ServiceCollection();
-            collection.ConfigureDbContext(configuration["DefaultConnection"]);
-
-            var serviceProvider = collection.BuildServiceProvider();
-
-            serviceProvider.Dispose();
-
-            // will need to refactor code
+            RegisterServices();
 
             var scraper = new CvOnlineScraper();
             scraper.ScrapePageUrls();
@@ -37,10 +29,33 @@ namespace WebScraper.Console
 
             var result = scraper.UrlData;
 
-            var test = "test";
-               
         }
 
-       
+        private static void RegisterServices()
+        {
+            var builder = new ConfigurationBuilder()
+           .SetBasePath(Directory.GetCurrentDirectory())
+           .AddJsonFile("appsettings.json");
+
+            var configuration = builder.Build();
+
+            var collection = new ServiceCollection();
+            collection.ConfigureDbContext(configuration["DefaultConnection"]);
+
+            var serviceProvider = collection.BuildServiceProvider();
+            serviceProvider.Dispose();
+        }
+
+        private static void DisposeServices()
+        {
+            if (_serviceProvider == null)
+            {
+                return;
+            }
+            if (_serviceProvider is IDisposable)
+            {
+                ((IDisposable)_serviceProvider).Dispose();
+            }
+        }
     }
 }
