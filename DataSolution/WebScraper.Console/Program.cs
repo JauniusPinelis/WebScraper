@@ -21,13 +21,9 @@ namespace WebScraper.Console
         {
             RegisterServices();
 
-            var scraper = new CvOnlineScraper();
-            scraper.ScrapePageUrls();
-
-            var cvOnlineFilter = new CvOnlineUrlFilter();
-            scraper.ApplyUrlFilter(cvOnlineFilter);
-
-            var result = scraper.UrlData;
+            var app = new Application();
+            app.Run();
+           
 
             DisposeServices();
 

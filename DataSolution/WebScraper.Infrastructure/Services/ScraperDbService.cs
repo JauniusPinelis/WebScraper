@@ -9,7 +9,7 @@ using WebScraper.Infrastructure.Entities;
 
 namespace WebScraper.Infrastructure.Services
 {
-    public class ScraperDbService
+    public class ScraperDbService : IDbService
     {
         private IGenericRepository<JobPortalPage> jobUrlRepository = null;
         private IMapper mapper = null;
