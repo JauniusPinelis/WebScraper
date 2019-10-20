@@ -8,7 +8,7 @@ using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Infrastructure.Migrations
 {
-    [DbContext(typeof(ScraperDbContext))]
+    [DbContext(typeof(JobDbContext))]
     [Migration("20191019121029_small-change-in-db")]
     partial class smallchangeindb
     {

@@ -8,7 +8,7 @@ using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Infrastructure.Migrations
 {
-    [DbContext(typeof(ScraperDbContext))]
+    [DbContext(typeof(JobDbContext))]
     [Migration("20191012131530_initial")]
     partial class initial
     {

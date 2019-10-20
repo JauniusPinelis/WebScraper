@@ -7,7 +7,7 @@ using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Infrastructure.Migrations
 {
-    [DbContext(typeof(ScraperDbContext))]
+    [DbContext(typeof(JobDbContext))]
     partial class ScraperDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

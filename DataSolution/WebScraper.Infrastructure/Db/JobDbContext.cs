@@ -6,19 +6,19 @@ using WebScraper.Infrastructure.Entities;
 
 namespace WebScraper.Infrastructure.Db
 {
-    public class ScraperDbContext : DbContext
+    public class JobDbContext : DbContext
     {
         private readonly string _connString = "Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True";
 
         public DbSet<JobPortalPage> PortalPages { get; set; }
         public DbSet<PortalCategory> PortalCategories { get; set; }
 
-        public ScraperDbContext() : base()
+        public JobDbContext() : base()
         {
 
         }
 
-        public ScraperDbContext(DbContextOptions<ScraperDbContext> options)
+        public JobDbContext(DbContextOptions<JobDbContext> options)
             : base(options)
         { }
 

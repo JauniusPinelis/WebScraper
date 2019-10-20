@@ -29,6 +29,8 @@ namespace WebScraper.Console
 
             var result = scraper.UrlData;
 
+            DisposeServices();
+
         }
 
         private static void RegisterServices()
