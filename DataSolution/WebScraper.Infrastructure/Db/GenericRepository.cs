@@ -30,7 +30,7 @@ namespace WebScraper.Infrastructure.Db
 
         public void Insert(T obj)
         {
-            throw new NotImplementedException();
+            _context.Add(obj);
         }
 
         public void Save()
