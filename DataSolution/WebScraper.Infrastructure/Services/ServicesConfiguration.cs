@@ -30,5 +30,10 @@ namespace WebScraper.Infrastructure.Services
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
         }
+
+        public static void RegisterServices(this IServiceCollection services)
+        {
+            services.AddSingleton(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        }
     }
 }

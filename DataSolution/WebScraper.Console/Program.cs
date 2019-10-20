@@ -44,6 +44,7 @@ namespace WebScraper.Console
             var collection = new ServiceCollection();
             collection.ConfigureDbContext(configuration["DefaultConnection"]);
             collection.ConfigureMapper();
+            collection.RegisterServices();
 
            var serviceProvider = collection.BuildServiceProvider();
             serviceProvider.Dispose();
