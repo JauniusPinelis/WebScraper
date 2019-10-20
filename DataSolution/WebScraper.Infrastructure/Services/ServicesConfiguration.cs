@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Text;
 using WebScraper.Infrastructure.Db;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using WebScraper.Infrastructure.Mappings;
 
 namespace WebScraper.Infrastructure.Services
 {
@@ -14,8 +16,19 @@ namespace WebScraper.Infrastructure.Services
         public static void ConfigureDbContext(this IServiceCollection services, string connectionString)
         {
            
-            services.AddDbContext<ScraperDbContext>(o =>
+            services.AddDbContext<JobDbContext>(o =>
                 o.UseSqlServer(connectionString));
+        }
+
+        public static void ConfigureMapper(this IServiceCollection services)
+        {
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
         }
     }
 }

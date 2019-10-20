@@ -46,7 +46,6 @@ namespace WebScraper.Core
                 {
                     UrlData.Add(resultNode.GetAttributeValue("href", string.Empty));
                 }
-                var test = "test";
 
             }
 
