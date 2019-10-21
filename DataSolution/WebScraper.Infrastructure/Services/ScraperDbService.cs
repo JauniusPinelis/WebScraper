@@ -44,7 +44,5 @@ namespace WebScraper.Infrastructure.Services
                 jobUrlRepository.Save();
             }
         }
-
-
     }
 }

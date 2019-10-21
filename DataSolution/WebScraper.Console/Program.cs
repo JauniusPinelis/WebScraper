@@ -21,6 +21,7 @@ namespace WebScraper.Console
         {
             RegisterServices();
 
+            var dbService = _serviceProvider.GetService<IDbService>();
             var app = new Application();
             app.Run();
            
@@ -42,8 +43,9 @@ namespace WebScraper.Console
             collection.ConfigureMapper();
             collection.RegisterServices();
 
-           var serviceProvider = collection.BuildServiceProvider();
-            serviceProvider.Dispose();
+            _serviceProvider = collection.BuildServiceProvider();
+
+           
         }
 
         private static void DisposeServices()

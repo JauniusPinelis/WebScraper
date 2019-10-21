@@ -21,7 +21,7 @@ namespace WebScraper.Console
 
             var results = scraper.UrlData;
 
-            var scraperDbService = new ScraperDbService();
+            var service = (IFooService)serviceProvider.GetService(typeof(IFooService));
 
             foreach (var result in results)
             {
