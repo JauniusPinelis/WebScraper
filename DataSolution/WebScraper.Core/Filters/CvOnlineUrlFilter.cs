@@ -13,7 +13,8 @@ namespace WebScraper.Core.Filters
             UrlsToRemove = new List<string>
             {
                 "test",
-                "/new_tp/map.php"
+                "/new_tp/map.php",
+                "/darbo-skelbimai/1d"
             };
         }
     }

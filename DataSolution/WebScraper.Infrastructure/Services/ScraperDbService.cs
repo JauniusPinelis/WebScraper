@@ -6,6 +6,7 @@ using System.Text;
 using WebScraper.Core.Dtos;
 using WebScraper.Infrastructure.Db;
 using WebScraper.Infrastructure.Entities;
+using WebScraper.Infrastructure.Mappings;
 
 namespace WebScraper.Infrastructure.Services
 {
@@ -17,6 +18,12 @@ namespace WebScraper.Infrastructure.Services
         public ScraperDbService()
         {
             jobUrlRepository = new GenericRepository<JobPortalPage>();
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+
+            mapper = mappingConfig.CreateMapper();
         }
 
         public ScraperDbService(IGenericRepository<JobPortalPage> repository, IMapper mapper)
@@ -29,8 +36,9 @@ namespace WebScraper.Infrastructure.Services
         {
             var entity = mapper.Map<JobPortalPage>(jobUrl);
             var entities = jobUrlRepository.GetAll().ToList();
+            var urls = entities.Select(e => e.Url);
 
-            if (!entities.Contains(entity))
+            if (!urls.Contains(entity.Url))
             {
                 jobUrlRepository.Insert(entity);
                 jobUrlRepository.Save();
