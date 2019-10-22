@@ -4,6 +4,6 @@ namespace WebScraper.Infrastructure.Services
 {
     public interface IDbService
     {
-        void InsertUrl(JobUrl jobUrl);
+        void InsertUrl(JobUrlDto jobUrl);
     }
 }

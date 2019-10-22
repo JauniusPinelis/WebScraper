@@ -40,9 +40,9 @@ namespace WebScraper.Console
                 dbService.InsertUrl(jobPageEntity);
             }
             */
-            var scraper = ScraperFactory.BuildScraper("CvOnline");
+            //var scraper = ScraperFactory.BuildScraper("CvOnline");
 
-            var scraper.ScrapeJobPortalInfo("https://www.cvonline.lt/darbo-skelbimas/baltic-underwriting-agency-ab/draudimo-riziku-vertintojas-a-d4032450.html");
+            //var scraper.ScrapeJobPortalInfo("https://www.cvonline.lt/darbo-skelbimas/baltic-underwriting-agency-ab/draudimo-riziku-vertintojas-a-d4032450.html");
 
         }
     }

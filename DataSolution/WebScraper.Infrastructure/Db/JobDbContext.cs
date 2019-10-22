@@ -10,8 +10,8 @@ namespace WebScraper.Infrastructure.Db
     {
         private readonly string _connString = "Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True";
 
-        public DbSet<JobPortalPage> PortalPages { get; set; }
-        public DbSet<PortalCategory> PortalCategories { get; set; }
+        public DbSet<JobUrl> PortalPages { get; set; }
+        public DbSet<JobUrlCategory> PortalCategories { get; set; }
 
         public JobDbContext() : base()
         {
@@ -29,7 +29,7 @@ namespace WebScraper.Infrastructure.Db
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PortalCategory>().HasData(new PortalCategory()
+            modelBuilder.Entity<JobUrlCategory>().HasData(new JobUrlCategory()
             {
                 Id = 1,
                 Name = "CvOnline.lt"

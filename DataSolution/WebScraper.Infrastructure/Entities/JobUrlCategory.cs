@@ -6,8 +6,8 @@ using System.Text;
 
 namespace WebScraper.Infrastructure.Entities
 {
-    [Table("tblData_PortalType")]
-    public class PortalCategory
+    [Table("tblData_JobUrlCategory")]
+    public class JobUrlCategory
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]

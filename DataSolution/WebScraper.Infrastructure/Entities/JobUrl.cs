@@ -6,8 +6,8 @@ using System.Text;
 
 namespace WebScraper.Infrastructure.Entities
 {
-    [Table("tblData_PortalPage")]
-    public class JobPortalPage
+    [Table("tblData_JobUrl")]
+    public class JobUrl
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
@@ -16,7 +16,7 @@ namespace WebScraper.Infrastructure.Entities
 
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
-        public PortalCategory Category { get; set; }
+        public JobUrlCategory Category { get; set; }
 
     }
 }

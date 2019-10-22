@@ -4,10 +4,10 @@ using System.Text;
 
 namespace WebScraper.Core.Dtos
 {
-    public class JobUrl
+    public class jobHtmlDto
     {
         public int Id { get; set; }
-        public string Url { get; set; }
-        public int CategoryId { get; set; }
+        public string HtmlCode { get; set; }
+        public int JobUrlId { get; set; }
     }
 }

@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Infrastructure.Migrations
 {
     [DbContext(typeof(JobDbContext))]
-    partial class ScraperDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191022084127_schema-renames")]
+    partial class schemarenames
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

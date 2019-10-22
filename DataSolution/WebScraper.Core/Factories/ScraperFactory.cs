@@ -2,16 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core.Filters;
-using WebScraper.Infrastructure.Services;
 
 namespace WebScraper.Core.Factories
 {
     public class ScraperFactory : IScraperFactory
     {
-        public ScraperFactory(IDbService dbService)
-        {
-
-        }
 
 
         public IScraper BuildScraper(string website)

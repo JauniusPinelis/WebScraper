@@ -10,31 +10,20 @@ using WebScraper.Infrastructure.Mappings;
 
 namespace WebScraper.Infrastructure.Services
 {
-    public class ScraperDbService : IDbService
+    public class DbService : IDbService
     {
-        private IGenericRepository<JobPortalPage> jobUrlRepository = null;
+        private IGenericRepository<Entities.JobUrl> jobUrlRepository = null;
         private IMapper mapper = null;
 
-        public ScraperDbService()
-        {
-            jobUrlRepository = new GenericRepository<JobPortalPage>();
-            var mappingConfig = new MapperConfiguration(mc =>
-            {
-                mc.AddProfile(new MappingProfile());
-            });
-
-            mapper = mappingConfig.CreateMapper();
-        }
-
-        public ScraperDbService(IGenericRepository<JobPortalPage> repository, IMapper mapper)
+        public DbService(IGenericRepository<Entities.JobUrl> repository, IMapper mapper)
         {
             jobUrlRepository = repository;
             this.mapper = mapper;
         }
 
-        public void InsertUrl(JobUrl jobUrl)
+        public void InsertUrl(Core.Dtos.JobUrlDto jobUrl)
         {
-            var entity = mapper.Map<JobPortalPage>(jobUrl);
+            var entity = mapper.Map<Entities.JobUrl>(jobUrl);
             var entities = jobUrlRepository.GetAll().ToList();
             var urls = entities.Select(e => e.Url);
 
