@@ -1,12 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore.SqlServer;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using WebScraper.Infrastructure.Db;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using WebScraper.Infrastructure.Mappings;
+using WebScraper.Core.Factories;
 
 namespace WebScraper.Infrastructure.Services
 {
@@ -35,6 +33,7 @@ namespace WebScraper.Infrastructure.Services
         {
             services.AddSingleton(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IDbService, ScraperDbService>();
+            services.AddScoped<IScraperFactory, ScraperFactory>();
         }
     }
 }

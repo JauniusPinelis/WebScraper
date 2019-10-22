@@ -51,6 +51,21 @@ namespace WebScraper.Core
 
         }
 
+        public void ScrapeJobPortalInfo(string url)
+        {
+            var webClient = new HttpClient();
+            var elementId = "page-main-content";
+
+            var html = webClient.GetStringAsync(url).Result;
+
+            var htmlDocument = new HtmlDocument();
+            htmlDocument.LoadHtml(html);
+
+            var resultNode = htmlDocument.DocumentNode.SelectSingleNode("//div[contains(@id, 'page-main-content')]");
+
+            var test = "test";
+        }
+
         public void ApplyUrlFilter(IUrlFilter filter)
         {
             var urlsToRemove = filter.UrlsToRemove;

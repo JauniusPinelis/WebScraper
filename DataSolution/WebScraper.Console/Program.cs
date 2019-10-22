@@ -22,7 +22,7 @@ namespace WebScraper.Console
             RegisterServices();
 
             var dbService = _serviceProvider.GetService<IDbService>();
-            var app = new Application();
+            var app = new Application(dbService);
             app.Run();
            
 

@@ -2,25 +2,38 @@
 using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core.Filters;
+using WebScraper.Infrastructure.Services;
 
 namespace WebScraper.Core.Factories
 {
-    public static class ScraperFactory
+    public class ScraperFactory : IScraperFactory
     {
-        public static IScraper BuildScraper(string website)
+        public ScraperFactory(IDbService dbService)
+        {
+
+        }
+
+
+        public IScraper BuildScraper(string website)
         {
             switch (website)
             {
                 case "cvonline":
                     return new CvOnlineScraper();
                 default:
-                    throw new Exception("There is not Scraper for this website");
+                    throw new Exception("There is no Scraper for this website");
             }
         }
 
-        public static IUrlFilter BuildUrlFilter(string website)
+        public IUrlFilter BuildUrlFilter(string website)
         {
-            return null;
+            switch (website)
+            {
+                case "cvonline":
+                    return new CvOnlineUrlFilter();
+                default:
+                    throw new Exception("There is no Filter for this website");
+            }
         }
     }
 }

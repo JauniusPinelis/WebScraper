@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core;
 using WebScraper.Core.Dtos;
+using WebScraper.Core.Factories;
 using WebScraper.Core.Filters;
 using WebScraper.Infrastructure.Entities;
 using WebScraper.Infrastructure.Services;
@@ -11,9 +12,15 @@ namespace WebScraper.Console
 {
     public class Application
     {
+        private IDbService dbService;
+
+        public Application(IDbService service)
+        {
+            dbService = service;
+        }
         public void Run()
         {
-            var scraper = new CvOnlineScraper();
+            /*var scraper = ScraperFactory.BuildScraper("CvOnline");
             scraper.ScrapePageUrls();
 
             var cvOnlineFilter = new CvOnlineUrlFilter();
@@ -21,7 +28,7 @@ namespace WebScraper.Console
 
             var results = scraper.UrlData;
 
-            var service = (IFooService)serviceProvider.GetService(typeof(IFooService));
+           
 
             foreach (var result in results)
             {
@@ -30,8 +37,13 @@ namespace WebScraper.Console
                     Url = result,
                     CategoryId = 1
                 };
-                scraperDbService.InsertUrl(jobPageEntity);
+                dbService.InsertUrl(jobPageEntity);
             }
+            */
+            var scraper = ScraperFactory.BuildScraper("CvOnline");
+
+            var scraper.ScrapeJobPortalInfo("https://www.cvonline.lt/darbo-skelbimas/baltic-underwriting-agency-ab/draudimo-riziku-vertintojas-a-d4032450.html");
+
         }
     }
 }
