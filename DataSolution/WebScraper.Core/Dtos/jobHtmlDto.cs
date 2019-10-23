@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WebScraper.Core.Dtos
 {
-    public class jobHtmlDto
+    public class JobHtmlDto
     {
         public int Id { get; set; }
         public string HtmlCode { get; set; }

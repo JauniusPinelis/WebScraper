@@ -12,26 +12,36 @@ namespace WebScraper.Infrastructure.Services
 {
     public class DbService : IDbService
     {
-        private IGenericRepository<Entities.JobUrl> jobUrlRepository = null;
-        private IMapper mapper = null;
+        private IGenericRepository<Entities.JobUrl> _jobUrlRepository = null;
+        private IMapper _mapper = null;
 
         public DbService(IGenericRepository<Entities.JobUrl> repository, IMapper mapper)
         {
-            jobUrlRepository = repository;
-            this.mapper = mapper;
+            _jobUrlRepository = repository;
+            _mapper = mapper;
         }
 
-        public void InsertUrl(Core.Dtos.JobUrlDto jobUrl)
+        public void InsertUrl(JobUrlDto jobUrl)
         {
-            var entity = mapper.Map<Entities.JobUrl>(jobUrl);
-            var entities = jobUrlRepository.GetAll().ToList();
+            var entity = _mapper.Map<Entities.JobUrl>(jobUrl);
+            var entities = _jobUrlRepository.GetAll().ToList();
             var urls = entities.Select(e => e.Url);
 
             if (!urls.Contains(entity.Url))
             {
-                jobUrlRepository.Insert(entity);
-                jobUrlRepository.Save();
+                _jobUrlRepository.Insert(entity);
+                _jobUrlRepository.Save();
             }
+        }
+
+        public void SaveHtmlData(List<JobHtmlDto> jobHtmls)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveUrlData(List<JobUrlDto> jobUrls)
+        {
+            jobUrls.ForEach(j => InsertUrl(j));
         }
     }
 }
