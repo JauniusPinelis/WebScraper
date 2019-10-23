@@ -5,6 +5,7 @@ using WebScraper.Core;
 using WebScraper.Core.Dtos;
 using WebScraper.Core.Factories;
 using WebScraper.Core.Filters;
+using WebScraper.Infrastructure.Db;
 using WebScraper.Infrastructure.Entities;
 using WebScraper.Infrastructure.Services;
 
@@ -12,9 +13,9 @@ namespace WebScraper.Console
 {
     public class Application
     {
-        private IDbService dbService;
+        private IUnitOfWork dbService;
 
-        public Application(IDbService service)
+        public Application(IUnitOfWork service)
         {
             dbService = service;
         }

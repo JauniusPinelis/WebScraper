@@ -2,7 +2,7 @@
 using WebScraper.Core.Dtos;
 using WebScraper.Infrastructure.Entities;
 
-namespace WebScraper.Infrastructure.Services
+namespace WebScraper.Infrastructure.Db
 {
     public interface IUnitOfWork
     {

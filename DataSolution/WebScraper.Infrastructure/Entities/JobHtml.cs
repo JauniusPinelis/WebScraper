@@ -12,7 +12,10 @@ namespace WebScraper.Infrastructure.Entities
         [Key]
         public int Id { get; set; }
         public string HtmlCode { get; set; }
+
+        [ForeignKey("JobUrl")]
         public int JobUrlId { get; set; }
+        public JobUrl JobUrl { get; set; }
 
     }
 }

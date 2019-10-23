@@ -11,7 +11,8 @@ namespace WebScraper.Infrastructure.Mappings
     {
         public MappingProfile()
         {
-            CreateMap<JobUrl, JobUrl>();
+            CreateMap<JobUrlDto, JobUrl>();
+            CreateMap<JobHtmlDto, JobHtml>();
         }
     }
 }

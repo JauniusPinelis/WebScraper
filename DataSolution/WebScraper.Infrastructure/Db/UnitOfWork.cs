@@ -8,15 +8,15 @@ using WebScraper.Infrastructure.Db;
 using WebScraper.Infrastructure.Entities;
 using WebScraper.Infrastructure.Mappings;
 
-namespace WebScraper.Infrastructure.Services
+namespace WebScraper.Infrastructure.Db
 {
-    public class DbService : IDbService
+    public class UnitOfWork : IUnitOfWork
     {
         private IGenericRepository<JobUrl> _jobUrlRepository = null;
         private IGenericRepository<JobHtml> _jobHtmlRepository = null;
         private IMapper _mapper = null;
 
-        public DbService(IGenericRepository<JobUrl> jobUrlRepository, IGenericRepository<JobHtml> jobHtmlRepository, IMapper mapper)
+        public UnitOfWork(IGenericRepository<JobUrl> jobUrlRepository, IGenericRepository<JobHtml> jobHtmlRepository, IMapper mapper)
         {
             _jobUrlRepository = jobUrlRepository;
             _jobHtmlRepository = jobHtmlRepository;
