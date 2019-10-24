@@ -5,20 +5,20 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
+using WebScraper.Core.Dtos;
 using WebScraper.Core.Filters;
 
 namespace WebScraper.Core
 {
     public class CvOnlineScraper : IScraper
     {
-        public List<string> UrlData { get; set; } = new List<String>();
-
-        public void ScrapePageUrls()
+        public IEnumerable<JobUrlDto> ScrapePageUrls()
         {
             var baseUrl = "https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=";
             var webClient = new HttpClient();
             int pageCounter = 0;
             var continueParsing = true;
+            var results = new List<JobUrlDto>();
 
             while (continueParsing && pageCounter < 3)
             {
@@ -44,10 +44,16 @@ namespace WebScraper.Core
 
                 foreach (var resultNode in resultNodes)
                 {
-                    UrlData.Add(resultNode.GetAttributeValue("href", string.Empty));
+                    results.Add(new JobUrlDto(){
+                        Url = resultNode.GetAttributeValue("href", string.Empty),
+                        CategoryId = 1
+                    }
+                    );
                 }
 
             }
+
+            return results;
 
         }
 
@@ -62,19 +68,6 @@ namespace WebScraper.Core
             htmlDocument.LoadHtml(html);
 
             var resultNode = htmlDocument.DocumentNode.SelectSingleNode("//div[contains(@id, 'page-main-content')]");
-
-            var test = "test";
-        }
-
-        public void ApplyUrlFilter(IUrlFilter filter)
-        {
-            var urlsToRemove = filter.UrlsToRemove;
-
-            var filtered = UrlData.Where(u => !urlsToRemove.Any(r => u.Contains(r)));
-            filtered = filtered.Where(u => u != "").Select(u => u.Replace("//",""));
-
-            UrlData = filtered.ToList();
-
         }
     }
 }

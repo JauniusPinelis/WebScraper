@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WebScraper.Core.Dtos;
 
 namespace WebScraper.Core.Filters
 {
     public interface IUrlFilter
     {
-        List<string> UrlsToRemove { get; set; }
+        void Apply(List<JobUrlDto> urls);
     }
 }

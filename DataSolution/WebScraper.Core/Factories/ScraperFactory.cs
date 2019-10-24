@@ -7,8 +7,6 @@ namespace WebScraper.Core.Factories
 {
     public class ScraperFactory : IScraperFactory
     {
-
-
         public IScraper BuildScraper(string website)
         {
             switch (website)

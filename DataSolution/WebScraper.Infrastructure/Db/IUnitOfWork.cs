@@ -6,9 +6,13 @@ namespace WebScraper.Infrastructure.Db
 {
     public interface IUnitOfWork
     {
-        void SaveJobUrls(List<JobUrlDto> jobUrls);
+        IEnumerable<JobUrlDto> GetJobUrls();
 
-        void SaveJobHtmls(List<JobHtmlDto> jobHtmls);
+        IEnumerable<JobHtmlDto> GetJobHtmls();
+
+        void SaveJobUrls(IEnumerable<JobUrlDto> jobUrls);
+
+        void SaveJobHtmls(IEnumerable<JobHtmlDto> jobHtmls);
 
         void InsertJobUrl(JobUrlDto jobUrl);
 

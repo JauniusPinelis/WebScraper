@@ -34,6 +34,7 @@ namespace WebScraper.Infrastructure.Services
             services.AddSingleton(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IScraperFactory, ScraperFactory>();
+            services.AddScoped<IScrapeService, ScrapeService>();
         }
     }
 }
