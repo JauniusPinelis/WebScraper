@@ -12,6 +12,35 @@ namespace WebScraper.Core
 {
     public class CvOnlineScraper : IScraper
     {
+        public IEnumerable<JobHtmlDto> ScrapeJobHtmls(IEnumerable<JobUrlDto> urlDtos)
+        {
+            var urls = urlDtos.ToList();
+            var results = new List<JobHtmlDto>();
+
+            /* As testing lets do only 20 page htmls for now - dont wanna 
+             * overload the page */
+
+            var limit = 20;
+            var delay = 1000;
+            var webClient = new HttpClient();
+
+            for (int i = 0; i <= limit; i++)
+            {
+                Thread.Sleep(delay);
+                var html = ScrapeJobPortalInfo(urls[i].Url);
+
+                results.Add(new JobHtmlDto()
+                {
+                    JobUrlId = urls[i].Id,
+                    HtmlCode = html
+                });
+
+
+            }
+
+            return results
+        }
+
         public IEnumerable<JobUrlDto> ScrapePageUrls()
         {
             var baseUrl = "https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=";
@@ -54,20 +83,20 @@ namespace WebScraper.Core
             }
 
             return results;
-
         }
 
-        public void ScrapeJobPortalInfo(string url)
+        private string ScrapeJobPortalInfo(string url)
         {
             var webClient = new HttpClient();
-            var elementId = "page-main-content";
 
             var html = webClient.GetStringAsync(url).Result;
 
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
 
-            var resultNode = htmlDocument.DocumentNode.SelectSingleNode("//div[contains(@id, 'page-main-content')]");
+            var resultNode = htmlDocument.DocumentNode.SelectSingleNode("//div[contains(@id, 'page-main-content')]").InnerHtml;
+
+            return resultNode;
         }
     }
 }

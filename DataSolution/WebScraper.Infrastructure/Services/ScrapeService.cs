@@ -20,42 +20,28 @@ namespace WebScraper.Infrastructure.Services
 
         public void ImportInitialCvOnlineData()
         {
+            var scraper = _scraperFactory.BuildScraper("CvOnline");
+
             var existingUrls = _unitOfWork.GetJobUrls();
+
             if (!existingUrls.Any())
             {
-                var scraper = _scraperFactory.BuildScraper("CvOnline");
 
                 var collectedUrls = scraper.ScrapePageUrls().ToList();
 
                 var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
                 cvOnlineFilter.Apply(collectedUrls);
 
-
-
                 _unitOfWork.SaveJobUrls(collectedUrls);
-                
             }
 
-            /*var scraper = ScraperFactory.BuildScraper("CvOnline");
-           scraper.ScrapePageUrls();
+            var existingHtmls = _unitOfWork.GetJobHtmls();
+            if (!existingHtmls.Any())
+            {
+                var htmlResults = scraper.ScrapeJobHtmls(_unitOfWork.GetJobUrls());
 
-           var cvOnlineFilter = new CvOnlineUrlFilter();
-           scraper.ApplyUrlFilter(cvOnlineFilter);
-
-           var results = scraper.UrlData;
-
-
-
-           foreach (var result in results)
-           {
-               var jobPageEntity = new JobUrl()
-               {
-                   Url = result,
-                   CategoryId = 1
-               };
-               dbService.InsertUrl(jobPageEntity);
-           }
-           */
+                _unitOfWork.SaveJobHtmls(htmlResults);
+            }
                 //var scraper = ScraperFactory.BuildScraper("CvOnline");
 
                 //var scraper.ScrapeJobPortalInfo("https://www.cvonline.lt/darbo-skelbimas/baltic-underwriting-agency-ab/draudimo-riziku-vertintojas-a-d4032450.html");
