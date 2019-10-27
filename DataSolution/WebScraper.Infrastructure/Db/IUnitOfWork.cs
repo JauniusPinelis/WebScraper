@@ -10,9 +10,9 @@ namespace WebScraper.Infrastructure.Db
 
         IEnumerable<JobHtmlDto> GetJobHtmls();
 
-        void SaveJobUrls(IEnumerable<JobUrlDto> jobUrls);
+        void SaveJobUrls(List<JobUrlDto> jobUrls);
 
-        void SaveJobHtmls(IEnumerable<JobHtmlDto> jobHtmls);
+        void SaveJobHtmls(List<JobHtmlDto> jobHtmls);
 
         void InsertJobUrl(JobUrlDto jobUrl);
 

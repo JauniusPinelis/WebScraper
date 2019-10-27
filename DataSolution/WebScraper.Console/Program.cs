@@ -21,8 +21,8 @@ namespace WebScraper.Console
         {
             RegisterServices();
 
-            var unitOfWork = _serviceProvider.GetService<IUnitOfWork>();
-            var app = new Application(dbService);
+            var scrapeService = _serviceProvider.GetService<IScrapeService>();
+            var app = new Application(scrapeService);
             app.Run();
            
 

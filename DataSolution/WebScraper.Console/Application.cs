@@ -13,38 +13,15 @@ namespace WebScraper.Console
 {
     public class Application
     {
-        private IUnitOfWork dbService;
+        private IScrapeService _scrapeService;
 
-        public Application(IUnitOfWork service)
+        public Application(IScrapeService scrapeService)
         {
-            dbService = service;
+            _scrapeService = scrapeService;
         }
         public void Run()
         {
-            /*var scraper = ScraperFactory.BuildScraper("CvOnline");
-            scraper.ScrapePageUrls();
-
-            var cvOnlineFilter = new CvOnlineUrlFilter();
-            scraper.ApplyUrlFilter(cvOnlineFilter);
-
-            var results = scraper.UrlData;
-
-           
-
-            foreach (var result in results)
-            {
-                var jobPageEntity = new JobUrl()
-                {
-                    Url = result,
-                    CategoryId = 1
-                };
-                dbService.InsertUrl(jobPageEntity);
-            }
-            */
-            //var scraper = ScraperFactory.BuildScraper("CvOnline");
-
-            //var scraper.ScrapeJobPortalInfo("https://www.cvonline.lt/darbo-skelbimas/baltic-underwriting-agency-ab/draudimo-riziku-vertintojas-a-d4032450.html");
-
+            _scrapeService.ImportInitialCvOnlineData();
         }
     }
 }

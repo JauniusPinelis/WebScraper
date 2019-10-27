@@ -6,6 +6,7 @@ using System.Text;
 
 namespace WebScraper.Infrastructure.Entities
 {
+    [Table("tblData_JobHtml")]
     public class JobHtml
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

@@ -12,6 +12,7 @@ namespace WebScraper.Infrastructure.Db
 
         public DbSet<JobUrl> PortalPages { get; set; }
         public DbSet<JobUrlCategory> PortalCategories { get; set; }
+        public DbSet<JobHtml> JobHtmls { get; set; }
 
         public JobDbContext() : base()
         {

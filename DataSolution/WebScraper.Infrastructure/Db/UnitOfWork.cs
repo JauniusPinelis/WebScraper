@@ -60,12 +60,12 @@ namespace WebScraper.Infrastructure.Db
             }
         }
 
-        public List<JobUrlDto> GetJobUrls()
+        public IEnumerable<JobUrlDto> GetJobUrls()
         {
             return _mapper.Map<List<JobUrlDto>>( _jobUrlRepository.GetAll());
         }
 
-        public List<JobHtmlDto> GetJobHtmls()
+        public IEnumerable<JobHtmlDto> GetJobHtmls()
         {
             return _mapper.Map<List<JobHtmlDto>>(_jobHtmlRepository.GetAll());
         }

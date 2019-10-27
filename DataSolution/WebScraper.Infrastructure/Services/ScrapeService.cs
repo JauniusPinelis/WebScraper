@@ -12,7 +12,7 @@ namespace WebScraper.Infrastructure.Services
         private IUnitOfWork _unitOfWork;
         private IScraperFactory _scraperFactory;
 
-        public ScrapeService(IUnitOfWork unitOfWork, IScraperFactory factory )
+        public ScrapeService(IUnitOfWork unitOfWork, IScraperFactory factory)
         {
             _unitOfWork = unitOfWork;
             _scraperFactory = factory;
@@ -38,13 +38,11 @@ namespace WebScraper.Infrastructure.Services
             var existingHtmls = _unitOfWork.GetJobHtmls();
             if (!existingHtmls.Any())
             {
-                var htmlResults = scraper.ScrapeJobHtmls(_unitOfWork.GetJobUrls());
+                var htmlResults = scraper.ScrapeJobHtmls(_unitOfWork.GetJobUrls()).ToList();
 
                 _unitOfWork.SaveJobHtmls(htmlResults);
             }
-                //var scraper = ScraperFactory.BuildScraper("CvOnline");
 
-                //var scraper.ScrapeJobPortalInfo("https://www.cvonline.lt/darbo-skelbimas/baltic-underwriting-agency-ab/draudimo-riziku-vertintojas-a-d4032450.html");
-            }
         }
+    }
 }

@@ -38,7 +38,7 @@ namespace WebScraper.Core
 
             }
 
-            return results
+            return results;
         }
 
         public IEnumerable<JobUrlDto> ScrapePageUrls()
