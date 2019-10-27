@@ -7,6 +7,6 @@ namespace WebScraper.Core.Filters
 {
     public interface IUrlFilter
     {
-        void Apply(List<JobUrlDto> urls);
+        void Apply(ref List<JobUrlDto> urls);
     }
 }

@@ -30,7 +30,7 @@ namespace WebScraper.Infrastructure.Services
                 var collectedUrls = scraper.ScrapePageUrls().ToList();
 
                 var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
-                cvOnlineFilter.Apply(collectedUrls);
+                cvOnlineFilter.Apply(ref collectedUrls);
 
                 _unitOfWork.SaveJobUrls(collectedUrls);
             }

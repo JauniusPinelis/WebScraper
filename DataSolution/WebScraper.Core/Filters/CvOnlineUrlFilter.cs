@@ -20,13 +20,13 @@ namespace WebScraper.Core.Filters
             };
         }
 
-        public void Apply(List<JobUrlDto> urlDtos)
+        public void Apply(ref List<JobUrlDto> urlDtos)
         {
             urlDtos = urlDtos.ToList();
             var urls = urlDtos.Select(u => u.Url);
             var urlsToRemove = urls.Where(u => UrlsToRemove.Any(r => u.Contains(r)));
 
-            urlDtos.RemoveAll(u => urlsToRemove.Contains(u.Url));
+            urlDtos.RemoveAll(u => urlsToRemove.Contains(u.Url) || u.Url == "");
         }
     }
 }

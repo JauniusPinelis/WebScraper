@@ -20,9 +20,8 @@ namespace WebScraper.Core
             /* As testing lets do only 20 page htmls for now - dont wanna 
              * overload the page */
 
-            var limit = 20;
+            var limit = 10;
             var delay = 1000;
-            var webClient = new HttpClient();
 
             for (int i = 0; i <= limit; i++)
             {
@@ -52,7 +51,7 @@ namespace WebScraper.Core
             while (continueParsing && pageCounter < 3)
             {
                 //Have some delay in parsing
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
 
                 var validUrl = baseUrl + pageCounter;
                 pageCounter += 1;

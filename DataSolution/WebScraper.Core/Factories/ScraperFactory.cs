@@ -9,7 +9,7 @@ namespace WebScraper.Core.Factories
     {
         public IScraper BuildScraper(string website)
         {
-            switch (website)
+            switch (website.ToLower())
             {
                 case "cvonline":
                     return new CvOnlineScraper();
@@ -20,7 +20,7 @@ namespace WebScraper.Core.Factories
 
         public IUrlFilter BuildUrlFilter(string website)
         {
-            switch (website)
+            switch (website.ToLower())
             {
                 case "cvonline":
                     return new CvOnlineUrlFilter();
