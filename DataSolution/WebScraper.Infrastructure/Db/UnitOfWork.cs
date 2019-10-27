@@ -62,7 +62,8 @@ namespace WebScraper.Infrastructure.Db
 
         public IEnumerable<JobUrlDto> GetJobUrls()
         {
-            return _mapper.Map<List<JobUrlDto>>( _jobUrlRepository.GetAll());
+            var jobUrls = _jobUrlRepository.GetAll().ToList();
+            return _mapper.Map<List<JobUrlDto>>(jobUrls);
         }
 
         public IEnumerable<JobHtmlDto> GetJobHtmls()

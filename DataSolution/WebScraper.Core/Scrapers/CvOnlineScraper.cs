@@ -16,6 +16,7 @@ namespace WebScraper.Core
         {
             var urls = urlDtos.ToList();
             var results = new List<JobHtmlDto>();
+            var webClient = new HttpClient();
 
             /* As testing lets do only 20 page htmls for now - dont wanna 
              * overload the page */
@@ -26,7 +27,7 @@ namespace WebScraper.Core
             for (int i = 0; i <= limit; i++)
             {
                 Thread.Sleep(delay);
-                var html = ScrapeJobPortalInfo(urls[i].Url);
+                var html = ScrapeJobPortalInfo(urls[i].Url, webClient);
 
                 results.Add(new JobHtmlDto()
                 {
@@ -84,14 +85,32 @@ namespace WebScraper.Core
             return results;
         }
 
-        private string ScrapeJobPortalInfo(string url)
+        private string TrimStart(string target, string trimString)
         {
-            var webClient = new HttpClient();
+            if (string.IsNullOrEmpty(trimString)) return target;
+
+            string result = target;
+            while (result.StartsWith(trimString))
+            {
+                result = result.Substring(trimString.Length);
+            }
+
+            return result;
+        }
+
+        private string ScrapeJobPortalInfo(string url, HttpClient webClient)
+        {
+
+            //temp stuff but this needs to be better refactored
+            url = TrimStart(url, "//");
+            url = "http://" + url;
 
             var html = webClient.GetStringAsync(url).Result;
 
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
+
+            var resultNode = htmlDocument.DocumentNode.SelectSingleNode("//div[contains(@id, 'page-main-content')]");
 
             var resultNode = htmlDocument.DocumentNode.SelectSingleNode("//div[contains(@id, 'page-main-content')]").InnerHtml;
 
