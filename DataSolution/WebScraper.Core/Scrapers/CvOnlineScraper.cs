@@ -104,17 +104,23 @@ namespace WebScraper.Core
             //temp stuff but this needs to be better refactored
             url = TrimStart(url, "//");
             url = "http://" + url;
+            try
+            {
+                var html = webClient.GetStringAsync(url).Result;
+                var htmlDocument = new HtmlDocument();
+                htmlDocument.LoadHtml(html);
 
-            var html = webClient.GetStringAsync(url).Result;
+                var resultNode = htmlDocument.DocumentNode.SelectSingleNode("//div[contains(@id, 'page-main-content')]");
 
-            var htmlDocument = new HtmlDocument();
-            htmlDocument.LoadHtml(html);
+                if (resultNode != null)
+                    return resultNode.InnerHtml;
+                return "";
+            }
 
-            var resultNode = htmlDocument.DocumentNode.SelectSingleNode("//div[contains(@id, 'page-main-content')]");
-
-            var resultNode = htmlDocument.DocumentNode.SelectSingleNode("//div[contains(@id, 'page-main-content')]").InnerHtml;
-
-            return resultNode;
+            catch(Exception e)
+            {
+                return "";
+            }       
         }
     }
 }
