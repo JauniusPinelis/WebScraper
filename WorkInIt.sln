@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebScraper", "WebScraper", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{1A05689F-47D6-4DAA-BA95-2F0D00DE2387}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Api", "WebApi\Api\WebApi.Api.csproj", "{91A9959F-7948-4295-95A3-27CA4CE54E9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Api", "WebApi\WebApi.Api\WebApi.Api.csproj", "{91A9959F-7948-4295-95A3-27CA4CE54E9D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Infrastructure", "WebApi\WebApi.Infrastructure\WebApi.Infrastructure.csproj", "{D391AF60-80FE-4DC5-B364-3C20F71ECB15}"
 EndProject
