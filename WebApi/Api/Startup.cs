@@ -29,6 +29,8 @@ namespace WebApi.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.ConfigureDbContext("Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True");
+            services.ConfigureMapper();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

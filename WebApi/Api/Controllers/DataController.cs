@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApi.Infrastructure.Db;
+using WebApi.Infrastructure.Dtos;
 
 namespace WebApi.Api.Controllers
 {
@@ -10,10 +13,24 @@ namespace WebApi.Api.Controllers
     [ApiController]
     public class DataController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private DataContext _context;
+        private IMapper _mapper;
+
+        public DataController(DataContext context, IMapper mapper)
         {
-            return new string[] { "value1", "value2" };
+            _context = context;
+            _mapper = mapper;
+        }
+
+
+        [HttpGet]
+        public ActionResult<IEnumerable<JobHtmlDto>> Get()
+        {
+            var entities = _context.JobHtmls.ToList();
+
+            var models = _mapper.Map<List<JobHtmlDto>>(entities);
+
+            return models;
         }
     }
 }
