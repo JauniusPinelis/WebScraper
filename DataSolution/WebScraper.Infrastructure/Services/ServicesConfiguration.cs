@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore.SqlServer;
 using WebScraper.Infrastructure.Db;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
