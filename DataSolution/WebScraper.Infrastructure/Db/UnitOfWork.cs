@@ -14,12 +14,18 @@ namespace WebScraper.Infrastructure.Db
     {
         private IGenericRepository<JobUrl> _jobUrlRepository = null;
         private IGenericRepository<JobHtml> _jobHtmlRepository = null;
+        private IGenericRepository<JobInfo> _jobInfoRepository = null;
         private IMapper _mapper = null;
 
-        public UnitOfWork(IGenericRepository<JobUrl> jobUrlRepository, IGenericRepository<JobHtml> jobHtmlRepository, IMapper mapper)
+        public UnitOfWork(
+            IGenericRepository<JobUrl> jobUrlRepository, 
+            IGenericRepository<JobHtml> jobHtmlRepository,
+            IGenericRepository<JobInfo> jobInfoRepository,
+            IMapper mapper)
         {
             _jobUrlRepository = jobUrlRepository;
             _jobHtmlRepository = jobHtmlRepository;
+            _jobInfoRepository = jobInfoRepository;
             _mapper = mapper;
         }
 
@@ -58,6 +64,18 @@ namespace WebScraper.Infrastructure.Db
                 _jobHtmlRepository.Insert(htmlEntity);
                 _jobHtmlRepository.Save();
             }
+        }
+
+        public void InsertJobInfo (ParseResult jobInfo)
+        {
+            var htmlEntity = _mapper.Map<JobInfo>(jobInfo);
+
+            _jobInfoRepository.Insert(htmlEntity);
+            _jobInfoRepository.Save();
+
+            // Unfinished
+            throw new NotImplementedException();
+
         }
 
         public IEnumerable<JobUrlDto> GetJobUrls()

@@ -22,6 +22,7 @@ namespace WebScraper.Infrastructure.Services
         {
             var scraper = _scraperFactory.BuildScraper("CvOnline");
 
+            // Get Urls
             var existingUrls = _unitOfWork.GetJobUrls();
 
             if (!existingUrls.Any())
@@ -35,6 +36,7 @@ namespace WebScraper.Infrastructure.Services
                 _unitOfWork.SaveJobUrls(collectedUrls);
             }
 
+            // Get Htmls
             var existingHtmls = _unitOfWork.GetJobHtmls();
             if (!existingHtmls.Any())
             {
@@ -42,6 +44,17 @@ namespace WebScraper.Infrastructure.Services
 
                 _unitOfWork.SaveJobHtmls(htmlResults);
             }
+
+            // Parse Infos from Html
+            var hmtlEntities = _unitOfWork.GetJobHtmls();
+            var parser = _scraperFactory.BuildParser("cvonline");
+
+            foreach (var htmlEntity in hmtlEntities)
+            {
+                var parseResult = parser.ParseInfo(htmlEntity);
+                _unitOfWork.InsertJobInfo(parseResult);
+            }
+            
 
         }
     }

@@ -17,5 +17,7 @@ namespace WebScraper.Infrastructure.Db
         void InsertJobUrl(JobUrlDto jobUrl);
 
         void InsertJobHtml(JobHtmlDto jobHtml);
+
+        void InsertJobInfo(ParseResult jobInfo);
     }
 }

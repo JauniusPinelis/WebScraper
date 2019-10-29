@@ -5,9 +5,9 @@ using WebScraper.Core.Dtos;
 
 namespace WebScraper.Core.Parsers
 {
-    public class CvOnlineParser
+    public class CvOnlineParser : IParser
     {
-       public ParseResult ParseInfo(string htmlString)
+        public ParseResult ParseInfo(JobHtmlDto jobHtml)
         {
             throw new NotImplementedException();
         }

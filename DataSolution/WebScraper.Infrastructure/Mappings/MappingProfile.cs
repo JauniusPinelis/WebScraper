@@ -13,6 +13,7 @@ namespace WebScraper.Infrastructure.Mappings
         {
             CreateMap<JobUrlDto, JobUrl>().ReverseMap();
             CreateMap<JobHtmlDto, JobHtml>().ReverseMap();
+            CreateMap<ParseResult, JobInfo>().ReverseMap();
         }
     }
 }
