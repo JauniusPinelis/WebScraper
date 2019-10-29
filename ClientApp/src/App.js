@@ -9,7 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-     htmlData: []
+     data: []
     };
   }
   render(){
@@ -21,7 +21,7 @@ class App extends Component {
             Testing for now
           </p>
           <div>
-          <DataTable />
+          <DataTable data={this.state.data} />
         </div>
         </header>
         
@@ -37,7 +37,7 @@ class App extends Component {
       .get("/api/data/")
       .then(res => {
         this.setState({
-          htmlData: res.data
+          data: res.data
         });
       })
       .catch(error => {});

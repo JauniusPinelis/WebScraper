@@ -3,6 +3,7 @@ import MaterialTable from "material-table";
 
 export default class DataTable extends Component {
   render() {
+    let data = this.props.data;
     return (
       <div style={{ maxWidth: "100%" }}>
         <MaterialTable

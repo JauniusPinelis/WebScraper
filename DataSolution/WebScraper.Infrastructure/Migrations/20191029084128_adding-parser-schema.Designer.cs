@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Infrastructure.Migrations
 {
     [DbContext(typeof(JobDbContext))]
-    partial class ScraperDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191029084128_adding-parser-schema")]
+    partial class addingparserschema
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,7 +49,7 @@ namespace WebScraper.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tblData_JobInfo");
+                    b.ToTable("JobInfo");
                 });
 
             modelBuilder.Entity("WebScraper.Infrastructure.Entities.JobUrl", b =>

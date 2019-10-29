@@ -6,21 +6,13 @@ using System.Text;
 
 namespace WebScraper.Infrastructure.Entities
 {
-    [Table("tblData_JobUrl")]
-    public class JobUrl
+    [Table("tblData_JobInfo")]
+    public class JobInfo
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
-        public string Url { get; set; }
-
-        [ForeignKey("Category")]
-        public int CategoryId { get; set; }
-        public JobUrlCategory Category { get; set; }
-
-        [ForeignKey("Info")]
-        public int InfoId { get; set; }
-        public JobInfo Info { get; set; }
-
+        public string Title { get; set; }
+        public string Salary { get; set; }
     }
 }
