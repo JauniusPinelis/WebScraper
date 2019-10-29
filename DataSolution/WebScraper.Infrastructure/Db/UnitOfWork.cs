@@ -12,10 +12,10 @@ namespace WebScraper.Infrastructure.Db
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private IGenericRepository<JobUrl> _jobUrlRepository = null;
-        private IGenericRepository<JobHtml> _jobHtmlRepository = null;
-        private IGenericRepository<JobInfo> _jobInfoRepository = null;
-        private IMapper _mapper = null;
+        private readonly IGenericRepository<JobUrl> _jobUrlRepository = null;
+        private readonly IGenericRepository<JobHtml> _jobHtmlRepository = null;
+        private readonly IGenericRepository<JobInfo> _jobInfoRepository = null;
+        private readonly IMapper _mapper = null;
 
         public UnitOfWork(
             IGenericRepository<JobUrl> jobUrlRepository, 
@@ -66,9 +66,11 @@ namespace WebScraper.Infrastructure.Db
             }
         }
 
-        public void InsertJobInfo (ParseResult jobInfo)
+        public void InsertOrUpdateInfo (ParseResult jobInfo)
         {
             var htmlEntity = _mapper.Map<JobInfo>(jobInfo);
+
+            var savedEntity = _jobUrlRepository
 
             _jobInfoRepository.Insert(htmlEntity);
             _jobInfoRepository.Save();

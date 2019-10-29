@@ -9,8 +9,8 @@ namespace WebScraper.Infrastructure.Services
 {
     public class ScrapeService : IScrapeService
     {
-        private IUnitOfWork _unitOfWork;
-        private IScraperFactory _scraperFactory;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IScraperFactory _scraperFactory;
 
         public ScrapeService(IUnitOfWork unitOfWork, IScraperFactory factory)
         {
