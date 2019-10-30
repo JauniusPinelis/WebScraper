@@ -20,7 +20,7 @@ namespace WebScraper.Core.Filters
             };
         }
 
-        public void Apply(ref List<JobUrlDto> urlDtos)
+        public void Apply(ref List<JobUrl> urlDtos)
         {
             urlDtos = urlDtos.ToList();
             var urls = urlDtos.Select(u => u.Url);

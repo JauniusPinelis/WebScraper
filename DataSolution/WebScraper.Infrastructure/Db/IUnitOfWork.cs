@@ -1,23 +1,22 @@
 ﻿using System.Collections.Generic;
 using WebScraper.Core.Dtos;
-using WebScraper.Infrastructure.Entities;
 
 namespace WebScraper.Infrastructure.Db
 {
     public interface IUnitOfWork
     {
-        IEnumerable<JobUrlDto> GetJobUrls();
+        IEnumerable<JobUrl> GetJobUrls();
 
-        IEnumerable<JobHtmlDto> GetJobHtmls();
+        IEnumerable<JobInfo> GetJobInfos();
 
-        void SaveJobUrls(List<JobUrlDto> jobUrls);
+        void SaveJobUrls(List<JobUrl> jobUrls);
 
-        void SaveJobHtmls(List<JobHtmlDto> jobHtmls);
+        void SaveJobHtmls(List<JobInfo> jobHtmls);
 
-        void InsertJobUrl(JobUrlDto jobUrl);
+        void InsertJobUrl(JobUrl jobUrl);
 
-        void InsertJobHtml(JobHtmlDto jobHtml);
+        void InsertJobHtml(JobInfo jobHtml);
 
-        void InsertJobInfo(ParseResult jobInfo);
+        void InsertOrUpdateInfo(JobInfo jobInfo);
     }
 }

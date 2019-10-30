@@ -4,6 +4,6 @@ namespace WebScraper.Core.Parsers
 {
     public interface IParser
     {
-        ParseResult ParseInfo(JobHtmlDto jobHtml);
+        JobInfo ParseInfo(JobInfo jobHtml);
     }
 }

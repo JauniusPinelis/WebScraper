@@ -8,8 +8,8 @@ namespace WebScraper.Core
 {
     public interface IScraper
     {
-        IEnumerable<JobUrlDto> ScrapePageUrls();
+        IEnumerable<JobUrl> ScrapePageUrls();
 
-        IEnumerable<JobHtmlDto> ScrapeJobHtmls(IEnumerable<JobUrlDto> urls);
+        IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urls);
     }
 }

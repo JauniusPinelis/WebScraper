@@ -12,10 +12,10 @@ namespace WebScraper.Core
 {
     public class CvOnlineScraper : IScraper
     {
-        public IEnumerable<JobHtmlDto> ScrapeJobHtmls(IEnumerable<JobUrlDto> urlDtos)
+        public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
         {
             var urls = urlDtos.ToList();
-            var results = new List<JobHtmlDto>();
+            var results = new List<JobInfo>();
             var webClient = new HttpClient();
 
             /* As testing lets do only 20 page htmls for now - dont wanna 
@@ -29,9 +29,9 @@ namespace WebScraper.Core
                 Thread.Sleep(delay);
                 var html = ScrapeJobPortalInfo(urls[i].Url, webClient);
 
-                results.Add(new JobHtmlDto()
+                results.Add(new JobInfo()
                 {
-                    JobUrlId = urls[i].Id,
+                    //JobUrl = urls[i].Id,
                     HtmlCode = html
                 });
 
@@ -41,13 +41,13 @@ namespace WebScraper.Core
             return results;
         }
 
-        public IEnumerable<JobUrlDto> ScrapePageUrls()
+        public IEnumerable<JobUrl> ScrapePageUrls()
         {
             var baseUrl = "https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=";
             var webClient = new HttpClient();
             int pageCounter = 0;
             var continueParsing = true;
-            var results = new List<JobUrlDto>();
+            var results = new List<JobUrl>();
 
             while (continueParsing && pageCounter < 3)
             {
@@ -73,7 +73,7 @@ namespace WebScraper.Core
 
                 foreach (var resultNode in resultNodes)
                 {
-                    results.Add(new JobUrlDto(){
+                    results.Add(new JobUrl(){
                         Url = resultNode.GetAttributeValue("href", string.Empty),
                         CategoryId = 1
                     }

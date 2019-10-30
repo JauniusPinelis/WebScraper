@@ -37,7 +37,7 @@ namespace WebScraper.Infrastructure.Services
             }
 
             // Get Htmls
-            var existingHtmls = _unitOfWork.GetJobHtmls();
+            var existingHtmls = _unitOfWork.GetJobInfos();
             if (!existingHtmls.Any())
             {
                 var htmlResults = scraper.ScrapeJobHtmls(_unitOfWork.GetJobUrls()).ToList();
@@ -46,13 +46,13 @@ namespace WebScraper.Infrastructure.Services
             }
 
             // Parse Infos from Html
-            var hmtlEntities = _unitOfWork.GetJobHtmls();
+            var hmtlEntities = _unitOfWork.GetJobInfos();
             var parser = _scraperFactory.BuildParser("cvonline");
 
             foreach (var htmlEntity in hmtlEntities)
             {
                 var parseResult = parser.ParseInfo(htmlEntity);
-                _unitOfWork.InsertJobInfo(parseResult);
+                _unitOfWork.InsertOrUpdateInfo(parseResult);
             }
             
 

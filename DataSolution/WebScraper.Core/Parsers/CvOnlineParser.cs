@@ -7,7 +7,7 @@ namespace WebScraper.Core.Parsers
 {
     public class CvOnlineParser : IParser
     {
-        public ParseResult ParseInfo(JobHtmlDto jobHtml)
+        public JobInfo ParseInfo(JobInfo jobHtml)
         {
             throw new NotImplementedException();
         }

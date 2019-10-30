@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using WebScraper.Core.Dtos;
 using WebScraper.Infrastructure.Db;
-using WebScraper.Infrastructure.Entities;
 using WebScraper.Infrastructure.Mappings;
 
 namespace WebScraper.Infrastructure.Db
@@ -13,36 +12,33 @@ namespace WebScraper.Infrastructure.Db
     public class UnitOfWork : IUnitOfWork
     {
         private readonly IGenericRepository<JobUrl> _jobUrlRepository = null;
-        private readonly IGenericRepository<JobHtml> _jobHtmlRepository = null;
         private readonly IGenericRepository<JobInfo> _jobInfoRepository = null;
         private readonly IMapper _mapper = null;
 
         public UnitOfWork(
             IGenericRepository<JobUrl> jobUrlRepository, 
-            IGenericRepository<JobHtml> jobHtmlRepository,
             IGenericRepository<JobInfo> jobInfoRepository,
             IMapper mapper)
         {
             _jobUrlRepository = jobUrlRepository;
-            _jobHtmlRepository = jobHtmlRepository;
             _jobInfoRepository = jobInfoRepository;
             _mapper = mapper;
         }
 
-        public void SaveJobHtmls(List<JobHtmlDto> jobHtmls)
+        public void SaveJobHtmls(List<JobInfo> jobHtmls)
         {
             jobHtmls.ForEach(j => InsertJobHtml(j));
         }
 
-        public void SaveJobUrls(List<JobUrlDto> jobUrls)
+        public void SaveJobUrls(List<JobUrl> jobUrls)
         {
             jobUrls.ForEach(j => InsertJobUrl(j));
         }
 
 
-        public void InsertJobUrl(JobUrlDto jobUrl)
+        public void InsertJobUrl(JobUrl jobUrl)
         {
-            var entity = _mapper.Map<Entities.JobUrl>(jobUrl);
+            var entity = _mapper.Map<JobUrl>(jobUrl);
             var entities = _jobUrlRepository.GetAll().ToList();
             var urls = entities.Select(e => e.Url);
 
@@ -54,23 +50,23 @@ namespace WebScraper.Infrastructure.Db
         }
 
       
-        public void InsertJobHtml(JobHtmlDto jobHtml)
+        public void InsertJobHtml(JobInfo jobHtml)
         {
-            var htmlEntity = _mapper.Map<JobHtml>(jobHtml);
+            /*var htmlEntity = _mapper.Map<JobInfo>(jobHtml);
             var existingHtmls = _jobHtmlRepository.GetAll().Select(j => j.HtmlCode);
 
             if (!existingHtmls.Contains(htmlEntity.HtmlCode))
             {
                 _jobHtmlRepository.Insert(htmlEntity);
                 _jobHtmlRepository.Save();
-            }
+            }*/
         }
 
-        public void InsertOrUpdateInfo (ParseResult jobInfo)
+        public void InsertOrUpdateInfo (JobInfo jobInfo)
         {
             var htmlEntity = _mapper.Map<JobInfo>(jobInfo);
 
-            var savedEntity = _jobUrlRepository
+            
 
             _jobInfoRepository.Insert(htmlEntity);
             _jobInfoRepository.Save();
@@ -80,15 +76,15 @@ namespace WebScraper.Infrastructure.Db
 
         }
 
-        public IEnumerable<JobUrlDto> GetJobUrls()
+        public IEnumerable<JobUrl> GetJobUrls()
         {
             var jobUrls = _jobUrlRepository.GetAll().ToList();
-            return _mapper.Map<List<JobUrlDto>>(jobUrls);
+            return _mapper.Map<List<JobUrl>>(jobUrls);
         }
 
-        public IEnumerable<JobHtmlDto> GetJobHtmls()
+        public IEnumerable<JobInfo> GetJobInfos()
         {
-            return _mapper.Map<List<JobHtmlDto>>(_jobHtmlRepository.GetAll());
+            return _mapper.Map<List<JobInfo>>(_jobInfoRepository.GetAll());
         }
     }
 }

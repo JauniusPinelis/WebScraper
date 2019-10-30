@@ -2,17 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using WebScraper.Infrastructure.Entities;
+using WebScraper.Core.Dtos;
 
 namespace WebScraper.Infrastructure.Db
 {
-    public class JobDbContext : DbContext
+    public class JobDbContext : DbContext, IJobDbContext
     {
         private readonly string _connString = "Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True";
 
-        public DbSet<JobUrl> PortalPages { get; set; }
-        public DbSet<JobUrlCategory> PortalCategories { get; set; }
-        public DbSet<JobHtml> JobHtmls { get; set; }
+        public DbSet<JobUrl> JobUrls { get; set; }
+        public DbSet<JobInfo> JobInfos { get; set; }
+       
 
         public JobDbContext() : base()
         {
@@ -30,11 +30,7 @@ namespace WebScraper.Infrastructure.Db
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<JobUrlCategory>().HasData(new JobUrlCategory()
-            {
-                Id = 1,
-                Name = "CvOnline.lt"
-            });
+            //modelBuilder.ApplyConfigurationsFromAssembly(typeof(JobDbContext).Assembly);
         }
     }
 }

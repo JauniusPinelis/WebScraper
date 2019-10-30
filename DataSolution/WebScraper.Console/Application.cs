@@ -6,7 +6,6 @@ using WebScraper.Core.Dtos;
 using WebScraper.Core.Factories;
 using WebScraper.Core.Filters;
 using WebScraper.Infrastructure.Db;
-using WebScraper.Infrastructure.Entities;
 using WebScraper.Infrastructure.Services;
 
 namespace WebScraper.Console

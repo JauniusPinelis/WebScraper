@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core.Dtos;
-using WebScraper.Infrastructure.Entities;
 
 namespace WebScraper.Infrastructure.Mappings
 {
@@ -11,9 +10,7 @@ namespace WebScraper.Infrastructure.Mappings
     {
         public MappingProfile()
         {
-            CreateMap<JobUrlDto, JobUrl>().ReverseMap();
-            CreateMap<JobHtmlDto, JobHtml>().ReverseMap();
-            CreateMap<ParseResult, JobInfo>().ReverseMap();
+          
         }
     }
 }
