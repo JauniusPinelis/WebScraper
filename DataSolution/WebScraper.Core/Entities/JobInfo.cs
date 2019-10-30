@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebScraper.Core.Dtos
+namespace WebScraper.Core.Entities
 {
     public class JobInfo
     {

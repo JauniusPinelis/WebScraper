@@ -8,6 +8,7 @@ using System.IO;
 using WebScraper.Core;
 using WebScraper.Core.Filters;
 using System;
+using WebScraper.Infrastructure;
 
 namespace WebScraper.Console
 {
@@ -42,6 +43,7 @@ namespace WebScraper.Console
             collection.ConfigureDbContext(configuration["DefaultConnection"]);
             collection.ConfigureMapper();
             collection.RegisterServices();
+            collection.AddPersistence(configuration);
 
             _serviceProvider = collection.BuildServiceProvider();
 
