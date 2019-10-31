@@ -22,7 +22,8 @@ namespace WebScraper.Infrastructure.Configurations
             builder.HasOne(u => u.JobUrl)
                 .WithOne(i => i.JobInfo)
                 .HasForeignKey<JobInfo>(u => u.JobUrlId)
-                .HasConstraintName("FK_tblData_JobInfo_tblDataUrl");
+                .HasConstraintName("FK_tblData_JobInfo_tblDataUrl")
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

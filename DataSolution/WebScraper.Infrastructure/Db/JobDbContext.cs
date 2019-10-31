@@ -16,7 +16,7 @@ namespace WebScraper.Infrastructure.Db
 
         public JobDbContext() : base()
         {
-
+            
         }
 
         public JobDbContext(DbContextOptions<JobDbContext> options)
@@ -30,7 +30,8 @@ namespace WebScraper.Infrastructure.Db
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.ApplyConfigurationsFromAssembly(typeof(JobDbContext).Assembly);
+            
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(JobDbContext).Assembly);
         }
     }
 }
