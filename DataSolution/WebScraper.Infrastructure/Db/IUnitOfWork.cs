@@ -18,5 +18,6 @@ namespace WebScraper.Infrastructure.Db
         void InsertJobHtml(JobInfo jobHtml);
 
         void InsertOrUpdateInfo(JobInfo jobInfo);
+
     }
 }

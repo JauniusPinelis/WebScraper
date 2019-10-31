@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using WebScraper.Core.Entities;
 
 namespace WebScraper.Infrastructure.Db
@@ -32,6 +34,26 @@ namespace WebScraper.Infrastructure.Db
         {
             
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(JobDbContext).Assembly);
+        }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+        {
+            /*foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        entry.Entity.CreatedBy = _currentUserService.UserId;
+                        entry.Entity.Created = _dateTime.Now;
+                        break;
+                    case EntityState.Modified:
+                        entry.Entity.LastModifiedBy = _currentUserService.UserId;
+                        entry.Entity.LastModified = _dateTime.Now;
+                        break;
+                }
+            }*/
+
+            return base.SaveChangesAsync(cancellationToken);
         }
     }
 }
