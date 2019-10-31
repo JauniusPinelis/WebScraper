@@ -13,9 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebScraper", "WebScraper", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{1A05689F-47D6-4DAA-BA95-2F0D00DE2387}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Api", "WebApi\WebApi.Api\WebApi.Api.csproj", "{91A9959F-7948-4295-95A3-27CA4CE54E9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Api", "WebApi\WebApi.Api\WebApi.Api.csproj", "{91A9959F-7948-4295-95A3-27CA4CE54E9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Infrastructure", "WebApi\WebApi.Infrastructure\WebApi.Infrastructure.csproj", "{D391AF60-80FE-4DC5-B364-3C20F71ECB15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Infrastructure", "WebApi\WebApi.Infrastructure\WebApi.Infrastructure.csproj", "{D391AF60-80FE-4DC5-B364-3C20F71ECB15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScraper.Application", "DataSolution\WebScraper.Application\WebScraper.Application.csproj", "{C2AEA3ED-77C9-4A10-A395-D0DCDA2BD75C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{D391AF60-80FE-4DC5-B364-3C20F71ECB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D391AF60-80FE-4DC5-B364-3C20F71ECB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D391AF60-80FE-4DC5-B364-3C20F71ECB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2AEA3ED-77C9-4A10-A395-D0DCDA2BD75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2AEA3ED-77C9-4A10-A395-D0DCDA2BD75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2AEA3ED-77C9-4A10-A395-D0DCDA2BD75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2AEA3ED-77C9-4A10-A395-D0DCDA2BD75C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{B83E6232-ADA8-489C-A7C7-6C49B610E190} = {55704848-E010-4EA0-B2F0-DFDB10738569}
 		{91A9959F-7948-4295-95A3-27CA4CE54E9D} = {1A05689F-47D6-4DAA-BA95-2F0D00DE2387}
 		{D391AF60-80FE-4DC5-B364-3C20F71ECB15} = {1A05689F-47D6-4DAA-BA95-2F0D00DE2387}
+		{C2AEA3ED-77C9-4A10-A395-D0DCDA2BD75C} = {55704848-E010-4EA0-B2F0-DFDB10738569}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F26B9C4-6053-42B1-9C6C-65B0EF147B46}
