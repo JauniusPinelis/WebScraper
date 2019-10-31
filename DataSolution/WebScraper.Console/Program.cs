@@ -9,6 +9,9 @@ using WebScraper.Core;
 using WebScraper.Core.Filters;
 using System;
 using WebScraper.Infrastructure;
+using WebScraper.Application;
+using MediatR;
+using WebScraper.Application.Services;
 
 namespace WebScraper.Console
 {
@@ -22,13 +25,11 @@ namespace WebScraper.Console
         {
             RegisterServices();
 
-            var scrapeService = _serviceProvider.GetService<IScrapeService>();
+            var scrapeService = _serviceProvider.GetService<IScrapingService>();
             var app = new Application(scrapeService);
             app.Run();
            
-
             DisposeServices();
-
         }
 
         private static void RegisterServices()
@@ -44,6 +45,8 @@ namespace WebScraper.Console
             collection.ConfigureMapper();
             collection.RegisterServices();
             collection.AddPersistence(configuration);
+            collection.AddApplication(configuration);
+           
 
             _serviceProvider = collection.BuildServiceProvider();
 

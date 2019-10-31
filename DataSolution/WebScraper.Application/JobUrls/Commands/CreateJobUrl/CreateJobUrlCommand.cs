@@ -38,8 +38,6 @@ namespace WebScraper.Application.JobUrls.Commands.CreateJobUrl
 
                 await _context.SaveChangesAsync(cancellationToken);
 
-                //await _mediator.Publish(new CustomerCreated { CustomerId = entity.CustomerId }, cancellationToken);
-
                 return Unit.Value;
             }
         }

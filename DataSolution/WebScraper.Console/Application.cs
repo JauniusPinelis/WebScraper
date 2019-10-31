@@ -6,15 +6,15 @@ using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
 using WebScraper.Core.Filters;
 using WebScraper.Infrastructure.Db;
-using WebScraper.Infrastructure.Services;
+using WebScraper.Application.Services;
 
 namespace WebScraper.Console
 {
     public class Application
     {
-        private IScrapeService _scrapeService;
+        private IScrapingService _scrapeService;
 
-        public Application(IScrapeService scrapeService)
+        public Application(IScrapingService scrapeService)
         {
             _scrapeService = scrapeService;
         }

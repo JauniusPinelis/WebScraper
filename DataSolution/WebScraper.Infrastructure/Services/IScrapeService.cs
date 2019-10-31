@@ -2,6 +2,6 @@
 {
     public interface IScrapeService
     {
-        void ImportInitialCvOnlineData();
+        
     }
 }
