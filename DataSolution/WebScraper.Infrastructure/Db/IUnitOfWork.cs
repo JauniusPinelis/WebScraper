@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using WebScraper.Core.Dtos;
+using WebScraper.Core.Entities;
 
 namespace WebScraper.Infrastructure.Db
 {

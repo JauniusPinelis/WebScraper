@@ -1,4 +1,4 @@
-﻿using WebScraper.Core.Dtos;
+﻿using WebScraper.Core.Entities;
 
 namespace WebScraper.Core.Parsers
 {

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core.Entities;
+using System.Linq;
 
 namespace WebScraper.Infrastructure.Configurations
 {
@@ -17,6 +18,11 @@ namespace WebScraper.Infrastructure.Configurations
              .ValueGeneratedOnAdd();
 
             builder.Property(e => e.HtmlCode).HasMaxLength(100000);
+
+            builder.HasOne(u => u.JobUrl)
+                .WithOne(i => i.JobInfo)
+                .HasForeignKey<JobInfo>(u => u.JobUrlId)
+                .HasConstraintName("FK_tblData_JobInfo_tblDataUrl");
         }
     }
 }

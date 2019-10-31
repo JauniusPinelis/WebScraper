@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using WebScraper.Core.Dtos;
+using WebScraper.Core.Entities;
 
 namespace WebScraper.Core.Filters
 {

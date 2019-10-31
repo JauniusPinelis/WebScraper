@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using WebScraper.Core.Dtos;
+using WebScraper.Core.Entities;
 
 namespace WebScraper.Core.Parsers
 {

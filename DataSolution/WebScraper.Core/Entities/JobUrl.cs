@@ -8,5 +8,8 @@ namespace WebScraper.Core.Entities
     {
         public int Id { get; set; }
         public string Url { get; set; }
+
+        public JobInfo JobInfo { get; set; }
+        public int? JobInfoId { get; set; }
     }
 }

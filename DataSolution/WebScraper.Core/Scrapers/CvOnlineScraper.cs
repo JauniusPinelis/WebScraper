@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
-using WebScraper.Core.Dtos;
+using WebScraper.Core.Entities;
 using WebScraper.Core.Filters;
 
 namespace WebScraper.Core
@@ -74,8 +74,7 @@ namespace WebScraper.Core
                 foreach (var resultNode in resultNodes)
                 {
                     results.Add(new JobUrl(){
-                        Url = resultNode.GetAttributeValue("href", string.Empty),
-                        CategoryId = 1
+                        Url = resultNode.GetAttributeValue("href", string.Empty)
                     }
                     );
                 }
