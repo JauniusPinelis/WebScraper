@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="JobInfos\" />
+    <Folder Include="JobInfos\Commands\UpsertJobInfo\" />
+    <Folder Include="JobInfos\Queries\GetJobInfos\" />
   </ItemGroup>
 
   <ItemGroup>

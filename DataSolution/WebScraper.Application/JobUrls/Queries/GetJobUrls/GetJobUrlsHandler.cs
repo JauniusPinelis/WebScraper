@@ -9,27 +9,27 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using WebScraper.Infrastructure.Db;
 
-namespace WebScraper.Application.JobUrls.GetJobsList
+namespace WebScraper.Application.JobUrls.GetJobsUrls
 {
-    public class GetJobsListHandler : IRequestHandler<GetJobsListQuery, JobsListVm>
+    public class GetJobsHandler : IRequestHandler<GetJobUrlsQuery, JobsVm>
     {
 
         private readonly IJobDbContext _context;
         private readonly IMapper _mapper;
 
-        public GetJobsListHandler(IJobDbContext context, IMapper mapper)
+        public GetJobsHandler(IJobDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
 
-        public async Task<JobsListVm> Handle(GetJobsListQuery request, CancellationToken cancellationToken)
+        public async Task<JobsVm> Handle(GetJobUrlsQuery request, CancellationToken cancellationToken)
         {
             var jobUrls = await _context.JobUrls
-                .ProjectTo<JobUrlLookupDto>(_mapper.ConfigurationProvider)
+                .ProjectTo<JobUrlLsookupDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
 
-            var vm = new JobsListVm
+            var vm = new JobsVm
             {
                 JobUrls = jobUrls
             };
