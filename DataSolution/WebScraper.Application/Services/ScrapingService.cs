@@ -33,8 +33,7 @@ namespace WebScraper.Application.Services
 
             var getJobListQuery = new GetJobsListQuery();
 
-            var result = await _mediator.Send(getJobListQuery);
-            
+            var result = _mediator.Send(new GetJobsListQuery()).Result;
 
             var test = "test";
         }
