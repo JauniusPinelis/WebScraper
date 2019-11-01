@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using WebScraper.Core.Entities;
 using WebScraper.Infrastructure.Db;
-using WebScraper.Infrastructure.Mappings;
 
 namespace WebScraper.Infrastructure.Db
 {

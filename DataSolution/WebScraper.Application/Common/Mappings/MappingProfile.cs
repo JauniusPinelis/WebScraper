@@ -9,6 +9,11 @@ namespace WebScraper.Application.Common.Mappings
 {
     public class MappingProfile : Profile
     {
+        public MappingProfile()
+        {
+            ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
+        }
+
         public void ApplyMappingsFromAssembly(Assembly assembly)
         {
             var types = assembly.GetExportedTypes()

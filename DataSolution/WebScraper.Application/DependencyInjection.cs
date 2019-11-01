@@ -1,8 +1,10 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Reflection;
+using WebScraper.Application.Common.Mappings;
 using WebScraper.Application.Services;
 
 namespace WebScraper.Application
@@ -18,5 +20,16 @@ namespace WebScraper.Application
 
             return services;
         }
+        public static void ConfigureMapper(this IServiceCollection services)
+        {
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+        }
+
     }
 }
