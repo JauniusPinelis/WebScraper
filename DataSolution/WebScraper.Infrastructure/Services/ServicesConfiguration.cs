@@ -6,6 +6,8 @@ using WebScraper.Infrastructure.Mappings;
 using WebScraper.Core.Factories;
 using System.Reflection;
 
+
+
 namespace WebScraper.Infrastructure.Services
 {
     public static class ServicesConfiguration
@@ -31,7 +33,6 @@ namespace WebScraper.Infrastructure.Services
 
         public static void RegisterServices(this IServiceCollection services)
         {
-            
             services.AddSingleton(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IScraperFactory, ScraperFactory>();

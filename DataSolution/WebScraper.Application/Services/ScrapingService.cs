@@ -24,14 +24,17 @@ namespace WebScraper.Application.Services
             _mediator = mediator;
         }
 
-        public void ImportInitialCvOnlineData()
+        public async void ImportInitialCvOnlineData()
         {
             var scraper = _scraperFactory.BuildScraper("CvOnline");
 
             // Get Urls
 
 
-            var existingUrls2 = _mediator.Send(new GetJobsListQuery()).Result;
+            var getJobListQuery = new GetJobsListQuery();
+
+            var result = await _mediator.Send(getJobListQuery);
+            
 
             var test = "test";
         }

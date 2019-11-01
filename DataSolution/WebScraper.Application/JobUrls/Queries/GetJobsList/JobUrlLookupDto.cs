@@ -7,7 +7,7 @@ using WebScraper.Core.Entities;
 
 namespace WebScraper.Application.JobUrls.GetJobsList
 {
-    public class JobUrlLookupDto : Imap<JobUrl>
+    public class JobUrlLookupDto : ImapFrom<JobUrl>
     {
         public int Id { get; set; }
 
@@ -15,7 +15,7 @@ namespace WebScraper.Application.JobUrls.GetJobsList
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<JobUrlLookupDto, JobUrl>()
+            profile.CreateMap<JobUrl, JobUrlLookupDto>()
                 .ForMember(d => d.Id, opt => opt.MapFrom(s => s.Id))
                 .ForMember(d => d.Url, opt => opt.MapFrom(s => s.Url));
         }

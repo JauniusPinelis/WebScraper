@@ -14,8 +14,14 @@ namespace WebScraper.Application.JobUrls.GetJobsList
     public class GetJobsListHandler : IRequestHandler<GetJobsListQuery, JobsListVm>
     {
 
-        private readonly JobDbContext _context;
+        private readonly IJobDbContext _context;
         private readonly IMapper _mapper;
+
+        public GetJobsListHandler(IJobDbContext context, IMapper mapper)
+        {
+            _context = context;
+            _mapper = mapper;
+        }
 
         public async Task<JobsListVm> Handle(GetJobsListQuery request, CancellationToken cancellationToken)
         {
