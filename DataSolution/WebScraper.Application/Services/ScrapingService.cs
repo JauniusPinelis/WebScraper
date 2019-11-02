@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using WebScraper.Application.JobUrls.Commands.CreateJobUrl;
-using WebScraper.Application.JobUrls.GetJobsList;
+using WebScraper.Application.JobInfos.Queries.GetJobInfos;
+using WebScraper.Application.JobUrls.GetJobsUrls;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
 
@@ -31,9 +31,11 @@ namespace WebScraper.Application.Services
             // Get Urls
 
 
-            var getJobListQuery = new GetJobsListQuery();
+            var getJobListQuery = new GetJobUrlsQuery();
 
-            var result = _mediator.Send(new GetJobsListQuery()).Result;
+            var result = _mediator.Send(new GetJobUrlsQuery()).Result;
+
+            var jobInfos = _mediator.Send(new GetJobInfosQuery()).Result;
 
             var test = "test";
         }

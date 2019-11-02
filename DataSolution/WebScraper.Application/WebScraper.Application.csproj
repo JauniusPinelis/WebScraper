@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="JobInfos\Commands\UpsertJobInfo\" />
-    <Folder Include="JobInfos\Queries\GetJobInfos\" />
   </ItemGroup>
 
   <ItemGroup>
