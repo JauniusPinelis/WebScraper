@@ -13,7 +13,7 @@ namespace WebScraper.Application.JobUrls.GetJobsUrls
 
         public string Url { get; set; }
 
-        public override void Mapping(Profile profile)
+        public void Mapping(Profile profile)
         {
             profile.CreateMap<JobUrl, JobUrlLsookupDto>()
                 .ForMember(d => d.Id, opt => opt.MapFrom(s => s.Id))

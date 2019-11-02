@@ -5,8 +5,8 @@ using AutoMapper;
 
 namespace WebScraper.Application.Common.Mappings
 {
-    public class ImapFrom<T>
+    public interface ImapFrom<T>
     {
-        public virtual void Mapping(Profile profile) => profile.CreateMap(typeof(T), GetType());
+        public void Mapping(Profile profile) => profile.CreateMap(typeof(T), GetType());
     }
 }
