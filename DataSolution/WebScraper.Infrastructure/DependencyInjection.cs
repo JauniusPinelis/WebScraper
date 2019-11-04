@@ -30,8 +30,6 @@ namespace WebScraper.Infrastructure
 
         public static void RegisterServices(this IServiceCollection services)
         {
-            services.AddSingleton(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IScraperFactory, ScraperFactory>();
         }
     }
