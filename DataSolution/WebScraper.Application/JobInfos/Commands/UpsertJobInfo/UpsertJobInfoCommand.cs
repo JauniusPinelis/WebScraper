@@ -30,8 +30,9 @@ namespace WebScraper.Application.JobInfos.Commands.UpsertJobInfo
             public async Task<int> Handle(UpsertJobInfoCommand request, CancellationToken cancellationToken)
             {
                 JobInfo entity;
+                var exists = _context.JobInfos.Any(j => j.HtmlCode == request.HtmlCode);
 
-               if (request.Id.HasValue)
+               if (request.Id.HasValue && exists)
                 {
                     entity = await _context.JobInfos.FindAsync(request.Id.Value);
                 }
