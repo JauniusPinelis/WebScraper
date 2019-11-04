@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using WebScraper.Infrastructure.Db;
 using Microsoft.EntityFrameworkCore;
-using WebScraper.Infrastructure.Services;
 using System.Configuration;
 using Microsoft.Extensions.Configuration;
 using System.IO;
@@ -41,16 +40,11 @@ namespace WebScraper.Console
             var configuration = builder.Build();
 
             var collection = new ServiceCollection();
-            collection.ConfigureDbContext(configuration["DefaultConnection"]);
             collection.ConfigureMapper();
-            collection.RegisterServices();
-            collection.AddPersistence(configuration);
             collection.AddApplication(configuration);
-           
+            collection.AddPersistence(configuration, configuration["DefaultConnection"]);
 
             _serviceProvider = collection.BuildServiceProvider();
-
-           
         }
 
         private static void DisposeServices()

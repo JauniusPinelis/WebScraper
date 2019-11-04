@@ -11,26 +11,15 @@ namespace WebScraper.Infrastructure
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration,
+             string connectionString)
         {
             services.AddDbContext<JobDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("NorthwindDatabase")));
+                options.UseSqlServer(connectionString));
 
             services.AddScoped<IJobDbContext>(provider => provider.GetService<JobDbContext>());
 
             return services;
-        }
-
-        public static void ConfigureDbContext(this IServiceCollection services, string connectionString)
-        {
-
-            services.AddDbContext<JobDbContext>(o =>
-                o.UseSqlServer(connectionString));
-        }
-
-        public static void RegisterServices(this IServiceCollection services)
-        {
-            services.AddScoped<IScraperFactory, ScraperFactory>();
         }
     }
 }

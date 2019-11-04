@@ -6,6 +6,7 @@ using System;
 using System.Reflection;
 using WebScraper.Application.Common.Mappings;
 using WebScraper.Application.Services;
+using WebScraper.Core.Factories;
 
 namespace WebScraper.Application
 {
@@ -16,6 +17,7 @@ namespace WebScraper.Application
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddScoped<IScrapingService, ScrapingService>();
+            services.AddScoped<IScraperFactory, ScraperFactory>();
 
 
             return services;
