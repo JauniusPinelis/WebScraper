@@ -17,7 +17,7 @@ namespace WebScraper.Application.JobInfos.Queries.GetJobInfos
         {
             profile.CreateMap<JobInfo, JobInfoDto>()
                 .ForMember(d => d.Id, opt => opt.MapFrom(s => s.Id))
-                .ForMember(d => d.HtmlCode, opt => opt.MapFrom(s => s.HtmlCode));
+                .ForMember(d => d.HtmlCode, opt => opt.MapFrom(s => s.HtmlCode)).ReverseMap();
         }
     }
 }

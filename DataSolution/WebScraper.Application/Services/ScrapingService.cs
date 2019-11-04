@@ -1,11 +1,14 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using WebScraper.Application.JobInfos.Commands.UpsertJobInfo;
 using WebScraper.Application.JobInfos.Queries.GetJobInfos;
 using WebScraper.Application.JobUrls.Commands.CreateJobUrl;
 using WebScraper.Application.JobUrls.GetJobsUrls;
+using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
 
@@ -16,20 +19,24 @@ namespace WebScraper.Application.Services
         private readonly IJobDbContext _context;
         private readonly IScraperFactory _scraperFactory;
         private IMediator _mediator;
+        private readonly IMapper _mapper;
 
 
 
-        public ScrapingService(IJobDbContext context, IScraperFactory factory, IMediator mediator)
+        public ScrapingService(IJobDbContext context, IScraperFactory factory, 
+            IMediator mediator, IMapper mapper)
         {
             _context = context;
             _scraperFactory = factory;
             _mediator = mediator;
+            _mapper = mapper;
         }
 
         public async void ImportInitialCvOnlineData()
         {
             var scraper = _scraperFactory.BuildScraper("CvOnline");
 
+            // Get Urls
             var jobUrlsVm = _mediator.Send(new GetJobUrlsQuery()).Result;
             var jobUrls = jobUrlsVm.JobUrls;
 
@@ -51,17 +58,39 @@ namespace WebScraper.Application.Services
                 }
             }
 
+            // Get Htmls
+            var existingHtmlsVm = _mediator.Send(new GetJobInfosQuery()).Result;
+            var existingHtmls = existingHtmlsVm.JobInfos;
 
-            var scraper = _scraperFactory.BuildScraper("CvOnline");
+            if (!existingHtmls.Any())
+            {
+                var htmlResults = scraper.ScrapeJobHtmls(_context.JobUrls.ToList());
 
-            // Get Urls
+                foreach(var html in htmlResults)
+                {
+                    await _mediator.Send(new UpsertJobInfoCommand()
+                    {
+                        Id = html.Id,
+                        HtmlCode = html.HtmlCode
+                    });
+                }
+            }
 
+            // Parse Infos from Html
+            var hmtlEntitiesVm = _mediator.Send(new GetJobInfosQuery()).Result;
+            var htmlEntities = hmtlEntitiesVm.JobInfos;
 
-            var getJobListQuery = new GetJobUrlsQuery();
+            var mappedHtmlEntities = _mapper.Map<List<JobInfo>>(htmlEntities);
 
-            var result = _mediator.Send(new GetJobUrlsQuery()).Result;
+            var parser = _scraperFactory.BuildParser("cvonline");
 
-            var jobInfos = _mediator.Send(new GetJobInfosQuery()).Result;
+            foreach (var htmlEntity in mappedHtmlEntities)
+            {
+                var parseResult = parser.ParseInfo(htmlEntity);
+
+                //_mediator.Send(new UpsertJobInfoCommand(parseResult));
+            }
+
 
             var test = "test";
         }
