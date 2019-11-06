@@ -14,5 +14,6 @@ namespace WebScraper.Infrastructure.Db
         DbSet<JobInfo> JobInfos { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+        int SaveChanges();
     }
 }

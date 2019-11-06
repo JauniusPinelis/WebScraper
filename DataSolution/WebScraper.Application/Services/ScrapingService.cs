@@ -19,7 +19,6 @@ namespace WebScraper.Application.Services
     {
         private readonly IJobDbContext _context;
         private readonly IScraperFactory _scraperFactory;
-        private IMediator _mediator;
         private readonly IMapper _mapper;
 
 
@@ -29,8 +28,50 @@ namespace WebScraper.Application.Services
         {
             _context = context;
             _scraperFactory = factory;
-            _mediator = mediator;
             _mapper = mapper;
+        }
+
+        public void UpdateJobInfo(JobInfo jobInfo)
+        {
+            
+            JobInfo entity;
+            var exists = _context.JobInfos.Any(j => j.HtmlCode == jobInfo.HtmlCode);
+
+            if (exists)
+            {
+                entity = _context.JobInfos.SingleOrDefault(j => j.HtmlCode == jobInfo.HtmlCode);
+            }
+            else
+            {
+                entity = new JobInfo();
+                _context.JobInfos.Add(entity);
+            }
+
+            entity.HtmlCode = jobInfo.HtmlCode;
+            entity.JobUrlId = jobInfo.JobUrlId;
+
+            _context.SaveChanges();
+
+        }
+
+        public void UpdateUrls(IList<JobUrl> jobUrls)
+        {
+            foreach(var jobUrl in jobUrls)
+            {
+                var urlsInDb = _context.JobUrls;
+                var exists = urlsInDb.Any(j => j.Url == jobUrl.Url);
+
+                if (!exists)
+                {
+                    _context.JobUrls.Add(new JobUrl()
+                    {
+                        Url = jobUrl.Url
+                    });
+                }
+
+            }
+
+            _context.SaveChanges();
         }
 
         public async void ImportInitialCvOnlineData()
@@ -38,8 +79,7 @@ namespace WebScraper.Application.Services
             var scraper = _scraperFactory.BuildScraper("CvOnline");
 
             // Get Urls
-            var jobUrlsVm = _mediator.Send(new GetJobUrlsQuery()).Result;
-            var jobUrls = jobUrlsVm.JobUrls;
+            var jobUrls = _context.JobUrls;
 
             if (!jobUrls.Any())
             {
@@ -49,49 +89,37 @@ namespace WebScraper.Application.Services
                 var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
                 cvOnlineFilter.Apply(ref collectedUrls);
 
-
-                _mediator.Send(new UpsertJobUrlsCommand()
-                {
-                    Urls = collectedUrls.ToDictionary(x => x.Id, x => x.Url)
-                }); ;
-
+                UpdateUrls(collectedUrls);
                
             }
 
             // Get Htmls
-            var existingHtmlsVm = _mediator.Send(new GetJobInfosQuery()).Result;
-            var existingHtmls = existingHtmlsVm.JobInfos;
+            var urlsInDb = _context.JobUrls;
 
-            if (!existingHtmls.Any())
+            if (urlsInDb.Any())
             {
-                var htmlResults = scraper.ScrapeJobHtmls(_context.JobUrls.ToList());
+                var htmlResults = scraper.ScrapeJobHtmls(urlsInDb.ToList());
 
                 foreach(var html in htmlResults)
                 {
-                    await _mediator.Send(new UpsertJobInfoCommand()
-                    {
-                        Id = html.Id,
-                        HtmlCode = html.HtmlCode,
-                        JobUrlId = html.JobUrlId
-                       
-                    });
+                    UpdateJobInfo(html);
                 }
             }
 
             // Parse Infos from Html
-            var hmtlEntitiesVm = _mediator.Send(new GetJobInfosQuery()).Result;
-            var htmlEntities = hmtlEntitiesVm.JobInfos;
+            //var hmtlEntitiesVm = _mediator.Send(new GetJobInfosQuery()).Result;
+            //var htmlEntities = hmtlEntitiesVm.JobInfos;
 
-            var mappedHtmlEntities = _mapper.Map<List<JobInfo>>(htmlEntities);
+            //var mappedHtmlEntities = _mapper.Map<List<JobInfo>>(htmlEntities);
 
-            var parser = _scraperFactory.BuildParser("cvonline");
+            //var parser = _scraperFactory.BuildParser("cvonline");
 
-            foreach (var htmlEntity in mappedHtmlEntities)
-            {
-                var parseResult = parser.ParseInfo(htmlEntity);
+            //foreach (var htmlEntity in mappedHtmlEntities)
+            //{
+            //    var parseResult = parser.ParseInfo(htmlEntity);
 
-                //_mediator.Send(new UpsertJobInfoCommand(parseResult));
-            }
+            //    //_mediator.Send(new UpsertJobInfoCommand(parseResult));
+            //}
 
 
             var test = "test";

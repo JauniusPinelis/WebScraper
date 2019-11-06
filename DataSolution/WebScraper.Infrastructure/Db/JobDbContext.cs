@@ -55,5 +55,10 @@ namespace WebScraper.Infrastructure.Db
 
             return base.SaveChangesAsync(cancellationToken);
         }
+
+        public override int SaveChanges()
+        {
+            return base.SaveChanges();
+        }
     }
 }
