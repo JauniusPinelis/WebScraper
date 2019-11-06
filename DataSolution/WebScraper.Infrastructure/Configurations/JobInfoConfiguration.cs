@@ -12,9 +12,11 @@ namespace WebScraper.Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<JobInfo> builder)
         {
+            builder.ToTable("tblData_jobInfo");
+
             builder.Property(e => e.Id)
              .HasColumnName("Id")
-             .HasMaxLength(5)
+             .HasMaxLength(6)
              .ValueGeneratedOnAdd();
 
             builder.Property(e => e.HtmlCode).HasMaxLength(100000);

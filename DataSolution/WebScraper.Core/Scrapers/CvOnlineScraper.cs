@@ -23,6 +23,7 @@ namespace WebScraper.Core
 
             var limit = 10;
             var delay = 1000;
+            var idCounter = 0;
 
             for (int i = 0; i <= limit; i++)
             {
@@ -31,7 +32,7 @@ namespace WebScraper.Core
 
                 results.Add(new JobInfo()
                 {
-                    //JobUrl = urls[i].Id,
+                    JobUrlId = urls[i].Id,
                     HtmlCode = html
                 });
 
@@ -48,6 +49,8 @@ namespace WebScraper.Core
             int pageCounter = 0;
             var continueParsing = true;
             var results = new List<JobUrl>();
+            int idCounter = 0;
+
 
             while (continueParsing && pageCounter < 3)
             {
@@ -73,10 +76,13 @@ namespace WebScraper.Core
 
                 foreach (var resultNode in resultNodes)
                 {
-                    results.Add(new JobUrl(){
+                    results.Add(new JobUrl()
+                    {
+                        Id = idCounter,
                         Url = resultNode.GetAttributeValue("href", string.Empty)
                     }
                     );
+                    idCounter += 1;
                 }
 
             }
@@ -116,10 +122,10 @@ namespace WebScraper.Core
                 return "";
             }
 
-            catch(Exception e)
+            catch (Exception e)
             {
                 return "";
-            }       
+            }
         }
     }
 }

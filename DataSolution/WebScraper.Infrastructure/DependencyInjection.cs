@@ -17,7 +17,7 @@ namespace WebScraper.Infrastructure
             services.AddDbContext<JobDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
-            services.AddScoped<IJobDbContext>(provider => provider.GetService<JobDbContext>());
+            services.AddSingleton<IJobDbContext>(provider => provider.GetService<JobDbContext>());
 
             return services;
         }

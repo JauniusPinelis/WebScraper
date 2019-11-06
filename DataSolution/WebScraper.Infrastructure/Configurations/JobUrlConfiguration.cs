@@ -11,6 +11,8 @@ namespace WebScraper.Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<JobUrl> builder)
         {
+            builder.ToTable("tblData_jobUrl");
+
             builder.Property(e => e.Id)
                .HasColumnName("Id")
                .HasMaxLength(5)

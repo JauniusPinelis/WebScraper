@@ -14,7 +14,7 @@ namespace WebScraper.Application.JobInfos.Commands.UpsertJobInfo
     {
         public int? Id { get; set; }
         public string HtmlCode { get; set; }
-        public int JobUrlId { get; set; }
+        public int? JobUrlId { get; set; }
 
         public class Handler : IRequestHandler<UpsertJobInfoCommand, int>
         {

@@ -7,6 +7,7 @@ using System.Text;
 using WebScraper.Application.JobInfos.Commands.UpsertJobInfo;
 using WebScraper.Application.JobInfos.Queries.GetJobInfos;
 using WebScraper.Application.JobUrls.Commands.CreateJobUrl;
+using WebScraper.Application.JobUrls.Commands.UpsertJobUrl;
 using WebScraper.Application.JobUrls.GetJobsUrls;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
@@ -48,14 +49,13 @@ namespace WebScraper.Application.Services
                 var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
                 cvOnlineFilter.Apply(ref collectedUrls);
 
-                foreach (var newUrl in collectedUrls)
+
+                _mediator.Send(new UpsertJobUrlsCommand()
                 {
-                    await _mediator.Send(new UpsertJobUrlCommand()
-                    {
-                        Id = newUrl.Id,
-                        Url = newUrl.Url
-                    });
-                }
+                    Urls = collectedUrls.ToDictionary(x => x.Id, x => x.Url)
+                }); ;
+
+               
             }
 
             // Get Htmls
@@ -71,7 +71,9 @@ namespace WebScraper.Application.Services
                     await _mediator.Send(new UpsertJobInfoCommand()
                     {
                         Id = html.Id,
-                        HtmlCode = html.HtmlCode
+                        HtmlCode = html.HtmlCode,
+                        JobUrlId = html.JobUrlId
+                       
                     });
                 }
             }

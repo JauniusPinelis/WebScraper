@@ -10,7 +10,7 @@ namespace WebScraper.Infrastructure.Db
 {
     public class JobDbContext : DbContext, IJobDbContext
     {
-        private readonly string _connString = "Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True";
+        private readonly string _connString = "Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True;MultipleActiveResultSets=True;";
 
         public DbSet<JobUrl> JobUrls { get; set; }
         public DbSet<JobInfo> JobInfos { get; set; }
