@@ -96,7 +96,7 @@ namespace WebScraper.Application.Services
             // Get Htmls
             var urlsInDb = _context.JobUrls;
 
-            if (urlsInDb.Any())
+            if (urlsInDb.Any() && false)
             {
                 var htmlResults = scraper.ScrapeJobHtmls(urlsInDb.ToList());
 
@@ -107,20 +107,23 @@ namespace WebScraper.Application.Services
             }
 
             // Parse Infos from Html
-            //var hmtlEntitiesVm = _mediator.Send(new GetJobInfosQuery()).Result;
-            //var htmlEntities = hmtlEntitiesVm.JobInfos;
 
-            //var mappedHtmlEntities = _mapper.Map<List<JobInfo>>(htmlEntities);
+            var htmlEntities = _context.JobInfos;
 
-            //var parser = _scraperFactory.BuildParser("cvonline");
+           
 
-            //foreach (var htmlEntity in mappedHtmlEntities)
-            //{
-            //    var parseResult = parser.ParseInfo(htmlEntity);
+            var parser = _scraperFactory.BuildParser("cvonline");
 
-            //    //_mediator.Send(new UpsertJobInfoCommand(parseResult));
-            //}
+            foreach (var htmlEntity in htmlEntities)
+            {
+                var parseResult = parser.ParseInfo(htmlEntity);
 
+                var entity = _context.JobInfos.Find(parseResult.Id);
+
+                entity.Title = parseResult.Title;
+                
+            }
+            _context.SaveChanges();
 
             var test = "test";
         }
