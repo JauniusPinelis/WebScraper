@@ -26,7 +26,7 @@ namespace WebApi.Api.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<JobUrlDto>> Get()
         {
-            var entities = _context.JobHtmls.ToList();
+            var entities = _context.JobHtmls.Take(20);
 
             var models = _mapper.Map<List<JobUrlDto>>(entities);
 
