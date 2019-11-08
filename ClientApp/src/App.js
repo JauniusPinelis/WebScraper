@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
 
@@ -10,7 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      urls: []
     };
   }
   render() {
@@ -35,7 +35,8 @@ class App extends Component {
       .get("/api/data/")
       .then(res => {
         this.setState({
-          data: res.data
+          data: res.data,
+          urls: res.data.map(d => d.url)
         });
       })
       .catch(error => {});
