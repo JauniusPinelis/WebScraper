@@ -21,6 +21,13 @@ namespace WebScraper.Core.Parsers
 
         private string ParseSalary(string html)
         {
+            var htmlDocument = new HtmlDocument();
+            htmlDocument.LoadHtml(html);
+
+            var resultNodes = htmlDocument.DocumentNode.SelectNodes("//li[contains(text(), 'EUR')]");
+            var title = resultNodes[0].InnerText;
+
+            //a[contains(text(), 'About us') or contains(text(), 'about us')]
             return String.Empty;
         }
         public JobInfo ParseInfo(JobInfo jobHtml)

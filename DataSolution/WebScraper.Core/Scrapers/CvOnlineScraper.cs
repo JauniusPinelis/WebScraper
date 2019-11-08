@@ -23,7 +23,6 @@ namespace WebScraper.Core
 
             var limit = 10;
             var delay = 1000;
-            var idCounter = 0;
 
             for (int i = 0; i <= limit; i++)
             {
@@ -49,7 +48,6 @@ namespace WebScraper.Core
             int pageCounter = 0;
             var continueParsing = true;
             var results = new List<JobUrl>();
-            int idCounter = 0;
 
 
             while (continueParsing && pageCounter < 3)
@@ -66,7 +64,7 @@ namespace WebScraper.Core
                 var htmlDocument = new HtmlDocument();
                 htmlDocument.LoadHtml(html);
 
-                var resultNodes = htmlDocument.DocumentNode.SelectNodes("//div[contains(@class, 'offer_primary_info')]//a");
+                var resultNodes = htmlDocument.DocumentNode.SelectNodes("//div[contains(@class, 'offer_primary_info')]");
 
                 if (resultNodes.Count == 0)
                 {
@@ -74,15 +72,26 @@ namespace WebScraper.Core
                     continue;
                 }
 
+
+
                 foreach (var resultNode in resultNodes)
                 {
-                    results.Add(new JobUrl()
+                    var resultHtml = new HtmlDocument();
+                    resultHtml.LoadHtml(resultNode.OuterHtml);
+
+                    var urls = resultHtml.DocumentNode.SelectNodes("//a[@href]");
+                    var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'salary-blue')]");
+
+                    foreach (var url in urls)
                     {
-                        Id = idCounter,
-                        Url = resultNode.GetAttributeValue("href", string.Empty)
+                        results.Add(new JobUrl()
+                        {
+                            Url = url.GetAttributeValue("href", string.Empty),
+                            Salary = salary?.InnerText ?? "",
+                            Title = url?.InnerText
+                        }
+                        );
                     }
-                    );
-                    idCounter += 1;
                 }
 
             }

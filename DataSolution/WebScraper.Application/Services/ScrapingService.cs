@@ -63,10 +63,7 @@ namespace WebScraper.Application.Services
 
                 if (!exists)
                 {
-                    _context.JobUrls.Add(new JobUrl()
-                    {
-                        Url = jobUrl.Url
-                    });
+                    _context.JobUrls.Add(jobUrl);
                 }
 
             }
@@ -124,8 +121,6 @@ namespace WebScraper.Application.Services
                 
             }
             _context.SaveChanges();
-
-            var test = "test";
         }
     }
 }

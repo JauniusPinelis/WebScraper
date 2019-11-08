@@ -18,6 +18,9 @@ namespace WebScraper.Infrastructure.Configurations
                .HasMaxLength(5)
                .ValueGeneratedOnAdd();
 
+            builder.Property(e => e.Salary).HasMaxLength(500);
+            builder.Property(e => e.Title).HasMaxLength(500);
+
             builder.Property(e => e.Url).HasMaxLength(300);
         }
     }
