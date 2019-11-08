@@ -11,7 +11,7 @@ namespace WebApi.Infrastructure.Mappings
     {
         public MappingProfile()
         {
-            CreateMap<JobHtmlDto, JobHtml>().ReverseMap();
+            CreateMap<JobUrlDto, JobUrl>().ReverseMap();
         }
     }
 }

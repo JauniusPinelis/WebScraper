@@ -6,16 +6,15 @@ using System.Text;
 
 namespace WebApi.Infrastructure.Entities
 {
-    [Table("tblData_JobHtml")]
-    public class JobHtml
+    [Table("tblData_JobUrl")]
+    public class JobUrl
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
-        public string HtmlCode { get; set; }
-
-        [ForeignKey("JobUrl")]
-        public int JobUrlId { get; set; }
+        public string Url { get; set; }
+        public string Title { get; set; }
+        public string Salary { get; set; }
 
     }
 }

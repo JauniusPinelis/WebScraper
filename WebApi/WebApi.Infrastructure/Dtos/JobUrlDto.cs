@@ -4,10 +4,11 @@ using System.Text;
 
 namespace WebApi.Infrastructure.Dtos
 {
-    public class JobHtmlDto
+    public class JobUrlDto
     {
         public int Id { get; set; }
-        public string HtmlCode { get; set; }
-        public int JobUrlId { get; set; }
+        public string Url { get; set; }
+        public string Title { get; set; }
+        public string Salary { get; set; }
     }
 }

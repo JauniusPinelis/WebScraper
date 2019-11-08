@@ -24,11 +24,11 @@ namespace WebApi.Api.Controllers
 
 
         [HttpGet]
-        public ActionResult<IEnumerable<JobHtmlDto>> Get()
+        public ActionResult<IEnumerable<JobUrlDto>> Get()
         {
             var entities = _context.JobHtmls.ToList();
 
-            var models = _mapper.Map<List<JobHtmlDto>>(entities);
+            var models = _mapper.Map<List<JobUrlDto>>(entities);
 
             return models;
         }
