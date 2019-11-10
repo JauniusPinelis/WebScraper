@@ -1,13 +1,16 @@
+using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using Moq;
 using NUnit.Framework;
 using System;
+using WebScraper.Core.Entities;
 using WebScraper.Infrastructure.Db;
 using WebScraper.Infrastructure.Services;
 
 namespace WebScraper.Infrastructure.IntegrationTests
 {
 
+    [TestFixture]
     public class DataDbContextTests : IDisposable
     {
         private readonly DataContext _sut;
@@ -24,18 +27,27 @@ namespace WebScraper.Infrastructure.IntegrationTests
                .UseInMemoryDatabase(Guid.NewGuid().ToString())
                .Options;
 
-            _sut = new DataContext(options, _dateTimeMock);
+            _sut = new DataContext(options, _dateTimeMock.Object);
+
         }
 
         [Test]
-        public void Test1()
+        public void SaveChanges_GivenNewUrl_ShouldSetCreated()
         {
-            Assert.Pass();
+            var url = new JobUrl()
+            {
+                Url = "Test"
+            };
+
+            _sut.JobUrls.Add(url);
+            _sut.SaveChanges();
+
+            url.Created.Should().Be(_dateTime);
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _sut?.Dispose();
         }
     }
 }

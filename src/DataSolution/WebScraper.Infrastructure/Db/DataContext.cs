@@ -30,11 +30,6 @@ namespace WebScraper.Infrastructure.Db
             _dateTime = dateTime;
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(_connString);
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             
