@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
+using WebScraper.Infrastructure.Services;
 
 namespace WebScraper.Infrastructure
 {
@@ -14,10 +15,11 @@ namespace WebScraper.Infrastructure
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration,
              string connectionString)
         {
-            services.AddDbContext<JobDbContext>(options =>
+            services.AddDbContext<DataContext>(options =>
                 options.UseSqlServer(connectionString));
 
-            services.AddSingleton<IJobDbContext>(provider => provider.GetService<JobDbContext>());
+            services.AddTransient<IDateTime, MachineDateTime>();
+            services.AddSingleton<IDataContext>(provider => provider.GetService<DataContext>());
 
             return services;
         }

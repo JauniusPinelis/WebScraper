@@ -9,7 +9,7 @@ using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Infrastructure.Migrations
 {
-    [DbContext(typeof(JobDbContext))]
+    [DbContext(typeof(DataContext))]
     [Migration("20191105073630_initial-schema")]
     partial class initialschema
     {

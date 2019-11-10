@@ -16,10 +16,10 @@ namespace WebScraper.Application.JobUrls.Commands.UpsertJobUrl
 
         public class Handler : IRequestHandler<UpsertJobUrlsCommand>
         {
-            private readonly IJobDbContext _context;
+            private readonly IDataContext _context;
             private readonly IMediator _mediator;
 
-            public Handler(IJobDbContext context, IMediator mediator)
+            public Handler(IDataContext context, IMediator mediator)
             {
                 _context = context;
                 _mediator = mediator;

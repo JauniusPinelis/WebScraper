@@ -17,13 +17,13 @@ namespace WebScraper.Application.Services
 {
     public class ScrapingService : IScrapingService
     {
-        private readonly IJobDbContext _context;
+        private readonly IDataContext _context;
         private readonly IScraperFactory _scraperFactory;
         private readonly IMapper _mapper;
 
 
 
-        public ScrapingService(IJobDbContext context, IScraperFactory factory, 
+        public ScrapingService(IDataContext context, IScraperFactory factory, 
             IMediator mediator, IMapper mapper)
         {
             _context = context;

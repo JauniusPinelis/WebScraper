@@ -14,10 +14,10 @@ namespace WebScraper.Application.JobUrls.GetJobsUrls
     public class GetJobsHandler : IRequestHandler<GetJobUrlsQuery, JobsVm>
     {
 
-        private readonly IJobDbContext _context;
+        private readonly IDataContext _context;
         private readonly IMapper _mapper;
 
-        public GetJobsHandler(IJobDbContext context, IMapper mapper)
+        public GetJobsHandler(IDataContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

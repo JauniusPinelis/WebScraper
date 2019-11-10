@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WebScraper.Core.Entities
 {
-    public class JobInfo
+    public class JobInfo : AuditableEntity
     {
         public int Id { get; set; }
         public string HtmlCode { get; set; }

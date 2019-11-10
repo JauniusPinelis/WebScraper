@@ -8,12 +8,11 @@ using WebScraper.Core.Entities;
 
 namespace WebScraper.Infrastructure.Db
 {
-    public interface IJobDbContext
+    public interface IDataContext
     {
         DbSet<JobUrl> JobUrls { get; set; }
         DbSet<JobInfo> JobInfos { get; set; }
 
-        Task<int> SaveChangesAsync(CancellationToken cancellationToken);
         int SaveChanges();
     }
 }

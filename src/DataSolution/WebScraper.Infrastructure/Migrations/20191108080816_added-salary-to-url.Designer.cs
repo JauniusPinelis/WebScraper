@@ -9,7 +9,7 @@ using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Infrastructure.Migrations
 {
-    [DbContext(typeof(JobDbContext))]
+    [DbContext(typeof(DataContext))]
     [Migration("20191108080816_added-salary-to-url")]
     partial class addedsalarytourl
     {
