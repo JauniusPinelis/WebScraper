@@ -31,6 +31,7 @@ namespace WebApi.Api
 
             services.ConfigureDbContext("Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True");
             services.ConfigureMapper();
+            services.ConfigureSwagger();
 
         }
 
@@ -45,6 +46,7 @@ namespace WebApi.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            
 
             app.UseAuthorization();
 
