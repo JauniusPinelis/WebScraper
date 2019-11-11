@@ -1,7 +1,11 @@
 using AutoMapper;
+using FluentAssertions;
 using NUnit.Framework;
-using WebApi.Infrastructure.Mappings;
+using System.Collections.Generic;
+using System.Linq;
+using WebScraper.Application.Common.Mappings;
 using WebScraper.Application.Services;
+using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
 
 namespace Webscraper.Application.UnitTests
@@ -9,7 +13,7 @@ namespace Webscraper.Application.UnitTests
     [TestFixture]
     public class ScrapingServiceTests : ContextTestBase
     {
-        private readonly IScrapingService _scrapingService;
+        private readonly ScrapingService _scrapingService;
 
         public ScrapingServiceTests() : base()
         {
@@ -26,9 +30,20 @@ namespace Webscraper.Application.UnitTests
         }
 
         [Test]
-        public void CheckIfUpdateServiceWorks()
+        public void UpdateUrls_HavingDublicates_ShouldDetectDublicates()
         {
-            Assert.Pass();
+            var entity = new JobUrl()
+            {
+                Url = "Delfi.lt"
+            };
+
+            IList<JobUrl> collectedEntities = new List<JobUrl>();
+            collectedEntities.Add(entity);
+            collectedEntities.Add(entity);
+
+            _scrapingService.UpdateUrls(collectedEntities);
+
+            _context.JobUrls.Count().Should().Be(1);
         }
     }
 }

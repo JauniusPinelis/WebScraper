@@ -59,11 +59,9 @@ namespace WebScraper.Application.Services
                 if (!exists)
                 {
                     _context.JobUrls.Add(jobUrl);
+                    _context.SaveChanges();
                 }
-
             }
-
-            _context.SaveChanges();
         }
 
         public async void ImportInitialCvOnlineData()
