@@ -19,7 +19,7 @@ namespace WebScraper.Infrastructure.Db
         private readonly IDateTime _dateTime;
        
 
-        public DataContext() : base()
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
             
         }
