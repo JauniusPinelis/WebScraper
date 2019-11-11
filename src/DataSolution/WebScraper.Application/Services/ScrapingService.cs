@@ -19,7 +19,7 @@ namespace WebScraper.Application.Services
 
 
         public ScrapingService(IDataContext context, IScraperFactory factory, 
-            IMediator mediator, IMapper mapper)
+             IMapper mapper)
         {
             _context = context;
             _scraperFactory = factory;
