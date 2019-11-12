@@ -37,5 +37,15 @@ namespace WebScraper.Core.UnitTests
             jobEntity.Url.Should().Be("//www.cvonline.lt/job-ad/forbis-uab/senior-middle-front-end-developers-f4010468.html");
         }
 
+        [Test]
+        public void ScrapeJobUrlInfo_GivenTestData_GetsCorrectCompany()
+        {
+            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvOnlineSingleUrlTestData.txt");
+
+            var jobEntity = _scraper.ScrapeJobUrlInfo(textData);
+
+            jobEntity.Company.Should().Be("//www.cvonline.lt/job-ad/forbis-uab/senior-middle-front-end-developers-f4010468.html");
+        }
+
     }
 }

@@ -45,6 +45,21 @@ namespace WebScraper.Infrastructure.IntegrationTests
             url.Created.Should().Be(_dateTime);
         }
 
+        [Test]
+        public void SaveChanges_GivenNewUrlWithVilnius_SavedLocationShouldBeVilnius()
+        {
+            var url = new JobUrl()
+            {
+                Url = "Test",
+                Location = "Vilnius"
+            };
+
+            _sut.JobUrls.Add(url);
+            _sut.SaveChanges();
+
+            url.Location.Should().Be("Vilnius");
+        }
+
         public void Dispose()
         {
             _sut?.Dispose();
