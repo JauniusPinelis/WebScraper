@@ -79,7 +79,7 @@ namespace WebScraper.Core
                     var resultHtml = new HtmlDocument();
                     resultHtml.LoadHtml(resultNode.OuterHtml);
 
-                    var urls = resultHtml.DocumentNode.SelectNodes("//a[@href]");
+                    var urls = resultHtml.DocumentNode.SelectNodes("//a[contains(@href, 'job-url')]");
                     var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'salary-blue')]");
 
                     foreach (var url in urls)
@@ -99,8 +99,21 @@ namespace WebScraper.Core
             return results;
         }
 
-        public JobUrl ScrapeJobUrlInfo(string html) {
-            throw new NotImplementedException();
+        public JobUrl ScrapeJobUrlInfo(string html)
+        {
+
+            var resultHtml = new HtmlDocument();
+            resultHtml.LoadHtml(html);
+
+            var url = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@href, 'job-ad')]");
+            var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'salary-blue')]");
+            return new JobUrl()
+            {
+                Url = url?.GetAttributeValue("href", string.Empty),
+                Salary = salary?.InnerText ?? "",
+                Title = url?.InnerText,
+                
+            };
         }
 
         private string TrimStart(string target, string trimString)
