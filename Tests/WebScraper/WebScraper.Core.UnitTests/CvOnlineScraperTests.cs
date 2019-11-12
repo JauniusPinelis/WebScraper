@@ -20,7 +20,7 @@ namespace WebScraper.Core.UnitTests
         [Test]
         public void ScrapeJobUrlInfo_GivenLocationVilnius_GivesVilnius()
         {
-            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvOnlineTestPageData.txt");
+            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvOnlineSingleUrlTestData.txt");
 
             var jobEntity = _scraper.ScrapeJobUrlInfo(textData);
 
@@ -30,7 +30,7 @@ namespace WebScraper.Core.UnitTests
         [Test]
         public void ScrapeJobUrlInfo_GivenTestData_GetsCorrectUrl()
         {
-            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvOnlineTestPageData.txt");
+            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvOnlineSingleUrlTestData.txt");
 
             var jobEntity = _scraper.ScrapeJobUrlInfo(textData);
 

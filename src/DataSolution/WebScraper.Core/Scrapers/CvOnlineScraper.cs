@@ -107,12 +107,13 @@ namespace WebScraper.Core
 
             var url = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@href, 'job-ad')]");
             var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'salary-blue')]");
+            var location = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@itemprop, 'address')]");
             return new JobUrl()
             {
                 Url = url?.GetAttributeValue("href", string.Empty),
                 Salary = salary?.InnerText ?? "",
                 Title = url?.InnerText,
-                
+                Location = location?.InnerText                
             };
         }
 
