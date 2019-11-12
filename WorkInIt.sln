@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScraper.Core", "src\Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScraper.Infrastructure", "src\DataSolution\WebScraper.Infrastructure\WebScraper.Infrastructure.csproj", "{9374EE11-5A72-4A15-A3A7-FD1C52B58C1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScraper.Infrastructure.IntegrationTests", "Tests\WebScraper\WebScraper.Infrastructure.IntegrationTests\WebScraper.Infrastructure.IntegrationTests.csproj", "{BBA225F9-5C92-477B-AF97-395C1069F979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScraper.Infrastructure.IntegrationTests", "Tests\WebScraper\WebScraper.Infrastructure.IntegrationTests\WebScraper.Infrastructure.IntegrationTests.csproj", "{BBA225F9-5C92-477B-AF97-395C1069F979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScraper.Core.UnitTests", "Tests\WebScraper\WebScraper.Core.UnitTests\WebScraper.Core.UnitTests.csproj", "{D93DDA0A-6C0D-44A2-8540-4AB12868D7E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{BBA225F9-5C92-477B-AF97-395C1069F979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBA225F9-5C92-477B-AF97-395C1069F979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBA225F9-5C92-477B-AF97-395C1069F979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D93DDA0A-6C0D-44A2-8540-4AB12868D7E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D93DDA0A-6C0D-44A2-8540-4AB12868D7E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D93DDA0A-6C0D-44A2-8540-4AB12868D7E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D93DDA0A-6C0D-44A2-8540-4AB12868D7E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{7C9CFB6F-6B6A-4B4D-9130-B310310ED388} = {55704848-E010-4EA0-B2F0-DFDB10738569}
 		{9374EE11-5A72-4A15-A3A7-FD1C52B58C1E} = {55704848-E010-4EA0-B2F0-DFDB10738569}
 		{BBA225F9-5C92-477B-AF97-395C1069F979} = {3B8194DA-DFE8-46A8-A0D3-D467571FDC57}
+		{D93DDA0A-6C0D-44A2-8540-4AB12868D7E9} = {3B8194DA-DFE8-46A8-A0D3-D467571FDC57}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F26B9C4-6053-42B1-9C6C-65B0EF147B46}

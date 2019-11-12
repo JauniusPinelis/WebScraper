@@ -1,0 +1,26 @@
+﻿<div class="cvo_module_offer alt" id="jobadrow_4010468" itemscope="" itemtype="http://schema.org/JobPosting">
+			   <div class="cvo_module_offer_content">
+				<div class="cvo_module_offer_box offer_logo"><a href="//www.cvonline.lt/darbo-skelbimai/forbis-uab"><img src="//files.cvonline.lt/logo/30427/w/kvadratinis.gif" border="0" alt="Žiūrėti visus įmonės pasiūlymus FORBIS, UAB"></a></div>
+				<div class="cvo_module_offer_box offer_content">
+				   <div class="offer_primary">
+					<div class="offer_primary_info"><h2><a href="//www.cvonline.lt/job-ad/forbis-uab/senior-middle-front-end-developers-f4010468.html" alt="Paspauskite ir darbo skelbimas atsidarys naujame lange" title="Paspauskite ir darbo skelbimas atsidarys naujame lange" target="_blank" onclick="Cvo.jobs.saveSearch();" itemprop="title">SENIOR/MIDDLE FRONT-END DEVELOPERS</a></h2>
+					   <div class="offer-primary-meta clearfix" itemprop="description">
+						<ul class="cvo_module_offer_salary">
+						   <li class="offer-salary"><span class="salary-blue">Mėnesinis atlygis (bruto): Nuo 2500.00 iki 5800.00 EUR</span></li>
+						</ul>
+						<ul class="cvo_module_offer_meta">
+						   <li class="offer-company"><span class="meta-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></span><span itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><a href="//www.cvonline.lt/darbo-skelbimai/forbis-uab" itemprop="name" alt="Žiūrėti visus įmonės darbo pasiūlymus: FORBIS, UAB" title="Žiūrėti visus įmonės darbo pasiūlymus: FORBIS, UAB">FORBIS, UAB</a></span></li>
+						   <li class="offer-location"><span class="meta-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span><span itemprop="jobLocation" itemscope="" itemtype="http://schema.org/Place"><a href="/new_tp/map.php?l=54.6871555%3A25.2796514" target="_blank" itemprop="address" title="">Vilnius</a></span><a href="/new_tp/map.php?l=54.6871555%3A25.2796514" target="_blank" class="map-marker"></a></li>
+						</ul>
+						<ul class="cvo_module_offer_meta offer_dates">
+						   <li title="23. rugsėjo 2019 11:41"><span class="meta-icon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span><span itemprop="datePosted" content="2019-09-23">Prieš 47 min.</span></li>
+						   <li title=" 2019.12.01"><span class="meta-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>Prašymus siųskite iki 2019.12.01</li>
+						</ul>
+						<div class="offer_save_feature" id="save4010468"><a href="" onclick="return(toggle('more4010468'));" class="offer-save-heart hide-mobile"><i class="offer-heart-icon"></i><span class="save-text">Išsaugoti</span><span class="saved-text">Pašalinti</span></a></div>
+					   </div>
+					</div>
+				   </div>
+				</div>
+			   </div>
+				<div class="cvo_module_offer_moretxt hide" id="more4010468"><a href="" onclick="return(toggle('more4010468'));" class="dismis-more-txt"><i class="fa fa-times" aria-hidden="true"></i></a>Norint išsaugoti darbo pasiūlymą <a href="/login">prisijunkite</a></div>
+			</div>

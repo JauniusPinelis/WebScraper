@@ -11,6 +11,8 @@ namespace WebScraper.Core.Entities
 
         public string Salary { get; set; }
         public string Title { get; set; }
+        public string Location { get; set; }
+
 
         public JobInfo JobInfo { get; set; }
         public int? JobInfoId { get; set; }

@@ -99,6 +99,10 @@ namespace WebScraper.Core
             return results;
         }
 
+        public JobUrl ScrapeJobUrlInfo(string html) {
+            throw new NotImplementedException();
+        }
+
         private string TrimStart(string target, string trimString)
         {
             if (string.IsNullOrEmpty(trimString)) return target;

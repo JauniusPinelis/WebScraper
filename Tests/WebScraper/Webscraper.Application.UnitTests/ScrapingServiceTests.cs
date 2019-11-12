@@ -45,5 +45,32 @@ namespace Webscraper.Application.UnitTests
 
             _context.JobUrls.Count().Should().Be(1);
         }
+
+        [Test]
+        public void UpdateUrls_HavingMultipleEntities_MultipleEntitiesShouldBeSaved()
+        {
+            var entity1 = new JobUrl()
+            {
+                Url = "Delfi.lt"
+            };
+
+            var entity2 = new JobUrl()
+            {
+                Url = "google.lt"
+            };
+
+            IList<JobUrl> collectedEntities = new List<JobUrl>();
+            collectedEntities.Add(entity1);
+            collectedEntities.Add(entity2);
+
+            _scrapingService.UpdateUrls(collectedEntities);
+
+            _context.JobUrls.Count().Should().Be(2);
+        }
+
+        public void ExtractLocation_HavingLocationVilnius_GiveLocationVilnius()
+        {
+
+        }
     }
 }
