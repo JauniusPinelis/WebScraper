@@ -34,8 +34,28 @@ namespace WebScraper.Core
                     JobUrlId = urls[i].Id,
                     HtmlCode = html
                 });
+            }
 
+            return results;
+        }
 
+        public IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
+        {
+            var results = new List<JobUrl>();
+
+            var htmlDocument = new HtmlDocument();
+            htmlDocument.LoadHtml(pageHtml);
+
+            var resultNodes = htmlDocument.DocumentNode.SelectNodes("//div[contains(@class, 'offer_primary_info')]");
+
+            if (resultNodes.Count == 0)
+            {
+                return results;
+            }
+
+            foreach (var resultNode in resultNodes)
+            {
+                results.Add(ScrapeJobUrlInfo(resultNode.OuterHtml));
             }
 
             return results;
@@ -60,40 +80,8 @@ namespace WebScraper.Core
 
                 var html = webClient.GetStringAsync(validUrl).Result;
 
-
-                var htmlDocument = new HtmlDocument();
-                htmlDocument.LoadHtml(html);
-
-                var resultNodes = htmlDocument.DocumentNode.SelectNodes("//div[contains(@class, 'offer_primary_info')]");
-
-                if (resultNodes.Count == 0)
-                {
-                    continueParsing = false;
-                    continue;
-                }
-
-
-
-                foreach (var resultNode in resultNodes)
-                {
-                    var resultHtml = new HtmlDocument();
-                    resultHtml.LoadHtml(resultNode.OuterHtml);
-
-                    var urls = resultHtml.DocumentNode.SelectNodes("//a[contains(@href, 'job-url')]");
-                    var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'salary-blue')]");
-
-                    foreach (var url in urls)
-                    {
-                        results.Add(new JobUrl()
-                        {
-                            Url = url.GetAttributeValue("href", string.Empty),
-                            Salary = salary?.InnerText ?? "",
-                            Title = url?.InnerText
-                        }
-                        );
-                    }
-                }
-
+                var pageResults = ExtractPageUrls(html);
+                results.AddRange(pageResults);
             }
 
             return results;
@@ -115,7 +103,7 @@ namespace WebScraper.Core
                 Url = url?.GetAttributeValue("href", string.Empty),
                 Salary = salary?.InnerText ?? "",
                 Title = url?.InnerText,
-                Location = location?.InnerText    ,
+                Location = location?.InnerText,
                 Company = company?.InnerText
             };
         }

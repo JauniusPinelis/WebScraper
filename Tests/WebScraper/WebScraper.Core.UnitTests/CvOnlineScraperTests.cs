@@ -3,6 +3,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace WebScraper.Core.UnitTests
@@ -45,6 +46,16 @@ namespace WebScraper.Core.UnitTests
             var jobEntity = _scraper.ScrapeJobUrlInfo(textData);
 
             jobEntity.Company.Should().Be("FORBIS, UAB");
+        }
+
+        [Test]
+        public void ExtractPageUrls_GivenTestData_ReturnCorrectAmountOfJobs()
+        {
+            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvOnlineTestPageData.txt");
+
+            var jobEntities = _scraper.ExtractPageUrls(textData);
+
+            jobEntities.Count().Should().Be(54);
         }
 
     }

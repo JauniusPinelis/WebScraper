@@ -100,8 +100,6 @@ namespace WebScraper.Application.Services
 
             var htmlEntities = _context.JobInfos;
 
-           
-
             var parser = _scraperFactory.BuildParser("cvonline");
 
             foreach (var htmlEntity in htmlEntities)

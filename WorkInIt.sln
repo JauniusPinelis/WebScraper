@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScraper.Infrastructure",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScraper.Infrastructure.IntegrationTests", "Tests\WebScraper\WebScraper.Infrastructure.IntegrationTests\WebScraper.Infrastructure.IntegrationTests.csproj", "{BBA225F9-5C92-477B-AF97-395C1069F979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScraper.Core.UnitTests", "Tests\WebScraper\WebScraper.Core.UnitTests\WebScraper.Core.UnitTests.csproj", "{D93DDA0A-6C0D-44A2-8540-4AB12868D7E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScraper.Core.UnitTests", "Tests\WebScraper\WebScraper.Core.UnitTests\WebScraper.Core.UnitTests.csproj", "{D93DDA0A-6C0D-44A2-8540-4AB12868D7E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

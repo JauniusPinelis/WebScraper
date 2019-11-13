@@ -2,6 +2,7 @@ using AutoMapper;
 using FluentAssertions;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using WebScraper.Application.Common.Mappings;
 using WebScraper.Application.Services;
@@ -68,9 +69,6 @@ namespace Webscraper.Application.UnitTests
             _context.JobUrls.Count().Should().Be(2);
         }
 
-        public void ExtractLocation_HavingLocationVilnius_GiveLocationVilnius()
-        {
-
-        }
+       
     }
 }
