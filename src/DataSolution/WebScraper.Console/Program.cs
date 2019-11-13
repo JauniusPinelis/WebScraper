@@ -5,7 +5,6 @@ using System.Configuration;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using WebScraper.Core;
-using WebScraper.Core.Filters;
 using System;
 using WebScraper.Infrastructure;
 using WebScraper.Application;

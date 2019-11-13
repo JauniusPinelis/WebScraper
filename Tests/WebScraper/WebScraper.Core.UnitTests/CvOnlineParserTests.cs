@@ -2,8 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using WebScraper.Core.Entities;
-using WebScraper.Core.Parsers;
+using WebScraper.Core.CvOnline;
 
 namespace WebScraper.Core.UnitTests
 {

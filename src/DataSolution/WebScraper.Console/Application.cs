@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using WebScraper.Core;
-using WebScraper.Core.Entities;
-using WebScraper.Core.Factories;
-using WebScraper.Core.Filters;
-using WebScraper.Infrastructure.Db;
-using WebScraper.Application.Services;
+﻿using WebScraper.Application.Services;
 
 namespace WebScraper.Console
 {

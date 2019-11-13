@@ -1,6 +1,6 @@
 ﻿using WebScraper.Core.Entities;
 
-namespace WebScraper.Core.Parsers
+namespace WebScraper.Core.Shared
 {
     public interface IParser
     {

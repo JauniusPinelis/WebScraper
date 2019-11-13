@@ -1,5 +1,4 @@
-﻿using WebScraper.Core.Filters;
-using WebScraper.Core.Parsers;
+﻿using WebScraper.Core.Shared;
 
 namespace WebScraper.Core.Factories
 {

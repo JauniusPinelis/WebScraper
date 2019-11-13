@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using WebScraper.Core.Entities;
+using WebScraper.Core.Shared;
 
-namespace WebScraper.Core.Filters
+namespace WebScraper.Core.CvOnline
 {
     public class CvOnlineUrlFilter : IUrlFilter
     {

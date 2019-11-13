@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core.Entities;
 
-namespace WebScraper.Core.Filters
+namespace WebScraper.Core.Shared
 {
     public interface IUrlFilter
     {

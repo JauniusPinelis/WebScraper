@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core.Entities;
-using WebScraper.Core.Filters;
 
-namespace WebScraper.Core
+namespace WebScraper.Core.Shared
 {
     public interface IScraper
     {

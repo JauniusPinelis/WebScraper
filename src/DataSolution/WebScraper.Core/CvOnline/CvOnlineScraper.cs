@@ -6,9 +6,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading;
 using WebScraper.Core.Entities;
-using WebScraper.Core.Filters;
+using WebScraper.Core.Shared;
 
-namespace WebScraper.Core
+namespace WebScraper.Core.CvOnline
 {
     public class CvOnlineScraper : IScraper
     {
