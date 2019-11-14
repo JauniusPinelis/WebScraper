@@ -1,0 +1,1804 @@
+﻿<div id="main_wrapper" class="main_wrapper main_w_job_ad_list">
+        <div class="container" id="main_container">
+            <main id="main" class="main_long">
+                                <form action="https://www.cvbankas.lt/" method="get" id="form_filter">
+    <div id="nr1"><a href="https://www.cvbankas.lt/nr1" id="nr1_a"><span id="nr1_1">Nr.1</span><br>Lankomiausias<br>
+darbo portalas</a></div>
+    <h1 class="heading1">Darbo skelbimai</h1>
+    <div id="city_wrapper">
+        <select name="miestas" class="input_search" title="Miestas" id="filter_city">
+            <option value="">Miestas</option>
+                            <optgroup label="------------------">
+                                            <option value="Vilnius">Vilnius</option>
+                                            <option value="Kaunas">Kaunas</option>
+                                            <option value="Klaipėda">Klaipėda</option>
+                                            <option value="Šiauliai">Šiauliai</option>
+                                            <option value="Panevėžys">Panevėžys</option>
+                                    </optgroup>
+                            <optgroup label="------------------">
+                                            <option value="Akmenė">Akmenė</option>
+                                            <option value="Alytus">Alytus</option>
+                                            <option value="Anykščiai">Anykščiai</option>
+                                            <option value="Birštonas">Birštonas</option>
+                                            <option value="Biržai">Biržai</option>
+                                            <option value="Druskininkai">Druskininkai</option>
+                                            <option value="Elektrėnai">Elektrėnai</option>
+                                            <option value="Gargždai">Gargždai</option>
+                                            <option value="Ignalina">Ignalina</option>
+                                            <option value="Jonava">Jonava</option>
+                                            <option value="Joniškis">Joniškis</option>
+                                            <option value="Jurbarkas">Jurbarkas</option>
+                                            <option value="Kaišiadorys">Kaišiadorys</option>
+                                            <option value="Kalvarija">Kalvarija</option>
+                                            <option value="Kazlų Rūda">Kazlų Rūda</option>
+                                            <option value="Kėdainiai">Kėdainiai</option>
+                                            <option value="Kelmė">Kelmė</option>
+                                            <option value="Krekenava">Krekenava</option>
+                                            <option value="Kretinga">Kretinga</option>
+                                            <option value="Kupiškis">Kupiškis</option>
+                                            <option value="Kuršėnai">Kuršėnai</option>
+                                            <option value="Lazdijai">Lazdijai</option>
+                                            <option value="Lentvaris">Lentvaris</option>
+                                            <option value="Marijampolė">Marijampolė</option>
+                                            <option value="Mažeikiai">Mažeikiai</option>
+                                            <option value="Molėtai">Molėtai</option>
+                                            <option value="Naujoji Akmenė">Naujoji Akmenė</option>
+                                            <option value="Neringa">Neringa</option>
+                                            <option value="Pagėgiai">Pagėgiai</option>
+                                            <option value="Pakruojis">Pakruojis</option>
+                                            <option value="Palanga">Palanga</option>
+                                            <option value="Pasvalys">Pasvalys</option>
+                                            <option value="Plungė">Plungė</option>
+                                            <option value="Prienai">Prienai</option>
+                                            <option value="Radviliškis">Radviliškis</option>
+                                            <option value="Raseiniai">Raseiniai</option>
+                                            <option value="Rietavas">Rietavas</option>
+                                            <option value="Rokiškis">Rokiškis</option>
+                                            <option value="Šakiai">Šakiai</option>
+                                            <option value="Šalčininkai">Šalčininkai</option>
+                                            <option value="Šilalė">Šilalė</option>
+                                            <option value="Šilutė">Šilutė</option>
+                                            <option value="Širvintos">Širvintos</option>
+                                            <option value="Skuodas">Skuodas</option>
+                                            <option value="Švenčionys">Švenčionys</option>
+                                            <option value="Tauragė">Tauragė</option>
+                                            <option value="Telšiai">Telšiai</option>
+                                            <option value="Trakai">Trakai</option>
+                                            <option value="Ukmergė">Ukmergė</option>
+                                            <option value="Utena">Utena</option>
+                                            <option value="Varėna">Varėna</option>
+                                            <option value="Vievis">Vievis</option>
+                                            <option value="Vilkaviškis">Vilkaviškis</option>
+                                            <option value="Visaginas">Visaginas</option>
+                                            <option value="Zarasai">Zarasai</option>
+                                    </optgroup>
+                            <optgroup label="------------------">
+                                            <option value="Darbas namuose">Darbas namuose</option>
+                                            <option value="Užsienis">Užsienis</option>
+                                    </optgroup>
+                    </select>
+    </div>
+
+    <div id="area_wrapper">
+        <select name="padalinys[]" class="input_search" id="filter_area" title="Darbo sritis" autocomplete="off">
+            <option value="">Darbo sritis</option>
+                            <option value="202">Administravimas/sekretoriavimas</option>
+                            <option value="945">Apsauga</option>
+                            <option value="390">Apskaita/finansai/auditas</option>
+                            <option value="402">Dizainas/architektūra</option>
+                            <option value="72">Draudimas</option>
+                            <option value="488">Eksportas</option>
+                            <option value="1043">Energetika/elektronika</option>
+                            <option value="76" selected="selected">Informacinės technologijos</option>
+                            <option value="203">Inžinerija/mechanika</option>
+                            <option value="489">Klientų aptarnavimas/paslaugos</option>
+                            <option value="94">Maisto gamyba</option>
+                            <option value="205">Marketingas/reklama</option>
+                            <option value="408">Medicina/sveikatos apsauga/farmacija</option>
+                            <option value="946">Nekilnojamasis turtas</option>
+                            <option value="396">Pardavimų vadyba</option>
+                            <option value="207">Personalo valdymas</option>
+                            <option value="491">Pirkimai/tiekimas</option>
+                            <option value="85">Pramonė/gamyba</option>
+                            <option value="71">Prekyba - konsultavimas</option>
+                            <option value="492">Sandėliavimas</option>
+                            <option value="87">Statyba</option>
+                            <option value="1045">Švietimas/mokymai/kultūra</option>
+                            <option value="88">Teisė</option>
+                            <option value="1047">Transporto vairavimas</option>
+                            <option value="1049">Transporto/logistikos vadyba</option>
+                            <option value="204">Vadovavimas/valdymas</option>
+                            <option value="92">Valstybės tarnyba</option>
+                            <option value="931">Žemės ūkis/žuvininkystė</option>
+                            <option value="398">Žiniasklaida/viešieji ryšiai</option>
+                    </select>
+        <div id="area_add_c" class="">
+            <button type="button" class="button_action" id="area_add_choose">Pasirinkti daugiau sričių</button>
+            <span id="area_add_chosen" class="dn">
+                <div id="area_add_chosen_txt">ir dar <span id="area_add_amount">0</span> kategorija (-os).</div>
+                <button type="button" class="button_action" id="area_add_edit">Keisti</button>
+                arba                <button type="button" class="button_action" id="are_add_clear">išvalyti</button>
+                <span id="area_add_inputs">
+                                    </span>
+            </span>
+        </div>
+    </div>
+
+    <input name="keyw" type="search" class="input_search" id="filter_keyword" value="" placeholder="Raktinis žodis" title="Įveskite paieškos žodį">
+
+    <input type="submit" value="Filtruoti" class="button_general" id="main_filter_submit">
+            <span id="filter_statistics">
+                            Rodoma 360 skelbimų                                        <a href="https://www.cvbankas.lt/" id="filter_statistics_all">(žiūrėti visus 5338 skelbimus)</a>
+                    </span>
+    </form>
+
+    <div id="job_ad_list">
+                                        <article class="list_article list_article_rememberable jobadlist_list_article_rememberable jobadlist_article_vip" id="job_ad_2864754">
+                                    <div class="jobadlist_article_vip_icon" data-tooltip="VIP skelbimai rodomi sąrašo viršuje">VIP</div>
+                                <div class="jobadlist_ad_anchor" id="jobad_2864754"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/zaidimu-dizaineris-e-vilniuje/1-2864754">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_2871105/nordcurrent-group.jpg" width="70" height="70" alt="UAB „Nordcurrent Group“" title="UAB „Nordcurrent Group“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">ŽAIDIMŲ DIZAINERIS (-Ė)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1000-1300</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Nordcurrent Group“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 3 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="2864754">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable jobadlist_article_vip" id="job_ad_5869379">
+                                    <div class="jobadlist_article_vip_icon" data-tooltip="VIP skelbimai rodomi sąrašo viršuje">VIP</div>
+                                <div class="jobadlist_ad_anchor" id="jobad_5869379"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/skaitmenines-rinkodaros-specialistas-e-vilniuje/1-5869379">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_2871105/nordcurrent-group.jpg" width="70" height="70" alt="UAB „Nordcurrent Group“" title="UAB „Nordcurrent Group“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">SKAITMENINĖS RINKODAROS SPECIALISTAS (Ė)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1400-1500</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Nordcurrent Group“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 7 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="5869379">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable jobadlist_article_vip" id="job_ad_1282832">
+                                    <div class="jobadlist_article_vip_icon" data-tooltip="VIP skelbimai rodomi sąrašo viršuje">VIP</div>
+                                <div class="jobadlist_ad_anchor" id="jobad_1282832"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/video-zaidimu-programuotojas-a-vilniuje/1-1282832">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/adlogo_2_2871133/nordcurrent-group.jpg" width="70" height="70" alt="UAB „Nordcurrent Group“" title="UAB „Nordcurrent Group“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">VIDEO ŽAIDIMŲ PROGRAMUOTOJAS (-A)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1000-1100</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Nordcurrent Group“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 8 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="1282832">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable jobadlist_article_vip" id="job_ad_6409135">
+                                    <div class="jobadlist_article_vip_icon" data-tooltip="VIP skelbimai rodomi sąrašo viršuje">VIP</div>
+                                <div class="jobadlist_ad_anchor" id="jobad_6409135"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/support-specialist-late-evening-shift-vilniuje/1-6409135">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_10324089/harbortouch.jpg" width="100" height="41" alt="Shift4 Payments Lithuania UAB" title="Shift4 Payments Lithuania UAB">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">SUPPORT SPECIALIST (Late evening shift)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1100-1300</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">Shift4 Payments Lithuania UAB</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 15 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6409135">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable jobadlist_article_vip" id="job_ad_6001231">
+                                    <div class="jobadlist_article_vip_icon" data-tooltip="VIP skelbimai rodomi sąrašo viršuje">VIP</div>
+                                <div class="jobadlist_ad_anchor" id="jobad_6001231"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/mid-level-full-stack-developer-java-scala-react-vilniuje/1-6001231">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_1432012/baltic-virtual-assistants.jpg" width="100" height="55" alt="UAB „BALTIC VIRTUAL ASSISTANTS“" title="UAB „BALTIC VIRTUAL ASSISTANTS“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Mid-level Full-Stack Developer (Java/Scala, React)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">Nuo 1800</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „BALTIC VIRTUAL ASSISTANTS“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 21 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6001231">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable jobadlist_article_vip" id="job_ad_3877806">
+                                    <div class="jobadlist_article_vip_icon" data-tooltip="VIP skelbimai rodomi sąrašo viršuje">VIP</div>
+                                <div class="jobadlist_ad_anchor" id="jobad_3877806"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/fullstack-php-programuotojas-junior-mid-vilniuje/1-3877806">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/adlogo_2_14626995/nordcode-technology.jpg" width="100" height="41" alt="UAB „Nordcode technology“" title="UAB „Nordcode technology“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Fullstack PHP programuotojas (junior - mid)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1000-2000</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Nordcode technology“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_important">liko 13 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="3877806">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6355099">
+                                <div class="jobadlist_ad_anchor" id="jobad_6355099"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/informaciniu-sistemu-architektas-e-vilniuje/1-6355099">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_5816613/registru-centras-vi.jpg" width="100" height="67" alt="Registrų Centras, VĮ" title="Registrų Centras, VĮ">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Informacinių sistemų architektas (-ė)</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Registrų Centras, VĮ</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 20 min.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6355099">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6355109">
+                                <div class="jobadlist_ad_anchor" id="jobad_6355109"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/informaciniu-sistemu-analitikas-e-vilniuje/1-6355109">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_5816613/registru-centras-vi.jpg" width="100" height="67" alt="Registrų Centras, VĮ" title="Registrų Centras, VĮ">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Informacinių sistemų analitikas (-ė)</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Registrų Centras, VĮ</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 21 min.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6355109">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6433135">
+                                <div class="jobadlist_ad_anchor" id="jobad_6433135"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/cabin-engineer-vilniuje/1-6433135">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_9782531/getjet-airlines.jpg" width="100" height="56" alt="UAB „GetJet Airlines“" title="UAB „GetJet Airlines“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Cabin Engineer</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1500-2000</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „GetJet Airlines“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 35 min.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6433135">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6433059">
+                                <div class="jobadlist_ad_anchor" id="jobad_6433059"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/it-inzinierius-e-vilniuje/1-6433059">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_2669993/atea.jpg" width="100" height="26" alt="ATEA grupė" title="ATEA grupė">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">IT Inžinierius (-ė)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">700-1000</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">ATEA grupė</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 2 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6433059">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+            <!--                <div class="banner_inline adspace"><div id="--><!--"></div></div>-->
+                <div class="banner_inline adspace" style=""><div id="div-gpt-ad-1549466664460-0" style=""><div id="google_ads_iframe_/146733436/CVbankas/CVB_list_0__container__" style="border: 0pt none; width: 728px; height: 90px;"></div></div></div>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6432947">
+                                <div class="jobadlist_ad_anchor" id="jobad_6432947"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/skelbimas-vilniuje/1-6432947">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-static.dgn.lt/static/images/cvbankas_client_small.jpg" width="70" height="31" alt="CVB klientas" title="CVB klientas">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Системный администратор</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1000-1500</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">ООО „Мистер Фуд“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 3 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6432947">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_5978333">
+                                <div class="jobadlist_ad_anchor" id="jobad_5978333"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/jaunesnysis-it-pagalbos-tarnybos-specialistas-klaipedoje/1-5978333">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_2243185/viciunu-imoniu-grupe.jpg" width="100" height="28" alt="„Vičiūnų“ įmonių grupė" title="„Vičiūnų“ įmonių grupė">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">JAUNESNYSIS IT PAGALBOS TARNYBOS SPECIALISTAS</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">700-800</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">„Vičiūnų“ įmonių grupė</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Klaipėdoje</span></span>
+                            <span class="txt_list_2">prieš 4 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="5978333">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6420775">
+                                <div class="jobadlist_ad_anchor" id="jobad_6420775"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/patyres-java-programuotojas-a-vilniuje/1-6420775">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16733283/asseco-lietuva.jpg" width="99" height="70" alt="UAB „Asseco Lietuva“" title="UAB „Asseco Lietuva“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Patyręs Java programuotojas (-a)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">2300-3700</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Asseco Lietuva“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 4 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6420775">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6392631">
+                                <div class="jobadlist_ad_anchor" id="jobad_6392631"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/head-of-data-solutions-group-vilniuje/1-6392631">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/adlogo_2_16653521/ignitis-grupe.jpg" width="100" height="48" alt="UAB „Ignitis grupė“" title="UAB „Ignitis grupė“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">HEAD OF DATA SOLUTIONS GROUP</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">UAB „Ignitis grupė“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 13 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6392631">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6432007">
+                                <div class="jobadlist_ad_anchor" id="jobad_6432007"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/seo-lead-security-product-vilniuje/1-6432007">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16234301/tesonet.jpg" width="70" height="70" alt="Tesonet" title="Tesonet">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">SEO Lead - Security Product</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Tesonet</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 16 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6432007">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6431963">
+                                <div class="jobadlist_ad_anchor" id="jobad_6431963"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/magento-v2-developer-php-programmer-kaune/1-6431963">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16232827/pecu-nino.jpg" width="100" height="25" alt="UAB „Pecu Nino“" title="UAB „Pecu Nino“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Magento v2 Developer / PHP Programmer</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">Iki 2500</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Pecu Nino“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Kaune</span></span>
+                            <span class="txt_list_2">prieš 17 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6431963">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6341593">
+                                <div class="jobadlist_ad_anchor" id="jobad_6341593"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/microsoft-dynamics-crm-konsultantas-e-kaune/1-6341593">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_14708181/softera-baltic.jpg" width="100" height="42" alt="UAB „SOFTERA BALTIC“" title="UAB „SOFTERA BALTIC“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Microsoft Dynamics CRM konsultantas (-ė)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">Nuo 1000</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „SOFTERA BALTIC“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Kaune</span></span>
+                            <span class="txt_list_2">prieš 20 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6341593">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6290363">
+                                <div class="jobadlist_ad_anchor" id="jobad_6290363"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/microsoft-dynamics-nav-sistemos-aptarnavimo-konsultantas-e-kaune/1-6290363">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_14708181/softera-baltic.jpg" width="100" height="42" alt="UAB „SOFTERA BALTIC“" title="UAB „SOFTERA BALTIC“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Microsoft Dynamics NAV sistemos aptarnavimo konsultantas(-ė)</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">UAB „SOFTERA BALTIC“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Kaune</span></span>
+                            <span class="txt_list_2">prieš 20 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6290363">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6431655">
+                                <div class="jobadlist_ad_anchor" id="jobad_6431655"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/qa-specialist-kaune/1-6431655">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16778835/pvcase.jpg" width="100" height="27" alt="UAB „PVcase“" title="UAB „PVcase“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">QA SPECIALIST</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">UAB „PVcase“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Kaune</span></span>
+                            <span class="txt_list_2">prieš 21 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6431655">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6431307">
+                                <div class="jobadlist_ad_anchor" id="jobad_6431307"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/php-magento-programuotojas-vilniuje/1-6431307">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/adlogo_2_16778431/interaktyvi-reklama.jpg" width="100" height="27" alt="UAB „Interaktyvi reklama“" title="UAB „Interaktyvi reklama“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">PHP/Magento programuotojas</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">Nuo 2000</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Interaktyvi reklama“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 22 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6431307">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6431569">
+                                <div class="jobadlist_ad_anchor" id="jobad_6431569"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/systems-analyst-for-core-banking-solutions-vilniuje/1-6431569">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-files.dgn.lt/companylogo_3_3506971/luminor-bank-ab-lietuvos-skyrius.svg" width="100" height="23" alt="Luminor Bank AB Lietuvos skyrius" title="Luminor Bank AB Lietuvos skyrius">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Systems Analyst for Core Banking Solutions</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Luminor Bank AB Lietuvos skyrius</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 22 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6431569">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6431421">
+                                <div class="jobadlist_ad_anchor" id="jobad_6431421"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/bi-developer-analyst-vilniuje/1-6431421">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_2774025/girteka-imoniu-grupe.jpg" width="100" height="38" alt="Girteka įmonių grupė" title="Girteka įmonių grupė">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">BI Developer - Analyst</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Girteka įmonių grupė</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 23 val.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6431421">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6431277">
+                                <div class="jobadlist_ad_anchor" id="jobad_6431277"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/solution-architect-vilniuje/1-6431277">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/adlogo_2_16777453/ignitis-grupe.jpg" width="100" height="48" alt="UAB „Ignitis grupė“" title="UAB „Ignitis grupė“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">SOLUTION ARCHITECT</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">UAB „Ignitis grupė“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6431277">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6430989">
+                                <div class="jobadlist_ad_anchor" id="jobad_6430989"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/front-end-developer-kaune/1-6430989">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_3315943/festo.jpg" width="100" height="19" alt="UAB „FESTO“" title="UAB „FESTO“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Front-End Developer</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">Nuo 1800</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „FESTO“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Kaune</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6430989">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_5960775">
+                                <div class="jobadlist_ad_anchor" id="jobad_5960775"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/full-stack-net-javascript-developer-vilniuje/1-5960775">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_4241127/telia.jpg" width="80" height="70" alt="Telia" title="Telia">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Full-stack .NET/JavaScript developer</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Telia</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="5960775">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_5627293">
+                                <div class="jobadlist_ad_anchor" id="jobad_5627293"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/front-end-developer-vilniuje/1-5627293">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_10191609/tg-lab.jpg" width="100" height="53" alt="UAB „TG LAB“" title="UAB „TG LAB“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">FRONT END DEVELOPER</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">UAB „TG LAB“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="5627293">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6427189">
+                                <div class="jobadlist_ad_anchor" id="jobad_6427189"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/front-end-programuotojas-vilniuje/1-6427189">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/adlogo_2_16742629/interaktyvi-reklama.jpg" width="100" height="35" alt="UAB „Interaktyvi reklama“" title="UAB „Interaktyvi reklama“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Front - end programuotojas</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">Nuo 1800</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Interaktyvi reklama“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6427189">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6430821">
+                                <div class="jobadlist_ad_anchor" id="jobad_6430821"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/siem-engineer-vilniuje/1-6430821">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/adlogo_2_16752317/indigroup.jpg" width="100" height="21" alt="UAB „Indigroup“" title="UAB „Indigroup“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">SIEM Engineer</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">2500-4132</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Indigroup“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6430821">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6322413">
+                                <div class="jobadlist_ad_anchor" id="jobad_6322413"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/linux-sysadmin-vilniuje/1-6322413">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16234301/tesonet.jpg" width="70" height="70" alt="Tesonet" title="Tesonet">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Linux SysAdmin</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Tesonet</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6322413">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6323019">
+                                <div class="jobadlist_ad_anchor" id="jobad_6323019"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/php-developer-vilniuje/1-6323019">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16234301/tesonet.jpg" width="70" height="70" alt="Tesonet" title="Tesonet">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">PHP Developer</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Tesonet</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6323019">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6322403">
+                                <div class="jobadlist_ad_anchor" id="jobad_6322403"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/ux-ui-designer-vilniuje/1-6322403">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16234301/tesonet.jpg" width="70" height="70" alt="Tesonet" title="Tesonet">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">UX/UI Designer</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Tesonet</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6322403">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6322155">
+                                <div class="jobadlist_ad_anchor" id="jobad_6322155"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/swift-developer-kaune/1-6322155">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16234301/tesonet.jpg" width="70" height="70" alt="Tesonet" title="Tesonet">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Swift Developer</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Tesonet</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Kaune</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6322155">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6322157">
+                                <div class="jobadlist_ad_anchor" id="jobad_6322157"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/linux-sysadmin-kaune/1-6322157">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16234301/tesonet.jpg" width="70" height="70" alt="Tesonet" title="Tesonet">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Linux SysAdmin</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Tesonet</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Kaune</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6322157">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6322371">
+                                <div class="jobadlist_ad_anchor" id="jobad_6322371"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/front-end-developer-vilniuje/1-6322371">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16234301/tesonet.jpg" width="70" height="70" alt="Tesonet" title="Tesonet">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Front-end Developer</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Tesonet</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6322371">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6429987">
+                                <div class="jobadlist_ad_anchor" id="jobad_6429987"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/b2b-it-projektu-vadovas-e-vilniuje/1-6429987">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_3762663/infotransport.jpg" width="100" height="21" alt="UAB „Infotransport“" title="UAB „Infotransport“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">B2B IT PROJEKTŲ VADOVAS(-Ė)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">900-1900</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Infotransport“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6429987">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6429771">
+                                <div class="jobadlist_ad_anchor" id="jobad_6429771"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/it-inzinierius-vilniuje/1-6429771">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_1253604/komveda.jpg" width="100" height="37" alt="UAB „Komveda“" title="UAB „Komveda“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">IT inžinierius</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1000-1600</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Komveda“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6429771">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6429745">
+                                <div class="jobadlist_ad_anchor" id="jobad_6429745"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/java-team-tech-lead-vilniuje/1-6429745">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_4241127/telia.jpg" width="80" height="70" alt="Telia" title="Telia">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Java Team/Tech Lead</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Telia</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6429745">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6429699">
+                                <div class="jobadlist_ad_anchor" id="jobad_6429699"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/informaciniu-sistemu-inzinierius-e-technologinio-valdymo-sistemos-vilniuje/1-6429699">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_3716523/aer-grid.jpg" width="100" height="43" alt="AB „Amber Grid“" title="AB „Amber Grid“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Informacinių sistemų inžinierius (-ė) (technologinio valdymo sistemos)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">Nuo 2200</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">AB „Amber Grid“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6429699">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6429673">
+                                <div class="jobadlist_ad_anchor" id="jobad_6429673"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/skelbimas-vilniuje/1-6429673">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-static.dgn.lt/static/images/cvbankas_client_small.jpg" width="70" height="31" alt="CVB klientas" title="CVB klientas">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Системный администратор</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1000-1500</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">ООО „БлицТим“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">liko 4 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6429673">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6404791">
+                                <div class="jobadlist_ad_anchor" id="jobad_6404791"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/kompiuteriu-technikas-e-mazeikiuose/1-6404791">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16687491/aumonda.jpg" width="100" height="20" alt="UAB „AUMONDA“" title="UAB „AUMONDA“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Kompiuterių technikas (-ė)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1400-1600</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „AUMONDA“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Mažeikiuose</span></span>
+                            <span class="txt_list_2">prieš 1 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6404791">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_5963485">
+                                <div class="jobadlist_ad_anchor" id="jobad_5963485"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/copywriter-kaune/1-5963485">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_3228155/hostinger.jpg" width="100" height="31" alt="UAB „HOSTINGER“" title="UAB „HOSTINGER“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Copywriter</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">700-1200</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „HOSTINGER“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Kaune</span></span>
+                            <span class="txt_list_2">liko 4 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="5963485">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6429431">
+                                <div class="jobadlist_ad_anchor" id="jobad_6429431"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/firewall-administrator-vilniuje/1-6429431">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_4241127/telia.jpg" width="80" height="70" alt="Telia" title="Telia">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Firewall Administrator</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Telia</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 2 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6429431">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6429287">
+                                <div class="jobadlist_ad_anchor" id="jobad_6429287"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/systems-manager-in-iam-vilniuje/1-6429287">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_4241127/telia.jpg" width="80" height="70" alt="Telia" title="Telia">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Systems Manager in IAM</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Telia</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 2 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6429287">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6429273">
+                                <div class="jobadlist_ad_anchor" id="jobad_6429273"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/informaciniu-sistemu-specialistas-e-kaune/1-6429273">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_1138138/lytagra.jpg" width="76" height="70" alt="AB „Lytagra“" title="AB „Lytagra“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">Informacinių sistemų specialistas (-ė)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1000-1200</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">AB „Lytagra“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Kaune</span></span>
+                            <span class="txt_list_2">prieš 2 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6429273">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6429225">
+                                <div class="jobadlist_ad_anchor" id="jobad_6429225"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/helpdesk-support-specialist-vilniuje/1-6429225">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_10766291/western-union-processing-lithuania.jpg" width="100" height="25" alt="UAB „Western Union Processing Lithuania“" title="UAB „Western Union Processing Lithuania“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Helpdesk Support Specialist</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1014,50-1739</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „Western Union Processing Lithuania“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 2 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6429225">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6429185">
+                                <div class="jobadlist_ad_anchor" id="jobad_6429185"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/vvs-erp-konsultantas-e-finansai-vilniuje/1-6429185">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_5644631/personalo-sprendimai.jpg" width="100" height="28" alt="UAB „PERSONALO SPRENDIMAI“" title="UAB „PERSONALO SPRENDIMAI“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="lt">VVS (ERP) KONSULTANTAS (-Ė) (finansai)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_net">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">Nuo 1500</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Į rankas</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „PERSONALO SPRENDIMAI“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 2 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6429185">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6347195">
+                                <div class="jobadlist_ad_anchor" id="jobad_6347195"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/qa-specialist-vilniuje/1-6347195">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_16234301/tesonet.jpg" width="70" height="70" alt="Tesonet" title="Tesonet">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">QA specialist</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Tesonet</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 2 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6347195">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6347915">
+                                <div class="jobadlist_ad_anchor" id="jobad_6347915"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/engineering-lead-vilniuje/1-6347915">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_7693/alliance-recruitment.jpg" width="100" height="31" alt="UAB „ALLIANCE RECRUITMENT“" title="UAB „ALLIANCE RECRUITMENT“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">Engineering Lead</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">4500-5700</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „ALLIANCE RECRUITMENT“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">liko 6 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6347915">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6428549">
+                                <div class="jobadlist_ad_anchor" id="jobad_6428549"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/oracle-developer-vilniuje/1-6428549">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_7693/alliance-recruitment.jpg" width="100" height="31" alt="UAB „ALLIANCE RECRUITMENT“" title="UAB „ALLIANCE RECRUITMENT“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">ORACLE DEVELOPER</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">1700-2200</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „ALLIANCE RECRUITMENT“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 2 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6428549">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                                            <article class="list_article list_article_rememberable jobadlist_list_article_rememberable " id="job_ad_6428529">
+                                <div class="jobadlist_ad_anchor" id="jobad_6428529"></div>
+                <a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/bi-developer-business-intelligence-vilniuje/1-6428529">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_7693/alliance-recruitment.jpg" width="100" height="31" alt="UAB „ALLIANCE RECRUITMENT“" title="UAB „ALLIANCE RECRUITMENT“">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">BI Developer (Business Intelligence)</h3>
+                            <span class="heading_secondary">
+                                                                    <span class="salary_bl salary_bl_gross">
+                                        <span class="salary_inner">
+                                            <span class="salary_text">
+                                                <span class="salary_amount">2000-3600</span>
+                                                <span class="salary_period">€/mėn.</span>
+                                            </span>
+                                            <span class="salary_calculation">Neatskaičius mokesčių</span>
+                                        </span>
+                                    </span>
+                                                                <span class="dib mt5">UAB „ALLIANCE RECRUITMENT“</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">liko 6 d.</span>
+                        </div>
+                    </div>
+                </a>
+                <form action="https://www.cvbankas.lt/isimiti-pamirsti-skelbima.html" method="post" class="jobadlist_remember_from">
+                    <input type="hidden" name="ad_id" value="6428529">
+                    <input type="submit" value="Įsiminti" class="list_remember_button button_sm_ico button_sm_ico_remember js_ga_event" data-category="ad_list" data-action="click" data-link-title="remember-forget">
+                </form>
+            </article>
+                        </div>
+
+
+    <ul class="pages_ul mt30 mb30">
+        
+        <li>
+            <ul class="pages_ul_inner">
+                                    <li>
+                                                    <a href="https://www.cvbankas.lt/?padalinys%5B0%5D=76" class="current">1</a>
+                                            </li>
+                                    <li>
+                                                    <a href="https://www.cvbankas.lt/?padalinys%5B0%5D=76&amp;page=2">2</a>
+                                            </li>
+                                    <li>
+                                                    <a href="https://www.cvbankas.lt/?padalinys%5B0%5D=76&amp;page=3">3</a>
+                                            </li>
+                                    <li>
+                                                    <a href="https://www.cvbankas.lt/?padalinys%5B0%5D=76&amp;page=4">4</a>
+                                            </li>
+                                    <li>
+                                                    <a href="https://www.cvbankas.lt/?padalinys%5B0%5D=76&amp;page=5">5</a>
+                                            </li>
+                                    <li>
+                                                    ...                                            </li>
+                                    <li>
+                                                    <a href="https://www.cvbankas.lt/?padalinys%5B0%5D=76&amp;page=8">8</a>
+                                            </li>
+                            </ul>
+        </li>
+                    <li><a href="https://www.cvbankas.lt/?padalinys%5B0%5D=76&amp;page=2" class="prev_next">»</a></li>
+            </ul>
+
+
+<script>
+if (cvbCanJs()) {
+    window.addEventListener('load', function() {
+        require(['cvbcomm!supports'], function(supports) {
+            // remember ad
+            if (supports.doesXhrLoadEnd()) {
+                require(['cvbcomm!event_manager'], function(eventManager) {
+                    var savedAdsCount = document.getElementById('remembered_ads_count'),
+                        adsContainer = document.getElementById('job_ad_list'),
+                        headMenu = document.getElementById('head_a_menu');
+                    eventManager.listenForClassClick(adsContainer, 'list_remember_button', function(e, button) {
+                        e.preventDefault();
+
+                        require(['cvbcomm!job_ad_rememberer'], function(jobAdRememberer) {
+                            jobAdRememberer.submitClicked(
+                                button,
+                                savedAdsCount,
+                                headMenu,
+                                'Pamiršti',
+                                'button_sm_ico_remember_not',
+                                'Įsiminti',
+                                'loader'
+                            )
+                        });
+                    });
+                });
+            }
+
+            // additional areas
+            require(['cvbcomm!ad_list/multi_area_selector'], function(multiAreaSelector) {
+                multiAreaSelector.manageAdditionalAreas(
+                    'https://www.cvbankas.lt/papildomos-sritys.html',
+                    document.getElementById('area_add_c'),
+                    document.getElementById('filter_area'),
+                    document.getElementById('form_filter'),
+                    document.getElementById('area_add_inputs'),
+                    document.getElementById('area_add_amount'),
+                    document.getElementById('area_add_choose'),
+                    document.getElementById('area_add_chosen'),
+                    document.getElementById('area_add_choose'),
+                    document.getElementById('area_add_edit'),
+                    document.getElementById('are_add_clear')
+                );
+
+                                    multiAreaSelector.unhideWidget(document.getElementById('area_add_c'));
+                            });
+
+            // submit style changing
+            require(['cvbcomm!ad_list/submit_changer'], function(submitChanger) {
+                submitChanger.manageChanging(
+                    document.getElementById('main_filter_submit'),
+                    document.getElementById('filter_city'),
+                    document.getElementById('filter_area'),
+                    document.getElementById('filter_keyword'),
+                    'button_jsk',
+                    'button_general'
+                );
+            });
+
+            // temporary track remember/forget
+            require(['cvbcomm!google_analytics_events_manager'], function (gaEventsManager) {
+                var ga = window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+                gaEventsManager.sendEvent(document.getElementById('job_ad_list'), 'js_ga_event', 'ignored', ga);
+            });
+        });
+    });
+}
+</script>            </main>
+            <aside id="main_aside" class="main_aside" style="display: block;">
+                <div id="aside_pad">
+    <div class="aside_c">
+        
+                    <div class="aside_section tac">
+                                    <div class="aside_h3 pb10">5000 darbdavių ieško Jūsų!</div>
+                                <a href="https://www.cvbankas.lt/sukurti-cv.html" class="button_jsk js_ga_event" data-category="jobAd" data-action="click" data-link-title="Sukurkite CV dabar sidebar">Sukurkite CV dabar</a>
+            </div>
+        
+        
+                    <div class="aside_section">
+                <form action="https://www.cvbankas.lt/login.php" method="post">
+                    <fieldset id="login_fs" class="fieldset_d">
+                        <legend id="login_legend">Prisijungti</legend>
+                                                                                    <a href="https://www.cvbankas.lt/prisijungti-facebook.html" class="button_ico button_ico_fb js_ga_event" id="fb_login_but" data-category="jobAd" data-action="click" data-link-title="facebook login sidebar">Facebook »</a>
+                                                                                        <a href="https://www.cvbankas.lt/prisijungti-linkedin.html" class="button_ico button_ico_in js_ga_event" id="in_login_but" data-category="jobAd" data-action="click" data-link-title="linkedIn login sidebar">Linkedin »</a>
+                                                    
+                                                                            <input type="hidden" name="login_sector" value="iesk">
+                                                <div class="login_input_c">
+                            <input type="email" name="uname" value="" required="required" class="input_d login_input" placeholder="El. paštas" data-error_msg="Įveskite el. pašto adresą" data-error_type="Patikrinkite įvestą el. pašto adresą" title="El. paštas"><br>
+                            <img src="https://cvbankas-static.dgn.lt/static/images/ico_envelope.png" alt="El. paštas" class="login_email_icon">
+                        </div>
+                        <div class="login_input_c">
+                            <input type="password" name="pass" value="" required="required" class="input_d login_input" placeholder="Slaptažodis" data-error_msg="Įveskite slaptažodį" title="Slaptažodis"><br>
+                            <img src="https://cvbankas-static.dgn.lt/static/images/ico_lock.png" alt="Slaptažodis" class="login_pass_icon">
+                        </div>
+                        
+                                                <input type="submit" value="Prisijungti" class="mt10 p5 button_general js_ga_event" data-category="jobAd" data-action="click" data-link-title="form login sidebar">
+
+                        <input type="checkbox" name="remember_me" value="1" checked="checked" class="input_d vam" id="remember_me">
+                        <label for="remember_me" class="txt_2 vam">Įsiminti mane</label>
+                    </fieldset>
+                </form>
+
+                <div id="aside_register_c">
+                    <div class="pt20"><a href="https://www.cvbankas.lt/keisti-slaptazodi.html" class="js_ga_event" data-category="jobAd" data-action="click" data-link-title="Pamiršau slaptažodį sidebar">Pamiršau slaptažodį</a></div>
+                    <div class="pt10"><a href="https://www.cvbankas.lt/registracija-ieskantiems-darbo.html" class="js_ga_event" data-category="jobAd" data-action="click" data-link-title="Registruotis sidebar">Registruotis</a></div>
+                </div>
+            </div>
+        
+        <ul class="aside_section aside_ul">
+            
+                            <li>
+                    <a href="https://www.cvbankas.lt/issaugoti-skelbimai.html" class="a_ico a_remembered_ads js_ga_event" data-category="jobAd" data-action="click" data-link-title="Įsiminti darbo skelbimai sidebar">
+                        Įsiminti darbo skelbimai <span id="remembered_ads_count" class="dn">(0)</span>
+                    </a>
+                </li>
+                    </ul>
+
+            </div>
+
+    
+    
+    
+            <div id="facebook_likebox" class="aside_c mt30" style="display: block;"><iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fcvbankas&amp;width=297&amp;height=255&amp;show_faces=true&amp;stream=false&amp;header=false&amp;colorscheme=light&amp;force_wall=false&amp;show_border=false&amp;locale=lt_LT" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:297px;height:255px;" allowtransparency="true"></iframe></div>
+        <div class="banner_right_big_sticky_container">
+            <div id="div-gpt-ad-1549466551465-0" class="banner_right_big adspace" style=""><div id="google_ads_iframe_/146733436/CVbankas/CVB_300x600_0__container__" style="border: 0pt none; width: 300px; height: 250px;"></div></div>
+        </div>
+    
+            <div class="aside_keywords_section">
+            <h3 class="aside_keywords_h3">POPULIARIOS PAIEŠKOS</h3>
+            <ul class="aside_keywords_ul">
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/php">php</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/junior">junior</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/java">java</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/praktika">praktika</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/python">python</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/net">.net</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/programuotojas">programuotojas</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/c">c#</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/test">test</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/front">front</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/vadovas">vadovas</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/javascript">javascript</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/linux">linux</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/sql">sql</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/react">react</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/android">android</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/web">web</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/ios">ios</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/qa">qa</a></li>
+                                    <li><a href="https://www.cvbankas.lt/raktazodis/developer">developer</a></li>
+                            </ul>
+        </div>
+                <div id="div-gpt-ad-1549466597944-0" class="banner_right_big_bottom adspace" style=""><div id="google_ads_iframe_/146733436/CVbankas/CVB_300x250_0__container__" style="border: 0pt none; width: 300px; height: 250px;"></div></div>
+    </div>
+
+
+<script>
+    if (cvbCanJs()) {
+        window.addEventListener('load', function() {
+            
+                    });
+    }
+</script>
+
+            </aside>
+        </div>
+    </div>
