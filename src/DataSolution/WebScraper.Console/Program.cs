@@ -10,6 +10,8 @@ using WebScraper.Infrastructure;
 using WebScraper.Application;
 using MediatR;
 using WebScraper.Application.Services;
+using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace WebScraper.Console
 {
@@ -32,9 +34,18 @@ namespace WebScraper.Console
 
         private static void RegisterServices()
         {
+            Log.Logger = new LoggerConfiguration()
+            .Enrich.FromLogContext()
+            .WriteTo.Console()
+            .CreateLogger();
+
+            Log.Information("The global logger has been configured");
+
+
             var builder = new ConfigurationBuilder()
            .SetBasePath(Directory.GetCurrentDirectory())
            .AddJsonFile("appsettings.json");
+
 
             var configuration = builder.Build();
 
@@ -42,6 +53,8 @@ namespace WebScraper.Console
             collection.ConfigureMapper();
             collection.AddApplication(configuration);
             collection.AddPersistence(configuration, configuration["DefaultConnection"]);
+
+           
 
             _serviceProvider = collection.BuildServiceProvider();
         }

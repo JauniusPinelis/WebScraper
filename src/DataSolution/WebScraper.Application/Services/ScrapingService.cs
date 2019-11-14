@@ -16,8 +16,6 @@ namespace WebScraper.Application.Services
         private readonly IScraperFactory _scraperFactory;
         private readonly IMapper _mapper;
 
-
-
         public ScrapingService(IDataContext context, IScraperFactory factory, 
              IMapper mapper)
         {

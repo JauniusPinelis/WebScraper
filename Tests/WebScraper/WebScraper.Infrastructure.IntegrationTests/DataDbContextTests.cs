@@ -60,6 +60,21 @@ namespace WebScraper.Infrastructure.IntegrationTests
             url.Location.Should().Be("Vilnius");
         }
 
+        [Test]
+        public void SaveChanges_GivenNewCompanyWithVilnius_SavedCompanyShouldBeMedScinet()
+        {
+            var url = new JobUrl()
+            {
+                Url = "Test",
+                Location = "Vilnius",
+                Company = "MedSciNet",
+            };
+
+            _sut.JobUrls.Add(url);
+            _sut.SaveChanges();
+
+            url.Company.Should().Be("MedSciNet");
+        }
         public void Dispose()
         {
             _sut?.Dispose();
