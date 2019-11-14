@@ -26,16 +26,17 @@ namespace WebScraper.Core.CvBankas
             var resultHtml = new HtmlDocument();
             resultHtml.LoadHtml(html);
 
-            var url = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@href, 'job-ad')]");
-            var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'salary-blue')]");
-            var location = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@itemprop, 'address')]");
-            var company = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@itemprop, 'name')]");
+            var url = resultHtml.DocumentNode.FirstChild.Attributes["href"].Value;
+            var title = resultHtml.DocumentNode.SelectSingleNode("//h3[contains(@class, 'list_h3')]");
+            var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'salary_amount')]");
+            var location = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'list_city')]");
+            var company = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'dib mt5')]");
 
             return new JobUrl()
             {
-                Url = url?.GetAttributeValue("href", string.Empty),
+                Url = url,
                 Salary = salary?.InnerText ?? "",
-                Title = url?.InnerText,
+                Title = title.InnerText,
                 Location = location?.InnerText,
                 Company = company?.InnerText
             };

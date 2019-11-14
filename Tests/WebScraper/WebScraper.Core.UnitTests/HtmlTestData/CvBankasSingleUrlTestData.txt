@@ -1,0 +1,17 @@
+﻿<a class="list_a can_visited list_a_has_logo" href="https://www.cvbankas.lt/sap-basis-administratorius-e-vilniuje/1-6411437">
+                    <div class="list_logo_c">
+                        <img src="https://cvbankas-img.dgn.lt/companylogo_2_4241127/telia.jpg" width="80" height="70" alt="Telia" title="Telia">
+                    </div>
+                    <div class="list_a_wrapper">
+                        <div class="list_cell">
+                            <h3 class="list_h3" lang="en">SAP Basis administratorius(-ė)</h3>
+                            <span class="heading_secondary">
+                                                                <span class="dib mt5">Telia</span>
+                            </span>
+                        </div>
+                        <div class="list_cell list_ads_c_last">
+                            <span class="txt_list_1" lang="lt"><span class="list_city">Vilniuje</span></span>
+                            <span class="txt_list_2">prieš 14 d.</span>
+                        </div>
+                    </div>
+                </a>

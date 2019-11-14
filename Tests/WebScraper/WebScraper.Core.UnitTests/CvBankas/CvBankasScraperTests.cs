@@ -29,5 +29,35 @@ namespace WebScraper.Core.UnitTests.CvBankas
 
             jobEntities.Count().Should().Be(50);
         }
+
+        [Test]
+        public void ScrapeJobUrlInfo_GivenLocationVilnius_GivesVilniuje()
+        {
+            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvBankasSingleUrlTestData.txt");
+
+            var jobEntity = _scraper.ScrapeJobUrlInfo(textData);
+
+            jobEntity.Location.Should().Be("Vilniuje");
+        }
+
+        [Test]
+        public void ScrapeJobUrlInfo_GivenTestData_GetsCorrectUrl()
+        {
+            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvBankasSingleUrlTestData.txt");
+
+            var jobEntity = _scraper.ScrapeJobUrlInfo(textData);
+
+            jobEntity.Url.Should().Be("https://www.cvbankas.lt/sap-basis-administratorius-e-vilniuje/1-6411437");
+        }
+
+        [Test]
+        public void ScrapeJobUrlInfo_GivenTestData_GetsCorrectCompany()
+        {
+            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvBankasSingleUrlTestData.txt");
+
+            var jobEntity = _scraper.ScrapeJobUrlInfo(textData);
+
+            jobEntity.Company.Should().Be("Telia");
+        }
     }
 }
