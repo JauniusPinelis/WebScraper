@@ -15,6 +15,7 @@ namespace WebScraper.Infrastructure.Db
 
         public DbSet<JobUrl> JobUrls { get; set; }
         public DbSet<JobInfo> JobInfos { get; set; }
+        public DbSet<JobPortal> JobPortals { get; set; }
 
         private readonly IDateTime _dateTime;
        
@@ -34,6 +35,14 @@ namespace WebScraper.Infrastructure.Db
         {
             
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(DataContext).Assembly);
+            SeedData(modelBuilder);
+        }
+
+        protected void SeedData (ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<JobPortal>().HasData(
+                new JobPortal() { Id = 1, Name = "CvOnline" },
+                new JobPortal() { Id = 2, Name = "CvBankas" });
         }
 
         public override int SaveChanges()

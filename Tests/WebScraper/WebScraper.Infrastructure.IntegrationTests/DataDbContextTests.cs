@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Moq;
 using NUnit.Framework;
 using System;
+using System.Linq;
 using WebScraper.Core.Entities;
 using WebScraper.Infrastructure.Db;
 using WebScraper.Infrastructure.Services;
@@ -75,6 +76,21 @@ namespace WebScraper.Infrastructure.IntegrationTests
 
             url.Company.Should().Be("MedSciNet");
         }
+
+        [Test]
+        public void SeedData_DefaultDb_HasJobPortalsSeeded()
+        {
+            _sut.Database.EnsureCreated();
+
+            var jobPortals = _sut.JobPortals.ToList();
+
+            var jobPortalNames = jobPortals.Select(p => p.Name.ToLower());
+
+            jobPortalNames.Should().NotBeEmpty();
+            jobPortalNames.Should().Contain("cvonline");
+            jobPortalNames.Should().Contain("cvbankas");
+        }
+
         public void Dispose()
         {
             _sut?.Dispose();

@@ -62,7 +62,13 @@ namespace WebScraper.Application.Services
             }
         }
 
-        public async void ImportInitialCvOnlineData()
+        public void ImportCvBankasData()
+        {
+            var scraper = _scraperFactory.BuildScraper("cvbankas");
+
+        }
+
+        public void ImportInitialCvOnlineData()
         {
             var scraper = _scraperFactory.BuildScraper("CvOnline");
 
