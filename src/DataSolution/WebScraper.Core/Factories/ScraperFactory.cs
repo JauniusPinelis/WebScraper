@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WebScraper.Core.CvBankas;
 using WebScraper.Core.CvOnline;
 using WebScraper.Core.Shared;
 
@@ -14,6 +15,8 @@ namespace WebScraper.Core.Factories
             {
                 case "cvonline":
                     return new CvOnlineScraper();
+                case "cvbankas":
+                    return new CvBankasScraper();
                 default:
                     throw new Exception("There is no Scraper for this website");
             }
