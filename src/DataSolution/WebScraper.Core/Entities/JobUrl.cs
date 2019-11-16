@@ -18,5 +18,9 @@ namespace WebScraper.Core.Entities
 
         public JobInfo JobInfo { get; set; }
         public int? JobInfoId { get; set; }
+
+        public JobPortal JobPortal { get; set; }
+
+        public int? JobPortalId { get; set; }
     }
 }

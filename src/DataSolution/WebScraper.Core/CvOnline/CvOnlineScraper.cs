@@ -12,6 +12,7 @@ namespace WebScraper.Core.CvOnline
 {
     public class CvOnlineScraper : IScraper
     {
+        private const int _jobPortalId = 1;
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
         {
             var urls = urlDtos.ToList();
@@ -104,7 +105,8 @@ namespace WebScraper.Core.CvOnline
                 Salary = salary?.InnerText ?? "",
                 Title = url?.InnerText,
                 Location = location?.InnerText,
-                Company = company?.InnerText
+                Company = company?.InnerText,
+                JobPortalId = 1
             };
         }
 

@@ -40,6 +40,16 @@ namespace WebScraper.Core.UnitTests
         }
 
         [Test]
+        public void ScrapeJobUrlInfo_GivenTestData_GetsJobPortalId()
+        {
+            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvOnlineSingleUrlTestData.txt");
+
+            var jobEntity = _scraper.ScrapeJobUrlInfo(textData);
+
+            jobEntity.JobPortalId.Should().Be(1);
+        }
+
+        [Test]
         public void ScrapeJobUrlInfo_GivenTestData_GetsCorrectCompany()
         {
             string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvOnlineSingleUrlTestData.txt");

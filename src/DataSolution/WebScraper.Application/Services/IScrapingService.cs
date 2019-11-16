@@ -2,6 +2,7 @@
 {
     public interface IScrapingService
     {
-        void ImportInitialCvOnlineData();
+        void ScrapeCvOnlineData();
+        void ScrapeCvBankasData();
     }
 }

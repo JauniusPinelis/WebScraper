@@ -22,6 +22,10 @@ namespace WebScraper.Infrastructure.Configurations
             builder.Property(e => e.Title).HasMaxLength(500);
 
             builder.Property(e => e.Url).HasMaxLength(300);
+
+            builder.HasOne(e => e.JobPortal)
+                .WithMany(p => p.JobUrls)
+                .HasForeignKey(e => e.JobInfoId);
         }
     }
 }

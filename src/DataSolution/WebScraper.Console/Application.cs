@@ -12,7 +12,8 @@ namespace WebScraper.Console
         }
         public void Run()
         {
-            _scrapeService.ImportInitialCvOnlineData();
+            //_scrapeService.ScrapeCvOnlineData();
+            _scrapeService.ScrapeCvBankasData();
         }
     }
 }
