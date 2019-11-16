@@ -9,6 +9,28 @@ namespace WebScraper.Core.CvLt
 {
     public class CvLtScraper : IScraper
     {
+        public IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
+        {
+            var results = new List<JobUrl>();
+
+            var htmlDocument = new HtmlDocument();
+            htmlDocument.LoadHtml(pageHtml);
+
+            var resultNodes = htmlDocument.DocumentNode.SelectNodes("//p[contains(@itemtype, 'http://schema.org/JobPosting')]");
+
+            if (resultNodes.Count == 0)
+            {
+                return results;
+            }
+
+            foreach (var resultNode in resultNodes)
+            {
+                results.Add(ScrapeJobUrlInfo(resultNode.OuterHtml));
+            }
+
+            return results;
+        }
+
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urls)
         {
             throw new NotImplementedException();

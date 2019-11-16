@@ -3,6 +3,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using WebScraper.Core.CvLt;
 
@@ -67,6 +68,16 @@ namespace WebScraper.Core.UnitTests.CvLt
             var jobEntity = _scraper.ScrapeJobUrlInfo(textData);
 
             jobEntity.Company.Should().Be("\"Vilniaus vandenys\"");
+        }
+
+        [Test]
+        public void ExtractPageUrls_GivenTestData_ReturnCorrectAmountOfJobs()
+        {
+            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvLtTestPageData.txt");
+
+            var jobEntities = _scraper.ExtractPageUrls(textData);
+
+            jobEntities.Count().Should().Be(40);
         }
 
     }

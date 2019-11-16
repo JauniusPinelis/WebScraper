@@ -12,5 +12,7 @@ namespace WebScraper.Core.Shared
         IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urls);
 
         JobUrl ScrapeJobUrlInfo(string html);
+
+        IEnumerable<JobUrl> ExtractPageUrls(string html);
     }
 }
