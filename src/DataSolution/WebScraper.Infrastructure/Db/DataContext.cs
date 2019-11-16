@@ -42,7 +42,8 @@ namespace WebScraper.Infrastructure.Db
         {
             modelBuilder.Entity<JobPortal>().HasData(
                 new JobPortal() { Id = 1, Name = "CvOnline" },
-                new JobPortal() { Id = 2, Name = "CvBankas" });
+                new JobPortal() { Id = 2, Name = "CvBankas" },
+                new JobPortal() { Id = 3, Name = "CvLt" });
         }
 
         public override int SaveChanges()
