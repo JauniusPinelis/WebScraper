@@ -84,7 +84,9 @@ namespace WebScraper.Core.CvBankas
                 Salary = salary?.InnerText ?? "",
                 Title = title.InnerText,
                 Location = location?.InnerText,
-                Company = company?.InnerText
+                Company = company?.InnerText,
+                JobPortalId = 2
+
             };
         }
 

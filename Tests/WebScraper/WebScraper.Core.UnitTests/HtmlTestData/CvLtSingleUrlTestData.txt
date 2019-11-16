@@ -1,0 +1,9 @@
+﻿<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/gamybos-pramones-darbai/gis-inzinierius-e-vilniuje-1-344240728/?sri=4" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">GIS INŽINIERIUS (-Ė)</a>
+			<a href="/vilniaus-vandenys-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">"Vilniaus vandenys"</span></a>
+			<span itemprop="baseSalary">Nuo 1.289 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-11-12">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-12-12T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/gamybos-pramones-darbai/gis-inzinierius-e-vilniuje-1-344240728">
+		</p>

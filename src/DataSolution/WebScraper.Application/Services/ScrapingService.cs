@@ -62,7 +62,7 @@ namespace WebScraper.Application.Services
             }
         }
 
-        public void ImportCvBankasData()
+        public void ScrapeCvBankasData()
         {
             var scraper = _scraperFactory.BuildScraper("cvbankas");
 
@@ -72,9 +72,10 @@ namespace WebScraper.Application.Services
             {
                 var collectedUrls = scraper.ScrapePageUrls();
 
-                var test = "test";
+                UpdateUrls(collectedUrls.ToList());
             }
 
+            
         }
 
         public void ScrapeCvOnlineData()
@@ -125,11 +126,6 @@ namespace WebScraper.Application.Services
                 
             }
             _context.SaveChanges();
-        }
-
-        public void ScrapeCvBankasData()
-        {
-            
         }
     }
 }
