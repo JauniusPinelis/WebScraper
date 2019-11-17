@@ -4,5 +4,6 @@
     {
         void ScrapeCvOnlineData();
         void ScrapeCvBankasData();
+        void ScrapeCvLtData();
     }
 }

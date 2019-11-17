@@ -1,7 +1,10 @@
 ﻿using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Threading;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Shared;
 
@@ -60,7 +63,35 @@ namespace WebScraper.Core.CvLt
 
         public IEnumerable<JobUrl> ScrapePageUrls()
         {
-            throw new NotImplementedException();
+            var baseUrl = "https://www.cv.lt/employee/announcementsAll.do?regular=true&department=1040&page=";
+            var webClient = new HttpClient();
+            int pageCounter = 0;
+            var continueParsing = true;
+            var results = new List<JobUrl>();
+
+
+            while (continueParsing && pageCounter < 20)
+            {
+                //Have some delay in parsing
+                Thread.Sleep(1000);
+
+                var validUrl = baseUrl + pageCounter;
+                pageCounter += 1;
+
+                var html = webClient.GetStringAsync(validUrl).Result;
+
+                var pageResults = ExtractPageUrls(html);
+
+                // no more found - stop parsing
+                if (!pageResults.Any())
+                {
+                    continueParsing = false;
+                }
+
+                results.AddRange(pageResults);
+            }
+
+            return results;
         }
     }
 }

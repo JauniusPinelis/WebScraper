@@ -49,7 +49,7 @@ namespace WebScraper.Core.CvBankas
             var results = new List<JobUrl>();
 
 
-            while (continueParsing && pageCounter < 3)
+            while (continueParsing)
             {
                 //Have some delay in parsing
                 Thread.Sleep(1000);
@@ -60,6 +60,12 @@ namespace WebScraper.Core.CvBankas
                 var html = webClient.GetStringAsync(validUrl).Result;
 
                 var pageResults = ExtractPageUrls(html);
+
+                // no more found - stop parsing
+                if (!pageResults.Any())
+                {
+                    continueParsing = false;
+                }
                 results.AddRange(pageResults);
             }
 

@@ -76,6 +76,20 @@ namespace WebScraper.Application.Services
             }
         }
 
+        public void ScrapeCvLtData()
+        {
+            var scraper = _scraperFactory.BuildScraper("CvLt");
+
+            var jobUrls = _context.JobUrls.Where(u => u.JobPortalId == 3);
+
+            if (!jobUrls.Any())
+            {
+                var collectedUrls = scraper.ScrapePageUrls();
+
+                UpdateUrls(collectedUrls.ToList());
+            }
+        }
+
         public void ScrapeCvOnlineData()
         {
             var scraper = _scraperFactory.BuildScraper("CvOnline");
@@ -85,7 +99,6 @@ namespace WebScraper.Application.Services
 
             if (!jobUrls.Any())
             {
-
                 var collectedUrls = scraper.ScrapePageUrls().ToList();
 
                 var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");

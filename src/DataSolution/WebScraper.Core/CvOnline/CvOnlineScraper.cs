@@ -71,7 +71,7 @@ namespace WebScraper.Core.CvOnline
             var results = new List<JobUrl>();
 
 
-            while (continueParsing && pageCounter < 3)
+            while (continueParsing && pageCounter < 20)
             {
                 //Have some delay in parsing
                 Thread.Sleep(1000);
@@ -82,6 +82,13 @@ namespace WebScraper.Core.CvOnline
                 var html = webClient.GetStringAsync(validUrl).Result;
 
                 var pageResults = ExtractPageUrls(html);
+
+                // no more found - stop parsing
+                if (!pageResults.Any())
+                {
+                    continueParsing = false;
+                }
+
                 results.AddRange(pageResults);
             }
 

@@ -14,7 +14,7 @@ namespace WebScraper.Console
         {
             _scrapeService.ScrapeCvOnlineData();
             _scrapeService.ScrapeCvBankasData();
-
+            _scrapeService.ScrapeCvLtData();
         }
     }
 }
