@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,12 +80,14 @@ namespace WebScraper.Core.CvLt
                 pageCounter += 1;
 
                 var html = webClient.GetStringAsync(validUrl).Result;
+                Log.Information("CvLtScraper is scraping page no {index}", pageCounter);
 
                 var pageResults = ExtractPageUrls(html);
 
                 // no more found - stop parsing
                 if (!pageResults.Any())
                 {
+                    Log.Information("CvLtScraper finished Scraping");
                     continueParsing = false;
                 }
 

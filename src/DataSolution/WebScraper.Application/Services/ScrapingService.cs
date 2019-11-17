@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,6 +59,11 @@ namespace WebScraper.Application.Services
                 {
                     _context.JobUrls.Add(jobUrl);
                     _context.SaveChanges();
+                    Log.Information("CvLt {url} has been added", jobUrl.Url);
+                }
+                else
+                {
+                    Log.Information("CvLt {url} already exists", jobUrl.Url);
                 }
             }
         }
@@ -80,14 +86,9 @@ namespace WebScraper.Application.Services
         {
             var scraper = _scraperFactory.BuildScraper("CvLt");
 
-            var jobUrls = _context.JobUrls.Where(u => u.JobPortalId == 3);
+            var collectedUrls = scraper.ScrapePageUrls();
 
-            if (!jobUrls.Any())
-            {
-                var collectedUrls = scraper.ScrapePageUrls();
-
-                UpdateUrls(collectedUrls.ToList());
-            }
+            UpdateUrls(collectedUrls.ToList());
         }
 
         public void ScrapeCvOnlineData()
