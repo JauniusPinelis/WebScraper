@@ -74,8 +74,6 @@ namespace WebScraper.Application.Services
 
                 UpdateUrls(collectedUrls.ToList());
             }
-
-            
         }
 
         public void ScrapeCvOnlineData()

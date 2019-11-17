@@ -12,8 +12,9 @@ namespace WebScraper.Console
         }
         public void Run()
         {
-            //_scrapeService.ScrapeCvOnlineData();
+            _scrapeService.ScrapeCvOnlineData();
             _scrapeService.ScrapeCvBankasData();
+
         }
     }
 }
