@@ -35,8 +35,8 @@ class App extends Component {
       .get("/api/data/")
       .then(res => {
         this.setState({
-          data: res.data,
-          urls: res.data.map(d => d.url)
+          data: res.data.jobUrls,
+          urls: res.data.jobUrls.map(d => d.url)
         });
       })
       .catch(error => {});

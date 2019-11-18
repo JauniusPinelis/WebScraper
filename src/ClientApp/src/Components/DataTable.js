@@ -13,7 +13,8 @@ export default class DataTable extends Component {
           columns={[
             { title: "No", field: "id" },
             { title: "Title", field: "title" },
-            { title: "Salary", field: "salary", type: "numeric" },
+            { title: "Location", field: "location" },
+            { title: "Salary", field: "salary"},
             { title: "Apply", apply: "apply",  
             render: rowData => <Button color="primary">Apply</Button>
           }
