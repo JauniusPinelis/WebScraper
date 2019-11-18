@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using WebApi.Infrastructure.Entities;
 
-namespace WebApi.Api.Mappings
+namespace WebApi.Application.Mappings
 {
     public class MappingProfile : Profile
     {

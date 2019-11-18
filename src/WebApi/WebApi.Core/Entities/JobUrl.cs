@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace WebApi.Infrastructure.Entities
+namespace WebApi.Core.Entities
 {
     [Table("tblData_JobUrl")]
     public class JobUrl

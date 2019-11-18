@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApi.Api.JobUrls.Queries.GetJobUrls;
+using WebApi.Application.JobUrls.Queries.GetJobUrls;
 using WebApi.Infrastructure.Db;
 
 namespace WebApi.Api.Controllers

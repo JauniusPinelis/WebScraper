@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using WebApi.Infrastructure.Db;
 
-namespace WebApi.Api.JobUrls.Queries.GetJobUrls
+namespace WebApi.Application.JobUrls.Queries.GetJobUrls
 {
     public class GetJobUrlsHandler : IRequestHandler<GetJobUrlsQuery, JobUrlsVm>
     {

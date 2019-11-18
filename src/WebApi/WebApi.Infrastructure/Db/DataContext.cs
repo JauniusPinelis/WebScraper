@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using WebApi.Infrastructure.Entities;
+using WebApi.Core.Entities;
 
 namespace WebApi.Infrastructure.Db
 {

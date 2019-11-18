@@ -6,9 +6,9 @@ using System.Text;
 using WebApi.Infrastructure.Db;
 using AutoMapper;
 
-namespace WebApi.Infrastructure.Extensions
+namespace WebApi.Infrastructure
 {
-    public static class ServiceExtensions
+    public static class DependencyInjection
     {
         public static void ConfigureDbContext(this IServiceCollection services, string connectionString)
         {
@@ -16,6 +16,5 @@ namespace WebApi.Infrastructure.Extensions
                options.UseSqlServer(connectionString));
         }
 
-       
     }
 }

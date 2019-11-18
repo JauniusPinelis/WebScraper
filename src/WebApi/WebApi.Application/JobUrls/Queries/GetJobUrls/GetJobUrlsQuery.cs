@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApi.Api.JobUrls.Queries.GetJobUrls
+namespace WebApi.Application.JobUrls.Queries.GetJobUrls
 {
     public class GetJobUrlsQuery : IRequest<JobUrlsVm>
     {

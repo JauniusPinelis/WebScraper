@@ -11,7 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using WebApi.Infrastructure.Extensions;
+using WebApi.Application;
+using WebApi.Infrastructure;
 
 namespace WebApi.Api
 {
@@ -32,6 +33,7 @@ namespace WebApi.Api
             services.ConfigureDbContext("Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True");
             services.ConfigureMapper();
             services.ConfigureServices();
+            services.ConfigureMediator();
            
 
         }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApi.Api.Mappings
+namespace WebApi.Application.Mappings
 {
     public interface IMapFrom<T>
     {

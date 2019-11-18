@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\" />
+    <ProjectReference Include="..\WebApi.Core\WebApi.Core.csproj" />
   </ItemGroup>
 
 </Project>

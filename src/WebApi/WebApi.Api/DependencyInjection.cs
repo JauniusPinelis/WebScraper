@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Reflection;
 using MediatR;
 using AutoMapper;
-using WebApi.Api.Mappings;
 
 namespace WebApi.Api
 {
@@ -24,19 +23,9 @@ namespace WebApi.Api
 
         public static void ConfigureServices(this IServiceCollection services)
         {
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+           
         }
 
-        public static void ConfigureMapper(this IServiceCollection services)
-        {
-            var mappingConfig = new MapperConfiguration(mc =>
-            {
-                mc.AddProfile(new MappingProfile());
-            });
-
-            IMapper mapper = mappingConfig.CreateMapper();
-            services.AddSingleton(mapper);
-        }
-
+      
     }
 }
