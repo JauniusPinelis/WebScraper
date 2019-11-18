@@ -8,7 +8,7 @@ namespace WebApi.Infrastructure.Db
 {
     public class DataContext : DbContext
     {
-        public DbSet<JobUrl> JobHtmls { get; set; }
+        public DbSet<JobUrl> JobUrls { get; set; }
 
         public DataContext(DbContextOptions options) : base(options)
         {

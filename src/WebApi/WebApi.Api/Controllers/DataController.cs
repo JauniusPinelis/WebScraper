@@ -1,17 +1,18 @@
 ﻿using AutoMapper;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApi.Api.JobUrls.Queries.GetJobUrls;
 using WebApi.Infrastructure.Db;
-using WebApi.Infrastructure.Dtos;
 
 namespace WebApi.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DataController : ControllerBase
+    public class DataController : BaseController
     {
         private DataContext _context;
         private IMapper _mapper;
@@ -23,7 +24,7 @@ namespace WebApi.Api.Controllers
         }
 
 
-        [HttpGet]
+        /*[HttpGet]
         public ActionResult<IEnumerable<JobUrlDto>> Get()
         {
             var entities = _context.JobHtmls.Take(20);
@@ -31,6 +32,12 @@ namespace WebApi.Api.Controllers
             var models = _mapper.Map<List<JobUrlDto>>(entities);
 
             return models;
+        }*/
+
+        [HttpGet]
+        public async Task<ActionResult<JobUrlsVm>> Get()
+        {
+            return Ok(await Mediator.Send(new GetJobUrlsQuery()));
         }
     }
 }

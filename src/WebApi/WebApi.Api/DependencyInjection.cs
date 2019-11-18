@@ -4,7 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Swashbuckle.AspNetCore.Swagger;
+using System.Reflection;
+using MediatR;
 
 namespace WebApi.Api
 {
@@ -17,6 +18,11 @@ namespace WebApi.Api
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
 
+        }
+
+        public static void ConfigureServices(this IServiceCollection services)
+        {
+            services.AddMediatR(Assembly.GetExecutingAssembly());
         }
         
     }
