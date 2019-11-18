@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using WebApi.Infrastructure.Entities;
 
-namespace WebApi.Infrastructure.Mappings
+namespace WebApi.Api.Mappings
 {
     public class MappingProfile : Profile
     {

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApi.Infrastructure.Mappings
+namespace WebApi.Api.Mappings
 {
-    public class IMapFrom<T>
+    public interface IMapFrom<T>
     {
         void Mapping(Profile profile) => profile.CreateMap(typeof(T), GetType());
     }
