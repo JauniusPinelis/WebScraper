@@ -17,7 +17,6 @@ class App extends Component {
     return (
       <div className="App">
         <Container>
-        
           <h2>Jobs</h2>
           <div>
             <DataTable data={this.state.data} />

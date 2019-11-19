@@ -10,11 +10,11 @@ namespace WebApi.Infrastructure
 {
     public static class DependencyInjection
     {
-        public static void ConfigureDbContext(this IServiceCollection services, string connectionString)
+        /*public static void ConfigureDbContext(this IServiceCollection services, string connectionString)
         {
             services.AddDbContext<DataContext>(options =>
                options.UseSqlServer(connectionString));
-        }
+        }*/
 
     }
 }

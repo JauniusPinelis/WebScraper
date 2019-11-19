@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using WebScraper.Core.Entities;
 using WebScraper.Infrastructure.Services;
 
@@ -11,7 +6,6 @@ namespace WebScraper.Infrastructure.Db
 {
     public class DataContext : DbContext, IDataContext
     {
-        private readonly string _connString = "Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True;MultipleActiveResultSets=True;";
 
         public DbSet<JobUrl> JobUrls { get; set; }
         public DbSet<JobInfo> JobInfos { get; set; }

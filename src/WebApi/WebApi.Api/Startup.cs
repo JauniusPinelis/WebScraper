@@ -30,7 +30,7 @@ namespace WebApi.Api
         {
             services.AddControllers();
 
-            services.ConfigureDbContext("Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True");
+            //services.ConfigureDbContext("Server=PC727;Database=ScrapeDb;Trusted_Connection=True");
             services.ConfigureMapper();
             services.ConfigureServices();
             services.ConfigureMediator();

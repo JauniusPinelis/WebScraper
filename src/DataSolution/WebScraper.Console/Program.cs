@@ -55,7 +55,6 @@ namespace WebScraper.Console
             collection.AddPersistence(configuration, configuration["DefaultConnection"]);
 
            
-
             _serviceProvider = collection.BuildServiceProvider();
         }
 
