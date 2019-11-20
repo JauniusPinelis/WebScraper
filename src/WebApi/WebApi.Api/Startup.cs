@@ -28,6 +28,8 @@ namespace WebApi.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Will need to move this into appSettings.json
+            services.ConfigureDbContext("Server=PC727;Database=ScrapeDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
             services.AddControllers();
 
             //services.ConfigureDbContext("Server=PC727;Database=ScrapeDb;Trusted_Connection=True");

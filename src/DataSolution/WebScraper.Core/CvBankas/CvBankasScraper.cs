@@ -136,7 +136,7 @@ namespace WebScraper.Core.CvBankas
                 return "";
             }
 
-            catch (Exception e)
+            catch (Exception)
             {
                 return "";
             }

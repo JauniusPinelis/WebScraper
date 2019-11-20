@@ -46,7 +46,7 @@ namespace WebScraper.Core.CvLt
             resultHtml.LoadHtml(html);
 
             var url = resultHtml.DocumentNode.SelectSingleNode("//meta[contains(@itemprop, 'url')]");
-            var title = resultHtml.DocumentNode.SelectSingleNode("//meta[contains(@itemprop, 'title')]");
+            var title = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@itemprop, 'title')]");
             var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@itemprop, 'baseSalary')]");
             var location = resultHtml.DocumentNode.SelectSingleNode("//meta[contains(@itemprop, 'jobLocation')]");
             var company = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@itemprop, 'name')]");
