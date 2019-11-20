@@ -59,11 +59,11 @@ namespace WebScraper.Application.Services
                 {
                     _context.JobUrls.Add(jobUrl);
                     _context.SaveChanges();
-                    Log.Information("CvLt {url} has been added", jobUrl.Url);
+                    Log.Information("{url} has been added", jobUrl.Url);
                 }
                 else
                 {
-                    Log.Information("CvLt {url} already exists", jobUrl.Url);
+                    Log.Information("{url} already exists", jobUrl.Url);
                 }
             }
         }
@@ -88,11 +88,13 @@ namespace WebScraper.Application.Services
 
             var collectedUrls = scraper.ScrapePageUrls();
 
+            Log.Information("CvLtScraper - saving urls to db");
             UpdateUrls(collectedUrls.ToList());
         }
 
         public void ScrapeCvOnlineData()
         {
+            Log.Information("CvOnline - starting to scraper CvOnline");
             var scraper = _scraperFactory.BuildScraper("CvOnline");
 
             // Get Urls of cvonline
@@ -109,8 +111,10 @@ namespace WebScraper.Application.Services
                
             }
 
+            Log.Information("CvOnline - CvOnline Urls saved");
+
             // Get Htmls
-            var urlsInDb = _context.JobUrls;
+           /* var urlsInDb = _context.JobUrls;
 
             if (urlsInDb.Any() && false)
             {
@@ -136,8 +140,7 @@ namespace WebScraper.Application.Services
 
                 entity.Title = parseResult.Title;
                 
-            }
-            _context.SaveChanges();
+            }**/
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,9 @@ namespace WebScraper.Core.CvOnline
         {
             var results = new List<JobUrl>();
 
+            if (pageHtml == "")
+                return results;
+
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(pageHtml);
 
@@ -73,19 +77,30 @@ namespace WebScraper.Core.CvOnline
 
             while (continueParsing && pageCounter < 20)
             {
-                //Have some delay in parsing
-                Thread.Sleep(1000);
+                string html;
+                try
+                {
+                    //Have some delay in parsing
+                    Thread.Sleep(1000);
 
-                var validUrl = baseUrl + pageCounter;
-                pageCounter += 1;
+                    var validUrl = baseUrl + pageCounter;
+                    pageCounter += 1;
+                    Log.Information("CvOnline: scraping page {pageIndex}", pageCounter);
 
-                var html = webClient.GetStringAsync(validUrl).Result;
+                    html = webClient.GetStringAsync(validUrl).Result;
+                }
+                catch (Exception)
+                {
+                    // html is empty
+                    html = "";
+                }
 
                 var pageResults = ExtractPageUrls(html);
 
                 // no more found - stop parsing
                 if (!pageResults.Any())
                 {
+                    Log.Information("CvOnline: finished scraping page urls");
                     continueParsing = false;
                 }
 

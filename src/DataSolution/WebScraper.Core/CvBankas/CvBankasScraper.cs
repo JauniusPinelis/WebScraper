@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,13 +50,14 @@ namespace WebScraper.Core.CvBankas
             var results = new List<JobUrl>();
 
 
-            while (continueParsing)
+            while (continueParsing && pageCounter <= 10)
             {
                 //Have some delay in parsing
                 Thread.Sleep(1000);
 
                 var validUrl = baseUrl + pageCounter;
                 pageCounter += 1;
+                Log.Information("CvBankas: scraping page {pageIndex}", pageCounter);
 
                 var html = webClient.GetStringAsync(validUrl).Result;
 
@@ -64,6 +66,7 @@ namespace WebScraper.Core.CvBankas
                 // no more found - stop parsing
                 if (!pageResults.Any())
                 {
+                    Log.Information("CvBankas: finished scraping page urls");
                     continueParsing = false;
                 }
                 results.AddRange(pageResults);
