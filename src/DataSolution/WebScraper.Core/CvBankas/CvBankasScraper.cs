@@ -44,35 +44,8 @@ namespace WebScraper.Core.CvBankas
         public IEnumerable<JobUrl> ScrapePageUrls()
         {
             var baseUrl = "https://www.cvbankas.lt/?padalinys%5B0%5D=76&page=";
-            var webClient = new HttpClient();
-            int pageCounter = 1;
-            var continueParsing = true;
-            var results = new List<JobUrl>();
 
-
-            while (continueParsing && pageCounter <= 10)
-            {
-                //Have some delay in parsing
-                Thread.Sleep(1000);
-
-                var validUrl = baseUrl + pageCounter;
-                pageCounter += 1;
-                Log.Information("CvBankas: scraping page {pageIndex}", pageCounter);
-
-                var html = webClient.GetStringAsync(validUrl).Result;
-
-                var pageResults = ExtractPageUrls(html);
-
-                // no more found - stop parsing
-                if (!pageResults.Any())
-                {
-                    Log.Information("CvBankas: finished scraping page urls");
-                    continueParsing = false;
-                }
-                results.AddRange(pageResults);
-            }
-
-            return results;
+            return ScrapePageUrls(baseUrl);
         }
 
         public override JobUrl ScrapeJobUrlInfo(string html)
@@ -99,7 +72,7 @@ namespace WebScraper.Core.CvBankas
             };
         }
 
-        public IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
+        public override IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
         {
             return ExtractPageUrls(pageHtml, "//a[contains(@class, 'list_a can_visited list_a_has_logo')]");
         }

@@ -13,7 +13,7 @@ namespace WebScraper.Core.CvLt
 {
     public class CvLtScraper : BaseScraper, IScraper
     {
-        public IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
+        public override IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
         {
             return ExtractPageUrls(pageHtml, "//p[contains(@itemtype, 'http://schema.org/JobPosting')]");
         }
@@ -48,36 +48,8 @@ namespace WebScraper.Core.CvLt
         public IEnumerable<JobUrl> ScrapePageUrls()
         {
             var baseUrl = "https://www.cv.lt/employee/announcementsAll.do?regular=true&department=1040&page=";
-            var webClient = new HttpClient();
-            int pageCounter = 0;
-            var continueParsing = true;
-            var results = new List<JobUrl>();
 
-
-            while (continueParsing && pageCounter < 20)
-            {
-                //Have some delay in parsing
-                Thread.Sleep(1000);
-
-                var validUrl = baseUrl + pageCounter;
-                pageCounter += 1;
-
-                var html = webClient.GetStringAsync(validUrl).Result;
-                Log.Information("CvLtScraper is scraping page no {index}", pageCounter);
-
-                var pageResults = ExtractPageUrls(html);
-
-                // no more found - stop parsing
-                if (!pageResults.Any())
-                {
-                    Log.Information("CvLtScraper finished Scraping");
-                    continueParsing = false;
-                }
-
-                results.AddRange(pageResults);
-            }
-
-            return results;
+            return ScrapePageUrls(baseUrl);
         }
     }
 }

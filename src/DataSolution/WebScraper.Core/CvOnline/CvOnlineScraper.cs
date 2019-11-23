@@ -41,9 +41,7 @@ namespace WebScraper.Core.CvOnline
             return results;
         }
 
-        
-
-        public IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
+        public override IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
         {
             return ExtractPageUrls(pageHtml, "//div[contains(@class, 'offer_primary_info')]");
         }
@@ -51,45 +49,9 @@ namespace WebScraper.Core.CvOnline
         public IEnumerable<JobUrl> ScrapePageUrls()
         {
             var baseUrl = "https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=";
-            var webClient = new HttpClient();
-            int pageCounter = 0;
-            var continueParsing = true;
-            var results = new List<JobUrl>();
 
+            return ScrapePageUrls(baseUrl);
 
-            while (continueParsing && pageCounter < 20)
-            {
-                string html;
-                try
-                {
-                    //Have some delay in parsing
-                    Thread.Sleep(1000);
-
-                    var validUrl = baseUrl + pageCounter;
-                    pageCounter += 1;
-                    Log.Information("CvOnline: scraping page {pageIndex}", pageCounter);
-
-                    html = webClient.GetStringAsync(validUrl).Result;
-                }
-                catch (Exception)
-                {
-                    // html is empty
-                    html = "";
-                }
-
-                var pageResults = ExtractPageUrls(html);
-
-                // no more found - stop parsing
-                if (!pageResults.Any())
-                {
-                    Log.Information("CvOnline: finished scraping page urls");
-                    continueParsing = false;
-                }
-
-                results.AddRange(pageResults);
-            }
-
-            return results;
         }
 
         public override JobUrl ScrapeJobUrlInfo(string html)
