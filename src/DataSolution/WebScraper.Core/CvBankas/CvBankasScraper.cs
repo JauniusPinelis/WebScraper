@@ -11,7 +11,7 @@ using WebScraper.Core.Shared;
 
 namespace WebScraper.Core.CvBankas
 {
-    public class CvBankasScraper : IScraper
+    public class CvBankasScraper :  BaseScraper, IScraper
     {
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
@@ -101,8 +101,6 @@ namespace WebScraper.Core.CvBankas
 
         public IEnumerable<JobUrl> ExtractPageUrls(string html)
         {
-            var results = new List<JobUrl>();
-
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
 
@@ -110,15 +108,15 @@ namespace WebScraper.Core.CvBankas
 
             if (resultNodes.Count == 0)
             {
-                return results;
+                return jobUrls;
             }
 
             foreach (var resultNode in resultNodes)
             {
-                results.Add(ScrapeJobUrlInfo(resultNode.OuterHtml));
+                jobUrls.Add(ScrapeJobUrlInfo(resultNode.OuterHtml));
             }
 
-            return results;
+            return jobUrls;
         }
 
         private string ScrapeJobPortalInfo(string url, HttpClient webClient)

@@ -11,12 +11,10 @@ using WebScraper.Core.Shared;
 
 namespace WebScraper.Core.CvLt
 {
-    public class CvLtScraper : IScraper
+    public class CvLtScraper : BaseScraper, IScraper
     {
         public IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
         {
-            var results = new List<JobUrl>();
-
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(pageHtml);
 
@@ -24,15 +22,15 @@ namespace WebScraper.Core.CvLt
 
             if (resultNodes.Count == 0)
             {
-                return results;
+                return jobUrls;
             }
 
             foreach (var resultNode in resultNodes)
             {
-                results.Add(ScrapeJobUrlInfo(resultNode.OuterHtml));
+                jobUrls.Add(ScrapeJobUrlInfo(resultNode.OuterHtml));
             }
 
-            return results;
+            return jobUrls;
         }
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urls)

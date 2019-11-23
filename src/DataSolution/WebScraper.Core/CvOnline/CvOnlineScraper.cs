@@ -11,7 +11,7 @@ using WebScraper.Core.Shared;
 
 namespace WebScraper.Core.CvOnline
 {
-    public class CvOnlineScraper : IScraper
+    public class CvOnlineScraper : BaseScraper,IScraper
     {
         private const int _jobPortalId = 1;
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
@@ -43,10 +43,9 @@ namespace WebScraper.Core.CvOnline
 
         public IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
         {
-            var results = new List<JobUrl>();
 
             if (pageHtml == "")
-                return results;
+                return jobUrls;
 
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(pageHtml);
@@ -55,15 +54,15 @@ namespace WebScraper.Core.CvOnline
 
             if (resultNodes.Count == 0)
             {
-                return results;
+                return jobUrls;
             }
 
             foreach (var resultNode in resultNodes)
             {
-                results.Add(ScrapeJobUrlInfo(resultNode.OuterHtml));
+                jobUrls.Add(ScrapeJobUrlInfo(resultNode.OuterHtml));
             }
 
-            return results;
+            return jobUrls;
         }
 
         public IEnumerable<JobUrl> ScrapePageUrls()
