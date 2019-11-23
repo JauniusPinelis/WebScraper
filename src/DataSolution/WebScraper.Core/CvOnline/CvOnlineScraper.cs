@@ -41,28 +41,11 @@ namespace WebScraper.Core.CvOnline
             return results;
         }
 
+        
+
         public IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
         {
-
-            if (pageHtml == "")
-                return jobUrls;
-
-            var htmlDocument = new HtmlDocument();
-            htmlDocument.LoadHtml(pageHtml);
-
-            var resultNodes = htmlDocument.DocumentNode.SelectNodes("//div[contains(@class, 'offer_primary_info')]");
-
-            if (resultNodes.Count == 0)
-            {
-                return jobUrls;
-            }
-
-            foreach (var resultNode in resultNodes)
-            {
-                jobUrls.Add(ScrapeJobUrlInfo(resultNode.OuterHtml));
-            }
-
-            return jobUrls;
+            return ExtractPageUrls(pageHtml, "//div[contains(@class, 'offer_primary_info')]");
         }
 
         public IEnumerable<JobUrl> ScrapePageUrls()
@@ -109,7 +92,7 @@ namespace WebScraper.Core.CvOnline
             return results;
         }
 
-        public JobUrl ScrapeJobUrlInfo(string html)
+        public override JobUrl ScrapeJobUrlInfo(string html)
         {
 
             var resultHtml = new HtmlDocument();

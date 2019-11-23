@@ -15,22 +15,7 @@ namespace WebScraper.Core.CvLt
     {
         public IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
         {
-            var htmlDocument = new HtmlDocument();
-            htmlDocument.LoadHtml(pageHtml);
-
-            var resultNodes = htmlDocument.DocumentNode.SelectNodes("//p[contains(@itemtype, 'http://schema.org/JobPosting')]");
-
-            if (resultNodes.Count == 0)
-            {
-                return jobUrls;
-            }
-
-            foreach (var resultNode in resultNodes)
-            {
-                jobUrls.Add(ScrapeJobUrlInfo(resultNode.OuterHtml));
-            }
-
-            return jobUrls;
+            return ExtractPageUrls(pageHtml, "//p[contains(@itemtype, 'http://schema.org/JobPosting')]");
         }
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urls)
@@ -38,7 +23,7 @@ namespace WebScraper.Core.CvLt
             throw new NotImplementedException();
         }
 
-        public JobUrl ScrapeJobUrlInfo(string html)
+        public override JobUrl ScrapeJobUrlInfo(string html)
         {
             var resultHtml = new HtmlDocument();
             resultHtml.LoadHtml(html);

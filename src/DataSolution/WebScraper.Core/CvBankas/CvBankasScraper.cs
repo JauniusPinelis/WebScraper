@@ -75,7 +75,7 @@ namespace WebScraper.Core.CvBankas
             return results;
         }
 
-        public JobUrl ScrapeJobUrlInfo(string html)
+        public override JobUrl ScrapeJobUrlInfo(string html)
         {
 
             var resultHtml = new HtmlDocument();
@@ -99,24 +99,9 @@ namespace WebScraper.Core.CvBankas
             };
         }
 
-        public IEnumerable<JobUrl> ExtractPageUrls(string html)
+        public IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
         {
-            var htmlDocument = new HtmlDocument();
-            htmlDocument.LoadHtml(html);
-
-            var resultNodes = htmlDocument.DocumentNode.SelectNodes("//a[contains(@class, 'list_a can_visited list_a_has_logo')]");
-
-            if (resultNodes.Count == 0)
-            {
-                return jobUrls;
-            }
-
-            foreach (var resultNode in resultNodes)
-            {
-                jobUrls.Add(ScrapeJobUrlInfo(resultNode.OuterHtml));
-            }
-
-            return jobUrls;
+            return ExtractPageUrls(pageHtml, "//a[contains(@class, 'list_a can_visited list_a_has_logo')]");
         }
 
         private string ScrapeJobPortalInfo(string url, HttpClient webClient)
