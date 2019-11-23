@@ -29,14 +29,8 @@ namespace WebApi.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var builder = new ConfigurationBuilder()
-          .SetBasePath(Directory.GetCurrentDirectory())
-          .AddJsonFile("appsettings.json");
-
-
-            var configuration = builder.Build();
             // Will need to move this into appSettings.json
-            services.ConfigureDbContext("Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
+            services.ConfigureDbContext(Configuration["ConnectionStrings:DefaultConnection"]);
             services.AddControllers();
 
             services.ConfigureMapper();

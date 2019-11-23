@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,11 +9,16 @@ namespace WebScraper.Infrastructure.Db
 {
     public class DataContextFactory : IDesignTimeDbContextFactory<DataContext>
     {
+        private IConfiguration Configuration { get; }
+        public DataContextFactory(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
         public DataContext CreateDbContext(string[] args)
         {
 
             var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
-            optionsBuilder.UseSqlServer("Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;;Database=ScrapeDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
+            optionsBuilder.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]);
 
             return new DataContext(optionsBuilder.Options);
         }
