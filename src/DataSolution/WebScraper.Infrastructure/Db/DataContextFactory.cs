@@ -12,7 +12,7 @@ namespace WebScraper.Infrastructure.Db
         {
 
             var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
-            optionsBuilder.UseSqlServer("Server=PC727;Database=ScrapeDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
+            optionsBuilder.UseSqlServer("Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;;Database=ScrapeDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
             return new DataContext(optionsBuilder.Options);
         }

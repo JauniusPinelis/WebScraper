@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -28,11 +29,16 @@ namespace WebApi.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var builder = new ConfigurationBuilder()
+          .SetBasePath(Directory.GetCurrentDirectory())
+          .AddJsonFile("appsettings.json");
+
+
+            var configuration = builder.Build();
             // Will need to move this into appSettings.json
-            services.ConfigureDbContext("Server=PC727;Database=ScrapeDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
+            services.ConfigureDbContext("Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
             services.AddControllers();
 
-            //services.ConfigureDbContext("Server=PC727;Database=ScrapeDb;Trusted_Connection=True");
             services.ConfigureMapper();
             services.ConfigureServices();
             services.ConfigureMediator();
