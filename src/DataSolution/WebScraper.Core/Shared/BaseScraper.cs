@@ -89,8 +89,46 @@ namespace WebScraper.Core.Shared
             return results;
         }
 
+        public JobUrl ScrapeJobUrlInfo()
+        {
+            var scrapeInfo = new JobUrlScraperInfoModel()
+            return ScrapeJobUrlInfo();
+        }
+
+        public override JobUrl ScrapeJobUrlInfo(JobUrlScraperInfoModel scrapeInfo)
+        {
+            var resultHtml = new HtmlDocument();
+            resultHtml.LoadHtml(html);
+
+            var url = resultHtml.DocumentNode.SelectSingleNode("//meta[contains(@itemprop, 'url')]");
+            var title = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@itemprop, 'title')]");
+            var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@itemprop, 'baseSalary')]");
+            var location = resultHtml.DocumentNode.SelectSingleNode("//meta[contains(@itemprop, 'jobLocation')]");
+            var company = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@itemprop, 'name')]");
+
+            return new JobUrl()
+            {
+                Url = url?.GetAttributeValue("content", string.Empty),
+                Salary = salary?.InnerText ?? "",
+                Title = title?.InnerText,
+                Location = location?.GetAttributeValue("content", string.Empty),
+                Company = company?.InnerText,
+                JobPortalId = 3
+            };
+        }
+
         public abstract JobUrl ScrapeJobUrlInfo(string html);
 
         public abstract IEnumerable<JobUrl> ExtractPageUrls(string pageHtml);
+    }
+
+    public class JobUrlScraperInfoModel
+    {
+        public string Url { get; set; }
+        public string Title { get; set; }
+        public string Salary { get; set; }
+        public string Location { get; set; }
+        public string Company { get; set; }
+
     }
 }
