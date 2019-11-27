@@ -56,26 +56,16 @@ namespace WebScraper.Core.CvOnline
 
         public override JobUrl ScrapeJobUrlInfo(string html)
         {
-
-            var resultHtml = new HtmlDocument();
-            resultHtml.LoadHtml(html);
-
-            var url = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@href, 'job-ad')]");
-            var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'salary-blue')]");
-            var location = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@itemprop, 'address')]");
-            var company = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@itemprop, 'name')]");
-
-            return new JobUrl()
+            var scrapeInfo = new JobUrlScraperInfoModel()
             {
-                Url = url?.GetAttributeValue("href", string.Empty),
-                Salary = salary?.InnerText ?? "",
-                Title = url?.InnerText,
-                Location = location?.InnerText,
-                Company = company?.InnerText,
-                JobPortalId = 1
+                Url = "//a[contains(@href, 'job-ad')]",
+                Title = "",
+                Salary = "//span[contains(@class, 'salary-blue')]",
+                Location = "//a[contains(@itemprop, 'address')]",
+                Company = "//a[contains(@itemprop, 'name')]"
             };
+            return ScrapeJobUrlInfo(html, scrapeInfo, 1);
         }
-
         private string TrimStart(string target, string trimString)
         {
             if (string.IsNullOrEmpty(trimString)) return target;

@@ -34,12 +34,7 @@ namespace WebScraper.Console
 
         private static void RegisterServices()
         {
-            Log.Logger = new LoggerConfiguration()
-            .Enrich.FromLogContext()
-            .WriteTo.Console()
-            .CreateLogger();
-
-            Log.Information("The global logger has been configured");
+            ConfigureSerilog();
 
 
             var builder = new ConfigurationBuilder()
@@ -68,6 +63,16 @@ namespace WebScraper.Console
             {
                 ((IDisposable)_serviceProvider).Dispose();
             }
+        }
+
+        private static void ConfigureSerilog()
+        {
+            Log.Logger = new LoggerConfiguration()
+          .Enrich.FromLogContext()
+          .WriteTo.Console()
+          .CreateLogger();
+
+            Log.Information("The global logger has been configured");
         }
     }
 }

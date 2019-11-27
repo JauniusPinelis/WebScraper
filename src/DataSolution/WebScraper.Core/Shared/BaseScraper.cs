@@ -89,46 +89,31 @@ namespace WebScraper.Core.Shared
             return results;
         }
 
-        public JobUrl ScrapeJobUrlInfo()
-        {
-            var scrapeInfo = new JobUrlScraperInfoModel()
-            return ScrapeJobUrlInfo();
-        }
-
-        public override JobUrl ScrapeJobUrlInfo(JobUrlScraperInfoModel scrapeInfo)
+        public JobUrl ScrapeJobUrlInfo(string html, JobUrlScraperInfoModel scrapeInfo, int websiteType)
         {
             var resultHtml = new HtmlDocument();
             resultHtml.LoadHtml(html);
 
-            var url = resultHtml.DocumentNode.SelectSingleNode("//meta[contains(@itemprop, 'url')]");
-            var title = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@itemprop, 'title')]");
-            var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@itemprop, 'baseSalary')]");
-            var location = resultHtml.DocumentNode.SelectSingleNode("//meta[contains(@itemprop, 'jobLocation')]");
-            var company = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@itemprop, 'name')]");
+            var url = resultHtml.DocumentNode.SelectSingleNode(scrapeInfo.Url);
+            var title = resultHtml.DocumentNode.SelectSingleNode(scrapeInfo.Title);
+            var salary = resultHtml.DocumentNode.SelectSingleNode(scrapeInfo.Salary);
+            var location = resultHtml.DocumentNode.SelectSingleNode(scrapeInfo.Location);
+            var company = resultHtml.DocumentNode.SelectSingleNode(scrapeInfo.Company);
 
             return new JobUrl()
             {
-                Url = url?.GetAttributeValue("content", string.Empty),
+                Url = url?.GetAttributeValue("href", string.Empty),
+                //Url = url?.GetAttributeValue("content", string.Empty),
                 Salary = salary?.InnerText ?? "",
                 Title = title?.InnerText,
                 Location = location?.GetAttributeValue("content", string.Empty),
                 Company = company?.InnerText,
-                JobPortalId = 3
+                JobPortalId = websiteType
             };
         }
 
         public abstract JobUrl ScrapeJobUrlInfo(string html);
 
         public abstract IEnumerable<JobUrl> ExtractPageUrls(string pageHtml);
-    }
-
-    public class JobUrlScraperInfoModel
-    {
-        public string Url { get; set; }
-        public string Title { get; set; }
-        public string Salary { get; set; }
-        public string Location { get; set; }
-        public string Company { get; set; }
-
     }
 }
