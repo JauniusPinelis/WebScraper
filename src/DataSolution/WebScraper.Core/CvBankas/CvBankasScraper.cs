@@ -48,42 +48,18 @@ namespace WebScraper.Core.CvBankas
             return ScrapePageUrls(baseUrl);
         }
 
-        //public override JobUrl ScrapeJobUrlInfo(string html)
-        //{
-        //    var scrapeInfo = new JobUrlScraperInfoModel()
-        //    {
-        //        Url = "//a[contains(@class, 'list_a can_visited list_a_has_logo')]",
-        //        Title = "//h3[contains(@class, 'list_h3')]",
-        //        Salary = "//span[contains(@class, 'salary_amount')]",
-        //        Location = "//span[contains(@class, 'list_city')]",
-        //        Company = "//span[contains(@class, 'dib mt5')]"
-        //    };
-        //    return ScrapeJobUrlInfo(html, scrapeInfo, 2);
-        //}
-
-
-
         public override JobUrl ScrapeJobUrlInfo(string html)
         {
-
-            var resultHtml = new HtmlDocument();
-            resultHtml.LoadHtml(html);
-
-            var url = resultHtml.DocumentNode.SelectSingleNode("//a[contains(@class, 'list_a can_visited list_a_has_logo')]");
-            var title = resultHtml.DocumentNode.SelectSingleNode("//h3[contains(@class, 'list_h3')]");
-            var salary = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'salary_amount')]");
-            var location = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'list_city')]");
-            var company = resultHtml.DocumentNode.SelectSingleNode("//span[contains(@class, 'dib mt5')]");
-
-            return new JobUrl()
+            var scrapeInfo = new JobUrlScraperInfoModel()
             {
-                Url = url.Attributes["href"].Value,
-                Salary = salary?.InnerText ?? "",
-                Title = title.InnerText,
-                Location = location?.InnerText,
-                Company = company?.InnerText,
-                JobPortalId = 2
+                Url = "//a[contains(@class, 'list_a can_visited list_a_has_logo')]",
+                UrlAttribute = "href",
+                Title = "//h3[contains(@class, 'list_h3')]",
+                Salary = "//span[contains(@class, 'salary_amount')]",
+                Location = "//span[contains(@class, 'list_city')]",
+                Company = "//span[contains(@class, 'dib mt5')]"
             };
+            return ScrapeJobUrlInfo(html, scrapeInfo, 2);
         }
 
         public override IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
