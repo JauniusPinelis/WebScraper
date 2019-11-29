@@ -48,18 +48,18 @@ namespace WebScraper.Core.CvBankas
             return ScrapePageUrls(baseUrl);
         }
 
-        public override JobUrl ScrapeJobUrlInfo(string html)
-        {
-            var scrapeInfo = new JobUrlScraperInfoModel()
-            {
-                Url = "//a[contains(@class, 'list_a can_visited list_a_has_logo')]",
-                Title = "//h3[contains(@class, 'list_h3')]",
-                Salary = "//span[contains(@class, 'salary_amount')]",
-                Location = "//span[contains(@class, 'list_city')]",
-                Company = "//span[contains(@class, 'dib mt5')]"
-            };
-            return ScrapeJobUrlInfo(html, scrapeInfo, 2);
-        }
+        //public override JobUrl ScrapeJobUrlInfo(string html)
+        //{
+        //    var scrapeInfo = new JobUrlScraperInfoModel()
+        //    {
+        //        Url = "//a[contains(@class, 'list_a can_visited list_a_has_logo')]",
+        //        Title = "//h3[contains(@class, 'list_h3')]",
+        //        Salary = "//span[contains(@class, 'salary_amount')]",
+        //        Location = "//span[contains(@class, 'list_city')]",
+        //        Company = "//span[contains(@class, 'dib mt5')]"
+        //    };
+        //    return ScrapeJobUrlInfo(html, scrapeInfo, 2);
+        //}
 
 
 
@@ -77,13 +77,12 @@ namespace WebScraper.Core.CvBankas
 
             return new JobUrl()
             {
-                Url = url,
+                Url = url.Attributes["href"].Value,
                 Salary = salary?.InnerText ?? "",
                 Title = title.InnerText,
                 Location = location?.InnerText,
                 Company = company?.InnerText,
                 JobPortalId = 2
-
             };
         }
 

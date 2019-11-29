@@ -59,6 +59,7 @@ namespace WebScraper.Core.CvOnline
             var scrapeInfo = new JobUrlScraperInfoModel()
             {
                 Url = "//a[contains(@href, 'job-ad')]",
+                UrlAttribute = "href",
                 Title = "",
                 Salary = "//span[contains(@class, 'salary-blue')]",
                 Location = "//a[contains(@itemprop, 'address')]",

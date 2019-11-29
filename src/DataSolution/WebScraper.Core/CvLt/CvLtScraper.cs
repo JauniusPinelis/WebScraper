@@ -27,7 +27,8 @@ namespace WebScraper.Core.CvLt
         {
             var scrapeInfo = new JobUrlScraperInfoModel()
             {
-                Url = "//a[contains(@itemprop, 'title')]",
+                Url = "//meta[contains(@itemprop, 'url')]",
+                UrlAttribute = "content",
                 Title = "//a[contains(@itemprop, 'title')]",
                 Salary = "//span[contains(@itemprop, 'baseSalary')]",
                 Location = "//meta[contains(@itemprop, 'jobLocation')]",

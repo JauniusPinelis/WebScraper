@@ -102,7 +102,7 @@ namespace WebScraper.Core.Shared
 
             return new JobUrl()
             {
-                Url = url?.GetAttributeValue("href", string.Empty),
+                Url = url?.GetAttributeValue(scrapeInfo.UrlAttribute, string.Empty),
                 //Url = url?.GetAttributeValue("content", string.Empty),
                 Salary = salary?.InnerText ?? "",
                 Title = title?.InnerText,
