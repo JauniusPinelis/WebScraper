@@ -60,7 +60,8 @@ namespace WebScraper.Core.CvOnline
             {
                 Url = "//a[contains(@href, 'job-ad')]",
                 UrlAttribute = "href",
-                Title = "",
+                Title = "//a[contains(@href, 'job-ad')]",
+                TitleAttribute = "title",
                 Salary = "//span[contains(@class, 'salary-blue')]",
                 Location = "//a[contains(@itemprop, 'address')]",
                 Company = "//a[contains(@itemprop, 'name')]"

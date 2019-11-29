@@ -32,6 +32,7 @@ namespace WebScraper.Core.CvLt
                 Title = "//a[contains(@itemprop, 'title')]",
                 Salary = "//span[contains(@itemprop, 'baseSalary')]",
                 Location = "//meta[contains(@itemprop, 'jobLocation')]",
+                LocationAttribute = "jobLocation",
                 Company = "//span[contains(@itemprop, 'name')]"
             };
             return ScrapeJobUrlInfo(html, scrapeInfo, 3);

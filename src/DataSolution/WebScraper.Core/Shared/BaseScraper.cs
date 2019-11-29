@@ -105,8 +105,9 @@ namespace WebScraper.Core.Shared
                 Url = url?.GetAttributeValue(scrapeInfo.UrlAttribute, string.Empty),
                 //Url = url?.GetAttributeValue("content", string.Empty),
                 Salary = salary?.InnerText ?? "",
-                Title = title?.InnerText,
-                Location = location?.GetAttributeValue("content", string.Empty),
+                Title = scrapeInfo.TitleAttribute != null ? title?.GetAttributeValue(scrapeInfo.TitleAttribute, string.Empty):  title?.InnerText,
+                //Location = location?.GetAttributeValue("content", string.Empty),
+                Location = scrapeInfo.LocationAttribute != null ? location?.GetAttributeValue("content", string.Empty) :  location?.InnerHtml,
                 Company = company?.InnerText,
                 JobPortalId = websiteType
             };
