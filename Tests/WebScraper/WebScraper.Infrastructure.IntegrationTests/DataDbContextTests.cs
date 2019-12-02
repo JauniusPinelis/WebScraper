@@ -5,6 +5,7 @@ using NUnit.Framework;
 using System;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using WebScraper.Core.Entities;
 using WebScraper.Infrastructure.Db;
@@ -34,23 +35,11 @@ namespace WebScraper.Infrastructure.IntegrationTests
 
         }
 
-        [Test]
-        public void InitDb_GivenDefaultConnectionString_ShouldCreateConnection()
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
-
-            var config = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
-
-            optionsBuilder.UseSqlServer(config["ConnectionStrings:DefaultConnection"]);
-
-            using (DataContext dbContext = new DataContext(optionsBuilder.Options))
-            {
-                dbContext.Database.CanConnect().Should().Be(true);
-            }
-        }
+        //[Test]
+        //public void InitDb_GivenDefaultConnectionString_ShouldCreateConnection()
+        //{
+          
+        //}
 
         [Test]
         public void SaveChanges_GivenNewUrl_ShouldSetCreated()
