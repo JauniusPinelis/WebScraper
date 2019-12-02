@@ -2,7 +2,10 @@
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Text;
+using Microsoft.Extensions.Configuration;
 using WebScraper.Infrastructure.Db;
 using WebScraper.Infrastructure.Services;
 
@@ -30,6 +33,19 @@ namespace Webscraper.Application.UnitTests
             context.SaveChanges();
 
             return context;
+        }
+
+        public static DataContext CreateLiveDbContext()
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
+
+            var config = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            optionsBuilder.UseSqlServer(config["ConnectionStrings:DefaultConnection"]);
+
+            return new DataContext(optionsBuilder.Options);
         }
 
         public static void Destroy(DataContext context)

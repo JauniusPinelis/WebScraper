@@ -89,6 +89,11 @@ namespace WebScraper.Core.Shared
             return results;
         }
 
+        public void ScrapeJobHtmls()
+        {
+
+        }
+
         public JobUrl ScrapeJobUrlInfo(string html, JobUrlScraperInfoModel scrapeInfo, int websiteType)
         {
             var resultHtml = new HtmlDocument();

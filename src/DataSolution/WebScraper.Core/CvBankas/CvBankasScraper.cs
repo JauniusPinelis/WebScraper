@@ -13,7 +13,6 @@ namespace WebScraper.Core.CvBankas
 {
     public class CvBankasScraper :  BaseScraper, IScraper
     {
-
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
         {
             var urls = urlDtos.ToList();

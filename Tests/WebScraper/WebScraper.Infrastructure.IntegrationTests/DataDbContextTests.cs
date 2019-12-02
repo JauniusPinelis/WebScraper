@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Moq;
 using NUnit.Framework;
 using System;
+using System.IO;
 using System.Linq;
+using Microsoft.Extensions.Configuration;
 using WebScraper.Core.Entities;
 using WebScraper.Infrastructure.Db;
 using WebScraper.Infrastructure.Services;
@@ -30,6 +32,24 @@ namespace WebScraper.Infrastructure.IntegrationTests
 
             _sut = new DataContext(options, _dateTimeMock.Object);
 
+        }
+
+        [Test]
+        public void InitDb_GivenDefaultConnectionString_ShouldCreateConnection()
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
+
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            optionsBuilder.UseSqlServer(config["ConnectionStrings:DefaultConnection"]);
+
+            using (DataContext dbContext = new DataContext(optionsBuilder.Options))
+            {
+                dbContext.Database.CanConnect().Should().Be(true);
+            }
         }
 
         [Test]
