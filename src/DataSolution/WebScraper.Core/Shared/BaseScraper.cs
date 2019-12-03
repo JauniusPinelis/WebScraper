@@ -89,9 +89,25 @@ namespace WebScraper.Core.Shared
             return results;
         }
 
-        public void ScrapeJobHtmls()
+        public string ScrapeJobHtml(HttpClient webClient, string url, string contentId)
         {
+            try
+            {
+                var html = webClient.GetStringAsync(url).Result;
+                var htmlDocument = new HtmlDocument();
+                htmlDocument.LoadHtml(html);
 
+                var resultNode = htmlDocument.DocumentNode.SelectSingleNode($"//div[contains(@id, '{contentId}')]");
+
+                if (resultNode != null)
+                    return resultNode.InnerHtml;
+                return "";
+            }
+
+            catch (Exception)
+            {
+                return "";
+            }
         }
 
         public JobUrl ScrapeJobUrlInfo(string html, JobUrlScraperInfoModel scrapeInfo, int websiteType)

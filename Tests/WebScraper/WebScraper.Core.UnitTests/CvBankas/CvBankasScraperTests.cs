@@ -51,6 +51,16 @@ namespace WebScraper.Core.UnitTests.CvBankas
         }
 
         [Test]
+        public void ScrapeJobUrlInfo_GivenTestData_GetsCorrectTitle()
+        {
+            string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvBankasSingleUrlTestData.txt");
+
+            var jobEntity = _scraper.ScrapeJobUrlInfo(textData);
+
+            jobEntity.Title.Should().Be("SAP Basis administratorius(-ė)");
+        }
+
+        [Test]
         public void ScrapeJobUrlInfo_GivenTestData_GetsCorrectCompany()
         {
             string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvBankasSingleUrlTestData.txt");

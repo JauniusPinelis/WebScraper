@@ -20,10 +20,8 @@ namespace WebScraper.Core.CvOnline
             var results = new List<JobInfo>();
             var webClient = new HttpClient();
 
-            /* As testing lets do only 20 page htmls for now - dont wanna 
-             * overload the page */
 
-            var limit = 10;
+            var limit = 50;
             var delay = 1000;
 
             for (int i = 0; i <= limit; i++)
@@ -31,6 +29,7 @@ namespace WebScraper.Core.CvOnline
                 Thread.Sleep(delay);
                 var html = ScrapeJobPortalInfo(urls[i].Url, webClient);
 
+                updateJobHtml();
                 results.Add(new JobInfo()
                 {
                     JobUrlId = urls[i].Id,
@@ -40,6 +39,8 @@ namespace WebScraper.Core.CvOnline
 
             return results;
         }
+
+
 
         public override IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
         {
@@ -70,7 +71,7 @@ namespace WebScraper.Core.CvOnline
         }
         private string TrimStart(string target, string trimString)
         {
-            if (string.IsNullOrEmpty(trimString)) return target;
+            if (string.IsNullOrEmpty(trimString) || string.IsNullOrEmpty(target)) return target;
 
             string result = target;
             while (result.StartsWith(trimString))
@@ -87,23 +88,9 @@ namespace WebScraper.Core.CvOnline
             //temp stuff but this needs to be better refactored
             url = TrimStart(url, "//");
             url = "http://" + url;
-            try
-            {
-                var html = webClient.GetStringAsync(url).Result;
-                var htmlDocument = new HtmlDocument();
-                htmlDocument.LoadHtml(html);
 
-                var resultNode = htmlDocument.DocumentNode.SelectSingleNode("//div[contains(@id, 'page-main-content')]");
-
-                if (resultNode != null)
-                    return resultNode.InnerHtml;
-                return "";
-            }
-
-            catch (Exception e)
-            {
-                return "";
-            }
+           return base.ScrapeJobHtml(webClient, url, "page-main-content");
+            
         }
     }
 }

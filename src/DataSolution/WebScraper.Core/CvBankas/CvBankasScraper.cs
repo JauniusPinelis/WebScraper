@@ -68,23 +68,7 @@ namespace WebScraper.Core.CvBankas
 
         private string ScrapeJobPortalInfo(string url, HttpClient webClient)
         {
-            try
-            {
-                var html = webClient.GetStringAsync(url).Result;
-                var htmlDocument = new HtmlDocument();
-                htmlDocument.LoadHtml(html);
-
-                var resultNode = htmlDocument.DocumentNode.SelectSingleNode("//div[contains(@id, 'page-main-content')]");
-
-                if (resultNode != null)
-                    return resultNode.InnerHtml;
-                return "";
-            }
-
-            catch (Exception)
-            {
-                return "";
-            }
+            return base.ScrapeJobHtml(webClient, url, "page-main-content");
         }
 
     }

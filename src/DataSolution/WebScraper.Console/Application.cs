@@ -13,12 +13,7 @@ namespace WebScraper.Console
         }
         public void Run()
         {
-            Log.Information("CVOnline: Starting to scrape data");
-            _scrapeService.ScrapeCvOnlineData();
-            Log.Information("CVBankas: Starting to scrape data");
-            _scrapeService.ScrapeCvBankasData();
-            Log.Information("CvLt: Starting to scrape data");
-            _scrapeService.ScrapeCvLtData();
+            _scrapeService.Run();
         }
     }
 }

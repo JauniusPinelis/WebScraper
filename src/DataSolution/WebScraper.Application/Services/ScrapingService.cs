@@ -25,6 +25,16 @@ namespace WebScraper.Application.Services
             _mapper = mapper;
         }
 
+        public void Run()
+        {
+            Log.Information("CVOnline: Starting to scrape data");
+            ScrapeCvOnlineData();
+            //Log.Information("CVBankas: Starting to scrape data");
+            //ScrapeCvBankasData();
+            //Log.Information("CvLt: Starting to scrape data");
+            //ScrapeCvLtData();
+        }
+
         public void UpdateJobInfo(JobInfo jobInfo)
         {
             
@@ -72,14 +82,9 @@ namespace WebScraper.Application.Services
         {
             var scraper = _scraperFactory.BuildScraper("cvbankas");
 
-            var jobUrls = _context.JobUrls.Where(u => u.JobPortalId == 2);
+            var collectedUrls = scraper.ScrapePageUrls();
 
-            if (!jobUrls.Any())
-            {
-                var collectedUrls = scraper.ScrapePageUrls();
-
-                UpdateUrls(collectedUrls.ToList());
-            }
+            UpdateUrls(collectedUrls.ToList());
         }
 
         public void ScrapeCvLtData()
@@ -97,35 +102,29 @@ namespace WebScraper.Application.Services
             Log.Information("CvOnline - starting to scraper CvOnline");
             var scraper = _scraperFactory.BuildScraper("CvOnline");
 
-            // Get Urls of cvonline
-            var jobUrls = _context.JobUrls.Where(u => u.JobPortalId == 1);
 
-            if (!jobUrls.Any())
-            {
-                var collectedUrls = scraper.ScrapePageUrls().ToList();
+            var collectedUrls = scraper.ScrapePageUrls().ToList();
 
-                var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
-                cvOnlineFilter.Apply(ref collectedUrls);
+            var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
+            cvOnlineFilter.Apply(ref collectedUrls);
 
-                UpdateUrls(collectedUrls);
+            UpdateUrls(collectedUrls);
                
-            }
+
 
             Log.Information("CvOnline - CvOnline Urls saved");
 
             // Get Htmls
-           /* var urlsInDb = _context.JobUrls;
+            var urlsInDb = _context.JobUrls;
 
-            if (urlsInDb.Any() && false)
+            var htmlResults = scraper.ScrapeJobHtmls(urlsInDb.ToList());
+
+            foreach(var html in htmlResults)
             {
-                var htmlResults = scraper.ScrapeJobHtmls(urlsInDb.ToList());
-
-                foreach(var html in htmlResults)
-                {
-                    UpdateJobInfo(html);
-                }
+                UpdateJobInfo(html);
             }
-
+            
+            /*
             // Parse Infos from Html
 
             var htmlEntities = _context.JobInfos;
