@@ -45,55 +45,10 @@ namespace WebScraper.Core.Shared
             return jobUrls;
         }
 
-        public IEnumerable<JobUrl> ScrapePageUrls(string baseUrl)
-        {
-            
-            var webClient = new HttpClient();
-            int pageCounter = 0;
-            var continueParsing = true;
-            var results = new List<JobUrl>();
-
-
-            while (continueParsing && pageCounter < 20)
-            {
-                string html;
-                try
-                {
-                    //Have some delay in parsing
-                    Thread.Sleep(_sleepTime);
-
-                    var validUrl = baseUrl + pageCounter;
-                    pageCounter += 1;
-                    Log.Information("Scraping page {pageIndex}", pageCounter);
-
-                    html = webClient.GetStringAsync(validUrl).Result;
-                }
-                catch (Exception)
-                {
-                    // html is empty
-                    html = "";
-                }
-
-                var pageResults = ExtractPageUrls(html);
-
-                // no more found - stop parsing
-                if (!pageResults.Any())
-                {
-                    Log.Information("Finished scraping page urls");
-                    continueParsing = false;
-                }
-
-                results.AddRange(pageResults);
-            }
-
-            return results;
-        }
-
-        public string ScrapeJobHtml(HttpClient webClient, string url, string contentId)
+        public string ScrapeJobHtml(string html, string contentId)
         {
             try
             {
-                var html = webClient.GetStringAsync(url).Result;
                 var htmlDocument = new HtmlDocument();
                 htmlDocument.LoadHtml(html);
 

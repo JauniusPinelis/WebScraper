@@ -6,13 +6,11 @@ using WebScraper.Core.Entities;
 namespace WebScraper.Core.Shared
 {
     public interface IScraper
-    {
-        IEnumerable<JobUrl> ScrapePageUrls();
-
-        IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urls);
-
+    { 
         JobUrl ScrapeJobUrlInfo(string html);
 
         IEnumerable<JobUrl> ExtractPageUrls(string html);
+
+        string ScrapeJobPortalInfo(string html);
     }
 }

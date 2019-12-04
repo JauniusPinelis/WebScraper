@@ -66,9 +66,9 @@ namespace WebScraper.Core.CvBankas
             return ExtractPageUrls(pageHtml, "//a[contains(@class, 'list_a can_visited list_a_has_logo')]");
         }
 
-        private string ScrapeJobPortalInfo(string url, HttpClient webClient)
+        private string ScrapeJobPortalInfo(string html)
         {
-            return base.ScrapeJobHtml(webClient, url, "page-main-content");
+            return base.ScrapeJobHtml(html, "page-main-content");
         }
 
     }
