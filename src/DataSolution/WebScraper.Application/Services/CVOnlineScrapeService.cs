@@ -33,9 +33,32 @@ namespace WebScraper.Application.Services
 
         }
 
-        public IEnumerable<JobInfo> ScrapePageHtmls()
+        public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
         {
+            var urls = urlDtos.ToList();
+            var results = new List<JobInfo>();
 
+            /* As testing lets do only 20 page htmls for now - dont wanna 
+             * overload the page */
+
+            var limit = 10;
+            var delay = 1000;
+
+            for (int i = 0; i <= limit; i++)
+            {
+                Thread.Sleep(delay);
+
+                var html = _scraper.ScrapeJobPortalInfo(urls[i].Url);
+
+
+                results.Add(new JobInfo()
+                {
+                    JobUrlId = urls[i].Id,
+                    HtmlCode = html
+                });
+            }
+
+            return results;
         }
     }
 }

@@ -13,39 +13,6 @@ namespace WebScraper.Core.CvBankas
 {
     public class CvBankasScraper :  BaseScraper, IScraper
     {
-        public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
-        {
-            var urls = urlDtos.ToList();
-            var results = new List<JobInfo>();
-            var webClient = new HttpClient();
-
-            /* As testing lets do only 20 page htmls for now - dont wanna 
-             * overload the page */
-
-            var limit = 10;
-            var delay = 1000;
-
-            for (int i = 0; i <= limit; i++)
-            {
-                Thread.Sleep(delay);
-                var html = ScrapeJobPortalInfo(urls[i].Url, webClient);
-
-                results.Add(new JobInfo()
-                {
-                    JobUrlId = urls[i].Id,
-                    HtmlCode = html
-                });
-            }
-
-            return results;
-        }
-
-        public IEnumerable<JobUrl> ScrapePageUrls()
-        {
-            var baseUrl = "https://www.cvbankas.lt/?padalinys%5B0%5D=76&page=";
-
-            return ScrapePageUrls(baseUrl);
-        }
 
         public override JobUrl ScrapeJobUrlInfo(string html)
         {
@@ -66,10 +33,11 @@ namespace WebScraper.Core.CvBankas
             return ExtractPageUrls(pageHtml, "//a[contains(@class, 'list_a can_visited list_a_has_logo')]");
         }
 
-        private string ScrapeJobPortalInfo(string html)
+        public string ScrapeJobPortalInfo(string html)
         {
             return base.ScrapeJobHtml(html, "page-main-content");
         }
 
+       
     }
 }

@@ -14,31 +14,7 @@ namespace WebScraper.Core.CvOnline
     public class CvOnlineScraper : BaseScraper,IScraper
     {
         private const int _jobPortalId = 1;
-        public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
-        {
-            var urls = urlDtos.ToList();
-            var results = new List<JobInfo>();
-            var webClient = new HttpClient();
-
-
-            var limit = 50;
-            var delay = 1000;
-
-            for (int i = 0; i <= limit; i++)
-            {
-                Thread.Sleep(delay);
-                var html = ScrapeJobPortalInfo(urls[i].Url, webClient);
-
-                results.Add(new JobInfo()
-                {
-                    JobUrlId = urls[i].Id,
-                    HtmlCode = html
-                });
-            }
-
-            return results;
-        }
-
+      
 
 
         public override IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
@@ -80,12 +56,8 @@ namespace WebScraper.Core.CvOnline
 
         }
 
-        private string ScrapeJobPortalInfo(string html)
+        public string ScrapeJobPortalInfo(string html)
         {
-
-            //temp stuff but this needs to be better refactored
-            url = TrimStart(url, "//");
-            url = "http://" + url;
 
            return base.ScrapeJobHtml( html , "page-main-content");
             

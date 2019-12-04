@@ -24,18 +24,10 @@ namespace WebScraper.Application.Services
 
         }
 
-        public IEnumerable<JobUrl> ScrapePageUrls()
-        {
-            var baseUrl = "https://www.cvbankas.lt/?padalinys%5B0%5D=76&page=";
-
-            return ScrapePageUrls(baseUrl);
-        }
-
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
         {
             var urls = urlDtos.ToList();
             var results = new List<JobInfo>();
-            var webClient = new HttpClient();
 
             /* As testing lets do only 20 page htmls for now - dont wanna 
              * overload the page */
@@ -46,7 +38,9 @@ namespace WebScraper.Application.Services
             for (int i = 0; i <= limit; i++)
             {
                 Thread.Sleep(delay);
-                var html = ScrapeJobHtml(urls[i].Url);
+
+                var html = ScrapeJobHtml(urls[i].Url, "list_a can_visited list_a_has_logo");
+             
 
                 results.Add(new JobInfo()
                 {
@@ -58,7 +52,13 @@ namespace WebScraper.Application.Services
             return results;
         }
 
-       
+        public IEnumerable<JobUrl> ScrapePageUrls()
+        {
+            var baseUrl = "https://www.cvbankas.lt/?padalinys%5B0%5D=76&page=";
+
+            return ScrapePageUrls(baseUrl);
+        }
+
 
     }
 }
