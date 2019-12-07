@@ -23,6 +23,11 @@ namespace WebScraper.Core.CvLt
             throw new NotImplementedException();
         }
 
+        public string ScrapeJobPortalInfo(string html)
+        {
+            throw new NotImplementedException();
+        }
+
         public override JobUrl ScrapeJobUrlInfo(string html)
         {
             var scrapeInfo = new JobUrlScraperInfoModel()
@@ -36,13 +41,6 @@ namespace WebScraper.Core.CvLt
                 Company = "//span[contains(@itemprop, 'name')]"
             };
             return ScrapeJobUrlInfo(html, scrapeInfo, 3);
-        }
-
-        public IEnumerable<JobUrl> ScrapePageUrls()
-        {
-            var baseUrl = "https://www.cv.lt/employee/announcementsAll.do?regular=true&department=1040&page=";
-
-            return ScrapePageUrls(baseUrl);
         }
     }
 }

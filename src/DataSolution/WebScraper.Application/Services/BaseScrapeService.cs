@@ -8,6 +8,7 @@ using HtmlAgilityPack;
 using Serilog;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Shared;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace WebScraper.Application.Services
 {

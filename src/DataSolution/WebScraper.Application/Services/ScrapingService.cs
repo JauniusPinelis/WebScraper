@@ -4,6 +4,7 @@ using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
@@ -16,13 +17,15 @@ namespace WebScraper.Application.Services
         private readonly IDataContext _context;
         private readonly IScraperFactory _scraperFactory;
         private readonly IMapper _mapper;
+        private readonly IHttpClientFactory _httpClientFactory;
 
         public ScrapingService(IDataContext context, IScraperFactory factory, 
-             IMapper mapper)
+             IMapper mapper, IHttpClientFactory clientFactory)
         {
             _context = context;
             _scraperFactory = factory;
             _mapper = mapper;
+            _httpClientFactory = clientFactory;
         }
 
         public void Run()
@@ -81,6 +84,9 @@ namespace WebScraper.Application.Services
         public void ScrapeCvBankasData()
         {
             var scraper = _scraperFactory.BuildScraper("cvbankas");
+
+            var scrapeService = new CvBankasScrapeService(_httpClientFactory);
+            scrapeService.ScrapePageUrls();
 
             var collectedUrls = scraper.ScrapePageUrls();
 
