@@ -86,9 +86,7 @@ namespace WebScraper.Application.Services
             var scraper = _scraperFactory.BuildScraper("cvbankas");
 
             var scrapeService = new CvBankasScrapeService(_httpClientFactory);
-            scrapeService.ScrapePageUrls();
-
-            var collectedUrls = scraper.ScrapePageUrls();
+            var collectedUrls = scrapeService.ScrapePageUrls();
 
             UpdateUrls(collectedUrls.ToList());
         }
@@ -96,6 +94,8 @@ namespace WebScraper.Application.Services
         public void ScrapeCvLtData()
         {
             var scraper = _scraperFactory.BuildScraper("CvLt");
+
+            var scrapeService = new CvLTScrapeService(_httpClientFactory);
 
             var collectedUrls = scraper.ScrapePageUrls();
 
@@ -108,8 +108,10 @@ namespace WebScraper.Application.Services
             Log.Information("CvOnline - starting to scraper CvOnline");
             var scraper = _scraperFactory.BuildScraper("CvOnline");
 
+            var scrapeService = new CvOnlineScrapeService(_httpClientFactory);
 
-            var collectedUrls = scraper.ScrapePageUrls().ToList();
+
+            var collectedUrls = scrapeService.ScrapePageUrls().ToList();
 
             var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
             cvOnlineFilter.Apply(ref collectedUrls);
@@ -123,7 +125,7 @@ namespace WebScraper.Application.Services
             // Get Htmls
             var urlsInDb = _context.JobUrls;
 
-            var htmlResults = scraper.ScrapeJobHtmls(urlsInDb.ToList());
+            var htmlResults = scrapeService.ScrapeJobHtmls(urlsInDb.ToList());
 
             foreach(var html in htmlResults)
             {
