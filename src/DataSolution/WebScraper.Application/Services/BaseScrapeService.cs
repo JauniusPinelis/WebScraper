@@ -9,19 +9,25 @@ using Serilog;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Shared;
 using Microsoft.Extensions.DependencyInjection;
+using WebScraper.Core.Factories;
+using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Application.Services
 {
     public class BaseScrapeService
     {
         protected IHttpClientFactory _httpClientFactory;
+        protected IScraperFactory _scraperFactory;
         protected IScraper _scraper;
+        protected IDataContext _context;
 
         protected const int _sleepTime = 1000;
 
-        public BaseScrapeService(IHttpClientFactory httpClientFactory)
+        public BaseScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory,  IDataContext context)
         {
+            _scraperFactory = scraperFactory;
             _httpClientFactory = httpClientFactory;
+            _context = context;
         }
 
         public IEnumerable<JobUrl> ScrapePageUrls(string baseUrl)
@@ -66,6 +72,49 @@ namespace WebScraper.Application.Services
             }
 
             return results;
+        }
+
+        public void UpdateJobInfo(JobInfo jobInfo)
+        {
+
+            JobInfo entity;
+            var exists = _context.JobInfos.Any(j => j.HtmlCode == jobInfo.HtmlCode);
+
+            if (exists)
+            {
+                entity = _context.JobInfos.SingleOrDefault(j => j.HtmlCode == jobInfo.HtmlCode);
+            }
+            else
+            {
+                entity = new JobInfo();
+                _context.JobInfos.Add(entity);
+            }
+
+            entity.HtmlCode = jobInfo.HtmlCode;
+            entity.JobUrlId = jobInfo.JobUrlId;
+
+            _context.SaveChanges();
+
+        }
+
+        public void UpdateUrls(IList<JobUrl> jobUrls)
+        {
+            foreach (var jobUrl in jobUrls)
+            {
+                var urlsInDb = _context.JobUrls;
+                var exists = urlsInDb.Any(j => j.Url == jobUrl.Url);
+
+                if (!exists)
+                {
+                    _context.JobUrls.Add(jobUrl);
+                    _context.SaveChanges();
+                    Log.Information("{url} has been added", jobUrl.Url);
+                }
+                else
+                {
+                    Log.Information("{url} already exists", jobUrl.Url);
+                }
+            }
         }
 
         public string ScrapeJobHtml(string url, string contentId)

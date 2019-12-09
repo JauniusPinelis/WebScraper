@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
+using Serilog;
 using WebScraper.Core.CvBankas;
 using WebScraper.Core.CvLt;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
+using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Application.Services
 {
     public class CvLtScrapeService : BaseScrapeService, IScrapeService
     {
-        public CvLtScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory) : base(httpClientFactory)
+        public CvLtScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext context) : base(httpClientFactory, scraperFactory, context)
         {
             _scraper = scraperFactory.BuildScraper("cvlt");
         }
@@ -27,7 +30,10 @@ namespace WebScraper.Application.Services
 
         public void Run()
         {
-            throw new NotImplementedException();
+            var collectedUrls  = ScrapePageUrls();
+
+            Log.Information("CvLtScraper - saving urls to db");
+            UpdateUrls(collectedUrls.ToList());
         }
     }
 }

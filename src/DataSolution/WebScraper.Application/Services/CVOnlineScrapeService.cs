@@ -9,20 +9,59 @@ using WebScraper.Core.CvOnline;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
 using WebScraper.Core.Shared;
+using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Application.Services
 {
     public class CvOnlineScrapeService : BaseScrapeService
     {
 
-        public CvOnlineScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory) : base(httpClientFactory)
+        public CvOnlineScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext dataContext) : base(httpClientFactory, scraperFactory, dataContext)
         {
             _scraper = scraperFactory.BuildScraper("cvonline");
         }
 
         public void Run()
         {
-            
+            Log.Information("CvOnline - starting to scraper CvOnline");
+
+            var collectedUrls = ScrapePageUrls().ToList();
+
+            var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
+            cvOnlineFilter.Apply(ref collectedUrls);
+
+            UpdateUrls(collectedUrls);
+
+
+
+            Log.Information("CvOnline - CvOnline Urls saved");
+
+            // Get Htmls
+            var urlsInDb = _context.JobUrls;
+
+            var htmlResults = ScrapeJobHtmls(urlsInDb.ToList());
+
+            foreach (var html in htmlResults)
+            {
+                UpdateJobInfo(html);
+            }
+
+            /*
+            // Parse Infos from Html
+
+            var htmlEntities = _context.JobInfos;
+
+            var parser = _scraperFactory.BuildParser("cvonline");
+
+            foreach (var htmlEntity in htmlEntities)
+            {
+                var parseResult = parser.ParseInfo(htmlEntity);
+
+                var entity = _context.JobInfos.Find(parseResult.Id);
+
+                entity.Title = parseResult.Title;
+                
+            }**/
         }
 
         public IEnumerable<JobUrl> ScrapePageUrls()

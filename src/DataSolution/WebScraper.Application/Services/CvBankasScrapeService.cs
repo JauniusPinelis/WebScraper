@@ -9,12 +9,13 @@ using WebScraper.Core.CvBankas;
 using WebScraper.Core.CvOnline;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
+using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Application.Services
 {
     public class CvBankasScrapeService : BaseScrapeService, IScrapeService
     {
-        public CvBankasScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory) : base(httpClientFactory)
+        public CvBankasScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext context) : base(httpClientFactory, scraperFactory, context)
         {
             _scraper = scraperFactory.BuildScraper("CvBankas");
 
@@ -22,7 +23,9 @@ namespace WebScraper.Application.Services
 
         public void Run()
         {
+            var collectedUrls = ScrapePageUrls();
 
+            UpdateUrls(collectedUrls.ToList());
         }
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
