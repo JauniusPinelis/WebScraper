@@ -7,6 +7,7 @@ using System.Threading;
 using Serilog;
 using WebScraper.Core.CvOnline;
 using WebScraper.Core.Entities;
+using WebScraper.Core.Factories;
 using WebScraper.Core.Shared;
 
 namespace WebScraper.Application.Services
@@ -14,10 +15,9 @@ namespace WebScraper.Application.Services
     public class CvOnlineScrapeService : BaseScrapeService
     {
 
-        public CvOnlineScrapeService(IHttpClientFactory httpClientFactory) : base(httpClientFactory)
+        public CvOnlineScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory) : base(httpClientFactory)
         {
-            // this can be done smarter
-            _scraper = new CvOnlineScraper();
+            _scraper = scraperFactory.BuildScraper("cvonline");
         }
 
         public void Run()

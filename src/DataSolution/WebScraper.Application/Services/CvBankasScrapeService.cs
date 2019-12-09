@@ -8,15 +8,16 @@ using HtmlAgilityPack;
 using WebScraper.Core.CvBankas;
 using WebScraper.Core.CvOnline;
 using WebScraper.Core.Entities;
+using WebScraper.Core.Factories;
 
 namespace WebScraper.Application.Services
 {
     public class CvBankasScrapeService : BaseScrapeService, IScrapeService
     {
-        public CvBankasScrapeService(IHttpClientFactory httpClientFactory) : base(httpClientFactory)
+        public CvBankasScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory) : base(httpClientFactory)
         {
-            // this can be done smarter
-            _scraper = new CvBankasScraper();
+            _scraper = scraperFactory.BuildScraper("CvBankas");
+
         }
 
         public void Run()
