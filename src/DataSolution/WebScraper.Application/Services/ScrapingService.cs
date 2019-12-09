@@ -95,9 +95,9 @@ namespace WebScraper.Application.Services
         {
             var scraper = _scraperFactory.BuildScraper("CvLt");
 
-            var scrapeService = new CvLTScrapeService(_httpClientFactory);
+            var scrapeService = new CvLtScrapeService(_httpClientFactory);
 
-            var collectedUrls = scraper.ScrapePageUrls();
+            var collectedUrls = scrapeService.ScrapePageUrls();
 
             Log.Information("CvLtScraper - saving urls to db");
             UpdateUrls(collectedUrls.ToList());

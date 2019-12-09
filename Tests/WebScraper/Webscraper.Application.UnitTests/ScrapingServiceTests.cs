@@ -4,10 +4,13 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Moq;
 using WebScraper.Application.Common.Mappings;
 using WebScraper.Application.Services;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
+using System.Net.Http;
+
 
 namespace Webscraper.Application.UnitTests
 {
@@ -27,7 +30,9 @@ namespace Webscraper.Application.UnitTests
 
             IMapper mapper = mappingConfig.CreateMapper();
 
-            _scrapingService = new ScrapingService(_context, scraperFactory, mapper);
+            var mockFactory = new Mock<IHttpClientFactory>();
+
+            _scrapingService = new ScrapingService(_context, scraperFactory, mapper, mockFactory.Object);
         }
 
         [Test]
