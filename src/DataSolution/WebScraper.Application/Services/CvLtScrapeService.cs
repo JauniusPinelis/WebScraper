@@ -25,9 +25,6 @@ namespace WebScraper.Application.Services
 
             return ScrapePageUrls(baseUrl);
         }
-
-
-
         public void Run()
         {
             var collectedUrls  = ScrapePageUrls();

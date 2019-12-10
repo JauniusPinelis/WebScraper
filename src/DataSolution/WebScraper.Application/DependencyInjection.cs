@@ -16,7 +16,7 @@ namespace WebScraper.Application
         public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
-            services.AddScoped<IScrapingService, ScrapingService>();
+            services.AddScoped<IScrapingService, ApplicationRunner>();
             services.AddScoped<IScraperFactory, ScraperFactory>();
 
 

@@ -12,14 +12,14 @@ using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Application.Services
 {
-    public class ScrapingService : IScrapingService
+    public class ApplicationRunner : IScrapingService
     {
         private readonly IDataContext _context;
         private readonly IScraperFactory _scraperFactory;
         private readonly IMapper _mapper;
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public ScrapingService(IDataContext context, IScraperFactory factory, 
+        public ApplicationRunner(IDataContext context, IScraperFactory factory, 
              IMapper mapper, IHttpClientFactory clientFactory)
         {
             _context = context;
@@ -50,26 +50,6 @@ namespace WebScraper.Application.Services
             scrapeServices.Add(cvOnlineScrapeService);
 
             return scrapeServices;
-        }
-
-        
-        public void ScrapeCvBankasData()
-        { 
-
-          
-            
-        }
-
-        public void ScrapeCvLtData()
-        {
-
-         
-
-        }
-
-        public void ScrapeCvOnlineData()
-        {
-            
         }
     }
 }
