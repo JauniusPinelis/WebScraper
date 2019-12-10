@@ -27,9 +27,17 @@ namespace WebScraper.Application.Services
             var urls = ExtractPageUrls(baseUrl);
             UpdateUrls(urls);
         }
+
+        public void ScrapePageInfos()
+        {
+            ScrapePageInfos("jobCont", 3);
+        }
+
         public void Run()
         {
             ScrapePageUrls();
+            ScrapePageInfos();
         }
+
     }
 }

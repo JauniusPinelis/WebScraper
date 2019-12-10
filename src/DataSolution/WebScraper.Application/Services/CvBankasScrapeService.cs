@@ -27,7 +27,7 @@ namespace WebScraper.Application.Services
             
 
             ScrapePageUrls();
-            //ScrapePageInfos();
+            ScrapePageInfos();
         }
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
@@ -65,6 +65,9 @@ namespace WebScraper.Application.Services
             UpdateUrls(urls);
         }
 
-
+        public void ScrapePageInfos()
+        {
+            ScrapePageInfos("jobad_content_main", 2);
+        }
     }
 }

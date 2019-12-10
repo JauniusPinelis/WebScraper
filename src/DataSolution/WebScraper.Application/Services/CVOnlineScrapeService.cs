@@ -46,47 +46,7 @@ namespace WebScraper.Application.Services
 
         public void ScrapePageInfos()
         {
-            var urlsInDb = _context.JobUrls;
-
-            foreach (var url in urlsInDb)
-            {
-                var html = ScrapeJobHtml(url.Url, "page-main-content");
-
-                var jobInfo = new JobInfo()
-                {
-                    HtmlCode = html
-                };
-
-                UpdateJobInfo(jobInfo);
-            }
-        }
-
-
-
-        public IEnumerable<JobInfo> ExtractPageUrls(IEnumerable<JobUrl> urlDtos)
-        {
-            var urls = urlDtos.ToList();
-            var results = new List<JobInfo>();
-
-            /* As testing lets do only 20 page htmls for now - dont wanna 
-             * overload the page */
-
-            for (int i = 0; i <= _scrapeLimit; i++)
-            {
-                Thread.Sleep(_sleepTime);
-
-                var html = _scraper.ScrapeJobPortalInfo(urls[i].Url);
-
-                Log.Information($"Html scraped: {urls[i].Url}");
-
-                results.Add(new JobInfo()
-                {
-                    JobUrlId = urls[i].Id,
-                    HtmlCode = html
-                });
-            }
-
-            return results;
+            ScrapePageInfos("page-main-content", 1); 
         }
     }
 }

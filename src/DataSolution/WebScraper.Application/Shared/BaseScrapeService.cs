@@ -98,6 +98,25 @@ namespace WebScraper.Application.Shared
 
         }
 
+        public void ScrapePageInfos(string elementId, int jobPortalId)
+        {
+            var urlsInDb = _context.JobUrls.Where(j => j.JobPortalId == jobPortalId).ToList();
+
+            foreach (var url in urlsInDb)
+            {
+                var html = ScrapeJobHtml(url.Url, elementId);
+
+                var jobInfo = new JobInfo()
+                {
+                    HtmlCode = html,
+                    JobUrlId = url.Id
+
+                };
+
+                UpdateJobInfo(jobInfo);
+            }
+        }
+
         public void UpdateUrls(IList<JobUrl> jobUrls)
         {
             foreach (var jobUrl in jobUrls)
@@ -134,7 +153,7 @@ namespace WebScraper.Application.Shared
                 return "";
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
                 return "";
             }
