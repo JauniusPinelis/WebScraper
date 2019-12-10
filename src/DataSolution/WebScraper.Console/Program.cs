@@ -12,6 +12,7 @@ using MediatR;
 using WebScraper.Application.Services;
 using Microsoft.Extensions.Logging;
 using Serilog;
+using WebScraper.Application.Shared;
 
 namespace WebScraper.Console
 {
@@ -25,7 +26,7 @@ namespace WebScraper.Console
         {
             RegisterServices();
 
-            var scrapeService = _serviceProvider.GetService<IScrapingService>();
+            var scrapeService = _serviceProvider.GetService<IScrapeService>();
             var app = new Application(scrapeService);
             app.Run();
            

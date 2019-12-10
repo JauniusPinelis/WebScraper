@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading;
 using HtmlAgilityPack;
+using WebScraper.Application.Shared;
 using WebScraper.Core.CvBankas;
 using WebScraper.Core.CvOnline;
 using WebScraper.Core.Entities;

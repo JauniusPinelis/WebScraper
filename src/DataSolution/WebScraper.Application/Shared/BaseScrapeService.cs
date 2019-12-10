@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
 
-namespace WebScraper.Application.Services
+namespace WebScraper.Application.Shared
 {
     public class BaseScrapeService
     {

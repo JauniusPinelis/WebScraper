@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using Serilog;
+using WebScraper.Application.Shared;
 using WebScraper.Core.CvBankas;
 using WebScraper.Core.CvLt;
 using WebScraper.Core.Entities;

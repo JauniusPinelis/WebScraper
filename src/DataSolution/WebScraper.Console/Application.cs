@@ -1,13 +1,14 @@
 ﻿using Serilog;
 using WebScraper.Application.Services;
+using WebScraper.Application.Shared;
 
 namespace WebScraper.Console
 {
     public class Application
     {
-        private IScrapingService _scrapeService;
+        private IScrapeService _scrapeService;
 
-        public Application(IScrapingService scrapeService)
+        public Application(IScrapeService scrapeService)
         {
             _scrapeService = scrapeService;
         }

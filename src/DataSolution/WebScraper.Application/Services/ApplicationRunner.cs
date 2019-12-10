@@ -6,13 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using WebScraper.Application.Shared;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Application.Services
 {
-    public class ApplicationRunner : IScrapingService
+    public class ApplicationRunner : IScrapeService
     {
         private readonly IDataContext _context;
         private readonly IScraperFactory _scraperFactory;
