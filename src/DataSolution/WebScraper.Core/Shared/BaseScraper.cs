@@ -55,6 +55,7 @@ namespace WebScraper.Core.Shared
                 var resultNode = htmlDocument.DocumentNode.SelectSingleNode($"//div[contains(@id, '{contentId}')]");
 
                 if (resultNode != null)
+
                     return resultNode.InnerHtml;
                 return "";
             }

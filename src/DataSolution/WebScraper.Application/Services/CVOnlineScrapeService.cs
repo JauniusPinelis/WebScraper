@@ -23,49 +23,62 @@ namespace WebScraper.Application.Services
         }
 
         public void Run()
+        { 
+        //{
+        //    Log.Information("CvOnline - starting to scraper CvOnline");
+
+        //    var collectedUrls = ScrapePageUrls().ToList();
+
+        //    var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
+        //    cvOnlineFilter.Apply(ref collectedUrls);
+
+        //    UpdateUrls(collectedUrls);
+
+
+
+        //    Log.Information("CvOnline - CvOnline Urls saved");
+
+        //// Get Htmls
+        //var urlsInDb = _context.JobUrls;
+
+        //var htmlResults = ScrapeJobHtmls(urlsInDb.ToList());
+
+        //foreach (var html in htmlResults)
+        //{
+        //    UpdateJobInfo(html);
+        //}
+
+        /*
+        // Parse Infos from Html
+
+        var htmlEntities = _context.JobInfos;
+
+        var parser = _scraperFactory.BuildParser("cvonline");
+
+        foreach (var htmlEntity in htmlEntities)
         {
-            Log.Information("CvOnline - starting to scraper CvOnline");
+            var parseResult = parser.ParseInfo(htmlEntity);
 
-            var collectedUrls = ScrapePageUrls().ToList();
+            var entity = _context.JobInfos.Find(parseResult.Id);
 
-            var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
-            cvOnlineFilter.Apply(ref collectedUrls);
+            entity.Title = parseResult.Title;
 
-            UpdateUrls(collectedUrls);
+        }**/
 
+        var urlsInDb = _context.JobUrls;
 
-
-            Log.Information("CvOnline - CvOnline Urls saved");
-
-            // Get Htmls
-            var urlsInDb = _context.JobUrls;
-
-            var htmlResults = ScrapeJobHtmls(urlsInDb.ToList());
-
-            foreach (var html in htmlResults)
-            {
-                UpdateJobInfo(html);
-            }
-
-            /*
-            // Parse Infos from Html
-
-            var htmlEntities = _context.JobInfos;
-
-            var parser = _scraperFactory.BuildParser("cvonline");
-
-            foreach (var htmlEntity in htmlEntities)
-            {
-                var parseResult = parser.ParseInfo(htmlEntity);
-
-                var entity = _context.JobInfos.Find(parseResult.Id);
-
-                entity.Title = parseResult.Title;
-                
-            }**/
+        foreach (var url in urlsInDb)
+        {
+            var html = ScrapeJobHtml(url.Url, "page-main-content");
+            UpdateJobInfo()
         }
 
-        public IEnumerable<JobUrl> ScrapePageUrls()
+        var htmls = ExtractPageUrls(urlsInDb);
+
+        var test = "test";
+        }
+
+    public IEnumerable<JobUrl> ScrapePageUrls()
         {
             var baseUrl = "https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=";
 
@@ -73,7 +86,7 @@ namespace WebScraper.Application.Services
 
         }
 
-        public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
+        public IEnumerable<JobInfo> ExtractPageUrls(IEnumerable<JobUrl> urlDtos)
         {
             var urls = urlDtos.ToList();
             var results = new List<JobInfo>();
@@ -81,15 +94,13 @@ namespace WebScraper.Application.Services
             /* As testing lets do only 20 page htmls for now - dont wanna 
              * overload the page */
 
-            var limit = 10;
-            var delay = 1000;
-
-            for (int i = 0; i <= limit; i++)
+            for (int i = 0; i <= _scrapeLimit; i++)
             {
-                Thread.Sleep(delay);
+                Thread.Sleep(_sleepTime);
 
                 var html = _scraper.ScrapeJobPortalInfo(urls[i].Url);
 
+                Log.Information($"Html scraped: {urls[i].Url}");
 
                 results.Add(new JobInfo()
                 {

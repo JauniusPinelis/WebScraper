@@ -21,7 +21,8 @@ namespace WebScraper.Application.Shared
         protected IScraper _scraper;
         protected IDataContext _context;
 
-        protected const int _sleepTime = 1000;
+        protected const int _sleepTime = 300;
+        protected const int _scrapeLimit = 200;
 
         public BaseScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory,  IDataContext context)
         {
