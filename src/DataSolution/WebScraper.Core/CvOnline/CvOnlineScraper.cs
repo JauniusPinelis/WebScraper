@@ -55,9 +55,7 @@ namespace WebScraper.Core.CvOnline
 
         public string ScrapeJobPortalInfo(string html)
         {
-
-           return base.ScrapeJobHtml( html , "page-main-content");
-            
+            return base.ScrapeJobHtml( html , "page-main-content");
         }
     }
 }

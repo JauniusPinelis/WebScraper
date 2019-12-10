@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Serilog;
 using WebScraper.Application.Shared;
 using WebScraper.Core.CvOnline;
@@ -23,68 +24,44 @@ namespace WebScraper.Application.Services
         }
 
         public void Run()
-        { 
-        //{
-        //    Log.Information("CvOnline - starting to scraper CvOnline");
-
-        //    var collectedUrls = ScrapePageUrls().ToList();
-
-        //    var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
-        //    cvOnlineFilter.Apply(ref collectedUrls);
-
-        //    UpdateUrls(collectedUrls);
-
-
-
-        //    Log.Information("CvOnline - CvOnline Urls saved");
-
-        //// Get Htmls
-        //var urlsInDb = _context.JobUrls;
-
-        //var htmlResults = ScrapeJobHtmls(urlsInDb.ToList());
-
-        //foreach (var html in htmlResults)
-        //{
-        //    UpdateJobInfo(html);
-        //}
-
-        /*
-        // Parse Infos from Html
-
-        var htmlEntities = _context.JobInfos;
-
-        var parser = _scraperFactory.BuildParser("cvonline");
-
-        foreach (var htmlEntity in htmlEntities)
         {
-            var parseResult = parser.ParseInfo(htmlEntity);
-
-            var entity = _context.JobInfos.Find(parseResult.Id);
-
-            entity.Title = parseResult.Title;
-
-        }**/
-
-        var urlsInDb = _context.JobUrls;
-
-        foreach (var url in urlsInDb)
-        {
-            var html = ScrapeJobHtml(url.Url, "page-main-content");
-            UpdateJobInfo()
+            //ScrapePageUrls();
+            ScrapePageInfos();
         }
 
-        var htmls = ExtractPageUrls(urlsInDb);
 
-        var test = "test";
-        }
 
-    public IEnumerable<JobUrl> ScrapePageUrls()
+        public void ScrapePageUrls()
         {
-            var baseUrl = "https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=";
+            var baseUrls = "https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=";
 
-            return ScrapePageUrls(baseUrl);
+            var urls = ExtractPageUrls(baseUrls);
 
+            var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
+            cvOnlineFilter.Apply(ref urls);
+            _context.SaveChanges();
+
+            UpdateUrls(urls);
         }
+
+        public void ScrapePageInfos()
+        {
+            var urlsInDb = _context.JobUrls;
+
+            foreach (var url in urlsInDb)
+            {
+                var html = ScrapeJobHtml(url.Url, "page-main-content");
+
+                var jobInfo = new JobInfo()
+                {
+                    HtmlCode = html
+                };
+
+                UpdateJobInfo(jobInfo);
+            }
+        }
+
+
 
         public IEnumerable<JobInfo> ExtractPageUrls(IEnumerable<JobUrl> urlDtos)
         {

@@ -24,9 +24,10 @@ namespace WebScraper.Application.Services
 
         public void Run()
         {
-            var collectedUrls = ScrapePageUrls();
+            
 
-            UpdateUrls(collectedUrls.ToList());
+            ScrapePageUrls();
+            //ScrapePageInfos();
         }
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
@@ -57,11 +58,11 @@ namespace WebScraper.Application.Services
             return results;
         }
 
-        public IEnumerable<JobUrl> ScrapePageUrls()
+        public void ScrapePageUrls()
         {
             var baseUrl = "https://www.cvbankas.lt/?padalinys%5B0%5D=76&page=";
-
-            return ScrapePageUrls(baseUrl);
+            var urls = ExtractPageUrls(baseUrl);
+            UpdateUrls(urls);
         }
 
 

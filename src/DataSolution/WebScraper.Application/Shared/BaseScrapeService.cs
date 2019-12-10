@@ -31,7 +31,7 @@ namespace WebScraper.Application.Shared
             _context = context;
         }
 
-        public IEnumerable<JobUrl> ScrapePageUrls(string baseUrl)
+        public List<JobUrl> ExtractPageUrls(string baseUrl)
         {
 
             var webClient = new HttpClient();

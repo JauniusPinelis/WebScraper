@@ -20,18 +20,16 @@ namespace WebScraper.Application.Services
             _scraper = scraperFactory.BuildScraper("cvlt");
         }
 
-        public IEnumerable<JobUrl> ScrapePageUrls()
+        public void ScrapePageUrls()
         {
             var baseUrl = "https://www.cv.lt/employee/announcementsAll.do?regular=true&department=1040&page=";
 
-            return ScrapePageUrls(baseUrl);
+            var urls = ExtractPageUrls(baseUrl);
+            UpdateUrls(urls);
         }
         public void Run()
         {
-            var collectedUrls  = ScrapePageUrls();
-
-            Log.Information("CvLtScraper - saving urls to db");
-            UpdateUrls(collectedUrls.ToList());
+            ScrapePageUrls();
         }
     }
 }

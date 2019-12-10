@@ -39,7 +39,7 @@ namespace WebScraper.Application.Services
             }
         }
 
-        public IEnumerable<IScrapeService> InitScrapeServices()
+        public List<IScrapeService> InitScrapeServices()
         {
             //var cvBankasScrapeService = new CvBankasScrapeService(_httpClientFactory, _scraperFactory, _context);
             //var cvLtScrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _context);
