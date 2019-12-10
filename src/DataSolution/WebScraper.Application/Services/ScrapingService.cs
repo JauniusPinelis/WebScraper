@@ -30,29 +30,40 @@ namespace WebScraper.Application.Services
 
         public void Run()
         {
-            Log.Information("CVOnline: Starting to scrape data");
-            ScrapeCvOnlineData();
-            //Log.Information("CVBankas: Starting to scrape data");
-            //ScrapeCvBankasData();
-            //Log.Information("CvLt: Starting to scrape data");
-            //ScrapeCvLtData();
+            var services = InitScrapeServices();
+
+            foreach (var scrapeService in services)
+            {
+                scrapeService.Run();
+            }
         }
 
-       
+        public IEnumerable<IScrapeService> InitScrapeServices()
+        {
+            var cvBankasScrapeService = new CvBankasScrapeService(_httpClientFactory, _scraperFactory, _context);
+            var cvLtScrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _context);
+            var cvOnlineScrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _context);
 
-      
+            var scrapeServices = new List<IScrapeService>();
+            scrapeServices.Add(cvBankasScrapeService);
+            scrapeServices.Add(cvLtScrapeService);
+            scrapeServices.Add(cvOnlineScrapeService);
 
+            return scrapeServices;
+        }
+
+        
         public void ScrapeCvBankasData()
         { 
 
-            var scrapeService = new CvBankasScrapeService(_httpClientFactory, _scraperFactory, _context);
+          
             
         }
 
         public void ScrapeCvLtData()
         {
 
-            var scrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _context);
+         
 
         }
 
