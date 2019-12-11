@@ -31,6 +31,9 @@
     <None Update="HtmlTestData\CvLtTestPageData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="HtmlTestData\CvOnlineHtmlData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="HtmlTestData\CvOnlineSingleUrlTestData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -1,6 +1,7 @@
 ﻿using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Shared;
@@ -32,15 +33,12 @@ namespace WebScraper.Core.CvOnline
             return String.Empty;
         }
 
-        public List<string> ParseTags(string html)
+        public List<string> ParseTags(string html, IEnumerable<Tag> tagsToSearch)
         {
-            var tags = new List<string>();
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
 
-            //TODO: Add functionality
-
-            return tags;
+            return (from tagToSearch in tagsToSearch where html.Contains(tagToSearch.Name) select tagToSearch.Name.ToLower()).ToList();
         }
 
         public JobInfo ParseInfo(JobInfo jobHtml)

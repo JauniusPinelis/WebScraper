@@ -1,0 +1,56 @@
+﻿<div id="page-main-content" class="bordered-content">
+				<ul id="page-breadcrumbs">
+			<li><a href="/" onclick="linkTrack('ja-breadcrumbs','frontpage');">Pagrindinis puslapis</a></li>
+			<li><a href="/darbo-skelbimai/informacines-technologijos" onclick="linkTrack('ja-breadcrumbs','job-ads-list');">Darbo skelbimai</a></li>
+			<li><a href="/darbo-skelbimai/viena-saskaita-uab" onclick="linkTrack('ja-breadcrumbs','employer-ads','viena-saskaita-uab');"><span class="application-company-name" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">Viena sąskaita, UAB</span></span></a></li>
+			<li class="current-crumb"><a href="/CVO-4060716-LT" onclick="linkTrack('ja-breadcrumbs','same-job-ad');">CVO-4060716-LT</a></li>
+				</ul>
+				<div id="application-title" class="flex-container">
+			<div class="application-logo flex-item" id="logo"><img src="//files.cvonline.lt/logo/86209/w/vs_naujas_logo.png" width="100" height="80"></div>
+			<div class="application-title flex-item"><h1 itemprop="title">.NET PROGRAMUOTOJAS (-A)</h1><span class="application-location">Kaunas</span></div>
+			<div class="application-dates">
+			  <span class="application-date">Paskelbta: 2019.11.29</span>
+			  <span class="application-date">Siųsti CV iki: 2019.12.29</span>
+			</div>
+				</div><!-- application-title //-->
+			<p itemprop="description"></p><p style="margin:0cm 0cm 8pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">Mes kuriame mokesčių platformą Vienasąskaita.lt, kuri komunalinių ir kitų kasmėnesinių atsiskaitymų sąskaitas leidžia apmokėti be sumaišties – vos vienu mokėjimu.</span></span></span></span></span></p>
+
+<p style="margin:0cm 0cm 8pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">Mes ieškome WEB specialisto svetainės plėtrai ir naujų projektų įgyvendinimui. Jei nebijai iššūkių, turi motyvacijos bei puikias darbines žinias – tai darbas tau!</span></span></span></span></span></p>
+<p></p>
+			<h3 itemprop="title">.NET PROGRAMUOTOJAS (-A)</h3>
+			<p itemprop="description"></p><p style="margin:0cm 0cm 8pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">DARBO POBŪDIS:</span></span></span></span></span></p>
+
+<ul>
+ <li style="margin:0cm 0cm 8pt 36pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">.NET programų kūrimas ir priežiūra</span></span></span></span></span></li>
+</ul>
+
+<p style="margin:0cm 0cm 8pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">REIKALAVIMAI:</span></span></span></span></span></p>
+
+<ul>
+ <li style="margin:0cm 0cm 0.0001pt 36pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">C# žinios</span></span></span></span></span></li>
+ <li style="margin:0cm 0cm 0.0001pt 36pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">MS SQL žinios</span></span></span></span></span></li>
+ <li style="margin:0cm 0cm 0.0001pt 36pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">Tęsiamos studijos ar jau įgytas aukštasis išsilavinimas tiksliųjų mokslų srityje</span></span></span></span></span></li>
+ <li style="margin:0cm 0cm 8pt 36pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">Gebėjimas dirbti individualiai ir komandoje</span></span></span></span></span></li>
+</ul>
+
+<p style="margin:0cm 0cm 8pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">PRIVALUMAI:</span></span></span></span></span></p>
+
+<ul>
+ <li style="margin:0cm 0cm 8pt 36pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">.NET technologijų išmanymas (WCF, WPF, MVC ir LINQ)</span></span></span></span></span></li>
+</ul>
+
+<p style="margin:0cm 0cm 8pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">MES SIŪLOME:</span></span></span></span></span></p>
+
+<ul>
+ <li style="margin:0cm 0cm 0.0001pt 36pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">Profesinius iššūkius ir tobulėjimo galimybes fintech</span></span></span></span></span></li>
+ <li style="margin:0cm 0cm 0.0001pt 36pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">Progą tiesiogiai prisidėti prie produkto vystymo ir kūrimo</span></span></span></span></span></li>
+ <li style="margin:0cm 0cm 0.0001pt 36pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">Erdvę drąsiausių idėjų įgyvendinimui </span></span></span></span></span></li>
+ <li style="margin:0cm 0cm 8pt 36pt"><span style="font-size:16px;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="color:#000000;"><span style="line-height:107%"><span style="line-height:107%">Draugišką kolektyvą</span></span></span></span></span></li>
+</ul>
+
+<p style="margin:0cm 0cm 8pt">&nbsp;</p>
+<p>
+				</p><div class="application-apply-bttn">
+			<button type="button" class="bttn bttn-green bttn-block bttn-slim bttn-bold apply-form-toggle" text="Darbo prašymas" onclick="UniqueTrack('apply-button-below-ad');loadScript('https://creativecdn.com/tags?type=script&amp;id=pr_7X5LCtGXaUjAaN2wQJl8_orderclick3_0_5df098ad43780_4060716&amp;id=pr_7X5LCtGXaUjAaN2wQJl8_custom_category_'+encodeURIComponent(google_tag_params.job_categories)+'&amp;cd=default');toggledetails();">Siųsti savo CV</button>
+				</div>
+			  </div>
