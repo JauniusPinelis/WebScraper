@@ -10,6 +10,7 @@ namespace WebScraper.Infrastructure.Db
         public DbSet<JobUrl> JobUrls { get; set; }
         public DbSet<JobInfo> JobInfos { get; set; }
         public DbSet<JobPortal> JobPortals { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
         private readonly IDateTime _dateTime;
        
@@ -38,6 +39,14 @@ namespace WebScraper.Infrastructure.Db
                 new JobPortal() { Id = 1, Name = "CvOnline" },
                 new JobPortal() { Id = 2, Name = "CvBankas" },
                 new JobPortal() { Id = 3, Name = "CvLt" });
+
+            modelBuilder.Entity<Tag>().HasData(
+                new Tag() { Id = 1, Name = ".NET"},
+                new Tag() { Id = 2, Name = "C#" },
+                new Tag() { Id = 3, Name = "PHP" },
+                new Tag() { Id = 4, Name = "Java" },
+                new Tag() { Id = 5, Name = "Javascript" }
+            );
         }
 
         public override int SaveChanges()

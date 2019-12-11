@@ -31,6 +31,18 @@ namespace WebScraper.Core.CvOnline
             //a[contains(text(), 'About us') or contains(text(), 'about us')]
             return String.Empty;
         }
+
+        public List<string> ParseTags(string html)
+        {
+            var tags = new List<string>();
+            var htmlDocument = new HtmlDocument();
+            htmlDocument.LoadHtml(html);
+
+            //TODO: Add functionality
+
+            return tags;
+        }
+
         public JobInfo ParseInfo(JobInfo jobHtml)
         {
             jobHtml.Title = ParseTitle(jobHtml.HtmlCode);

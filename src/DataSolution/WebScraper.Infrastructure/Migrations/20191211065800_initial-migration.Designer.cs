@@ -10,14 +10,14 @@ using WebScraper.Infrastructure.Db;
 namespace WebScraper.Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191111071237_created-updated")]
-    partial class createdupdated
+    [Migration("20191211065800_initial-migration")]
+    partial class initialmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.0.0")
+                .HasAnnotation("ProductVersion", "3.1.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -30,7 +30,7 @@ namespace WebScraper.Infrastructure.Migrations
                         .HasMaxLength(6)
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Created")
+                    b.Property<DateTime?>("Created")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("HtmlCode")
@@ -40,7 +40,7 @@ namespace WebScraper.Infrastructure.Migrations
                     b.Property<int?>("JobUrlId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("LastModified")
+                    b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Salary")
@@ -60,6 +60,41 @@ namespace WebScraper.Infrastructure.Migrations
                     b.ToTable("tblData_jobInfo");
                 });
 
+            modelBuilder.Entity("WebScraper.Core.Entities.JobPortal", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasColumnType("int")
+                        .HasMaxLength(5)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tblMeta_jobPortal");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "CvOnline"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "CvBankas"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "CvLt"
+                        });
+                });
+
             modelBuilder.Entity("WebScraper.Core.Entities.JobUrl", b =>
                 {
                     b.Property<int>("Id")
@@ -69,14 +104,23 @@ namespace WebScraper.Infrastructure.Migrations
                         .HasMaxLength(5)
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Created")
+                    b.Property<string>("Company")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Created")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("JobInfoId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("LastModified")
+                    b.Property<int?>("JobPortalId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Location")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Salary")
                         .HasColumnType("nvarchar(500)")
@@ -92,7 +136,54 @@ namespace WebScraper.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("JobInfoId");
+
                     b.ToTable("tblData_jobUrl");
+                });
+
+            modelBuilder.Entity("WebScraper.Core.Entities.Tag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasColumnType("int")
+                        .HasMaxLength(5)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tblMeta_tag");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = ".NET"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "C#"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "PHP"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Java"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Javascript"
+                        });
                 });
 
             modelBuilder.Entity("WebScraper.Core.Entities.JobInfo", b =>
@@ -102,6 +193,13 @@ namespace WebScraper.Infrastructure.Migrations
                         .HasForeignKey("WebScraper.Core.Entities.JobInfo", "JobUrlId")
                         .HasConstraintName("FK_tblData_JobInfo_tblDataUrl")
                         .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("WebScraper.Core.Entities.JobUrl", b =>
+                {
+                    b.HasOne("WebScraper.Core.Entities.JobPortal", "JobPortal")
+                        .WithMany("JobUrls")
+                        .HasForeignKey("JobInfoId");
                 });
 #pragma warning restore 612, 618
         }

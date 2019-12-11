@@ -51,10 +51,6 @@ namespace WebScraper.Application.Services
             scrapeServices.Add(cvOnlineScrapeService);
 
             return scrapeServices;
-
-
-
-
         }
     }
 }

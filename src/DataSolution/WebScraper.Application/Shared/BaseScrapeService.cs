@@ -106,11 +106,12 @@ namespace WebScraper.Application.Shared
             {
                 var html = ScrapeJobHtml(url.Url, elementId);
 
+                Log.Information($"Updating HtmlCode for Job Url {url.Id}");
+
                 var jobInfo = new JobInfo()
                 {
                     HtmlCode = html,
                     JobUrlId = url.Id
-
                 };
 
                 UpdateJobInfo(jobInfo);

@@ -3,21 +3,19 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191116065403_Added-JobPortal")]
-    partial class AddedJobPortal
+    partial class DataContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.0.0")
+                .HasAnnotation("ProductVersion", "3.1.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -87,6 +85,11 @@ namespace WebScraper.Infrastructure.Migrations
                         {
                             Id = 2,
                             Name = "CvBankas"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "CvLt"
                         });
                 });
 
@@ -134,6 +137,51 @@ namespace WebScraper.Infrastructure.Migrations
                     b.HasIndex("JobInfoId");
 
                     b.ToTable("tblData_jobUrl");
+                });
+
+            modelBuilder.Entity("WebScraper.Core.Entities.Tag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasColumnType("int")
+                        .HasMaxLength(5)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tblMeta_tag");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = ".NET"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "C#"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "PHP"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Java"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Javascript"
+                        });
                 });
 
             modelBuilder.Entity("WebScraper.Core.Entities.JobInfo", b =>
