@@ -25,8 +25,9 @@ namespace WebScraper.Application.Services
 
         public void Run()
         {
-            //ScrapePageUrls();
+            ScrapePageUrls();
             ScrapePageInfos();
+            ScrapePageTags();
         }
 
 
@@ -47,6 +48,16 @@ namespace WebScraper.Application.Services
         public void ScrapePageInfos()
         {
             ScrapePageInfos("page-main-content", 1); 
+        }
+
+        public void ScrapePageTags()
+        {
+
+        }
+
+        public void UpdateTags()
+        {
+
         }
     }
 }

@@ -33,7 +33,7 @@ namespace WebScraper.Core.CvOnline
             return String.Empty;
         }
 
-        public List<string> ParseTags(string html, IEnumerable<Tag> tagsToSearch)
+        public List<string> ParseTags(string html, IEnumerable<TagCategory> tagsToSearch)
         {
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
