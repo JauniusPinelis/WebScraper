@@ -33,19 +33,22 @@ namespace WebScraper.Core.CvOnline
             return String.Empty;
         }
 
-        public List<string> ParseTags(string html, IEnumerable<TagCategory> tagsToSearch)
+        public List<TagCategory> ParseTags(string html, IEnumerable<TagCategory> tagsToSearch)
         {
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
 
-            return (from tagToSearch in tagsToSearch where html.Contains(tagToSearch.Name) select tagToSearch.Name.ToLower()).ToList();
+            return (from tagToSearch in tagsToSearch where html.Contains(tagToSearch.Name) select new TagCategory() {Name = tagToSearch.Name.ToLower() } ).ToList();
         }
 
-        public JobInfo ParseInfo(JobInfo jobHtml)
+        public JobInfo ParseInfo(string html)
         {
-            jobHtml.Title = ParseTitle(jobHtml.HtmlCode);
-            jobHtml.Salary = ParseSalary(jobHtml.Salary);
-            return jobHtml;
+            return new JobInfo()
+            {
+                Title = ParseTitle(html),
+                Salary = ParseSalary(html)
+            };
+
         }
     }
 }

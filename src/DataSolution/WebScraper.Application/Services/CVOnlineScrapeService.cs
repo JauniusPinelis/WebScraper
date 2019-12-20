@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Serilog;
 using WebScraper.Application.Shared;
@@ -55,7 +56,15 @@ namespace WebScraper.Application.Services
 
         public void ScrapePageTags()
         {
-            //var jobInfos = _context.JobUrls.Where(j => j.JobPortalId == )
+            var jobUrls = _context.JobUrls.Include(j => j.JobInfo)
+                .Where(j => j.JobPortalId == (int) JobPortals.CvOnline);
+
+            var jobInfos = jobUrls.Select(j => j.JobInfo).ToList();
+
+            foreach (var jobInfo in jobInfos)
+            {
+                
+            }
         }
 
         public void UpdateTags()

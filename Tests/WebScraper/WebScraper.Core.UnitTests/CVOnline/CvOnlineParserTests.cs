@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using FluentAssertions;
 using WebScraper.Core.CvOnline;
@@ -33,8 +34,13 @@ namespace WebScraper.Core.UnitTests
         {
             string textData = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\HtmlTestData\\CvOnlineHtmlData.txt");
             var tags = _parser.ParseTags(textData, MockedTagCategories);
-            tags.Should().Contain(".NET".ToLower());
-            tags.Should().Contain("c#".ToLower());
+
+            var tagNames = tags.Select(t => t.Name);
+
+
+
+            tagNames.Should().Contain(".NET".ToLower());
+            tagNames.Should().Contain("c#".ToLower());
         }
 
         [Test]
