@@ -9,6 +9,7 @@ using Serilog;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Shared;
 using Microsoft.Extensions.DependencyInjection;
+using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
 
@@ -98,9 +99,9 @@ namespace WebScraper.Application.Shared
 
         }
 
-        public void ScrapePageInfos(string elementId, int jobPortalId)
+        public void ScrapePageInfos(string elementId, JobPortals jobPortals)
         {
-            var urlsInDb = _context.JobUrls.Where(j => j.JobPortalId == jobPortalId).ToList();
+            var urlsInDb = _context.JobUrls.Where(j => j.JobPortalId == (int)jobPortals).ToList();
 
             foreach (var url in urlsInDb)
             {

@@ -1,11 +1,12 @@
-﻿using WebScraper.Core.Shared;
+﻿using WebScraper.Core.Enums;
+using WebScraper.Core.Shared;
 
 namespace WebScraper.Core.Factories
 {
     public interface IScraperFactory
     {
-        IScraper BuildScraper(string website);
-        IUrlFilter BuildUrlFilter(string website);
-        IParser BuildParser(string website);
+        IScraper BuildScraper(JobPortals website);
+        IUrlFilter BuildUrlFilter(JobPortals website);
+        IParser BuildParser(JobPortals website);
     }
 }

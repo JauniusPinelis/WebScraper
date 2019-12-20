@@ -9,6 +9,7 @@ using Serilog;
 using WebScraper.Application.Shared;
 using WebScraper.Core.CvOnline;
 using WebScraper.Core.Entities;
+using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
 using WebScraper.Core.Shared;
 using WebScraper.Infrastructure.Db;
@@ -21,7 +22,7 @@ namespace WebScraper.Application.Services
 
         public CvOnlineScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext dataContext) : base(httpClientFactory, scraperFactory, dataContext)
         {
-            _scraper = scraperFactory.BuildScraper("cvonline");
+            _scraper = scraperFactory.BuildScraper(JobPortals.CvOnline);
             _parser = new CvOnlineParser();
         }
 
@@ -40,7 +41,7 @@ namespace WebScraper.Application.Services
 
             var urls = ExtractPageUrls(baseUrls);
 
-            var cvOnlineFilter = _scraperFactory.BuildUrlFilter("CvOnline");
+            var cvOnlineFilter = _scraperFactory.BuildUrlFilter(JobPortals.CvOnline);
             cvOnlineFilter.Apply(ref urls);
             _context.SaveChanges();
 
@@ -49,12 +50,12 @@ namespace WebScraper.Application.Services
 
         public void ScrapePageInfos()
         {
-            ScrapePageInfos("page-main-content", 1); 
+            ScrapePageInfos("page-main-content", JobPortals.CvOnline); 
         }
 
         public void ScrapePageTags()
         {
-            var jobInfos = _context.JobUrls.Where(j => j.JobPortalId == )
+            //var jobInfos = _context.JobUrls.Where(j => j.JobPortalId == )
         }
 
         public void UpdateTags()
