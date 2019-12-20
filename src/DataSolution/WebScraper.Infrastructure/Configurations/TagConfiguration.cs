@@ -18,7 +18,14 @@ namespace WebScraper.Infrastructure.Configurations
                 .HasMaxLength(5)
                 .ValueGeneratedOnAdd();
 
-            builder.Property(e => e.Name).HasMaxLength(500);
+            builder.HasOne(e => e.JobInfo)
+                .WithMany(p => p.Tags)
+                .HasForeignKey(e => e.JobInfoId);
+
+            builder.HasOne(e => e.TagCategory)
+                .WithMany(p => p.Tags)
+                .HasForeignKey(e => e.TagCategoryId);
+
         }
     }
 }

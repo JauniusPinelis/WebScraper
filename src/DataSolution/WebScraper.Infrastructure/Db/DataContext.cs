@@ -40,12 +40,12 @@ namespace WebScraper.Infrastructure.Db
                 new JobPortal() { Id = 2, Name = "CvBankas" },
                 new JobPortal() { Id = 3, Name = "CvLt" });
 
-            modelBuilder.Entity<Tag>().HasData(
-                new Tag() { Id = 1, Name = ".NET"},
-                new Tag() { Id = 2, Name = "C#" },
-                new Tag() { Id = 3, Name = "PHP" },
-                new Tag() { Id = 4, Name = "Java" },
-                new Tag() { Id = 5, Name = "Javascript" }
+            modelBuilder.Entity<TagCategory>().HasData(
+                new TagCategory() { Id = 1, Name = ".NET"},
+                new TagCategory() { Id = 2, Name = "C#" },
+                new TagCategory() { Id = 3, Name = "PHP" },
+                new TagCategory() { Id = 4, Name = "Java" },
+                new TagCategory() { Id = 5, Name = "Javascript" }
             );
         }
 
