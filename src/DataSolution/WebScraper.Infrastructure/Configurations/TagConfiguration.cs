@@ -11,7 +11,7 @@ namespace WebScraper.Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<Tag> builder)
         {
-            builder.ToTable("tblMeta_tag");
+            builder.ToTable("tblData_tag");
 
             builder.Property(e => e.Id)
                 .HasColumnName("Id")

@@ -17,10 +17,12 @@ namespace WebScraper.Application.Services
 {
     public class CvOnlineScrapeService : BaseScrapeService, IScrapeService
     {
+        private readonly IParser _parser;
 
         public CvOnlineScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext dataContext) : base(httpClientFactory, scraperFactory, dataContext)
         {
             _scraper = scraperFactory.BuildScraper("cvonline");
+            _parser = new CvOnlineParser();
         }
 
         public void Run()
@@ -52,7 +54,7 @@ namespace WebScraper.Application.Services
 
         public void ScrapePageTags()
         {
-
+            var jobInfos = _context.JobUrls.Where(j => j.JobPortalId == )
         }
 
         public void UpdateTags()
