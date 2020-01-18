@@ -28,6 +28,9 @@ class App extends Component {
   componentDidMount() {
     this.loadData();
   }
+  loadData = () => {
+    axios.get("/api/data/")
+  }
 
   loadData = () => {
     axios
