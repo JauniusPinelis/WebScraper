@@ -1,5 +1,0 @@
-﻿Web scraper structure:
-
-1. Have a factory class which creates appropriate Scraper depending on website we want to scrape.
-2. Since we will have lots of faulty urls, we will need custom filters to make out the non-sensical ones.
-Will use similar factory pattern, but this time with Strategies (filters) which will be applied on url lists
