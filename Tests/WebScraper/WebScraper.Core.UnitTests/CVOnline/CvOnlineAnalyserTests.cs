@@ -26,7 +26,7 @@ namespace WebScraper.Core.UnitTests.CVOnline
             var salary = _analyser.GetSalary(textData);
 
             salary.From.Should().Be(2500);
-            salary.To.Should().Be(2500);
+            salary.To.Should().Be(5800);
             salary.Exact.Should().BeNull();
             salary.Currency.Should().Be("EUR");
             salary.Type.Should().Be("Brutto");

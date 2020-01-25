@@ -9,33 +9,51 @@ namespace WebScraper.Core.CvOnline
 {
     public class CvOnlineAnalyser
     {
-        public bool HasNumber(string input)
-        {
-            return input.Where(i => Char.IsDigit(i)).Any();
-        }
+        public bool HasNumber(string input) => input.Where(i => Char.IsDigit(i)).Any();
 
 
-        
+        public List<Match> RemoveZeros(List<Match> data) => data.Where(d => !d.Value.All(v => v.Equals('0'))).ToList();
+
+
+
         public Salary GetSalary(string salary)
         {
-            if (HasNumber(salary))
+            if (!HasNumber(salary))
                 return null; //No salary information in the advertisements
+
+            decimal? from = null;
+            decimal? to = null;
+            decimal? exact = null;
 
             salary = salary.ToLower();
 
-            MatchCollection matches = Regex.Matches(salary, @"\d+");
+            List<Match> matches = Regex.Matches(salary, @"\d+").ToList();
+
+            matches = RemoveZeros(matches);
+
+            if (matches.Count >= 2)
+            {
+                from = Decimal.Parse(matches[0].Value);
+                to = Decimal.Parse(matches[1].Value);
+            }
+
+            if (matches.Count == 1)
+            {
+                exact = Decimal.Parse(matches[0].Value);
+            }
 
             var type = salary.Contains("netto") || salary.Contains("rankas") ? "Netto" : "Brutto";
-            
 
 
-            var salaryObject = new Salary()
+            var salaryData = new Salary()
             {
-
-
+                From = from,
+                To = to,
+                Exact = exact,
+                Type = type
             };
 
-            throw new NotImplementedException();
+            return salaryData;
         }
     }
 }
