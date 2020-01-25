@@ -9,6 +9,7 @@ using WebScraper.Application.Shared;
 using WebScraper.Core.CvBankas;
 using WebScraper.Core.CvOnline;
 using WebScraper.Core.Entities;
+using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
 
@@ -18,7 +19,7 @@ namespace WebScraper.Application.Services
     {
         public CvBankasScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext context) : base(httpClientFactory, scraperFactory, context)
         {
-            _scraper = scraperFactory.BuildScraper("CvBankas");
+            _scraper = scraperFactory.BuildScraper(JobPortals.CvBankas);
 
         }
 
@@ -67,7 +68,7 @@ namespace WebScraper.Application.Services
 
         public void ScrapePageInfos()
         {
-            ScrapePageInfos("jobad_content_main", 2);
+            ScrapePageInfos("jobad_content_main", JobPortals.CvBankas);
         }
     }
 }

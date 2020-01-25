@@ -1,9 +1,12 @@
-﻿using WebScraper.Core.Entities;
+﻿using System.Collections.Generic;
+using WebScraper.Core.Entities;
 
 namespace WebScraper.Core.Shared
 {
     public interface IParser
     {
-        JobInfo ParseInfo(JobInfo jobHtml);
+        JobInfo ParseInfo(string html);
+
+        List<TagCategory> ParseTags(string html, IEnumerable<TagCategory> tagsToSearch);
     }
 }

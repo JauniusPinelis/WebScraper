@@ -8,12 +8,12 @@ namespace WebScraper.Core.Shared
 {
     public class BaseParser : IParser
     {
-        public JobInfo ParseInfo(JobInfo jobHtml)
+        public JobInfo ParseInfo(string html)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<string> ParseTags()
+        public List<TagCategory> ParseTags(string html, IEnumerable<TagCategory> tagsToSearch)
         {
             throw new NotImplementedException();
         }

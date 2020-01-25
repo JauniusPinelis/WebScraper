@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core.CvBankas;
 using WebScraper.Core.CvOnline;
+using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
 
 namespace WebScraper.Core.UnitTests.Scraper
@@ -21,7 +22,7 @@ namespace WebScraper.Core.UnitTests.Scraper
         [Test]
         public void BuildScraper_GivenCvOnline_returnCvOnlineScraper()
         {
-            var scraper = _factory.BuildScraper("cvonline");
+            var scraper = _factory.BuildScraper(JobPortals.CvOnline);
 
             scraper.Should().BeOfType<CvOnlineScraper>();
         }
@@ -29,7 +30,7 @@ namespace WebScraper.Core.UnitTests.Scraper
         [Test]
         public void BuildScraper_GivenCvBankas_returnCvBankasScraper()
         {
-            var scraper = _factory.BuildScraper("cvbankas");
+            var scraper = _factory.BuildScraper(JobPortals.CvBankas);
 
             scraper.Should().BeOfType<CvBankasScraper>();
         }
