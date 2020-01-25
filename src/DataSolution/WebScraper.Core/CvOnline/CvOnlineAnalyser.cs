@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using WebScraper.Core.Models;
 
 namespace WebScraper.Core.CvOnline
@@ -22,8 +23,10 @@ namespace WebScraper.Core.CvOnline
 
             salary = salary.ToLower();
 
+            MatchCollection matches = Regex.Matches(salary, @"\d+");
+
             var type = salary.Contains("netto") || salary.Contains("rankas") ? "Netto" : "Brutto";
-            var 
+            
 
 
             var salaryObject = new Salary()

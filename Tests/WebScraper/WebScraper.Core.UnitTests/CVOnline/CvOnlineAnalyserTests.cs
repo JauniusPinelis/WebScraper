@@ -19,7 +19,7 @@ namespace WebScraper.Core.UnitTests.CVOnline
         }
         
         [Test]
-        public void BasicTest()
+        public void GetSalary_GivenBasicTestData_GetsFullSalaryRange()
         {
             string textData = "<span class=salary - blue>Mėnesinis atlygis (bruto): Nuo 2500.00 iki 5800.00 EUR</span></li>";
 
@@ -31,6 +31,16 @@ namespace WebScraper.Core.UnitTests.CVOnline
             salary.Currency.Should().Be("EUR");
             salary.Type.Should().Be("Brutto");
 
+        }
+
+        [Test]
+        public void GetSalary_GivenEmptyString_ShouldREturnEmptyProject()
+        {
+            string textData = "";
+
+            var salary = _analyser.GetSalary(textData);
+
+            salary.Should().BeNull();
         }
     }
 }
