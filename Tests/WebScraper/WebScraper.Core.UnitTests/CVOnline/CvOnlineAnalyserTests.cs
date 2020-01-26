@@ -56,17 +56,5 @@ namespace WebScraper.Core.UnitTests.CVOnline
             salary.To.Should().BeNull();
             salary.From.Should().Be(2200);
         }
-
-        [Test]
-        public void GetSalary_GivenMaximumRange_ShouldReturnOnlyMaximumFrom()
-        {
-            string textData = "Atlyginimas iki 2200 eur brutto";
-
-            var salary = _analyser.GetSalary(textData);
-
-            salary.Exact.Should().BeNull();
-            salary.To.Should().BeNull();
-            salary.From.Should().Be(2200);
-        }
     }
 }
