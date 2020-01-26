@@ -36,8 +36,11 @@ namespace WebScraper.Core.CvOnline
                 from = Decimal.Parse(matches[0].Value);
                 to = Decimal.Parse(matches[1].Value);
             }
-
-            if (matches.Count == 1)
+            else if (matches.Count == 1 && (salary.Contains("nuo ") || salary.Contains("from ")))
+            {
+                from = Decimal.Parse(matches[0].Value);
+            }
+            else if (matches.Count == 1)
             {
                 exact = Decimal.Parse(matches[0].Value);
             }
