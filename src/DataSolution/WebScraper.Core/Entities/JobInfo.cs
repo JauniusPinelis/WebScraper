@@ -6,7 +6,6 @@ namespace WebScraper.Core.Entities
 {
     public class JobInfo : AuditableEntity
     {
-        public int Id { get; set; }
         public string HtmlCode { get; set; }
 
         public string Title { get; set; }

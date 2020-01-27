@@ -24,4 +24,8 @@
     <ProjectReference Include="..\WebScraper.Core\WebScraper.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>

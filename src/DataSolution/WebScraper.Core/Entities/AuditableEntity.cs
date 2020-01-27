@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WebScraper.Core.Entities
 {
-    public class AuditableEntity
+    public class AuditableEntity : Entity
     {
         public DateTime? Created { get; set; }
         public DateTime? LastModified { get; set; }

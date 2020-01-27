@@ -4,9 +4,8 @@ using System.Text;
 
 namespace WebScraper.Core.Entities
 {
-    public class JobPortal
+    public class JobPortal : Entity
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<JobUrl> JobUrls { get; set; }
     }

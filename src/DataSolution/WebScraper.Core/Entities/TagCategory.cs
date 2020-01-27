@@ -4,9 +4,8 @@ using System.Text;
 
 namespace WebScraper.Core.Entities
 {
-    public class TagCategory
+    public class TagCategory : Entity
     {
-        public int Id { get; set; }
         public string Name { get; set; }
 
         public List<Tag> Tags { get; set; }
