@@ -11,6 +11,8 @@ namespace WebScraper.Infrastructure.Db
         public DbSet<JobInfo> JobInfos { get; set; }
         public DbSet<JobPortal> JobPortals { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<Salary> Salaries { get; set; }
+       
 
         private readonly IDateTime _dateTime;
        

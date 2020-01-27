@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebScraper.Core.Models
+namespace WebScraper.Core.Entities
 {
     public class Salary
     {
+        public int Id { get; set; }
         public decimal? From { get; set; }
         public decimal? To { get; set; }
 
@@ -14,6 +15,10 @@ namespace WebScraper.Core.Models
 
         // Brutto or Netto
         public string Type { get; set; } = "Brutto";
+
+        //Foreign
+        public JobInfo JobInfo { get; set; }
+        public int JobInfoId { get; set; }
 
     }
 }

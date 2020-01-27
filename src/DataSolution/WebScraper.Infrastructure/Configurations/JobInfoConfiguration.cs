@@ -21,7 +21,7 @@ namespace WebScraper.Infrastructure.Configurations
 
             builder.Property(e => e.HtmlCode).HasMaxLength(100000);
             builder.Property(e => e.Title).HasMaxLength(100000);
-            builder.Property(e => e.Salary).HasMaxLength(100000);
+            builder.Property(e => e.SalaryText).HasMaxLength(100000);
 
             builder.HasOne(u => u.JobUrl)
                 .WithOne(i => i.JobInfo)

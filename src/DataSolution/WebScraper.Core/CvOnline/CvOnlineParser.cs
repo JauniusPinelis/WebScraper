@@ -46,7 +46,7 @@ namespace WebScraper.Core.CvOnline
             return new JobInfo()
             {
                 Title = ParseTitle(html),
-                Salary = ParseSalary(html)
+                SalaryText = ParseSalary(html)
             };
 
         }
