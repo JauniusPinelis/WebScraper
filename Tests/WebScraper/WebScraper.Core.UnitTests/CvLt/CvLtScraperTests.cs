@@ -37,7 +37,7 @@ namespace WebScraper.Core.UnitTests.CvLt
 
             var jobEntity = _scraper.ScrapeJobUrlInfo(textData);
 
-            jobEntity.Salary.Should().Be("Nuo 1.289 €");
+            jobEntity.SalaryText.Should().Be("Nuo 1.289 €");
         }
 
         [Test]
