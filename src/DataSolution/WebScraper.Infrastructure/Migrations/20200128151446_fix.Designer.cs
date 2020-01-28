@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebScraper.Infrastructure.Db;
 
 namespace WebScraper.Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200128151446_fix")]
+    partial class fix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -120,7 +122,7 @@ namespace WebScraper.Infrastructure.Migrations
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("SalaryId")
+                    b.Property<int>("SalaryId")
                         .HasColumnType("int");
 
                     b.Property<string>("SalaryText")
@@ -140,8 +142,7 @@ namespace WebScraper.Infrastructure.Migrations
                     b.HasIndex("JobInfoId");
 
                     b.HasIndex("SalaryId")
-                        .IsUnique()
-                        .HasFilter("[SalaryId] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("tblData_jobUrl");
                 });
@@ -270,7 +271,9 @@ namespace WebScraper.Infrastructure.Migrations
 
                     b.HasOne("WebScraper.Core.Entities.Salary", "Salary")
                         .WithOne("JobUrl")
-                        .HasForeignKey("WebScraper.Core.Entities.JobUrl", "SalaryId");
+                        .HasForeignKey("WebScraper.Core.Entities.JobUrl", "SalaryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("WebScraper.Core.Entities.Tag", b =>

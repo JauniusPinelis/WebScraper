@@ -15,6 +15,8 @@ namespace WebScraper.Core.Entities
         // Brutto or Netto
         public string Type { get; set; } = "Brutto";
 
+        public string Period { get; set; } = "Monthly";
+
         //Foreign
         public JobUrl JobUrl { get; set; }
         public int? JObUrlId { get; set; }

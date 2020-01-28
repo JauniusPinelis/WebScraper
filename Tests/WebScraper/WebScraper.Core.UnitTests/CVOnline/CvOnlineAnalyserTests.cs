@@ -56,5 +56,18 @@ namespace WebScraper.Core.UnitTests.CVOnline
             salary.To.Should().BeNull();
             salary.From.Should().Be(2200);
         }
+
+        [Test]
+        public void GetSalary_GivenYearRange_ShouldReturnAYearlySalaryObject()
+        {
+            string textData = "Metinis atlyginimas:Nuo 22800.00 iki 30000.00 EUR";
+
+            var salary = _analyser.GetSalary(textData);
+
+            salary.Period.Should().Be("Yearly");
+            salary.Exact.Should().BeNull();
+            salary.To.Should().Be(30000);
+            salary.From.Should().Be(22800);
+        }
     }
 }

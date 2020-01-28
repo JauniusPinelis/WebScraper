@@ -33,7 +33,7 @@ namespace WebScraper.Infrastructure.Db
              https://www.benday.com/2017/02/17/ef-core-migrations-without-hard-coding-a-connection-string-using-idbcontextfactory/ */
 
             optionsBuilder.UseSqlServer(Configuration != null ? Configuration["ConnectionStrings:DefaultConnection"] 
-                : "Server=PC727;Database=ScrapeDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
+                : "Server=LAPTOP-9RMR1NCR\\SQLEXPRESS;Database=ScrapeDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
             return new DataContext(optionsBuilder.Options);
         }

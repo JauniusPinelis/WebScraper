@@ -43,6 +43,7 @@ namespace WebScraper.Core.Shared
             }
 
             var type = salary.Contains("netto") || salary.Contains("rankas") ? "Netto" : "Brutto";
+            var period = salary.Contains("metinis") ? "Yearly" : "Monthly";
 
 
             var salaryData = new Salary()
@@ -50,7 +51,8 @@ namespace WebScraper.Core.Shared
                 From = from,
                 To = to,
                 Exact = exact,
-                Type = type
+                Type = type,
+                Period = period
             };
 
             return salaryData;

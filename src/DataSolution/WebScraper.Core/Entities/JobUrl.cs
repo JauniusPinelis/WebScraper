@@ -24,6 +24,6 @@ namespace WebScraper.Core.Entities
 
         public Salary Salary { get; set; }
 
-        public int SalaryId { get; set; }
+        public int? SalaryId { get; set; }
     }
 }
