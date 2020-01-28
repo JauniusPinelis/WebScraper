@@ -41,9 +41,6 @@ namespace WebScraper.Infrastructure.Migrations
                     b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("SalaryId")
-                        .HasColumnType("int");
-
                     b.Property<string>("SalaryText")
                         .HasColumnType("nvarchar(max)")
                         .HasMaxLength(100000);
@@ -57,10 +54,6 @@ namespace WebScraper.Infrastructure.Migrations
                     b.HasIndex("JobUrlId")
                         .IsUnique()
                         .HasFilter("[JobUrlId] IS NOT NULL");
-
-                    b.HasIndex("SalaryId")
-                        .IsUnique()
-                        .HasFilter("[SalaryId] IS NOT NULL");
 
                     b.ToTable("tblData_jobInfo");
                 });
@@ -127,7 +120,10 @@ namespace WebScraper.Infrastructure.Migrations
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Salary")
+                    b.Property<int>("SalaryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SalaryText")
                         .HasColumnType("nvarchar(500)")
                         .HasMaxLength(500);
 
@@ -142,6 +138,9 @@ namespace WebScraper.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("JobInfoId");
+
+                    b.HasIndex("SalaryId")
+                        .IsUnique();
 
                     b.ToTable("tblData_jobUrl");
                 });
@@ -167,7 +166,7 @@ namespace WebScraper.Infrastructure.Migrations
                     b.Property<decimal?>("From")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("JobInfoId")
+                    b.Property<int?>("JObUrlId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("LastModified")
@@ -260,10 +259,6 @@ namespace WebScraper.Infrastructure.Migrations
                         .HasForeignKey("WebScraper.Core.Entities.JobInfo", "JobUrlId")
                         .HasConstraintName("FK_tblData_JobInfo_tblDataUrl")
                         .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("WebScraper.Core.Entities.Salary", "Salary")
-                        .WithOne("JobInfo")
-                        .HasForeignKey("WebScraper.Core.Entities.JobInfo", "SalaryId");
                 });
 
             modelBuilder.Entity("WebScraper.Core.Entities.JobUrl", b =>
@@ -271,6 +266,12 @@ namespace WebScraper.Infrastructure.Migrations
                     b.HasOne("WebScraper.Core.Entities.JobPortal", "JobPortal")
                         .WithMany("JobUrls")
                         .HasForeignKey("JobInfoId");
+
+                    b.HasOne("WebScraper.Core.Entities.Salary", "Salary")
+                        .WithOne("JobUrl")
+                        .HasForeignKey("WebScraper.Core.Entities.JobUrl", "SalaryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("WebScraper.Core.Entities.Tag", b =>

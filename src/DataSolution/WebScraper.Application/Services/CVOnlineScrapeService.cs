@@ -31,21 +31,23 @@ namespace WebScraper.Application.Services
 
         public void Run()
         {
-            ScrapePageUrls();
-            ScrapePageInfos();
-            ScrapePageTags();
+            //ScrapePageUrls();
+            //ScrapePageInfos();
+            //ScrapePageTags();
             ProcessSalaries();
         }
 
         public void ProcessSalaries()
         {
             var jobUrls = _context.JobUrls.Include(j => j.JobInfo)
-              .Where(j => j.JobPortalId == (int)JobPortals.CvOnline);
+              .Where(j => j.JobPortalId == (int)JobPortals.CvOnline && !String.IsNullOrEmpty(j.SalaryText)).ToList();
 
             foreach(var jobUrl in jobUrls)
             {
-                var salary = _analyser.GetSalary(jobUrl.JobInfo.SalaryText);
+                var salary = _analyser.GetSalary(jobUrl.SalaryText);
+                salary.JObUrlId = jobUrl.Id;
                 _context.Salaries.Add(salary);
+                _context.SaveChanges();
             }
         }
 

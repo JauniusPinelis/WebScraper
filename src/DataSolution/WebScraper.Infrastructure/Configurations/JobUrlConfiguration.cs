@@ -18,7 +18,7 @@ namespace WebScraper.Infrastructure.Configurations
                .HasMaxLength(5)
                .ValueGeneratedOnAdd();
 
-            builder.Property(e => e.Salary).HasMaxLength(500);
+            builder.Property(e => e.SalaryText).HasMaxLength(500);
             builder.Property(e => e.Title).HasMaxLength(500);
 
             builder.Property(e => e.Url).HasMaxLength(300);
@@ -26,6 +26,8 @@ namespace WebScraper.Infrastructure.Configurations
             builder.HasOne(e => e.JobPortal)
                 .WithMany(p => p.JobUrls)
                 .HasForeignKey(e => e.JobInfoId);
+
+          
         }
     }
 }

@@ -43,7 +43,7 @@ namespace WebScraper.Application.Services
         {
             var cvBankasScrapeService = new CvBankasScrapeService(_httpClientFactory, _scraperFactory, _context);
             var cvLtScrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _context);
-            var cvOnlineScrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _context);
+            var cvOnlineScrapeService = new CvOnlineScrapeService(_httpClientFactory, _scraperFactory, _context);
 
             var scrapeServices = new List<IScrapeService>();
             //scrapeServices.Add(cvBankasScrapeService);

@@ -19,9 +19,9 @@ namespace WebScraper.Infrastructure.Configurations
                .ValueGeneratedOnAdd();
 
 
-            builder.HasOne(e => e.JobInfo)
+            builder.HasOne(e => e.JobUrl)
                .WithOne(p => p.Salary)
-               .HasForeignKey<JobInfo>(f => f.SalaryId);
+               .HasForeignKey<JobUrl>(f => f.SalaryId);
         }
     }
     

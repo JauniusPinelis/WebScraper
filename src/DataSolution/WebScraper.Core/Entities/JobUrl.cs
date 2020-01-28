@@ -8,7 +8,7 @@ namespace WebScraper.Core.Entities
     {
         public string Url { get; set; }
 
-        public string Salary { get; set; }
+        public string SalaryText { get; set; }
         public string Title { get; set; }
         public string Location { get; set; }
 
@@ -21,5 +21,9 @@ namespace WebScraper.Core.Entities
         public JobPortal JobPortal { get; set; }
 
         public int? JobPortalId { get; set; }
+
+        public Salary Salary { get; set; }
+
+        public int SalaryId { get; set; }
     }
 }

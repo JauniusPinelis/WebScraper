@@ -6,8 +6,8 @@ namespace WebScraper.Core.Enums
 {
     public enum JobPortals
     {
-        CvOnline = 0,
-        CvBankas = 1,
-        CvLt = 2
+        CvOnline = 1,
+        CvBankas = 2,
+        CvLt = 3
     }
 }

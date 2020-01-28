@@ -6,7 +6,6 @@ namespace WebScraper.Core.Entities
 {
     public class Salary : AuditableEntity
     {
-        public int Id { get; set; }
         public decimal? From { get; set; }
         public decimal? To { get; set; }
 
@@ -17,8 +16,8 @@ namespace WebScraper.Core.Entities
         public string Type { get; set; } = "Brutto";
 
         //Foreign
-        public JobInfo JobInfo { get; set; }
-        public int JobInfoId { get; set; }
+        public JobUrl JobUrl { get; set; }
+        public int? JObUrlId { get; set; }
 
     }
 }

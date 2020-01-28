@@ -10,8 +10,8 @@ using WebScraper.Infrastructure.Db;
 namespace WebScraper.Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191220054338_rename")]
-    partial class rename
+    [Migration("20200128065340_reset-migration")]
+    partial class resetmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,7 +43,7 @@ namespace WebScraper.Infrastructure.Migrations
                     b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Salary")
+                    b.Property<string>("SalaryText")
                         .HasColumnType("nvarchar(max)")
                         .HasMaxLength(100000);
 
@@ -122,7 +122,10 @@ namespace WebScraper.Infrastructure.Migrations
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Salary")
+                    b.Property<int>("SalaryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SalaryText")
                         .HasColumnType("nvarchar(500)")
                         .HasMaxLength(500);
 
@@ -138,7 +141,48 @@ namespace WebScraper.Infrastructure.Migrations
 
                     b.HasIndex("JobInfoId");
 
+                    b.HasIndex("SalaryId")
+                        .IsUnique();
+
                     b.ToTable("tblData_jobUrl");
+                });
+
+            modelBuilder.Entity("WebScraper.Core.Entities.Salary", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasColumnType("int")
+                        .HasMaxLength(5)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Currency")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal?>("Exact")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("From")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("JObUrlId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("LastModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("To")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tblData_salary");
                 });
 
             modelBuilder.Entity("WebScraper.Core.Entities.Tag", b =>
@@ -224,6 +268,12 @@ namespace WebScraper.Infrastructure.Migrations
                     b.HasOne("WebScraper.Core.Entities.JobPortal", "JobPortal")
                         .WithMany("JobUrls")
                         .HasForeignKey("JobInfoId");
+
+                    b.HasOne("WebScraper.Core.Entities.Salary", "Salary")
+                        .WithOne("JobUrl")
+                        .HasForeignKey("WebScraper.Core.Entities.JobUrl", "SalaryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("WebScraper.Core.Entities.Tag", b =>
