@@ -9,5 +9,6 @@ namespace WebScraper.Core.Entities
         public string Name { get; set; }
 
         public List<Tag> Tags { get; set; }
+
     }
 }

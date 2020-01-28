@@ -16,7 +16,7 @@ namespace WebScraper.Core.Entities
 
         public List<Tag> Tags { get; set; }
         public Salary Salary { get; set; }
-        public int SalaryId { get; set; }
+        public int? SalaryId { get; set; }
 
     }
 }
