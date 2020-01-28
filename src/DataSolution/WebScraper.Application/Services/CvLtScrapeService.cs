@@ -16,9 +16,10 @@ namespace WebScraper.Application.Services
 {
     public class CvLtScrapeService : BaseScrapeService, IScrapeService
     {
-        public CvLtScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext context) : base(httpClientFactory, scraperFactory, context)
+        public CvLtScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext context) 
+            : base(JobPortals.CvLt, httpClientFactory, scraperFactory, context)
         {
-            _scraper = scraperFactory.BuildScraper(JobPortals.CvLt);
+           
         }
 
         public void ScrapePageUrls()

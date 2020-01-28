@@ -17,9 +17,11 @@ namespace WebScraper.Application.Services
 {
     public class CvBankasScrapeService : BaseScrapeService, IScrapeService
     {
-        public CvBankasScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext context) : base(httpClientFactory, scraperFactory, context)
+        public CvBankasScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext context) 
+            : base(JobPortals.CvBankas,httpClientFactory, scraperFactory, context)
         {
             _scraper = scraperFactory.BuildScraper(JobPortals.CvBankas);
+            _analyser = new BaseAnalyser();
 
         }
 

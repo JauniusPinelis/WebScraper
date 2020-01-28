@@ -7,6 +7,7 @@ using WebScraper.Core.CvBankas;
 using WebScraper.Core.CvOnline;
 using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
+using WebScraper.Core.Shared;
 
 namespace WebScraper.Core.UnitTests.Scraper
 {
@@ -33,6 +34,13 @@ namespace WebScraper.Core.UnitTests.Scraper
             var scraper = _factory.BuildScraper(JobPortals.CvBankas);
 
             scraper.Should().BeOfType<CvBankasScraper>();
+        }
+
+        public void BuildAnalyser_GivenAnyWebsite_returnBaseAnalyser()
+        {
+            var analyser = _factory.BuildAnalyser(JobPortals.CvBankas);
+
+            analyser.Should().BeOfType<BaseAnalyser>();
         }
     }
 }

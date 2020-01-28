@@ -8,5 +8,7 @@ namespace WebScraper.Core.Factories
         IScraper BuildScraper(JobPortals website);
         IUrlFilter BuildUrlFilter(JobPortals website);
         IParser BuildParser(JobPortals website);
+
+        IAnalyser BuildAnalyser(JobPortals website);
     }
 }

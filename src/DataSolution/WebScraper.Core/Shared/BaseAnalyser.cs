@@ -7,7 +7,7 @@ using WebScraper.Core.Entities;
 
 namespace WebScraper.Core.Shared
 {
-    public class BaseAnalyser
+    public class BaseAnalyser : IAnalyser
     {
         public bool HasNumber(string input) => input.Where(i => Char.IsDigit(i)).Any();
 

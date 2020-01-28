@@ -20,13 +20,12 @@ namespace WebScraper.Application.Services
     public class CvOnlineScrapeService : BaseScrapeService, IScrapeService
     {
         private readonly IParser _parser;
-        private readonly CvOnlineAnalyser _analyser;
 
         public CvOnlineScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext dataContext) : base(httpClientFactory, scraperFactory, dataContext)
         {
             _scraper = scraperFactory.BuildScraper(JobPortals.CvOnline);
             _parser = new CvOnlineParser();
-            _analyser = new CvOnlineAnalyser();
+            _analyser = new BaseAnalyser();
         }
 
         public void Run()
@@ -37,19 +36,7 @@ namespace WebScraper.Application.Services
             ProcessSalaries();
         }
 
-        public void ProcessSalaries()
-        {
-            var jobUrls = _context.JobUrls.Include(j => j.JobInfo)
-              .Where(j => j.JobPortalId == (int)JobPortals.CvOnline && !String.IsNullOrEmpty(j.SalaryText)).ToList();
-
-            foreach(var jobUrl in jobUrls)
-            {
-                var salary = _analyser.GetSalary(jobUrl.SalaryText);
-                salary.JObUrlId = jobUrl.Id;
-                _context.Salaries.Add(salary);
-                _context.SaveChanges();
-            }
-        }
+       
 
         public void ScrapePageUrls()
         {

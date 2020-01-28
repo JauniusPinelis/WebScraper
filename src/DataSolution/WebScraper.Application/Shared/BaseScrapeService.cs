@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebScraper.Application.Shared
 {
@@ -20,16 +21,20 @@ namespace WebScraper.Application.Shared
         protected IHttpClientFactory _httpClientFactory;
         protected IScraperFactory _scraperFactory;
         protected IScraper _scraper;
+        protected IAnalyser _analyser;
         protected IDataContext _context;
 
         protected const int _sleepTime = 300;
         protected const int _scrapeLimit = 200;
 
-        public BaseScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory,  IDataContext context)
+        public BaseScrapeService(JobPortals portalName, IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory,  IDataContext context)
         {
             _scraperFactory = scraperFactory;
             _httpClientFactory = httpClientFactory;
             _context = context;
+
+            _scraper = _scraperFactory.BuildScraper(portalName);
+            _analyser = ScrapeFactory.BuildAnalyser(portalName);
         }
 
         public List<JobUrl> ExtractPageUrls(string baseUrl)
@@ -97,6 +102,20 @@ namespace WebScraper.Application.Shared
 
             _context.SaveChanges();
 
+        }
+
+        public void ProcessSalaries()
+        {
+            var jobUrls = _context.JobUrls.Include(j => j.JobInfo)
+              .Where(j => j.JobPortalId == (int)JobPortals.CvOnline && !String.IsNullOrEmpty(j.SalaryText)).ToList();
+
+            foreach (var jobUrl in jobUrls)
+            {
+                var salary = _analyser.GetSalary(jobUrl.SalaryText);
+                salary.JObUrlId = jobUrl.Id;
+                _context.Salaries.Add(salary);
+                _context.SaveChanges();
+            }
         }
 
         public void ScrapePageInfos(string elementId, JobPortals jobPortals)
