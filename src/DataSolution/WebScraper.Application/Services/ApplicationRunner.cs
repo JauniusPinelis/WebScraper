@@ -46,8 +46,8 @@ namespace WebScraper.Application.Services
             var cvOnlineScrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _context);
 
             var scrapeServices = new List<IScrapeService>();
-            scrapeServices.Add(cvBankasScrapeService);
-            scrapeServices.Add(cvLtScrapeService);
+            //scrapeServices.Add(cvBankasScrapeService);
+            //scrapeServices.Add(cvLtScrapeService);
             scrapeServices.Add(cvOnlineScrapeService);
 
             return scrapeServices;

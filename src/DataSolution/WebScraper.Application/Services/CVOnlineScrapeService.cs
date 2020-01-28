@@ -45,7 +45,7 @@ namespace WebScraper.Application.Services
             foreach(var jobUrl in jobUrls)
             {
                 var salary = _analyser.GetSalary(jobUrl.JobInfo.SalaryText);
-                //_context.Salaries
+                _context.Salaries.Add(salary);
             }
         }
 

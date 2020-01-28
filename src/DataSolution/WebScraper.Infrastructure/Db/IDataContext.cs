@@ -13,6 +13,7 @@ namespace WebScraper.Infrastructure.Db
         DbSet<JobUrl> JobUrls { get; set; }
         DbSet<JobInfo> JobInfos { get; set; }
         DbSet<JobPortal> JobPortals { get; set;}
+        DbSet<Salary> Salaries { get; set; }
 
         int SaveChanges();
     }
