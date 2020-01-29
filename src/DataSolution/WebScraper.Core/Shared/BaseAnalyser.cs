@@ -22,7 +22,7 @@ namespace WebScraper.Core.Shared
             decimal? to = null;
             decimal? exact = null;
 
-            salary = salary.ToLower().Replace(".","");
+            salary = salary.ToLower();
 
             List<string> matches = Regex.Matches(salary, @"\d+").Select(m => m.Value).ToList();
 

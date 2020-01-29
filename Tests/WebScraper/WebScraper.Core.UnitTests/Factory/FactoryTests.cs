@@ -42,8 +42,8 @@ namespace WebScraper.Core.UnitTests.Scraper
             var cvBankasAnalyser = _factory.BuildAnalyser(JobPortals.CvBankas);
             var cvOnlineAnalyser = _factory.BuildAnalyser(JobPortals.CvOnline);
 
-            cvBankasAnalyser.Should().BeOfType<BaseAnalyser>();
-            cvOnlineAnalyser.Should().BeOfType<BaseAnalyser>();
+            cvBankasAnalyser.Should().BeOfType<CvBankasAnalyser>();
+            cvOnlineAnalyser.Should().BeOfType<CvOnlineAnalyser>();
         }
     }
 }

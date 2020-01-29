@@ -3,6 +3,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WebScraper.Core.CvLt;
 using WebScraper.Core.CvOnline;
 using WebScraper.Core.Shared;
 
@@ -15,7 +16,7 @@ namespace WebScraper.Core.UnitTests.CvLt
 
         public CvLtAnalyserTests()
         {
-            _analyser = new CvOnlineAnalyser();
+            _analyser = new CvLtAnalyser();
         }
 
         [Test]
