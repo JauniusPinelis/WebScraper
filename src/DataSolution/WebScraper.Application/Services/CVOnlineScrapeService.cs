@@ -21,17 +21,15 @@ namespace WebScraper.Application.Services
     {
         private readonly IParser _parser;
 
-        public CvOnlineScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext dataContext) : base(httpClientFactory, scraperFactory, dataContext)
+        public CvOnlineScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext dataContext) : base(JobPortals.CvOnline, httpClientFactory, scraperFactory, dataContext)
         {
-            _scraper = scraperFactory.BuildScraper(JobPortals.CvOnline);
             _parser = new CvOnlineParser();
-            _analyser = new BaseAnalyser();
         }
 
         public void Run()
         {
-            //ScrapePageUrls();
-            //ScrapePageInfos();
+            ScrapePageUrls();
+            ScrapePageInfos();
             //ScrapePageTags();
             ProcessSalaries();
         }

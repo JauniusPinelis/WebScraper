@@ -34,7 +34,7 @@ namespace WebScraper.Application.Shared
             _context = context;
 
             _scraper = _scraperFactory.BuildScraper(portalName);
-            _analyser = ScrapeFactory.BuildAnalyser(portalName);
+            _analyser = _scraperFactory.BuildAnalyser(portalName);
         }
 
         public List<JobUrl> ExtractPageUrls(string baseUrl)

@@ -28,5 +28,19 @@ namespace WebScraper.Core.UnitTests.CvBankas
             salary.To.Should().BeNull();
             salary.From.Should().Be(1200);
         }
+
+        [Test]
+        public void GetSalary_GivenRange_ReturnsMinimumAndMaximumSalary()
+        {
+            var textData = "2500-5000";
+
+            var salary = _analyser.GetSalary(textData);
+
+            salary.Exact.Should().BeNull();
+            salary.From.Should().Be(2500);
+            salary.To.Should().Be(5000);
+            salary.Period.Should().Be("Monthly");
+            salary.Type.Should().Be("Brutto");
+        }
     }
 }

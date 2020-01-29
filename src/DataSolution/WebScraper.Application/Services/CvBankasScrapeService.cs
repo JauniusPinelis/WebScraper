@@ -20,8 +20,6 @@ namespace WebScraper.Application.Services
         public CvBankasScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext context) 
             : base(JobPortals.CvBankas,httpClientFactory, scraperFactory, context)
         {
-            _scraper = scraperFactory.BuildScraper(JobPortals.CvBankas);
-            _analyser = new BaseAnalyser();
 
         }
 
@@ -29,8 +27,9 @@ namespace WebScraper.Application.Services
         {
             
 
-            ScrapePageUrls();
-            ScrapePageInfos();
+            //ScrapePageUrls();
+            //ScrapePageInfos();
+            ProcessSalaries();
         }
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)

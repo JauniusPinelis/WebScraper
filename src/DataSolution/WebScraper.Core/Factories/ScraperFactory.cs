@@ -47,5 +47,20 @@ namespace WebScraper.Core.Factories
                     throw new Exception("There is no parser for this website");
             }
         }
+
+        public IAnalyser BuildAnalyser(JobPortals website)
+        {
+            switch (website)
+            {
+                case JobPortals.CvOnline:
+                    return new BaseAnalyser();
+                case JobPortals.CvBankas:
+                    return new BaseAnalyser();
+                case JobPortals.CvLt:
+                    return new BaseAnalyser();
+                default:
+                    throw new Exception("There is no Analyser for this website");
+            }
+        }
     }
 }

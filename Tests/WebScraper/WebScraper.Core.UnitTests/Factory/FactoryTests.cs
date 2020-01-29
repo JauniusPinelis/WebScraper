@@ -36,11 +36,14 @@ namespace WebScraper.Core.UnitTests.Scraper
             scraper.Should().BeOfType<CvBankasScraper>();
         }
 
+        [Test]
         public void BuildAnalyser_GivenAnyWebsite_returnBaseAnalyser()
         {
-            var analyser = _factory.BuildAnalyser(JobPortals.CvBankas);
+            var cvBankasAnalyser = _factory.BuildAnalyser(JobPortals.CvBankas);
+            var cvOnlineAnalyser = _factory.BuildAnalyser(JobPortals.CvOnline);
 
-            analyser.Should().BeOfType<BaseAnalyser>();
+            cvBankasAnalyser.Should().BeOfType<BaseAnalyser>();
+            cvOnlineAnalyser.Should().BeOfType<BaseAnalyser>();
         }
     }
 }
