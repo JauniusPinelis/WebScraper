@@ -29,7 +29,7 @@ namespace WebScraper.Application.Services
 
             //ScrapePageUrls();
             //ScrapePageInfos();
-            ProcessSalaries();
+            //ProcessSalaries();
         }
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)

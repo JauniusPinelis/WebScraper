@@ -107,7 +107,7 @@ namespace WebScraper.Application.Shared
         public void ProcessSalaries()
         {
             var jobUrls = _context.JobUrls.Include(j => j.JobInfo)
-              .Where(j => j.JobPortalId == (int)JobPortals.CvOnline && !String.IsNullOrEmpty(j.SalaryText)).ToList();
+              .Where(j =>!String.IsNullOrEmpty(j.SalaryText)).ToList();
 
             foreach (var jobUrl in jobUrls)
             {

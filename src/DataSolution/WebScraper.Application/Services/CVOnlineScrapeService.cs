@@ -28,10 +28,10 @@ namespace WebScraper.Application.Services
 
         public void Run()
         {
-            ScrapePageUrls();
-            ScrapePageInfos();
+            //ScrapePageUrls();
+            //ScrapePageInfos();
             //ScrapePageTags();
-            ProcessSalaries();
+            //ProcessSalaries();
         }
 
        
