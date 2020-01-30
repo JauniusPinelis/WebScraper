@@ -14,6 +14,7 @@ using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
 using WebScraper.Core.Shared;
 using WebScraper.Infrastructure.Db;
+using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Services
 {
@@ -21,7 +22,8 @@ namespace WebScraper.Application.Services
     {
         private readonly IParser _parser;
 
-        public CvOnlineScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext dataContext) : base(JobPortals.CvOnline, httpClientFactory, scraperFactory, dataContext)
+        public CvOnlineScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
+            : base(JobPortals.CvOnline, httpClientFactory, scraperFactory, unitOfWork)
         {
             _parser = new CvOnlineParser();
         }
@@ -44,7 +46,7 @@ namespace WebScraper.Application.Services
 
             var cvOnlineFilter = _scraperFactory.BuildUrlFilter(JobPortals.CvOnline);
             cvOnlineFilter.Apply(ref urls);
-            _context.SaveChanges();
+            
 
             UpdateUrls(urls);
         }
@@ -52,24 +54,6 @@ namespace WebScraper.Application.Services
         public void ScrapePageInfos()
         {
             ScrapePageInfos("page-main-content", JobPortals.CvOnline); 
-        }
-
-        public void ScrapePageTags()
-        {
-            var jobUrls = _context.JobUrls.Include(j => j.JobInfo)
-                .Where(j => j.JobPortalId == (int) JobPortals.CvOnline);
-
-            var jobInfos = jobUrls.Select(j => j.JobInfo).ToList();
-
-            //foreach (var jobInfo in jobInfos)
-            //{
-                
-            //}
-        }
-
-        public void UpdateTags()
-        {
-
         }
     }
 }

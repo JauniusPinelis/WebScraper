@@ -11,13 +11,14 @@ using WebScraper.Core.Entities;
 using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
+using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Services
 {
     public class CvLtScrapeService : BaseScrapeService, IScrapeService
     {
-        public CvLtScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext context) 
-            : base(JobPortals.CvLt, httpClientFactory, scraperFactory, context)
+        public CvLtScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
+            : base(JobPortals.CvLt, httpClientFactory, scraperFactory, unitOfWork)
         {
            
         }

@@ -32,7 +32,7 @@ namespace Webscraper.Application.UnitTests
 
             var mockFactory = new Mock<IHttpClientFactory>();
 
-            _scrapingService = new ApplicationRunner(_context, scraperFactory, mapper, mockFactory.Object);
+            _scrapingService = new ApplicationRunner(_unitOfWork, scraperFactory, mapper, mockFactory.Object);
         }
 
         [Test]

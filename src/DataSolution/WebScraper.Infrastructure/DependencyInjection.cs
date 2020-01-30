@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
+using WebScraper.Infrastructure.Repositories;
 using WebScraper.Infrastructure.Services;
 
 namespace WebScraper.Infrastructure
@@ -20,6 +21,7 @@ namespace WebScraper.Infrastructure
 
             services.AddTransient<IDateTime, MachineDateTime>();
             services.AddSingleton<IDataContext>(provider => provider.GetService<DataContext>());
+            services.AddSingleton<IUnitOfWork, UnitOfWork>();
 
             return services;
         }

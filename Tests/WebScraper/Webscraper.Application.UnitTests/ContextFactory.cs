@@ -8,12 +8,13 @@ using System.Text;
 using Microsoft.Extensions.Configuration;
 using WebScraper.Infrastructure.Db;
 using WebScraper.Infrastructure.Services;
+using WebScraper.Infrastructure.Repositories;
 
 namespace Webscraper.Application.UnitTests
 {
     public class ContextFactory
     {
-        public static DataContext Create()
+        public static DataContext CreateTestDataContext()
         {
             var _dateTime = new DateTime(2001, 1, 14);
             var _dateTimeMock = new Mock<IDateTime>();
@@ -33,6 +34,12 @@ namespace Webscraper.Application.UnitTests
             context.SaveChanges();
 
             return context;
+        }
+
+        public static IUnitOfWork CreateTestUnitOfWork()
+        {
+            var unitOfWork = CreateTestDataContext();
+            return new UnitOfWork(unitOfWork);
         }
 
         public static DataContext CreateLiveDbContext()

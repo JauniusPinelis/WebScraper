@@ -13,6 +13,7 @@ using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
 using Microsoft.EntityFrameworkCore;
+using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Shared
 {
@@ -22,16 +23,16 @@ namespace WebScraper.Application.Shared
         protected IScraperFactory _scraperFactory;
         protected IScraper _scraper;
         protected IAnalyser _analyser;
-        protected IDataContext _context;
+        protected IUnitOfWork _unitOfWork;
 
         protected const int _sleepTime = 300;
         protected const int _scrapeLimit = 200;
 
-        public BaseScrapeService(JobPortals portalName, IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory,  IDataContext context)
+        public BaseScrapeService(JobPortals portalName, IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory,  IUnitOfWork unitOfWork)
         {
             _scraperFactory = scraperFactory;
             _httpClientFactory = httpClientFactory;
-            _context = context;
+            _unitOfWork = unitOfWork;
 
             _scraper = _scraperFactory.BuildScraper(portalName);
             _analyser = _scraperFactory.BuildAnalyser(portalName);
@@ -81,48 +82,30 @@ namespace WebScraper.Application.Shared
             return results;
         }
 
-        public void UpdateJobInfo(JobInfo jobInfo)
-        {
-
-            JobInfo entity;
-            var exists = _context.JobInfos.Any(j => j.HtmlCode == jobInfo.HtmlCode);
-
-            if (exists)
-            {
-                entity = _context.JobInfos.SingleOrDefault(j => j.HtmlCode == jobInfo.HtmlCode);
-            }
-            else
-            {
-                entity = new JobInfo();
-                _context.JobInfos.Add(entity);
-            }
-
-            entity.HtmlCode = jobInfo.HtmlCode;
-            entity.JobUrlId = jobInfo.JobUrlId;
-
-            _context.SaveChanges();
-
-        }
-
         public void ProcessSalaries()
         {
-            var jobUrls = _context.JobUrls.Include(j => j.JobInfo)
-              .Where(j =>!String.IsNullOrEmpty(j.SalaryText)).ToList();
+            var jobUrls = _unitOfWork.JobUrlRepository.GetAll();
 
-            foreach (var jobUrl in jobUrls)
+            var jobsWithSalaries = jobUrls.Where(j =>!String.IsNullOrEmpty(j.SalaryText)).ToList();
+
+            foreach (var jobUrl in jobsWithSalaries)
             {
                 var salary = _analyser.GetSalary(jobUrl.SalaryText);
+
                 salary.JObUrlId = jobUrl.Id;
-                _context.Salaries.Add(salary);
-                _context.SaveChanges();
+
+                _unitOfWork.SalaryRepository.Upsert(salary, salary.Id);
+                _unitOfWork.SaveChanges();
             }
         }
 
         public void ScrapePageInfos(string elementId, JobPortals jobPortals)
         {
-            var urlsInDb = _context.JobUrls.Where(j => j.JobPortalId == (int)jobPortals).ToList();
+            var urlsInDb = _unitOfWork.JobUrlRepository.GetAll();
+            
+            var jobPortalsUrls = urlsInDb.Where(j => j.JobPortalId == (int)jobPortals).ToList();
 
-            foreach (var url in urlsInDb)
+            foreach (var url in jobPortalsUrls)
             {
                 var html = ScrapeJobHtml(url.Url, elementId);
 
@@ -134,7 +117,8 @@ namespace WebScraper.Application.Shared
                     JobUrlId = url.Id
                 };
 
-                UpdateJobInfo(jobInfo);
+                _unitOfWork.JobInfoRepository.Upsert(jobInfo, jobInfo.Id);
+                _unitOfWork.SaveChanges();
             }
         }
 
@@ -142,19 +126,9 @@ namespace WebScraper.Application.Shared
         {
             foreach (var jobUrl in jobUrls)
             {
-                var urlsInDb = _context.JobUrls;
-                var exists = urlsInDb.Any(j => j.Url == jobUrl.Url);
 
-                if (!exists)
-                {
-                    _context.JobUrls.Add(jobUrl);
-                    _context.SaveChanges();
-                    Log.Information("{url} has been added", jobUrl.Url);
-                }
-                else
-                {
-                    Log.Information("{url} already exists", jobUrl.Url);
-                }
+                _unitOfWork.JobUrlRepository.Upsert(jobUrl, jobUrl.Id);
+                _unitOfWork.SaveChanges();
             }
         }
 

@@ -12,13 +12,14 @@ using WebScraper.Core.Entities;
 using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
+using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Services
 {
     public class CvBankasScrapeService : BaseScrapeService, IScrapeService
     {
-        public CvBankasScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IDataContext context) 
-            : base(JobPortals.CvBankas,httpClientFactory, scraperFactory, context)
+        public CvBankasScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
+            : base(JobPortals.CvBankas,httpClientFactory, scraperFactory, unitOfWork)
         {
 
         }

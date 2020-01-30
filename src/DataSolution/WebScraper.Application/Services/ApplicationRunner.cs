@@ -10,20 +10,21 @@ using WebScraper.Application.Shared;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
 using WebScraper.Infrastructure.Db;
+using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Services
 {
     public class ApplicationRunner : IScrapeService
     {
-        private readonly IDataContext _context;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IScraperFactory _scraperFactory;
         private readonly IMapper _mapper;
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public ApplicationRunner(IDataContext context, IScraperFactory factory, 
+        public ApplicationRunner(IUnitOfWork unitOfWork, IScraperFactory factory, 
              IMapper mapper, IHttpClientFactory clientFactory)
         {
-            _context = context;
+            _unitOfWork = unitOfWork;
             _scraperFactory = factory;
             _mapper = mapper;
             _httpClientFactory = clientFactory;
@@ -41,9 +42,9 @@ namespace WebScraper.Application.Services
 
         public List<IScrapeService> InitScrapeServices()
         {
-            var cvBankasScrapeService = new CvBankasScrapeService(_httpClientFactory, _scraperFactory, _context);
-            var cvLtScrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _context);
-            var cvOnlineScrapeService = new CvOnlineScrapeService(_httpClientFactory, _scraperFactory, _context);
+            var cvBankasScrapeService = new CvBankasScrapeService(_httpClientFactory, _scraperFactory, _unitOfWork);
+            var cvLtScrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _unitOfWork);
+            var cvOnlineScrapeService = new CvOnlineScrapeService(_httpClientFactory, _scraperFactory, _unitOfWork);
 
             var scrapeServices = new List<IScrapeService>();
             scrapeServices.Add(cvBankasScrapeService);
