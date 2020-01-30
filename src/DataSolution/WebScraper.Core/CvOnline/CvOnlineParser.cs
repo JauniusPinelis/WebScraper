@@ -8,7 +8,7 @@ using WebScraper.Core.Shared;
 
 namespace WebScraper.Core.CvOnline
 {
-    public class CvOnlineParser : IParser
+    public class CvOnlineParser : BaseParser
     {
 
         private string ParseTitle(string html)
@@ -31,14 +31,6 @@ namespace WebScraper.Core.CvOnline
 
             //a[contains(text(), 'About us') or contains(text(), 'about us')]
             return String.Empty;
-        }
-
-        public List<TagCategory> ParseTags(string html, IEnumerable<TagCategory> tagsToSearch)
-        {
-            var htmlDocument = new HtmlDocument();
-            htmlDocument.LoadHtml(html);
-
-            return (from tagToSearch in tagsToSearch where html.Contains(tagToSearch.Name) select new TagCategory() {Name = tagToSearch.Name.ToLower() } ).ToList();
         }
 
         public JobInfo ParseInfo(string html)

@@ -253,6 +253,26 @@ namespace WebScraper.Infrastructure.Migrations
                         {
                             Id = 5,
                             Name = "Javascript"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "React"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Angular"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "React"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "Node.js"
                         });
                 });
 

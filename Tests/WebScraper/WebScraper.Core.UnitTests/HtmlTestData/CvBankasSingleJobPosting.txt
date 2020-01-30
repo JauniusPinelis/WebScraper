@@ -1,0 +1,85 @@
+﻿<div id="jobad_content_main">
+                <header id="jobad_header">
+                    <h1 class="heading1" id="jobad_heading1" itemprop="title">.NET developer</h1>
+
+                                            <span class="salary_bl salary_bl_net">
+                            <span class="salary_inner">
+                                <span class="salary_text">
+                                    <span class="salary_amount">Nuo 2000</span>
+                                    <span class="salary_period">€/mėn.</span>
+                                </span>
+                                <span class="salary_calculation">Į rankas</span>
+                            </span>
+                        </span>
+                    
+                    <div itemprop="jobLocation" itemscope="" itemtype="http://schema.org/Place" id="jobad_location" class="txt_2">
+                        <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                            <a href="https://www.cvbankas.lt/darbas-kaune" class="js_ga_event" data-category="jobAd" data-action="click" data-link-title="Miestas Kaunas skelbime "><span itemprop="addressLocality">Kaunas</span></a>                        </span>
+                                                    - UAB „Pharmanet“                                            </div>
+
+                    
+                    <aside id="job_ad_statistics">
+                                                    <div class="jobad_stat">
+                                <strong class="jobad_stat_value">720</strong>
+                                peržiūrėjo                            </div>
+                                                                            <div class="jobad_stat">
+                                <strong class="jobad_stat_value">8</strong>
+                                kandidatavo                            </div>
+                                                                            <div class="jobad_stat">Įmonė žiūrėjo CV prieš 1 val.</div>
+                                            </aside>
+                </header>
+
+                <section itemprop="description">
+                                            <section>
+                                                            <h4 class="heading4 jobad_subheading">Your role</h4>
+                                                        <div class="jobad_txt" itemprop="responsibilities"><ul><li>Full-stack development on Microsoft .NET technology platforms (Microsoft .NET, .NET Core / Web API / SQL Server);<br>
+</li><li>Development using the latest front-end web technologies including Angular Typescript (5.x and above) and AngularJS;<br>
+</li><li>Working in and rotating (on a project-by-project basis) small, agile teams of 2 to 6 people;<br>
+</li><li>Maintaining code quality across the business with regular 360 code reviews, E2E Testing, and Continuous Integration &amp; Delivery;<br>
+</li><li>Working closely with stakeholder to map user stories to complex functionality;<br>
+</li><li>Becoming a Subject Matter Expert for reference by our internal team and customers.</li></ul></div>
+                        </section>
+                    
+                                            <section>
+                                                            <h4 class="heading4 jobad_subheading">Desirable Skills &amp; Previous Experience</h4>
+                                                        <div class="jobad_txt" itemprop="qualifications"><ul><li>C# .NET / MVC / Other OO Experience;<br>
+</li><li>SQL Server;<br>
+</li><li>HTML / CSS / SASS;<br>
+</li><li>JavaScript / jQuery;<br>
+</li><li>AngularJS / React / React Native;<br>
+</li><li>Experience migrating from one framework to another (e.g. .NET framework to .NET Core or jQuery/Knockout to Vue/React/Angular);<br>
+</li><li>Git / Azure DevOps / Other source control;<br>
+</li><li>Docker;<br>
+</li><li>Front-end &amp; Back-end (Unit) Testing;<br>
+</li><li>Ability to adapt to a high-pressure, reactive working environment;<br>
+</li><li>Self-motivated &amp; delivery-focused;<br>
+</li><li>Good communication skills and fluent in English;<br>
+</li><li>At least 2-3 years commercial experience​.</li></ul></div>
+                        </section>
+                    
+                                            <section>
+                                                            <h4 class="heading4 jobad_subheading">Company offers</h4>
+                                                        <div class="jobad_txt" itemprop="benefits"><ul><li>Opportunity to work in a leading company;<br>
+</li><li>Professional development;<br>
+</li><li>Friendly and supportive team;<br>
+</li><li>Competitive salary;<br>
+</li><li>Possibilities to further development and growth.<br>
+</li></ul><br>
+<br>
+<br>
+Please send your CV in English.<br>
+<br>
+Only selected candidates will be informed. Confidentiality is guaranteed.<br>
+<br>
+By submitting Your CV, You agree with PHARMANET's Privacy Policy (see <a href="https://www.pharmanet.lt/en/privacy-policy/" target="_blank" rel="nofollow">www.pharmanet.lt/en/privacy-policy/</a> for access to the Privacy Policy).</div>
+                        </section>
+                    
+                                            <section>
+                            <h4 class="heading4 jobad_subheading">Atlyginimas</h4>
+                            <div class="jobad_txt">
+                                                                    Nuo 2000                                    €/mėn.                                    į rankas                                    <br>
+                                
+                                                            </div>
+                        </section>
+                                    </section>
+            </div>

@@ -19,6 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="HtmlTestData\CvBankasSingleJobPosting.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="HtmlTestData\CvBankasSingleUrlTestData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

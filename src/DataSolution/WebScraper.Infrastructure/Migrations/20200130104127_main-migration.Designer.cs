@@ -10,8 +10,8 @@ using WebScraper.Infrastructure.Db;
 namespace WebScraper.Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200128152227_SalaryIdFix2")]
-    partial class SalaryIdFix2
+    [Migration("20200130104127_main-migration")]
+    partial class mainmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -175,6 +175,9 @@ namespace WebScraper.Infrastructure.Migrations
                     b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Period")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal?>("To")
                         .HasColumnType("decimal(18,2)");
 
@@ -252,6 +255,26 @@ namespace WebScraper.Infrastructure.Migrations
                         {
                             Id = 5,
                             Name = "Javascript"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "React"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Angular"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "React"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "Node.js"
                         });
                 });
 

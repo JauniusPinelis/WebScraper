@@ -33,8 +33,6 @@ namespace WebScraper.Core.UnitTests.CVOnline
 
         }
 
-
-
         [Test]
         public void GetSalary_GivenEmptyString_ShouldREturnEmptyProject()
         {

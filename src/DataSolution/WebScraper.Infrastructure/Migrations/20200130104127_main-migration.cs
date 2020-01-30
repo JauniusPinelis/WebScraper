@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebScraper.Infrastructure.Migrations
 {
-    public partial class resetmigration : Migration
+    public partial class mainmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,6 +20,7 @@ namespace WebScraper.Infrastructure.Migrations
                     Exact = table.Column<decimal>(nullable: true),
                     Currency = table.Column<string>(nullable: true),
                     Type = table.Column<string>(nullable: true),
+                    Period = table.Column<string>(nullable: true),
                     JObUrlId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -68,7 +69,7 @@ namespace WebScraper.Infrastructure.Migrations
                     Company = table.Column<string>(nullable: true),
                     JobInfoId = table.Column<int>(nullable: true),
                     JobPortalId = table.Column<int>(nullable: true),
-                    SalaryId = table.Column<int>(nullable: false)
+                    SalaryId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -84,7 +85,7 @@ namespace WebScraper.Infrastructure.Migrations
                         column: x => x.SalaryId,
                         principalTable: "tblData_salary",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -156,7 +157,11 @@ namespace WebScraper.Infrastructure.Migrations
                     { 2, "C#" },
                     { 3, "PHP" },
                     { 4, "Java" },
-                    { 5, "Javascript" }
+                    { 5, "Javascript" },
+                    { 6, "React" },
+                    { 7, "Angular" },
+                    { 8, "React" },
+                    { 9, "Node.js" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -175,7 +180,8 @@ namespace WebScraper.Infrastructure.Migrations
                 name: "IX_tblData_jobUrl_SalaryId",
                 table: "tblData_jobUrl",
                 column: "SalaryId",
-                unique: true);
+                unique: true,
+                filter: "[SalaryId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_tblData_tag_JobInfoId",

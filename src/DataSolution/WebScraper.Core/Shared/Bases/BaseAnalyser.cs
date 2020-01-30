@@ -57,5 +57,7 @@ namespace WebScraper.Core.Shared
 
             return salaryData;
         }
+
+       
     }
 }

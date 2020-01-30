@@ -47,8 +47,15 @@ namespace WebScraper.Infrastructure.Db
                 new TagCategory() { Id = 2, Name = "C#" },
                 new TagCategory() { Id = 3, Name = "PHP" },
                 new TagCategory() { Id = 4, Name = "Java" },
-                new TagCategory() { Id = 5, Name = "Javascript" }
+                new TagCategory() { Id = 5, Name = "Javascript" },
+                new TagCategory() { Id = 6, Name = "React"},
+                new TagCategory() { Id = 7, Name = "Angular" },
+                new TagCategory() { Id = 8, Name = "React" },
+                new TagCategory() { Id = 9, Name = "Node.js" }
+
             );
+
+            
         }
 
         public override int SaveChanges()
