@@ -41,7 +41,7 @@ namespace WebScraper.Application.Shared
         public List<JobUrl> ExtractPageUrls(string baseUrl)
         {
 
-            var webClient = new HttpClient();
+            var webClient = _httpClientFactory.CreateClient();
             int pageCounter = 0;
             var continueParsing = true;
             var results = new List<JobUrl>();

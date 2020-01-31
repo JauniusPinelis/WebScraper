@@ -10,14 +10,14 @@ using WebScraper.Application.Services;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Factories;
 using System.Net.Http;
-
+using WebScraper.Infrastructure.Repositories;
 
 namespace Webscraper.Application.UnitTests
 {
     [TestFixture]
     public class ScrapingServiceTests : ContextTestBase
     {
-        private readonly ApplicationRunner _scrapingService;
+        private readonly CvOnlineScrapeService _scrapingService;
 
         public ScrapingServiceTests() : base()
         {
@@ -30,50 +30,34 @@ namespace Webscraper.Application.UnitTests
 
             IMapper mapper = mappingConfig.CreateMapper();
 
-            var mockFactory = new Mock<IHttpClientFactory>();
+            
 
-            _scrapingService = new ApplicationRunner(_unitOfWork, scraperFactory, mapper, mockFactory.Object);
+            _scrapingService = new CvOnlineScrapeService(_httpClientFactory, scraperFactory, _unitOfWork);
         }
 
         [Test]
-        public void UpdateUrls_HavingDublicates_ShouldDetectDublicates()
+        public void BasicTest()
         {
-            //var entity = new JobUrl()
-            //{
-            //    Url = "Delfi.lt"
-            //};
+            var result = await subjectUnderTest
+   .GetSomethingRemoteAsync('api/test/whatever');
 
-            //IList<JobUrl> collectedEntities = new List<JobUrl>();
-            //collectedEntities.Add(entity);
-            //collectedEntities.Add(entity);
+            // ASSERT
+            result.Should().NotBeNull(); // this is fluent assertions here...
+            result.Id.Should().Be(1);
 
-            //_scrapingService.UpdateUrls(collectedEntities);
+            // also check the 'http' call was like we expected it
+            var expectedUri = new Uri("http://test.com/api/test/whatever");
 
-            //_context.JobUrls.Count().Should().Be(1);
+            handlerMock.Protected().Verify(
+               "SendAsync",
+               Times.Exactly(1), // we expected a single external request
+               ItExpr.Is<HttpRequestMessage>(req =>
+                  req.Method == HttpMethod.Get  // we expected a GET request
+                  && req.RequestUri == expectedUri // to this uri
+               ),
+               ItExpr.IsAny<CancellationToken>()
+            );
         }
-
-        [Test]
-        public void UpdateUrls_HavingMultipleEntities_MultipleEntitiesShouldBeSaved()
-        {
-            //var entity1 = new JobUrl()
-            //{
-            //    Url = "Delfi.lt"
-            //};
-
-            //var entity2 = new JobUrl()
-            //{
-            //    Url = "google.lt"
-            //};
-
-            //IList<JobUrl> collectedEntities = new List<JobUrl>();
-            //collectedEntities.Add(entity1);
-            //collectedEntities.Add(entity2);
-
-            //_scrapingService.UpdateUrls(collectedEntities);
-
-            //_context.JobUrls.Count().Should().Be(2);
-        }
-
        
     }
 }
