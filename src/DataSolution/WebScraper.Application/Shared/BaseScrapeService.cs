@@ -17,7 +17,7 @@ using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Shared
 {
-    public class BaseScrapeService
+    public abstract class BaseScrapeService
     {
         protected IHttpClientFactory _httpClientFactory;
         protected IScraperFactory _scraperFactory;
@@ -28,6 +28,8 @@ namespace WebScraper.Application.Shared
         protected const int _sleepTime = 300;
         protected const int _scrapeLimit = 200;
 
+        protected BaseHtmlScraper _htmlScraper;
+
         public BaseScrapeService(JobPortals portalName, IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory,  IUnitOfWork unitOfWork)
         {
             _scraperFactory = scraperFactory;
@@ -36,51 +38,13 @@ namespace WebScraper.Application.Shared
 
             _scraper = _scraperFactory.BuildScraper(portalName);
             _analyser = _scraperFactory.BuildAnalyser(portalName);
+
+            _htmlScraper = new BaseHtmlScraper(_httpClientFactory.CreateClient(), _scraper);
         }
 
-        public List<JobUrl> ExtractPageUrls(string baseUrl)
-        {
+        public List<JobUrl> ExtractPageUrls(string baseUrl) => _htmlScraper.ExtractPageUrls(baseUrl);
 
-            var webClient = _httpClientFactory.CreateClient();
-            int pageCounter = 0;
-            var continueParsing = true;
-            var results = new List<JobUrl>();
-
-
-            while (continueParsing && pageCounter < 20)
-            {
-                string html;
-                try
-                {
-                    //Have some delay in parsing
-                    Thread.Sleep(_sleepTime);
-
-                    var validUrl = baseUrl + pageCounter;
-                    pageCounter += 1;
-                    Log.Information("Scraping page {pageIndex}", pageCounter);
-
-                    html = webClient.GetStringAsync(validUrl).Result;
-                }
-                catch (Exception)
-                {
-                    // html is empty
-                    html = "";
-                }
-
-                var pageResults = _scraper.ExtractPageUrls(html);
-
-                // no more found - stop parsing
-                if (!pageResults.Any())
-                {
-                    Log.Information("Finished scraping page urls");
-                    continueParsing = false;
-                }
-
-                results.AddRange(pageResults);
-            }
-
-            return results;
-        }
+        public string ScrapeJobHtml(string url, string contentId) => _htmlScraper.ScrapeJobHtml(url, contentId);
 
         public void ProcessSalaries()
         {
@@ -132,26 +96,7 @@ namespace WebScraper.Application.Shared
             }
         }
 
-        public string ScrapeJobHtml(string url, string contentId)
-        {
-            try
-            {
-                var webClient = _httpClientFactory.CreateClient();
-                var html = webClient.GetStringAsync(url).Result;
-                var htmlDocument = new HtmlDocument();
-                htmlDocument.LoadHtml(html);
-
-                var resultNode = htmlDocument.DocumentNode.SelectSingleNode($"//div[contains(@id, '{contentId}')]");
-
-                if (resultNode != null)
-                    return resultNode.InnerHtml;
-                return "";
-            }
-
-            catch (Exception ex)
-            {
-                return "";
-            }
-        }
+       
+        
     }
 }
