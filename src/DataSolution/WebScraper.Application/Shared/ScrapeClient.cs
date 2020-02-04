@@ -11,7 +11,7 @@ using WebScraper.Core.Shared;
 
 namespace WebScraper.Application
 {
-    public class BaseHtmlScraper
+    public class ScrapeClient
     {
         private readonly HttpClient _httpClient;
         private readonly IScraper _scraper;
@@ -19,7 +19,7 @@ namespace WebScraper.Application
         protected const int _sleepTime = 300;
         protected const int _scrapeLimit = 200;
 
-        public BaseHtmlScraper(HttpClient httpClient, IScraper scraper)
+        public ScrapeClient(HttpClient httpClient, IScraper scraper)
         {
             _httpClient = httpClient;
             _scraper = scraper;
@@ -27,7 +27,6 @@ namespace WebScraper.Application
 
         public List<JobUrl> ExtractPageUrls(string baseUrl)
         {
-
 
             int pageCounter = 0;
             var continueParsing = true;

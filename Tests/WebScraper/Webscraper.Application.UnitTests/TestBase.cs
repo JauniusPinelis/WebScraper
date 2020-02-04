@@ -13,13 +13,15 @@ using WebScraper.Infrastructure.Repositories;
 
 namespace Webscraper.Application.UnitTests
 {
-    public class ContextTestBase : IDisposable
+    public class TestBase : IDisposable
     {
         protected readonly DataContext _context;
         protected readonly IUnitOfWork _unitOfWork;
         protected readonly IHttpClientFactory _httpClientFactory;
 
-        public ContextTestBase()
+        
+
+        public TestBase()
         {
             _context = ContextFactory.CreateTestDataContext();
             _unitOfWork = ContextFactory.CreateTestUnitOfWork();

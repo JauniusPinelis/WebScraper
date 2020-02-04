@@ -32,10 +32,7 @@ namespace WebScraper.Infrastructure.Repositories
             return table.ToList();
         }
 
-        public IEnumerable<T> GetByPortal()
-        {
-            table.Where(t => t.)
-        }
+      
 
         public T GetById(object id)
         {

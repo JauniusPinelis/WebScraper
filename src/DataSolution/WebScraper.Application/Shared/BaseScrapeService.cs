@@ -28,7 +28,7 @@ namespace WebScraper.Application.Shared
         protected const int _sleepTime = 300;
         protected const int _scrapeLimit = 200;
 
-        protected BaseHtmlScraper _htmlScraper;
+        protected ScrapeClient _htmlScraper;
 
         public BaseScrapeService(JobPortals portalName, IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory,  IUnitOfWork unitOfWork)
         {
@@ -39,7 +39,7 @@ namespace WebScraper.Application.Shared
             _scraper = _scraperFactory.BuildScraper(portalName);
             _analyser = _scraperFactory.BuildAnalyser(portalName);
 
-            _htmlScraper = new BaseHtmlScraper(_httpClientFactory.CreateClient(), _scraper);
+            _htmlScraper = new ScrapeClient(_httpClientFactory.CreateClient(), _scraper);
         }
 
         public List<JobUrl> ExtractPageUrls(string baseUrl) => _htmlScraper.ExtractPageUrls(baseUrl);
