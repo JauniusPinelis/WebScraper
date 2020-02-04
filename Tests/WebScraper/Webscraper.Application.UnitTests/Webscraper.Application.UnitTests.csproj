@@ -22,5 +22,14 @@
     <ProjectReference Include="..\..\..\src\DataSolution\WebScraper.Infrastructure\WebScraper.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TestData\CvOnlineHtmlData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\CvOnlineTestPageData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
  
 </Project>

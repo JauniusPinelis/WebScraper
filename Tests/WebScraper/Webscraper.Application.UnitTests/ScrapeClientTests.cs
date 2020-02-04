@@ -19,11 +19,11 @@ namespace Webscraper.Application.UnitTests
         }
 
         [Test]
-        public void BasicTest()
+        public void ExtractPageUrls_GivenCvonlineURlsPage_ShouldReturnCorrectAmountOfUrls()
         {
-            var results = _cvOnlineScrapeClient.ExtractPageUrls("http://test.com/");
+            var results = _cvOnlineScrapeClient.ExtractPageUrls("https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=1");
 
-            results.Should().NotBeEmpty();
+            results.Count.Should().Be(1080);
         }
     }
 }

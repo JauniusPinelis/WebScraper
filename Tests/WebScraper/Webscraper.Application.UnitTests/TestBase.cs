@@ -1,7 +1,9 @@
 ﻿using Moq;
 using Moq.Protected;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -33,8 +35,12 @@ namespace Webscraper.Application.UnitTests
             ContextFactory.Destroy(_context);
         }
 
+        
+
         private IHttpClientFactory GenerateTestHttpClientFactory()
         {
+            var content = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\TestData\\CvOnlineTestPageData.txt");
+
             var mockFactory = new Mock<IHttpClientFactory>();
 
             var handlerMock = new Mock<HttpMessageHandler>(MockBehavior.Strict);
@@ -50,7 +56,7 @@ namespace Webscraper.Application.UnitTests
                .ReturnsAsync(new HttpResponseMessage()
                {
                    StatusCode = HttpStatusCode.OK,
-                   Content = new StringContent("[{'id':1,'value':'1'}]"),
+                   Content = new StringContent(content),
                })
                .Verifiable();
 
