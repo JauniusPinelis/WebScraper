@@ -1,0 +1,1219 @@
+﻿<tbody data-ng-controller="BookmarkCtrl" data-ng-init="init(false)" class="ng-scope">
+						<tr id="s344133039" class="data premium">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">1.324</span></div>
+	</td>
+	<td>
+		<div id="BM344133039" class="Bookmark" data-ng-class="bookmarked(344133039)" data-ng-click="bookmark(344133039)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/administravimo-darbai/administravimo-veiklu-koordinavimo-grupes-analitikas-e-vilniuje-1-344133039/?sri=0" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Administravimo veiklų koordinavimo grupės analitikas (-ė)</a>
+			<a href="/lietuvos-gelezinkeliai-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">Lietuvos geležinkeliai, AB</span></a>
+			<span itemprop="baseSalary">1.430 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-11-08">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-30T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/administravimo-darbai/administravimo-veiklu-koordinavimo-grupes-analitikas-e-vilniuje-1-344133039">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 15 d.</td>
+	<td>
+		<div><img src="/logos/312870832/thumbnails/image001-thumb0.jpg" alt="Lietuvos geležinkeliai, AB"></div>
+	</td>
+</tr>
+<tr id="s344133099" class="data premium distinct">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">1.295</span></div>
+	</td>
+	<td>
+		<div id="BM344133099" class="Bookmark" data-ng-class="bookmarked(344133099)" data-ng-click="bookmark(344133099)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/koordinatorius-e-vilniuje-1-344133099/?sri=1" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Koordinatorius (-ė)</a>
+			<a href="/lietuvos-gelezinkeliai-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">Lietuvos geležinkeliai, AB</span></a>
+			<span itemprop="baseSalary">1.935 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-11-08">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-28T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/koordinatorius-e-vilniuje-1-344133099">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 13 d.</td>
+	<td>
+		<div><img src="/logos/312870832/thumbnails/image001-thumb0.jpg" alt="Lietuvos geležinkeliai, AB"></div>
+	</td>
+</tr>
+<tr id="s344134038" class="data premium distinct">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">922</span></div>
+	</td>
+	<td>
+		<div id="BM344134038" class="Bookmark" data-ng-class="bookmarked(344134038)" data-ng-click="bookmark(344134038)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/web-developer-vilniuje-1-344134038/?sri=2" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Web Developer</a>
+			<a href="/lietuvos-gelezinkeliai-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">Lietuvos geležinkeliai, AB</span></a>
+			<span itemprop="baseSalary">2.525 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-11-08">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-29T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/web-developer-vilniuje-1-344134038">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 14 d.</td>
+	<td>
+		<div><img src="/logos/312870832/thumbnails/image001-thumb0.jpg" alt="Lietuvos geležinkeliai, AB"></div>
+	</td>
+</tr>
+<tr id="s344134056" class="data premium distinct">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">949</span></div>
+	</td>
+	<td>
+		<div id="BM344134056" class="Bookmark" data-ng-class="bookmarked(344134056)" data-ng-click="bookmark(344134056)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/web-developer-designer-vilniuje-1-344134056/?sri=3" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Web Developer/ Designer</a>
+			<a href="/lietuvos-gelezinkeliai-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">Lietuvos geležinkeliai, AB</span></a>
+			<span itemprop="baseSalary">2.525 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-11-08">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-29T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/web-developer-designer-vilniuje-1-344134056">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 14 d.</td>
+	<td>
+		<div><img src="/logos/312870832/thumbnails/image001-thumb0.jpg" alt="Lietuvos geležinkeliai, AB"></div>
+	</td>
+</tr>
+<tr id="s344240728" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">903</span></div>
+	</td>
+	<td>
+		<div id="BM344240728" class="Bookmark" data-ng-class="bookmarked(344240728)" data-ng-click="bookmark(344240728)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/gamybos-pramones-darbai/gis-inzinierius-e-vilniuje-1-344240728/?sri=4" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">GIS INŽINIERIUS (-Ė)</a>
+			<a href="/vilniaus-vandenys-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">"Vilniaus vandenys"</span></a>
+			<span itemprop="baseSalary">Nuo 1.289 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-11-12">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-12-12T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/gamybos-pramones-darbai/gis-inzinierius-e-vilniuje-1-344240728">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 27 d.</td>
+	<td>
+		<div><img src="/logos/236842606/thumbnails/Vilniaus_vandenys_log2017N-thumb0.png" alt="&quot;Vilniaus vandenys&quot;"></div>
+	</td>
+</tr>
+<tr id="s321751258" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">12.987</span></div>
+	</td>
+	<td>
+		<div id="BM321751258" class="Bookmark" data-ng-class="bookmarked(321751258)" data-ng-click="bookmark(321751258)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/senior-java-developer-inschool-project-vilniuje-1-321751258/?sri=5" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Senior Java Developer (InSchool Project)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.975 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2018-10-11">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/senior-java-developer-inschool-project-vilniuje-1-321751258">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s342772641" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">2.715</span></div>
+	</td>
+	<td>
+		<div id="BM342772641" class="Bookmark" data-ng-class="bookmarked(342772641)" data-ng-click="bookmark(342772641)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/ios-developer-wallmob-project-vilniuje-1-342772641/?sri=6" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">iOS Developer (Wallmob Project)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 1.258 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-10-03">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/ios-developer-wallmob-project-vilniuje-1-342772641">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337249201" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">7.002</span></div>
+	</td>
+	<td>
+		<div id="BM337249201" class="Bookmark" data-ng-class="bookmarked(337249201)" data-ng-click="bookmark(337249201)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/android-developer-watts-project-vilniuje-1-337249201/?sri=7" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Android Developer (Watts project)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.975 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-03">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/android-developer-watts-project-vilniuje-1-337249201">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337250238" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">5.709</span></div>
+	</td>
+	<td>
+		<div id="BM337250238" class="Bookmark" data-ng-class="bookmarked(337250238)" data-ng-click="bookmark(337250238)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/ios-developer-for-visma-scanner-project-vilniuje-1-337250238/?sri=8" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">iOS Developer for Visma Scanner project</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-03">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/ios-developer-for-visma-scanner-project-vilniuje-1-337250238">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337321862" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">6.473</span></div>
+	</td>
+	<td>
+		<div id="BM337321862" class="Bookmark" data-ng-class="bookmarked(337321862)" data-ng-click="bookmark(337321862)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/senior-qa-automation-engineer-inschool-project-vilniuje-1-337321862/?sri=9" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Senior QA Automation Engineer (InSchool Project)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.975 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-05">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/senior-qa-automation-engineer-inschool-project-vilniuje-1-337321862">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<!-- tr class="insert top-dotted">
+									<td colspan="6">
+										<div class="subscription-widget is-loading" data-ng-controller="SubscriptionWidgetCtrl" data-ng-init="init(null, {cities: [], departments: [1040]})" data-is-loading="loading" data-block-ui="subscriptionWidgetCtrl">
+								        	<form name="SubscriptionForm" class="form form-simple" data-ng-if="before()">
+								                <div class="form-group">
+								                	<div class="iblock"><span class="bold">IT, telekomunikacijų</span> srities darbo pasiūlymus noriu</div>
+									                <div class="iblock instant-select">
+						                                <input data-selectize="nameBeanConfig" data-options="getClassificationsOfPeriods()"
+															name="instant" data-ng-model="subscription.instant">
+							                        </div>
+							                        <div class="iblock">gauti į</div>
+							                        <div class="iblock validation-group email-group">
+							                            <input class="validation-input lh-32 h-32" type="text" name="email"
+							                            	data-ng-model="subscription.email" placeholder="šį el. pašto adresą" data-ng-focus="expand()"
+															validator="required,email" valid-method="submit" data-element-modifier="gridBox">
+						                        	</div>
+								                </div>
+								                
+								                <div class="clearfix" data-ng-show="expanded">
+									                <div class="form-group validation-group cities-group">
+									                	<div class="col-4">
+									                		<div class="control-classificator" data-click-outside="hideCitiesClassificator($event, 'cc01')">
+										                		<button type="button" class="btn-classificator validation-input" name="cities" data-ng-click="toggleCitiesClassificator()"
+																	data-ng-model="subscription.cities" validator="none" validation-field-reset-auto-on="click" data-element-modifier="gridBox">
+									                                <i class="sprite"></i>Domina šie miestai
+									                            </button>
+															    <div data-ng-show="isCitiesClassificatorSelected()">
+									                                <div data-cities-classificator-select="cc01" data-cities="subscription.cities" data-on-close="hideCitiesClassificator()"></div>
+									                            </div>
+									                            <div data-cities-classificator-tag="" data-cities="subscription.cities"></div>
+															</div>
+											            </div>
+											            <div class="col-4">
+											            	<div class="control-classificator" data-click-outside="hideDepartmentsClassificator($event, 'dc01')">
+									                        	<button type="button" class="fl btn-classificator" name="departments" data-ng-click="toggleDepartmentsClassificator()"
+									                        		data-ng-model="subscription.departments" validator="none" validation-field-reset-auto-on="click" data-element-modifier="gridBox">
+								                                    <i class="sprite"></i>Domina šios sritys
+								                                </button>
+								                                <div data-ng-show="isDepartmentsClassificatorSelected()">
+								                                    <div data-departaments-classificator-select="dc01"
+								                                        data-regular="subscription.regular"
+								                                        data-departments="subscription.departments"
+								                                        data-volunteer="subscription.volunteer"
+								                                        data-practice="subscription.practice"
+								                                        data-extra="subscription.extra"
+								                                        data-on-close="hideDepartmentsClassificator()"></div>
+								                                </div>
+								                                <div data-departaments-classificator-tag=""
+								                                     data-regular="subscription.regular"
+								                                     data-departments="subscription.departments"
+								                                     data-volunteer="subscription.volunteer"
+								                                     data-practice="subscription.practice"
+								                                     data-extra="subscription.extra"></div>
+															</div>
+									                    </div>
+									                    
+									                    <div class="col-3"> 
+										                    <div class="jsMoreChoice_toggle btn-moreChoice clearfix"
+									                    		data-ng-class="{'less': isNoMoreOptionsAvailable()}"
+									                    		data-ng-click="changeMoreOptionsAvailability()">
+										                        <div class="more inlineBlock">
+										                            <div class="down">
+										                                <div class="sprite icon-arrow-bot-black" style="display: inline-block!important"></div>
+										                                <span class="underline">Daugiau pasirinkimų</span>
+										                            </div>
+										                            <div class="up">
+										                                <div class="sprite icon-arrow-top-black" style="display: inline-block!important"></div>
+										                                <span class="underline">Mažiau pasirinkimų</span>
+										                            </div>
+										                        </div>
+										                    </div>
+														</div>
+													</div>
+													
+								                    <div class="form-group jsMoreChoice" data-ng-show="isNoMoreOptionsAvailable()">
+								                        <div class="col-4 field horizontal">
+									                        <input class="lh32 h32" type="text" name="companyNameWatch" data-ng-model="subscription.companyNameWatch" placeholder="Sekti šias įmones">
+														</div>
+														<div class="col-4 field horizontal">
+									                        <input class="lh32 h32" type="text" name="companyNameDeny" data-ng-model="subscription.companyNameDeny" placeholder="Blokuoti šias įmones">
+														</div>
+									                    <div class="col-4 field horizontal">
+									                        <div class="fl custom-select">
+									                        	<input data-selectize="labelConfig" data-options="companyTypes"
+									                            	name="companyType" data-ng-model="subscription.companyType">
+									                        </div>
+									                    </div>
+								                    </div>
+								                    
+								                </div>
+								                <div class="clearfix links">
+							                        <div class="fl submit w-155 mr-30">
+								                        <a class="button-order" href="javascript:void(0);" data-ng-click="addNewSubscription(SubscriptionForm)">Užsakyti</a>
+								                        <span class="fs-10">Nepraleisk geriausių pasiūlymų!</span>
+								                    </div>
+								                    <div class="fl letter-example">
+										                <a class="underline hover-t hover-red" data-ng-click="openExamplePopUp()">Laiško pavyzdys</a>
+										            </div>
+								                </div>
+								            </form>
+								            <div class="after-ordered after-load" data-ng-if="after()">
+								            	<div data-ng-show="emailSent()">
+													<span>Ką tik Jums išsiuntėme laišką el. paštu <span class="email" data-ng-bind="subscription.email"></span></span>
+													<span>Darbo pasiūlymai bus pradėti siųsti, kai šiame laiške paspausite ant nuorodos ir taip patvirtinsite savo pasirinkimą.</span>
+												</div>
+												<div data-ng-show="!emailSent()">
+													<span>Darbo pasiūlymai bus pradėti siųsti el. paštu <span class="email" data-ng-bind="subscription.email"></span></span>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr -->
+								<tr class="insert">
+									<td colspan="6">
+										<div id="suggIns">
+											<span>IT, telekomunikacijų</span> srities darbo pasiūlymus noriu
+											<div class="iblock">
+												<div id="suggestDD">
+													<ul>
+														<li class="has-sub last"><a href="#">Kasdien</a>
+															<ul>
+																<li id="suggestDD0"><a href="#" data-field-value="0">Kasdien</a></li>
+																<li id="suggestDD2"><a href="#" data-field-value="2">Kas 7 d.</a></li>
+																<li id="suggestDD3"><a href="#" data-field-value="3">Kas 14 d.</a></li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</div>
+											gauti e.paštu
+											<div><a href="/anonymous/subscription/email.do?instant=0&amp;departments=1040">Užsakyti</a>Nepraleisk geriausių pasiūlymų!</div>
+										</div>
+									</td>
+								</tr>
+						<tr id="s337249175" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">6.179</span></div>
+	</td>
+	<td>
+		<div id="BM337249175" class="Bookmark" data-ng-class="bookmarked(337249175)" data-ng-click="bookmark(337249175)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a class="long" href="/it-telekomunikaciju-darbai/ms-dynamics-365-crm-technical-consultant-vilniuje-kaune-1-337249175/?sri=10" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">MS Dynamics 365 (CRM) Technical Consultant</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 1.258 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius, Kaunas">
+			<meta itemprop="datePosted" content="2019-07-03">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/ms-dynamics-365-crm-technical-consultant-vilniuje-kaune-1-337249175">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+<a href="/darbas-kaune">Kaunas</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337284942" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">6.200</span></div>
+	</td>
+	<td>
+		<div id="BM337284942" class="Bookmark" data-ng-class="bookmarked(337284942)" data-ng-click="bookmark(337284942)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/ios-developer-watts-project-vilniuje-1-337284942/?sri=11" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">iOS Developer (Watts project)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 1.258 € iki 3.140 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-04">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/ios-developer-watts-project-vilniuje-1-337284942">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337284948" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">5.987</span></div>
+	</td>
+	<td>
+		<div id="BM337284948" class="Bookmark" data-ng-class="bookmarked(337284948)" data-ng-click="bookmark(337284948)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/scala-developer-vilniuje-1-337284948/?sri=12" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Scala Developer</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-04">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/scala-developer-vilniuje-1-337284948">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s342643488" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">3.084</span></div>
+	</td>
+	<td>
+		<div id="BM342643488" class="Bookmark" data-ng-class="bookmarked(342643488)" data-ng-click="bookmark(342643488)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/full-stack-netjavascript-developer-digital-illustrated-team-vilniuje-1-342643488/?sri=13" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Full-stack (.NET/Javascript) Developer (Digital Illustrated Team)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-09-30">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/full-stack-netjavascript-developer-digital-illustrated-team-vilniuje-1-342643488">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337284915" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">5.608</span></div>
+	</td>
+	<td>
+		<div id="BM337284915" class="Bookmark" data-ng-class="bookmarked(337284915)" data-ng-click="bookmark(337284915)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/java-developer-expense-project-vilniuje-1-337284915/?sri=14" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Java Developer (Expense Project)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-04">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/java-developer-expense-project-vilniuje-1-337284915">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s343224163" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">1.787</span></div>
+	</td>
+	<td>
+		<div id="BM343224163" class="Bookmark" data-ng-class="bookmarked(343224163)" data-ng-click="bookmark(343224163)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/technical&nbsp;retail&nbsp;product&nbsp;consultant-vilniuje-1-343224163/?sri=15" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Technical&nbsp;Retail&nbsp;Product&nbsp;Consultant</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-10-11">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/technical&nbsp;retail&nbsp;product&nbsp;consultant-vilniuje-1-343224163">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337788434" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">5.467</span></div>
+	</td>
+	<td>
+		<div id="BM337788434" class="Bookmark" data-ng-class="bookmarked(337788434)" data-ng-click="bookmark(337788434)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/full-stack-netjavascript-developer-episerver-team-vilniuje-1-337788434/?sri=16" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Full-stack (.NET/Javascript) Developer (Episerver Team)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 3.140 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-19">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/full-stack-netjavascript-developer-episerver-team-vilniuje-1-337788434">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337030708" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">7.098</span></div>
+	</td>
+	<td>
+		<div id="BM337030708" class="Bookmark" data-ng-class="bookmarked(337030708)" data-ng-click="bookmark(337030708)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/penetration-tester-vilniuje-1-337030708/?sri=17" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Penetration Tester</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 1.258 € iki 3.140 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-06-27">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/penetration-tester-vilniuje-1-337030708">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s342802819" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">2.707</span></div>
+	</td>
+	<td>
+		<div id="BM342802819" class="Bookmark" data-ng-class="bookmarked(342802819)" data-ng-click="bookmark(342802819)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/front-end-developer-azets-project-vilniuje-1-342802819/?sri=18" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Front-end Developer (Azets project)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-10-04">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/front-end-developer-azets-project-vilniuje-1-342802819">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337250670" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">7.772</span></div>
+	</td>
+	<td>
+		<div id="BM337250670" class="Bookmark" data-ng-class="bookmarked(337250670)" data-ng-click="bookmark(337250670)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/web-developer-for-e-commerce-project-kaune-1-337250670/?sri=19" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Web Developer for E-commerce Project</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Kaunas">
+			<meta itemprop="datePosted" content="2019-07-03">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/web-developer-for-e-commerce-project-kaune-1-337250670">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-kaune">Kaunas</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337788235" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">5.090</span></div>
+	</td>
+	<td>
+		<div id="BM337788235" class="Bookmark" data-ng-class="bookmarked(337788235)" data-ng-click="bookmark(337788235)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/senior-active-directory-engineer-vilniuje-1-337788235/?sri=20" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Senior Active Directory Engineer</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.975 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-19">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/senior-active-directory-engineer-vilniuje-1-337788235">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s343696681" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">1.441</span></div>
+	</td>
+	<td>
+		<div id="BM343696681" class="Bookmark" data-ng-class="bookmarked(343696681)" data-ng-click="bookmark(343696681)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/system-engineer-for-endpoint-protection-vilniuje-1-343696681/?sri=21" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">System Engineer for Endpoint Protection</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-10-25">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/system-engineer-for-endpoint-protection-vilniuje-1-343696681">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337250634" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">5.661</span></div>
+	</td>
+	<td>
+		<div id="BM337250634" class="Bookmark" data-ng-class="bookmarked(337250634)" data-ng-click="bookmark(337250634)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/quality-assurance-engineer-extenda-retail-vilniuje-1-337250634/?sri=22" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Quality Assurance Engineer (Extenda Retail)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 1.258 € iki 3.140 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-03">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/quality-assurance-engineer-extenda-retail-vilniuje-1-337250634">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337788271" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">5.187</span></div>
+	</td>
+	<td>
+		<div id="BM337788271" class="Bookmark" data-ng-class="bookmarked(337788271)" data-ng-click="bookmark(337788271)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/front-end-developer-episerver-team-vilniuje-1-337788271/?sri=23" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Front-end Developer (Episerver Team)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 3.140 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-19">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/front-end-developer-episerver-team-vilniuje-1-337788271">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337788261" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">5.231</span></div>
+	</td>
+	<td>
+		<div id="BM337788261" class="Bookmark" data-ng-class="bookmarked(337788261)" data-ng-click="bookmark(337788261)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/quality-assurance-engineer-admincontrol-project-vilniuje-1-337788261/?sri=24" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Quality Assurance Engineer (AdminControl Project)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 3.140 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-19">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/quality-assurance-engineer-admincontrol-project-vilniuje-1-337788261">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s343220583" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">2.010</span></div>
+	</td>
+	<td>
+		<div id="BM343220583" class="Bookmark" data-ng-class="bookmarked(343220583)" data-ng-click="bookmark(343220583)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/devops-engineer-for-azets-team-vilniuje-1-343220583/?sri=25" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">DevOps Engineer for Azets Team</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-10-11">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/devops-engineer-for-azets-team-vilniuje-1-343220583">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s313299524" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">39.028</span></div>
+	</td>
+	<td>
+		<div id="BM313299524" class="Bookmark" data-ng-class="bookmarked(313299524)" data-ng-click="bookmark(313299524)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/php-developer-e-commerce-project-kaune-1-313299524/?sri=26" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">PHP Developer (E-commerce Project)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Kaunas">
+			<meta itemprop="datePosted" content="2018-02-15">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/php-developer-e-commerce-project-kaune-1-313299524">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-kaune">Kaunas</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s343224482" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">1.911</span></div>
+	</td>
+	<td>
+		<div id="BM343224482" class="Bookmark" data-ng-class="bookmarked(343224482)" data-ng-click="bookmark(343224482)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a class="long" href="/it-telekomunikaciju-darbai/ms-dynamics-365-crm-developer-vilniuje-kaune-1-343224482/?sri=27" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">MS Dynamics 365 (CRM) Developer</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 1.258 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius, Kaunas">
+			<meta itemprop="datePosted" content="2019-10-11">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/ms-dynamics-365-crm-developer-vilniuje-kaune-1-343224482">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+<a href="/darbas-kaune">Kaunas</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s343363764" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">1.851</span></div>
+	</td>
+	<td>
+		<div id="BM343363764" class="Bookmark" data-ng-class="bookmarked(343363764)" data-ng-click="bookmark(343363764)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/paid-java-development-internship-vilniuje-1-343363764/?sri=28" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Paid Java Development Internship</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">555 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-10-16">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/paid-java-development-internship-vilniuje-1-343363764">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s343446746" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">1.884</span></div>
+	</td>
+	<td>
+		<div id="BM343446746" class="Bookmark" data-ng-class="bookmarked(343446746)" data-ng-click="bookmark(343446746)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/front-end-developer-for-inschool-project-vilniuje-1-343446746/?sri=29" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Front-end Developer for InSchool Project</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-10-18">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/front-end-developer-for-inschool-project-vilniuje-1-343446746">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s343696632" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">1.340</span></div>
+	</td>
+	<td>
+		<div id="BM343696632" class="Bookmark" data-ng-class="bookmarked(343696632)" data-ng-click="bookmark(343696632)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a class="long" href="/it-telekomunikaciju-darbai/bi-developer-vilniuje-kaune-1-343696632/?sri=30" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">BI Developer</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius, Kaunas">
+			<meta itemprop="datePosted" content="2019-10-25">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/bi-developer-vilniuje-kaune-1-343696632">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+<a href="/darbas-kaune">Kaunas</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s342416419" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">2.670</span></div>
+	</td>
+	<td>
+		<div id="BM342416419" class="Bookmark" data-ng-class="bookmarked(342416419)" data-ng-click="bookmark(342416419)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/quality-assurance-engineer-visma&nbsp;care-project-vilniuje-1-342416419/?sri=31" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Quality Assurance Engineer (Visma&nbsp;Care Project)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 2.128 € iki 5.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-09-23">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/quality-assurance-engineer-visma&nbsp;care-project-vilniuje-1-342416419">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s337285138" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">6.300</span></div>
+	</td>
+	<td>
+		<div id="BM337285138" class="Bookmark" data-ng-class="bookmarked(337285138)" data-ng-click="bookmark(337285138)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/net-developer-boots-project-vilniuje-1-337285138/?sri=32" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">.NET Developer (Boots project)</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">Nuo 1.258 € iki 3.140 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-07-04">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-25T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/net-developer-boots-project-vilniuje-1-337285138">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 10 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s343659148" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">1.707</span></div>
+	</td>
+	<td>
+		<div id="BM343659148" class="Bookmark" data-ng-class="bookmarked(343659148)" data-ng-click="bookmark(343659148)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/paid-mobile-development-iosandroid-internship-vilniuje-1-343659148/?sri=33" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Paid Mobile Development (iOS/Android) Internship</a>
+			<a href="/visma-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB Visma Lietuva</span></a>
+			<span itemprop="baseSalary">555 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-10-24">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-12-02T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/paid-mobile-development-iosandroid-internship-vilniuje-1-343659148">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 17 d.</td>
+	<td>
+		<div><img src="/logos/230149835/thumbnails/Visma_small2-thumb0.png" alt="UAB Visma Lietuva"></div>
+	</td>
+</tr>
+<tr id="s343768806" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">2.089</span></div>
+	</td>
+	<td>
+		<div id="BM343768806" class="Bookmark" data-ng-class="bookmarked(343768806)" data-ng-click="bookmark(343768806)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/jaunesnysis-informacines-saugos-specialistas-e-vilniuje-1-343768806/?sri=34" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Jaunesnysis informacinės saugos specialistas/-ė</a>
+			<a href="/cognit-consult-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">COGNIT CONSULT</span></a>
+			<span itemprop="baseSalary">Nuo 1.250 € iki 1.950 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-10-28">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-23T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/jaunesnysis-informacines-saugos-specialistas-e-vilniuje-1-343768806">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 8 d.</td>
+	<td>
+		<div><img src="/logos/343623361/thumbnails/Cognit_Consult_Logo_h-thumb0.png" alt="COGNIT CONSULT"></div>
+	</td>
+</tr>
+<tr id="s344357555" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Vakar<span class="visited">211</span></div>
+	</td>
+	<td>
+		<div id="BM344357555" class="Bookmark" data-ng-class="bookmarked(344357555)" data-ng-click="bookmark(344357555)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/net-programuotojas-a-vilniuje-1-344357555/?sri=35" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">.NET programuotojas(-a)</a>
+			<a href="/alna-software-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">Alna Software, UAB</span></a>
+			<span itemprop="baseSalary">Nuo 2.200 € iki 3.000 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-11-15">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-12-15T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/net-programuotojas-a-vilniuje-1-344357555">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 30 d.</td>
+	<td>
+		<div><img src="/logos/327618359/thumbnails/alna-software-thumb0.jpg" alt="Alna Software, UAB"></div>
+	</td>
+</tr>
+<tr id="s344325377" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Prieš 2 d.<span class="visited">260</span></div>
+	</td>
+	<td>
+		<div id="BM344325377" class="Bookmark" data-ng-class="bookmarked(344325377)" data-ng-click="bookmark(344325377)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/it-e-commerce-solutions-specialist-vilniuje-1-344325377/?sri=36" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">IT E-commerce Solutions Specialist</a>
+			<a href="/rimi-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">UAB RIMI Lietuva</span></a>
+			<meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-11-14">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-12-14T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/it-e-commerce-solutions-specialist-vilniuje-1-344325377">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 29 d.</td>
+	<td>
+		<div><img src="/logos/2101551/thumbnails/Rimi-logo_Cia-vertinamas-tavo-pasirinkimas-thumb0.jpg" alt="UAB RIMI Lietuva"></div>
+	</td>
+</tr>
+<tr id="s344324329" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Prieš 2 d.<span class="visited">441</span></div>
+	</td>
+	<td>
+		<div id="BM344324329" class="Bookmark" data-ng-class="bookmarked(344324329)" data-ng-click="bookmark(344324329)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/prekybos-salono-konsultantas-e-anyksciuose-1-344324329/?sri=37" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Prekybos salono konsultantas (-ė) Anykščiuose</a>
+			<a href="/telia-lietuva-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">Telia Lietuva</span></a>
+			<meta itemprop="jobLocation" content="Anykščiai">
+			<meta itemprop="datePosted" content="2019-11-14">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-12-04T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/prekybos-salono-konsultantas-e-anyksciuose-1-344324329">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-anyksciuose">Anykščiai</a>
+</td>
+	<td>
+		Liko 19 d.</td>
+	<td>
+		<div><img src="/logos/254807331/thumbnails/tgd-thumb0.png" alt="Telia Lietuva"></div>
+	</td>
+</tr>
+<tr id="s344322878" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Prieš 2 d.<span class="visited">287</span></div>
+	</td>
+	<td>
+		<div id="BM344322878" class="Bookmark" data-ng-class="bookmarked(344322878)" data-ng-click="bookmark(344322878)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/senior-ios-developer-vilniuje-1-344322878/?sri=38" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">Senior iOS Developer</a>
+			<a href="/moneybase-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">Moneybase</span></a>
+			<span itemprop="baseSalary">Nuo 4.132 € iki 5.785 €</span><meta itemprop="jobLocation" content="Vilnius">
+			<meta itemprop="datePosted" content="2019-11-14">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-12-14T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/senior-ios-developer-vilniuje-1-344322878">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-vilniuje">Vilnius</a>
+</td>
+	<td>
+		Liko 29 d.</td>
+	<td>
+		<div><img src="/logos/219224559/thumbnails/Moneybase-thumb0.PNG" alt="Moneybase"></div>
+	</td>
+</tr>
+<tr id="s343658063" class="data">
+	<td>
+		<div title="Peržiūrų skaičius">Prieš 2 d.<span class="visited">1.553</span></div>
+	</td>
+	<td>
+		<div id="BM343658063" class="Bookmark" data-ng-class="bookmarked(343658063)" data-ng-click="bookmark(343658063)"><img src="/mercury/img/x.gif" width="14" height="14" alt="Įsiminti" title="Įsiminti"></div>
+	</td>
+	<td>
+		<p itemscope="" itemtype="http://schema.org/JobPosting">
+			<a href="/it-telekomunikaciju-darbai/java-programuotojas-kaune-1-343658063/?sri=39" target="_blank" itemprop="title" onclick="$(this).parents('tr.data').addClass('read');">JAVA PROGRAMUOTOJAS KAUNE</a>
+			<a href="/lietuvos-centrine-kredito-unija-lcku-darbo-skelbimai" target="_blank" itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">Lietuvos centrinė kredito unija (LCKU)</span></a>
+			<span itemprop="baseSalary">Nuo 1.900 € iki 3.100 €</span><meta itemprop="jobLocation" content="Kaunas">
+			<meta itemprop="datePosted" content="2019-10-24">
+			<meta itemprop="employmentType" content="FULL_TIME">
+			<meta itemprop="validThrough" content="2019-11-24T00:00:00.000">
+			<meta itemprop="url" content="https://www.cv.lt/it-telekomunikaciju-darbai/java-programuotojas-kaune-1-343658063">
+		</p>
+	</td>
+	<td>
+<a href="/darbas-kaune">Kaunas</a>
+</td>
+	<td>
+		Liko 9 d.</td>
+	<td>
+		<div><img src="/logos/274512851/thumbnails/image001-thumb0.png" alt="Lietuvos centrinė kredito unija (LCKU)"></div>
+	</td>
+</tr>
+</tbody>

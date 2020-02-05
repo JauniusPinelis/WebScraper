@@ -13,7 +13,7 @@ namespace WebScraper.Core.Shared
 
         public List<string> RemoveZeros(List<string> data) => data.Where(d => !d.All(v => v.Equals('0'))).ToList();
 
-        public Salary GetSalary(string salary)
+        public virtual Salary GetSalary(string salary)
         {
             if (!HasNumber(salary))
                 return null; //No salary information in the advertisements

@@ -19,7 +19,7 @@ namespace Webscraper.Application.UnitTests
     {
         protected readonly DataContext _context;
         protected readonly IUnitOfWork _unitOfWork;
-        protected readonly IHttpClientFactory _httpClientFactory;
+        protected IHttpClientFactory _httpClientFactory;
 
         
 
@@ -27,7 +27,7 @@ namespace Webscraper.Application.UnitTests
         {
             _context = ContextFactory.CreateTestDataContext();
             _unitOfWork = ContextFactory.CreateTestUnitOfWork();
-            _httpClientFactory = GenerateTestHttpClientFactory();
+            _httpClientFactory = GenerateTestHttpClientFactory("");
         }
 
         public void Dispose()
@@ -35,11 +35,29 @@ namespace Webscraper.Application.UnitTests
             ContextFactory.Destroy(_context);
         }
 
-        
-
-        private IHttpClientFactory GenerateTestHttpClientFactory()
+        public void SetCvOnlineContent()
         {
             var content = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\TestData\\CvOnlineTestPageData.txt");
+            _httpClientFactory = GenerateTestHttpClientFactory(content);
+        }
+
+        public void SetCvBankasContent()
+        {
+            var content = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\TestData\\CvBankasTestPageData.txt");
+            _httpClientFactory = GenerateTestHttpClientFactory(content);
+        }
+
+        public void SetCvLtContent()
+        {
+            var content = File.ReadAllText(TestContext.CurrentContext.TestDirectory + "\\TestData\\CvLtTestPageData.txt");
+            _httpClientFactory = GenerateTestHttpClientFactory(content);
+        }
+            
+        
+
+        private IHttpClientFactory GenerateTestHttpClientFactory(string content)
+        {
+            
 
             var mockFactory = new Mock<IHttpClientFactory>();
 
@@ -63,7 +81,7 @@ namespace Webscraper.Application.UnitTests
             // use real http client with mocked handler here
             var httpClient = new HttpClient(handlerMock.Object)
             {
-                BaseAddress = new Uri("http://test.com/"),
+                BaseAddress = new Uri("https://test.com"),
             };
 
             mockFactory.Setup(_ => _.CreateClient(It.IsAny<string>())).Returns(httpClient);

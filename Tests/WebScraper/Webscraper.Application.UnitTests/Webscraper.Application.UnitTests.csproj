@@ -23,6 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="TestData\CvBankasTestPageData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\CvLtTestPageData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="TestData\CvOnlineHtmlData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
