@@ -18,11 +18,11 @@ using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Services
 {
-    public class CvOnlineScrapeService : BaseScrapeService, IScrapeService
+    public class CvOnlineDataService : BaseScrapeService, IScrapeService
     {
         private readonly IParser _parser;
 
-        public CvOnlineScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
+        public CvOnlineDataService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
             : base(JobPortals.CvOnline, httpClientFactory, scraperFactory, unitOfWork)
         {
             _parser = new CvOnlineParser();
@@ -30,10 +30,18 @@ namespace WebScraper.Application.Services
 
         public void Run()
         {
-            //ScrapePageUrls();
-            //ScrapePageInfos();
-            //ScrapePageTags();
-            //ProcessSalaries();
+            ScrapePageUrls();
+            ScrapePageInfos();
+            ScrapeTags();
+            ProcessSalaries();
+        }
+
+        public void ScrapeTags()
+        {
+
+            var jobUrls = _unitOfWork.JobUrlRepository.GetAll().Where(j => j.JobPortalId == (int) JobPortals.CvOnline).ToList();
+
+            jobInfos = _unitOfWork.JobInfoRepository.GetAll().Where(j => j.JobUrlId)
         }
 
        

@@ -42,7 +42,7 @@ namespace WebScraper.Application.Services
 
         public List<IScrapeService> InitScrapeServices()
         {
-            var cvBankasScrapeService = new CvBankasScrapeService(_httpClientFactory, _scraperFactory, _unitOfWork);
+            var cvBankasScrapeService = new CvBankasDataService(_httpClientFactory, _scraperFactory, _unitOfWork);
             var cvLtScrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _unitOfWork);
             var cvOnlineScrapeService = new CvOnlineScrapeService(_httpClientFactory, _scraperFactory, _unitOfWork);
 

@@ -16,9 +16,9 @@ using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Services
 {
-    public class CvBankasScrapeService : BaseScrapeService, IScrapeService
+    public class CvBankasDataService : BaseScrapeService, IScrapeService
     {
-        public CvBankasScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
+        public CvBankasDataService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
             : base(JobPortals.CvBankas,httpClientFactory, scraperFactory, unitOfWork)
         {
 
@@ -26,11 +26,9 @@ namespace WebScraper.Application.Services
 
         public void Run()
         {
-            
-
-            //ScrapePageUrls();
-            //ScrapePageInfos();
-            //ProcessSalaries();
+            ScrapePageUrls();
+            ScrapePageInfos();
+            ProcessSalaries();
         }
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
