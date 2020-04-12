@@ -4,6 +4,7 @@ namespace WebScraper.Core.Shared
 {
     public class JobUrlScraperInfoModel
     {
+
         public string Url { get; set; }
         public string? UrlAttribute { get; set; }
         public string Title { get; set; }
