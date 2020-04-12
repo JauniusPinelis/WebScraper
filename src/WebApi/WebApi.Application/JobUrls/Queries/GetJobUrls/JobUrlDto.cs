@@ -16,8 +16,6 @@ namespace WebApi.Application.JobUrls.Queries.GetJobUrls
 
         public string Location { get; set; }
 
-        public string Salary { get; set; }
-
         public string Title { get; set; }
 
         public void Mapping(Profile profile)
