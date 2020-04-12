@@ -41,7 +41,7 @@ namespace WebScraper.Application.Services
 
             var jobUrls = _unitOfWork.JobUrlRepository.GetAll().Where(j => j.JobPortalId == (int) JobPortals.CvOnline).ToList();
 
-            jobInfos = _unitOfWork.JobInfoRepository.GetAll().Where(j => j.JobUrlId)
+           // jobInfos = _unitOfWork.JobInfoRepository.GetAll().Where(j => j.JobUrlId)
         }
 
        
