@@ -95,8 +95,5 @@ namespace WebScraper.Application.Shared
                 _unitOfWork.SaveChanges();
             }
         }
-
-       
-        
     }
 }

@@ -38,8 +38,8 @@ namespace WebScraper.Application.Services
 
         public void Run()
         {
-            //ScrapePageUrls();
-            //ScrapePageInfos();
+            ScrapePageUrls();
+            ScrapePageInfos();
             ProcessSalaries();
         }
 
