@@ -39,10 +39,12 @@ namespace WebScraper.Application.Shared
             _scraper = _scraperFactory.BuildScraper(portalName);
             _analyser = _scraperFactory.BuildAnalyser(portalName);
 
-            _htmlScraper = new ScrapeClient(_httpClientFactory.CreateClient(), _scraper);
+			var httpClient = _httpClientFactory.CreateClient(portalName.ToString());
+
+			_htmlScraper = new ScrapeClient(httpClient, _scraper);
         }
 
-        public List<JobUrl> ExtractPageUrls(string baseUrl) => _htmlScraper.ExtractPageUrls(baseUrl);
+        public List<JobUrl> ExtractPageUrls() => _htmlScraper.ExtractPageUrls();
 
         public string ScrapeJobHtml(string url, string contentId) => _htmlScraper.ScrapeJobHtml(url, contentId);
 
@@ -95,5 +97,11 @@ namespace WebScraper.Application.Shared
                 _unitOfWork.SaveChanges();
             }
         }
-    }
+
+		public virtual void ScrapePageUrls()
+		{
+			var urls = ExtractPageUrls();
+			UpdateUrls(urls);
+		}
+	}
 }
