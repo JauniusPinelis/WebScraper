@@ -25,7 +25,7 @@ namespace WebScraper.Application
             _scraper = scraper;
         }
 
-        public List<JobUrl> ExtractPageUrls(string baseUrl)
+        public List<JobUrl> ExtractPageUrls()
         {
 
             int pageCounter = 0;
@@ -41,11 +41,10 @@ namespace WebScraper.Application
                     //Have some delay in parsing
                     Thread.Sleep(_sleepTime);
 
-                    var validUrl = baseUrl + pageCounter;
                     pageCounter += 1;
                     Log.Information("Scraping page {pageIndex}", pageCounter);
 
-                    html = _httpClient.GetStringAsync(validUrl).Result;
+                    html = _httpClient.GetStringAsync("" + pageCounter).Result;
                 }
                 catch (Exception)
                 {
