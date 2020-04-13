@@ -5,76 +5,40 @@ The aim is to have something similar to https://remoteok.io/
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
-[node.js](https://nodejs.org/) - for npm and front app
+- [node.js](https://nodejs.org/) - for npm and front app
+- [.net core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)- web api and data data scraping service
 
-```
-[.net core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)- web api and data data scraping service
-```
+### To scrape Data
 
-### Installing
+- Modify "DefaultConnectionString" to point to your local db instance
+- Run update-database
+- Run "Webscraper.Console" project
 
-To
+### To run the App
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+- Modify "DefaultConnectionString" to point to your local db instance
+- Run WebApi/WebApi.Api
+- cd to /ClientApp/
+- npm install
+- npm run start
 
 ## Built With
 
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+- [.net core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)- web api and data data scraping service
+- [React](https://reactjs.org/) - Front-end framework
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+To be added
 
 ## Authors
 
 - **Jaunius Pinelis** - _Initial work_
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
