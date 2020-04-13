@@ -35,12 +35,6 @@ namespace WebScraper.Infrastructure.IntegrationTests
 
         }
 
-        //[Test]
-        //public void InitDb_GivenDefaultConnectionString_ShouldCreateConnection()
-        //{
-          
-        //}
-
         [Test]
         public void SaveChanges_GivenNewUrl_ShouldSetCreated()
         {
