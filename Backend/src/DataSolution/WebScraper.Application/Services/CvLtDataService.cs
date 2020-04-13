@@ -23,13 +23,7 @@ namespace WebScraper.Application.Services
            
         }
 
-        public void ScrapePageUrls()
-        {
-            var baseUrl = "https://www.cv.lt/employee/announcementsAll.do?regular=true&department=1040&page=";
-
-            var urls = ExtractPageUrls(baseUrl);
-            UpdateUrls(urls);
-        }
+      
 
         public void ScrapePageInfos()
         {

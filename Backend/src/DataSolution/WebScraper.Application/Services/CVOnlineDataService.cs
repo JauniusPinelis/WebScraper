@@ -44,13 +44,9 @@ namespace WebScraper.Application.Services
            // jobInfos = _unitOfWork.JobInfoRepository.GetAll().Where(j => j.JobUrlId)
         }
 
-       
-
-        public void ScrapePageUrls()
+        public override void ScrapePageUrls()
         {
-            var baseUrls = "https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=";
-
-            var urls = ExtractPageUrls(baseUrls);
+            var urls = ExtractPageUrls();
 
             var cvOnlineFilter = _scraperFactory.BuildUrlFilter(JobPortals.CvOnline);
             cvOnlineFilter.Apply(ref urls);

@@ -59,13 +59,6 @@ namespace WebScraper.Application.Services
             return results;
         }
 
-        public void ScrapePageUrls()
-        {
-            var baseUrl = "https://www.cvbankas.lt/?padalinys%5B0%5D=76&page=";
-            var urls = ExtractPageUrls(baseUrl);
-            UpdateUrls(urls);
-        }
-
         public void ScrapePageInfos()
         {
             ScrapePageInfos("jobad_content_main", JobPortals.CvBankas);
