@@ -30,6 +30,8 @@ namespace WebScraper.Application.Shared
 
         protected ScrapeClient _htmlScraper;
 
+		private JobPortals _portalName;
+
         public BaseScrapeService(JobPortals portalName, IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory,  IUnitOfWork unitOfWork)
         {
             _scraperFactory = scraperFactory;
@@ -50,7 +52,8 @@ namespace WebScraper.Application.Shared
 
         public void ProcessSalaries()
         {
-            var jobUrls = _unitOfWork.JobUrlRepository.GetAll();
+			Log.Information($"processing Salaries for {_portalName.GetDescription()}");
+			var jobUrls = _unitOfWork.JobUrlRepository.GetAll();
 
             var jobsWithSalaries = jobUrls.Where(j =>!String.IsNullOrEmpty(j.SalaryText)).ToList();
 
@@ -61,13 +64,15 @@ namespace WebScraper.Application.Shared
                 salary.JObUrlId = jobUrl.Id;
 
                 _unitOfWork.SalaryRepository.Upsert(salary, salary.Id);
-                _unitOfWork.SaveChanges();
+				Log.Information($"Updating salary for: {_portalName.GetDescription()}");
+				_unitOfWork.SaveChanges();
             }
         }
 
         public void ScrapePageInfos(string elementId, JobPortals jobPortals)
         {
-            var urlsInDb = _unitOfWork.JobUrlRepository.GetAll();
+			Log.Information($"Scraping page infos for {_portalName.GetDescription()}");
+			var urlsInDb = _unitOfWork.JobUrlRepository.GetAll();
             
             var jobPortalsUrls = urlsInDb.Where(j => j.JobPortalId == (int)jobPortals).ToList();
 
@@ -92,14 +97,15 @@ namespace WebScraper.Application.Shared
         {
             foreach (var jobUrl in jobUrls)
             {
-
-                _unitOfWork.JobUrlRepository.Upsert(jobUrl, jobUrl.Id);
+				Log.Information($"Upserting url: {jobUrl.Url}");
+				_unitOfWork.JobUrlRepository.Upsert(jobUrl, jobUrl.Id);
                 _unitOfWork.SaveChanges();
             }
         }
 
 		public virtual void ScrapePageUrls()
 		{
+			Log.Information($"Scraping urls for: {_portalName.GetDescription()}");
 			var urls = ExtractPageUrls();
 			UpdateUrls(urls);
 		}
