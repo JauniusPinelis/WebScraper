@@ -51,7 +51,6 @@ namespace WebScraper.Application.Services
             var cvOnlineFilter = _scraperFactory.BuildUrlFilter(JobPortals.CvOnline);
             cvOnlineFilter.Apply(ref urls);
             
-
             UpdateUrls(urls);
         }
 

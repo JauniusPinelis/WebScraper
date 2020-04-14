@@ -23,8 +23,6 @@ namespace WebScraper.Application.Services
            
         }
 
-      
-
         public void ScrapePageInfos()
         {
             ScrapePageInfos("jobCont", JobPortals.CvLt);

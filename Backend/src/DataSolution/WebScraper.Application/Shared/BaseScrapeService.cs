@@ -39,7 +39,7 @@ namespace WebScraper.Application.Shared
             _scraper = _scraperFactory.BuildScraper(portalName);
             _analyser = _scraperFactory.BuildAnalyser(portalName);
 
-			var httpClient = _httpClientFactory.CreateClient(portalName.ToString());
+			var httpClient = _httpClientFactory.CreateClient(portalName.GetDescription());
 
 			_htmlScraper = new ScrapeClient(httpClient, _scraper);
         }

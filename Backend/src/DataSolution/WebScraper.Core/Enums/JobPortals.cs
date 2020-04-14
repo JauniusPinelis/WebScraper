@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace WebScraper.Core.Enums
 {
     public enum JobPortals
     {
-        CvOnline = 1,
-        CvBankas = 2,
-        CvLt = 3
+		[Description("CvOnline")]
+        CvOnline,
+		[Description("CvBankas")]
+		CvBankas,
+		[Description("CvLt")]
+		CvLt,
     }
 }

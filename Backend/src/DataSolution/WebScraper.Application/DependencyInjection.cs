@@ -22,15 +22,15 @@ namespace WebScraper.Application
             services.AddScoped<IScrapeService, ApplicationRunner>();
             services.AddScoped<IScraperFactory, ScraperFactory>();
 
-			services.AddHttpClient(JobPortals.CvLt.ToString(), client =>
+			services.AddHttpClient(JobPortals.CvLt.GetDescription(), client =>
 			{
 				client.BaseAddress = new Uri("https://www.cv.lt/employee/announcementsAll.do?regular=true&department=1040&page=");
 			});
-			services.AddHttpClient(JobPortals.CvBankas.ToString(), client =>
+			services.AddHttpClient(JobPortals.CvBankas.GetDescription(), client =>
 			{
 				client.BaseAddress = new Uri("https://www.cvbankas.lt/?padalinys%5B0%5D=76&page=");
 			});
-			services.AddHttpClient(JobPortals.CvOnline.ToString(), client =>
+			services.AddHttpClient(JobPortals.CvOnline.GetDescription(), client =>
 			{
 				client.BaseAddress = new Uri("https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=");
 			});
