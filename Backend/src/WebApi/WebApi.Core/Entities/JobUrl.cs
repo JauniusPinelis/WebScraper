@@ -15,6 +15,7 @@ namespace WebApi.Core.Entities
         public string Url { get; set; }
         public string Title { get; set; }
         public string Salary { get; set; }
+        public string Location { get; set; }
 
     }
 }
