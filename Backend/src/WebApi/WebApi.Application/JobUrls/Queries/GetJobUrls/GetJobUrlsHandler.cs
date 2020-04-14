@@ -24,7 +24,7 @@ namespace WebApi.Application.JobUrls.Queries.GetJobUrls
 
         public async Task<JobUrlsVm> Handle(GetJobUrlsQuery request, CancellationToken cancellationToken)
         {
-            var jobUrls = await _context.JobUrls
+            List<JobUrlDto> jobUrls = await _context.JobUrls
                 .ProjectTo<JobUrlDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
 
