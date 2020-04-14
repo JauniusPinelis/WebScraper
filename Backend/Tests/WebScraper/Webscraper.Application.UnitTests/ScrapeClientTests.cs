@@ -7,6 +7,7 @@ using WebScraper.Application;
 using WebScraper.Core.CvBankas;
 using WebScraper.Core.CvLt;
 using WebScraper.Core.CvOnline;
+using WebScraper.Core.Enums;
 
 namespace Webscraper.Application.UnitTests
 {
@@ -24,9 +25,9 @@ namespace Webscraper.Application.UnitTests
         public void ExtractPageUrls_GivenCvOnlineURlsPage_ShouldReturnCorrectAmountOfUrls()
         {
             SetCvOnlineContent();
-            var cvOnlineScrapeClient = new ScrapeClient(_httpClientFactory.CreateClient(""), new CvOnlineScraper());
+            var cvOnlineScrapeClient = new ScrapeClient(_httpClientFactory.CreateClient(JobPortals.CvOnline.ToString()), new CvOnlineScraper());
 
-            var results = cvOnlineScrapeClient.ExtractPageUrls("https://www.cvonline.lt/darbo-skelbimai/informacines-technologijos?page=1");
+            var results = cvOnlineScrapeClient.ExtractPageUrls();
 
             results.Count.Should().Be(1080);
         }
@@ -35,9 +36,9 @@ namespace Webscraper.Application.UnitTests
         public void ExtractPageUrls_GivenCvBankasURlsPage_ShouldReturnCorrectAmountOfUrls()
         {
             SetCvBankasContent();
-            var cvBankasScrapeClient = new ScrapeClient(_httpClientFactory.CreateClient(""), new CvBankasScraper());
+            var cvBankasScrapeClient = new ScrapeClient(_httpClientFactory.CreateClient(JobPortals.CvBankas.ToString()), new CvBankasScraper());
 
-            var results = cvBankasScrapeClient.ExtractPageUrls("https://www.cvbankas.lt");
+            var results = cvBankasScrapeClient.ExtractPageUrls();
 
             results.Count.Should().Be(1000);
         }
@@ -46,9 +47,9 @@ namespace Webscraper.Application.UnitTests
         public void ExtractPageUrls_GivenCvLtURlsPage_ShouldReturnCorrectAmountOfUrls()
         {
             SetCvLtContent();
-            var cvLtScrapeClient = new ScrapeClient(_httpClientFactory.CreateClient(""), new CvLtScraper());
+            var cvLtScrapeClient = new ScrapeClient(_httpClientFactory.CreateClient(JobPortals.CvLt.ToString()), new CvLtScraper());
 
-            var results = cvLtScrapeClient.ExtractPageUrls("https://www.cvlt.lt/");
+            var results = cvLtScrapeClient.ExtractPageUrls();
 
             results.Count.Should().Be(800);
         }
