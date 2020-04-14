@@ -69,9 +69,9 @@ namespace WebScraper.Console
         private static void ConfigureSerilog()
         {
             Log.Logger = new LoggerConfiguration()
-          .Enrich.FromLogContext()
-          .WriteTo.Console()
-          .CreateLogger();
+			  .Enrich.FromLogContext()
+			  .WriteTo.Console()
+			  .CreateLogger();
 
             Log.Information("The global logger has been configured");
         }
