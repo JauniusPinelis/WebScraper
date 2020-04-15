@@ -16,5 +16,6 @@ namespace WebApi.Core.Entities
         public string Title { get; set; }
         public string SalaryText { get; set; }
         public string Location { get; set; }
+        public string Company { get; set; }
     }
 }
