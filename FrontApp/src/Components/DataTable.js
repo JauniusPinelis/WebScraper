@@ -15,7 +15,7 @@ export default class DataTable extends Component {
             { title: "Title", field: "title" },
             { title: "Location", field: "location" },
             { title: "Company", field: "company" },
-            { title: "Salary", field: "salary"},
+            { title: "Salary", field: "salaryText"},
             { title: "Apply", apply: "apply",  
             render: rowData => <Button color="primary">Apply</Button>
           }
