@@ -2,17 +2,14 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 
-import DataTable from "./Components/DataTable";
+import  DataTable from "./Components/DataTable";
 import Container from "@material-ui/core/Container";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      data: [],
-      urls: []
-    };
-  }
+  state = {
+    data: [],
+    urls: []
+  };
   render() {
     return (
       <div className="App">
@@ -28,9 +25,9 @@ class App extends Component {
   componentDidMount() {
     this.loadData();
   }
-  loadData = () => {
-    axios.get("/api/data/")
-  }
+  // loadData = () => {
+  //   axios.get("/api/data/")
+  // }
 
   loadData = () => {
     axios
@@ -38,7 +35,7 @@ class App extends Component {
       .then(res => {
         this.setState({
           data: res.data.jobUrls,
-          urls: res.data.jobUrls.map(d => d.url)
+          urls: res.data.jobUrls
         });
       })
       .catch(error => {});
