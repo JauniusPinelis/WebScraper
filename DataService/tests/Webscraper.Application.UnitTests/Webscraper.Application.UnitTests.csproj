@@ -8,41 +8,33 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.9.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.0" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.0" />
+    <PackageReference Include="Moq" Version="4.13.1" />
     <PackageReference Include="nunit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\DataSolution\WebScraper.Core\WebScraper.Core.csproj" />
+    <ProjectReference Include="..\..\Application\WebScraper.Application.csproj" />
+    <ProjectReference Include="..\..\Core\WebScraper.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="HtmlTestData\CvBankasSingleJobPosting.txt">
+    <None Update="TestData\CvBankasTestPageData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="HtmlTestData\CvBankasSingleUrlTestData.txt">
+    <None Update="TestData\CvLtTestPageData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="HtmlTestData\CvBankasTestPageData.txt">
+    <None Update="TestData\CvOnlineHtmlData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="HtmlTestData\CvLtSingleUrlTestData.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="HtmlTestData\CvLtTestPageData.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="HtmlTestData\CvOnlineHtmlData.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="HtmlTestData\CvOnlineSingleUrlTestData.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="HtmlTestData\CvOnlineTestPageData.txt">
+    <None Update="TestData\CvOnlineTestPageData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
+ 
 </Project>

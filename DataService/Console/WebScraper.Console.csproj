@@ -31,9 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WebScraper.Application\WebScraper.Application.csproj" />
-    <ProjectReference Include="..\WebScraper.Core\WebScraper.Core.csproj" />
-    <ProjectReference Include="..\WebScraper.Infrastructure\WebScraper.Infrastructure.csproj" />
+    <ProjectReference Include="..\Application\WebScraper.Application.csproj" />
+    <ProjectReference Include="..\Core\WebScraper.Core.csproj" />
+    <ProjectReference Include="..\Infrastructure\WebScraper.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
