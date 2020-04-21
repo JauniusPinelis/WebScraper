@@ -18,6 +18,10 @@ namespace WebApi.Application.JobUrls.Queries.GetJobUrls
 
         public string Title { get; set; }
 
+        public string SalaryText { get; set; }
+
+        public string Company { get; set; }
+
         public void Mapping(Profile profile)
         {
             profile.CreateMap<JobUrl, JobUrlDto>();   
