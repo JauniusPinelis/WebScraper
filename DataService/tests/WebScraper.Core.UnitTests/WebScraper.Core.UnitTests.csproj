@@ -8,34 +8,41 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.9.0" />
-    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.0" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.0" />
-    <PackageReference Include="Moq" Version="4.13.1" />
     <PackageReference Include="nunit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\DataSolution\WebScraper.Application\WebScraper.Application.csproj" />
-    <ProjectReference Include="..\..\..\src\DataSolution\WebScraper.Infrastructure\WebScraper.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Core\WebScraper.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="TestData\CvBankasTestPageData.txt">
+    <None Update="HtmlTestData\CvBankasSingleJobPosting.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="TestData\CvLtTestPageData.txt">
+    <None Update="HtmlTestData\CvBankasSingleUrlTestData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="TestData\CvOnlineHtmlData.txt">
+    <None Update="HtmlTestData\CvBankasTestPageData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="TestData\CvOnlineTestPageData.txt">
+    <None Update="HtmlTestData\CvLtSingleUrlTestData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="HtmlTestData\CvLtTestPageData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="HtmlTestData\CvOnlineHtmlData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="HtmlTestData\CvOnlineSingleUrlTestData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="HtmlTestData\CvOnlineTestPageData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
- 
 </Project>

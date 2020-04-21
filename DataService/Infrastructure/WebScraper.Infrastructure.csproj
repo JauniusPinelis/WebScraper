@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WebScraper.Core\WebScraper.Core.csproj" />
+    <ProjectReference Include="..\Core\WebScraper.Core.csproj" />
   </ItemGroup>
 
 </Project>
