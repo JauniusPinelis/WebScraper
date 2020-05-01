@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using WebScraper.Core.Entities;
@@ -9,7 +10,7 @@ namespace WebScraper.Infrastructure.Configurations
 {
     public class TagCategoryConfiguration : IEntityTypeConfiguration<TagCategory>
     {
-        public void Configure(EntityTypeBuilder<TagCategory> builder)
+        public void Configure([ValidatedNotNullAttribute] EntityTypeBuilder<TagCategory> builder)
         {
             builder.ToTable("tblMeta_tagCategory");
 

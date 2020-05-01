@@ -1,15 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using WebScraper.Core.Entities;
 
 namespace WebScraper.Infrastructure.Configurations
 {
     public class SalaryConfiguration : IEntityTypeConfiguration<Salary>
     {
-        public void Configure(EntityTypeBuilder<Salary> builder)
+        public void Configure([ValidatedNotNullAttribute] EntityTypeBuilder<Salary> builder)
         {
             builder.ToTable("tblData_salary");
 

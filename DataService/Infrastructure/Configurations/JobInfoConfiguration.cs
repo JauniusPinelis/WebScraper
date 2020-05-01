@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core.Entities;
 using System.Linq;
+using Microsoft;
 
 namespace WebScraper.Infrastructure.Configurations
 {
     public class JobInfoConfiguration : IEntityTypeConfiguration<JobInfo>
     {
-        public void Configure(EntityTypeBuilder<JobInfo> builder)
+        public void Configure([ValidatedNotNullAttribute] EntityTypeBuilder<JobInfo> builder)
         {
             builder.ToTable("tblData_jobInfo");
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace WebScraper.Infrastructure.Configurations
 {
     public class JobUrlConfiguration : IEntityTypeConfiguration<JobUrl>
     {
-        public void Configure(EntityTypeBuilder<JobUrl> builder)
+        public void Configure([ValidatedNotNullAttribute] EntityTypeBuilder<JobUrl> builder)
         {
             builder.ToTable("tblData_jobUrl");
 
