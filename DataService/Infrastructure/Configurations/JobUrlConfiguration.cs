@@ -26,8 +26,6 @@ namespace WebScraper.Infrastructure.Configurations
             builder.HasOne(e => e.JobPortal)
                 .WithMany(p => p.JobUrls)
                 .HasForeignKey(e => e.JobInfoId);
-
-          
         }
     }
 }

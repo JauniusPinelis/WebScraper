@@ -40,18 +40,12 @@ namespace WebScraper.Application.Services
             }
         }
 
-        public List<IScrapeService> InitScrapeServices()
-        {
-            var cvBankasScrapeService = new CvBankasDataService(_httpClientFactory, _scraperFactory, _unitOfWork);
-            var cvLtScrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _unitOfWork);
-            var cvOnlineScrapeService = new CvOnlineDataService(_httpClientFactory, _scraperFactory, _unitOfWork);
+        public IEnumerable<IScrapeService> InitScrapeServices() => 
+            new List<IScrapeService>()
+            {   new CvBankasDataService(_httpClientFactory, _scraperFactory, _unitOfWork),
+                new CvLtScrapeService(_httpClientFactory, _scraperFactory, _unitOfWork),
+                new CvOnlineDataService(_httpClientFactory, _scraperFactory, _unitOfWork) 
+            };
 
-            var scrapeServices = new List<IScrapeService>();
-            scrapeServices.Add(cvBankasScrapeService);
-            scrapeServices.Add(cvLtScrapeService);
-            scrapeServices.Add(cvOnlineScrapeService);
-
-            return scrapeServices;
-        }
-    }
+}
 }
