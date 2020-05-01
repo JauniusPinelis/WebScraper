@@ -4,17 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using WebScraper.Core.CvBankas;
+using WebScraper.Core.Shared;
 
 namespace WebScraper.Core.UnitTests.CvBankas
 {
     [TestFixture]
     public class CvBankasAnalyserTests
     {
-        private CvBankasAnalyser _analyser;
+        private BaseAnalyser _analyser;
 
         public CvBankasAnalyserTests()
         {
-            _analyser = new CvBankasAnalyser();
+            _analyser = new BaseAnalyser();
         }
 
         [Test]

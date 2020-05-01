@@ -30,7 +30,7 @@ namespace WebScraper.Core.UnitTests.CvBankas
 
         public CvBankasParserTests()
         {
-            _parser = new CvBankasParser();
+            _parser = new BaseParser();
         }
 
         [Test]

@@ -59,7 +59,6 @@ namespace WebScraper.Infrastructure.Db
                 new TagCategory() { Id = 9, Name = "Node.js" }
 
             );
-
             
         }
 

@@ -37,7 +37,5 @@ namespace WebScraper.Core.CvBankas
         {
             return base.ScrapeJobHtml(html, "page-main-content");
         }
-
-       
     }
 }

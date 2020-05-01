@@ -5,17 +5,18 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using WebScraper.Core.CvOnline;
+using WebScraper.Core.Shared;
 
 namespace WebScraper.Core.UnitTests.CVOnline
 {
     [TestFixture]
     public class CvOnlineAnalyserTests
     {
-        private CvOnlineAnalyser _analyser;
+        private BaseAnalyser _analyser;
         
         public CvOnlineAnalyserTests()
         {
-            _analyser = new CvOnlineAnalyser();
+            _analyser = new BaseAnalyser();
         }
         
         [Test]
