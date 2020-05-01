@@ -30,15 +30,13 @@ namespace WebScraper.Application.Services
             _httpClientFactory = clientFactory;
         }
 
-        public void Run()
-        {
-            var services = InitScrapeServices();
+        /// <summary>
+        /// Run all Services
+        /// </summary>
+        public void Run() => InitScrapeServices().ToList().ForEach(s => s.Run());
 
-            foreach (var scrapeService in services)
-            {
-                scrapeService.Run();
-            }
-        }
+
+
 
         public IEnumerable<IScrapeService> InitScrapeServices() => 
             new List<IScrapeService>()
@@ -47,5 +45,5 @@ namespace WebScraper.Application.Services
                 new CvOnlineDataService(_httpClientFactory, _scraperFactory, _unitOfWork) 
             };
 
-}
+    }
 }

@@ -10,10 +10,6 @@ namespace WebScraper.Core.Shared
 {
     public class BaseParser : IParser
     {
-        public JobInfo ParseInfo(string html)
-        {
-            throw new NotImplementedException();
-        }
 
         public List<TagCategory> ParseTags(string html, IEnumerable<TagCategory> tagsToSearch)
         {
