@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MaterialTable from "material-table";
 import { Button } from '@material-ui/core';
 
+
 interface IDataTableProps {
   data: any;
 }
@@ -18,7 +19,7 @@ export default class DataTable extends React.Component<IDataTableProps> {
             { title: "Title", field: "title" },
             { title: "Location", field: "location" },
             { title: "Company", field: "company" },
-            { title: "Salary", field: "salaryText"},
+            { title: "Salary", field: "salary"},
             { title: "Apply",  
             render: rowData => <Button color="primary">Apply</Button>
           }
