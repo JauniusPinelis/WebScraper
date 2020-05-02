@@ -53,9 +53,9 @@ namespace WebScraper.Application.Shared
         public void ProcessSalaries()
         {
 			Log.Information($"processing Salaries for {_portalName.GetDescription()}");
-			var jobUrls = _unitOfWork.JobUrlRepository.GetAll();
 
-            var jobsWithSalaries = jobUrls.Where(j =>!String.IsNullOrEmpty(j.SalaryText)).ToList();
+			var jobsWithSalaries = _unitOfWork.JobUrlRepository.GetAll()
+                .Where(j => !String.IsNullOrEmpty(j.SalaryText)).ToList();
 
             foreach (var jobUrl in jobsWithSalaries)
             {
@@ -64,7 +64,9 @@ namespace WebScraper.Application.Shared
                 salary.JObUrlId = jobUrl.Id;
 
                 _unitOfWork.SalaryRepository.Upsert(salary, salary.Id);
+
 				Log.Information($"Updating salary for: {_portalName.GetDescription()}");
+
 				_unitOfWork.SaveChanges();
             }
         }
@@ -72,11 +74,11 @@ namespace WebScraper.Application.Shared
         public void ScrapePageInfos(string elementId, JobPortals jobPortals)
         {
 			Log.Information($"Scraping page infos for {_portalName.GetDescription()}");
-			var urlsInDb = _unitOfWork.JobUrlRepository.GetAll();
-            
-            var jobPortalsUrls = urlsInDb.Where(j => j.JobPortalId == (int)jobPortals).ToList();
 
-            foreach (var url in jobPortalsUrls)
+			var jobPortalUrls = _unitOfWork.JobUrlRepository.GetAll()
+                .Where(j => j.JobPortalId == (int)jobPortals).ToList();
+
+            foreach (var url in jobPortalUrls)
             {
                 var html = ScrapeJobHtml(url.Url, elementId);
 

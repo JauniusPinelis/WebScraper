@@ -32,7 +32,6 @@ namespace WebScraper.Application
             var continueParsing = true;
             var results = new List<JobUrl>();
 
-
             while (continueParsing && pageCounter < 20)
             {
                 string html;
@@ -47,7 +46,7 @@ namespace WebScraper.Application
 					// _httpClient.BaseAddress.ToString() to be fixed 
 					html = _httpClient.GetStringAsync(_httpClient.BaseAddress.ToString() + pageCounter).Result;
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
                     // html is empty
                     html = "";
@@ -84,7 +83,7 @@ namespace WebScraper.Application
                 return "";
             }
 
-            catch (Exception ex)
+            catch (Exception )
             {
                 return "";
             }
