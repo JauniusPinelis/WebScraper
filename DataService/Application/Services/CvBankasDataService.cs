@@ -5,12 +5,12 @@ using System.Net.Http;
 using System.Text;
 using System.Threading;
 using HtmlAgilityPack;
+using WebScraper.Application.CvBankas;
 using WebScraper.Application.Shared;
-using WebScraper.Core.CvBankas;
-using WebScraper.Core.CvOnline;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
+using WebScraper.Core.Shared;
 using WebScraper.Infrastructure.Db;
 using WebScraper.Infrastructure.Repositories;
 
@@ -18,17 +18,29 @@ namespace WebScraper.Application.Services
 {
     public class CvBankasDataService : BaseScrapeService, IScrapeService
     {
+
+        private IUnitOfWork _unitOfWork;
+        private IAnalyser _analyser;
+        private IScraper _scraper;
+        private HttpClient _httpClient;
+
+
         public CvBankasDataService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
             : base(JobPortals.CvBankas,httpClientFactory, scraperFactory, unitOfWork)
         {
-
+            _unitOfWork = unitOfWork;
+            _analyser = scraperFactory.BuildAnalyser(JobPortals.CvBankas);
+            _scraper = scraperFactory.BuildScraper(JobPortals.CvBankas);
+            _httpClient = httpClientFactory.CreateClient(JobPortals.CvBankas.GetDescription());
         }
 
         public void Run()
         {
             ScrapePageUrls();
             ScrapePageInfos();
-            ProcessSalaries();
+           new ScrapePageUrls(_unitOfWork, _analyser, _scraper, _httpClient).Do(JobPortals.CvBankas);
+           
+           new ProcessSalaries(_unitOfWork, _analyser).Do(JobPortals.CvBankas);
         }
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)

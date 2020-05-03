@@ -1,28 +1,17 @@
-﻿using HtmlAgilityPack;
-using Serilog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading;
+﻿using System.Collections.Generic;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Shared;
 
 namespace WebScraper.Core.CvOnline
 {
-    public class CvOnlineScraper : BaseScraper,IScraper
+    public class CvOnlineScraper : BaseScraper, IScraper
     {
         private const int _jobPortalId = 1;
       
-
-
         public override IEnumerable<JobUrl> ExtractPageUrls(string pageHtml)
         {
             return ExtractPageUrls(pageHtml, "//div[contains(@class, 'offer_primary_info')]");
         }
-
-       
 
         public override JobUrl ScrapeJobUrlInfo(string html)
         {
@@ -37,18 +26,6 @@ namespace WebScraper.Core.CvOnline
                 Company = "//a[contains(@itemprop, 'name')]"
             };
             return ScrapeJobUrlInfo(html, scrapeInfo, 1);
-        }
-        private string TrimStart(string target, string trimString)
-        {
-            if (string.IsNullOrEmpty(trimString) || string.IsNullOrEmpty(target)) return target;
-
-            string result = target;
-            while (result.StartsWith(trimString))
-            {
-                result = result.Substring(trimString.Length);
-            }
-
-            return result;
         }
 
         public string ScrapeJobPortalInfo(string html)

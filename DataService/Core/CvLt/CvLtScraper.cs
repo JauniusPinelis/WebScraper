@@ -1,11 +1,6 @@
 ﻿using HtmlAgilityPack;
-using Serilog;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Shared;
 
@@ -19,11 +14,6 @@ namespace WebScraper.Core.CvLt
         }
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urls)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string ScrapeJobPortalInfo(string html)
         {
             throw new NotImplementedException();
         }

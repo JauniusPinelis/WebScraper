@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading;
-using HtmlAgilityPack;
 using Serilog;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Shared;
 using Microsoft.Extensions.DependencyInjection;
 using WebScraper.Core.Enums;
 using WebScraper.Core.Factories;
-using WebScraper.Infrastructure.Db;
-using Microsoft.EntityFrameworkCore;
 using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Shared
@@ -40,7 +35,6 @@ namespace WebScraper.Application.Shared
 
             _scraper = _scraperFactory.BuildScraper(portalName);
             _analyser = _scraperFactory.BuildAnalyser(portalName);
-
 			var httpClient = _httpClientFactory.CreateClient(portalName.GetDescription());
 
 			_htmlScraper = new ScrapeClient(httpClient, _scraper);
@@ -72,10 +66,10 @@ namespace WebScraper.Application.Shared
         public void ScrapePageInfos(string elementId, JobPortals jobPortals)
         {
 			Log.Information($"Scraping page infos for {_portalName.GetDescription()}");
-			var urlsInDb = _unitOfWork.JobUrlRepository.GetAll();
-            
-            var jobPortalsUrls = urlsInDb.Where(j => j.JobPortalId == (int)jobPortals).ToList();
 
+			var jobPortalsUrls = _unitOfWork.JobUrlRepository.GetAll()
+                .Where(j => j.JobPortalId == (int)jobPortals).ToList();
+            
             foreach (var url in jobPortalsUrls)
             {
                 var html = ScrapeJobHtml(url.Url, elementId);
@@ -106,8 +100,7 @@ namespace WebScraper.Application.Shared
 		public virtual void ScrapePageUrls()
 		{
 			Log.Information($"Scraping urls for: {_portalName.GetDescription()}");
-			var urls = ExtractPageUrls();
-			UpdateUrls(urls);
+			UpdateUrls(ExtractPageUrls());
 		}
 	}
 }
