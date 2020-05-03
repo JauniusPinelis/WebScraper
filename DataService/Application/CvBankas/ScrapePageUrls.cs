@@ -14,12 +14,12 @@ namespace WebScraper.Application.CvBankas
 {
 	public class ScrapePageUrls : BaseCommand
 	{
-		private ScrapeClient _htmlScraper;
+		private ScrapeClient _scrapeClient;
 
-		public ScrapePageUrls(IUnitOfWork unitOfWork, IAnalyser analyser, IScraper scraper, HttpClient httpClient)
-			:base(unitOfWork, analyser)
+		public ScrapePageUrls(IUnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient)
+			:base(unitOfWork, analyser, scrapeClient)
 		{
-			_htmlScraper = new ScrapeClient( httpClient, scraper);
+			_scrapeClient = scrapeClient;
 		}
 
 		public void Do(JobPortals jobPortal)
@@ -27,7 +27,5 @@ namespace WebScraper.Application.CvBankas
 			Log.Information($"Scraping urls for: {jobPortal.GetDescription()}");
 			UpdateUrls(ExtractPageUrls());
 		}
-
-		public List<JobUrl> ExtractPageUrls() => _htmlScraper.ExtractPageUrls();
 	}
 }

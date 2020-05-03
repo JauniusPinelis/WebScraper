@@ -14,8 +14,8 @@ namespace WebScraper.Application.CvBankas
 	public class ProcessSalaries : BaseCommand
 	{
 
-		public ProcessSalaries(IUnitOfWork unitOfWork, IAnalyser analyser) 
-			: base(unitOfWork, analyser)
+		public ProcessSalaries(IUnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient) 
+			: base(unitOfWork, analyser, scrapeClient)
 		{
 		
 		}

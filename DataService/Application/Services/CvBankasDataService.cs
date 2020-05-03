@@ -39,11 +39,9 @@ namespace WebScraper.Application.Services
 
         public void Run()
         {
-            ScrapePageUrls();
-            ScrapePageInfos();
-           new ScrapePageUrls(_unitOfWork, _analyser, _scraper, _httpClient).Do(JobPortals.CvBankas);
-           new ScrapePageInfos(_unitOfWork, _scrapeClient).Do(JobPortals.CvBankas);
-           new ProcessSalaries(_unitOfWork, _analyser).Do(JobPortals.CvBankas);
+           new ScrapePageUrls(_unitOfWork, _analyser, _scrapeClient).Do(JobPortals.CvBankas);
+           new ScrapePageInfos(_unitOfWork, _analyser, _scrapeClient).Do(JobPortals.CvBankas);
+           new ProcessSalaries(_unitOfWork, _analyser, _scrapeClient).Do(JobPortals.CvBankas);
         }
 
         public IEnumerable<JobInfo> ScrapeJobHtmls(IEnumerable<JobUrl> urlDtos)
