@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Serilog;
+using WebScraper.Application.CvOnline;
 using WebScraper.Application.Shared;
 using WebScraper.Core.CvOnline;
 using WebScraper.Core.Entities;
@@ -18,45 +14,36 @@ using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Services
 {
-    public class CvOnlineDataService : BaseScrapeService, IScrapeService
+    public class CvOnlineDataService : IDataService
     {
         private readonly IParser _parser;
 
+        private IUnitOfWork _unitOfWork;
+        private IAnalyser _analyser;
+        private IScraper _scraper;
+        private IUrlFilter _filter;
+        private HttpClient _httpClient;
+        private ScrapeClient _scrapeClient;
+
         public CvOnlineDataService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
-            : base(JobPortals.CvOnline, httpClientFactory, scraperFactory, unitOfWork)
         {
             _parser = new CvOnlineParser();
+
+            _unitOfWork = unitOfWork;
+            _analyser = scraperFactory.BuildAnalyser(JobPortals.CvOnline);
+            _scraper = scraperFactory.BuildScraper(JobPortals.CvOnline);
+            _filter = scraperFactory.BuildUrlFilter(JobPortals.CvOnline);
+
+            _httpClient = httpClientFactory.CreateClient(JobPortals.CvOnline.GetDescription());
+
+            _scrapeClient = new ScrapeClient(_httpClient, _scraper);
         }
 
         public void Run()
         {
-            ScrapePageUrls();
-            ScrapePageInfos();
-            ScrapeTags();
-            ProcessSalaries();
-        }
-
-        public void ScrapeTags()
-        {
-
-            var jobUrls = _unitOfWork.JobUrlRepository.GetAll().Where(j => j.JobPortalId == (int) JobPortals.CvOnline).ToList();
-
-           // jobInfos = _unitOfWork.JobInfoRepository.GetAll().Where(j => j.JobUrlId)
-        }
-
-        public override void ScrapePageUrls()
-        {
-            var urls = ExtractPageUrls();
-
-            var cvOnlineFilter = _scraperFactory.BuildUrlFilter(JobPortals.CvOnline);
-            cvOnlineFilter.Apply(ref urls);
-            
-            UpdateUrls(urls);
-        }
-
-        public void ScrapePageInfos()
-        {
-            ScrapePageInfos("page-main-content", JobPortals.CvOnline); 
+            new ScrapePageUrls(_unitOfWork,_analyser, _scrapeClient ).Do(JobPortals.CvOnline, _filter);
+            new ScrapePageInfos(_unitOfWork, _analyser, _scrapeClient).Do();
+            new ProcessSalaries(_unitOfWork, _analyser, _scrapeClient).Do(JobPortals.CvOnline);
         }
     }
 }

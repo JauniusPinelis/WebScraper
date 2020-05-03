@@ -19,7 +19,7 @@ namespace WebScraper.Application
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
             
-            services.AddScoped<IScrapeService, ApplicationRunner>();
+            services.AddScoped<IDataService, ApplicationRunner>();
             services.AddScoped<IScraperFactory, ScraperFactory>();
 
 			services.AddHttpClient(JobPortals.CvLt.GetDescription(), client =>

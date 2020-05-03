@@ -15,9 +15,5 @@
     <ProjectReference Include="..\Infrastructure\WebScraper.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CvOnline\" />
-  </ItemGroup>
-
   
 </Project>

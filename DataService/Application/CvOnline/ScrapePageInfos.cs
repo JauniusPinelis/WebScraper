@@ -6,12 +6,10 @@ using WebScraper.Core.Enums;
 using WebScraper.Core.Shared;
 using WebScraper.Infrastructure.Repositories;
 
-namespace WebScraper.Application.CvLt
+namespace WebScraper.Application.CvOnline
 {
 	public class ScrapePageInfos : BaseCommand
 	{
-	
-
 		public ScrapePageInfos(IUnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient) :
 			base(unitOfWork, analyser, scrapeClient)
 		{
@@ -20,7 +18,7 @@ namespace WebScraper.Application.CvLt
 
 		public void Do()
 		{
-			ScrapePageInfos("jobCont", JobPortals.CvLt);
+			ScrapePageInfos("page-main-content", JobPortals.CvOnline);
 		}
 	}
 }

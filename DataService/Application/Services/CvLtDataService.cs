@@ -17,36 +17,30 @@ using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Services
 {
-    public class CvLtScrapeService : BaseScrapeService, IScrapeService
+    public class CvLtScrapeService : IDataService
     {
+        private IUnitOfWork _unitOfWork;
+        private IAnalyser _analyser;
         private IScraper _scraper;
         private HttpClient _httpClient;
         private ScrapeClient _scrapeClient;
 
 
         public CvLtScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
-            : base(JobPortals.CvLt, httpClientFactory, scraperFactory, unitOfWork)
         {
-            _scraper = scraperFactory.BuildScraper(JobPortals.CvBankas);
-            _httpClient = httpClientFactory.CreateClient(JobPortals.CvBankas.GetDescription());
+            _unitOfWork = unitOfWork;
+            _analyser = scraperFactory.BuildAnalyser(JobPortals.CvLt);
+            _scraper = scraperFactory.BuildScraper(JobPortals.CvLt);
+            _httpClient = httpClientFactory.CreateClient(JobPortals.CvLt.GetDescription());
 
             _scrapeClient = new ScrapeClient(_httpClient, _scraper);
-        }
-
-        public void ScrapePageInfos()
-        {
-            ScrapePageInfos("jobCont", JobPortals.CvLt);
         }
 
         public void Run()
         {
             new ScrapePageUrls(_unitOfWork, _analyser, _scrapeClient).Do(JobPortals.CvLt);
             new ScrapePageInfos(_unitOfWork, _analyser, _scrapeClient).Do(JobPortals.CvLt);
-
-            ScrapePageInfos();
-            ProcessSalaries();
-
-           
+            new ProcessSalaries(_unitOfWork, _analyser, _scrapeClient).Do(JobPortals.CvLt);
         }
 
     }
