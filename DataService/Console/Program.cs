@@ -1,18 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using WebScraper.Infrastructure.Db;
-using Microsoft.EntityFrameworkCore;
-using System.Configuration;
 using Microsoft.Extensions.Configuration;
 using System.IO;
-using WebScraper.Core;
 using System;
 using WebScraper.Infrastructure;
 using WebScraper.Application;
-using MediatR;
 using WebScraper.Application.Services;
-using Microsoft.Extensions.Logging;
 using Serilog;
-using WebScraper.Application.Shared;
 
 namespace WebScraper.Console
 {
@@ -26,7 +19,7 @@ namespace WebScraper.Console
         {
             RegisterServices();
 
-            var scrapeService = _serviceProvider.GetService<IScrapeService>();
+            var scrapeService = _serviceProvider.GetService<IDataService>();
             var app = new Application(scrapeService);
             app.Run();
            

@@ -1,8 +1,5 @@
 ﻿using HtmlAgilityPack;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using WebScraper.Core.Entities;
 using WebScraper.Core.Shared;
 
@@ -13,6 +10,7 @@ namespace WebScraper.Core.CvOnline
 
         private string ParseTitle(string html)
         {
+
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
 

@@ -11,7 +11,5 @@ namespace WebScraper.Core.Shared
 
         IEnumerable<JobUrl> ExtractPageUrls(string html);
 
-        string ScrapeJobPortalInfo(string html);
-
     }
 }

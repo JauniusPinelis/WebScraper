@@ -14,7 +14,7 @@ using WebScraper.Infrastructure.Repositories;
 
 namespace WebScraper.Application.Services
 {
-    public class ApplicationRunner : IScrapeService
+    public class ApplicationRunner : IDataService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IScraperFactory _scraperFactory;
@@ -40,13 +40,13 @@ namespace WebScraper.Application.Services
             }
         }
 
-        public List<IScrapeService> InitScrapeServices()
+        public List<IDataService> InitScrapeServices()
         {
             var cvBankasScrapeService = new CvBankasDataService(_httpClientFactory, _scraperFactory, _unitOfWork);
             var cvLtScrapeService = new CvLtScrapeService(_httpClientFactory, _scraperFactory, _unitOfWork);
             var cvOnlineScrapeService = new CvOnlineDataService(_httpClientFactory, _scraperFactory, _unitOfWork);
 
-            var scrapeServices = new List<IScrapeService>();
+            var scrapeServices = new List<IDataService>();
             scrapeServices.Add(cvBankasScrapeService);
             scrapeServices.Add(cvLtScrapeService);
             scrapeServices.Add(cvOnlineScrapeService);

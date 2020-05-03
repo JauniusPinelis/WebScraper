@@ -25,7 +25,7 @@ namespace WebScraper.Application
             _scraper = scraper;
         }
 
-        public List<JobUrl> ExtractPageUrls()
+        public List<JobUrl> ExtractPageUrls(int pageLimit = 20)
         {
 
             int pageCounter = 0;
@@ -33,7 +33,7 @@ namespace WebScraper.Application
             var results = new List<JobUrl>();
 
 
-            while (continueParsing && pageCounter < 20)
+            while (continueParsing && pageCounter < pageLimit)
             {
                 string html;
                 try

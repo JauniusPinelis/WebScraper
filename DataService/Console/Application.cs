@@ -6,9 +6,9 @@ namespace WebScraper.Console
 {
     public class Application
     {
-        private IScrapeService _scrapeService;
+        private IDataService _scrapeService;
 
-        public Application(IScrapeService scrapeService)
+        public Application(IDataService scrapeService)
         {
             _scrapeService = scrapeService;
         }
