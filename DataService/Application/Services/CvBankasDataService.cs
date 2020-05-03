@@ -23,6 +23,7 @@ namespace WebScraper.Application.Services
         private IAnalyser _analyser;
         private IScraper _scraper;
         private HttpClient _httpClient;
+        private ScrapeClient _scrapeClient;
 
 
         public CvBankasDataService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
@@ -32,6 +33,8 @@ namespace WebScraper.Application.Services
             _analyser = scraperFactory.BuildAnalyser(JobPortals.CvBankas);
             _scraper = scraperFactory.BuildScraper(JobPortals.CvBankas);
             _httpClient = httpClientFactory.CreateClient(JobPortals.CvBankas.GetDescription());
+
+            _scrapeClient = new ScrapeClient(_httpClient, _scraper);
         }
 
         public void Run()
@@ -39,7 +42,7 @@ namespace WebScraper.Application.Services
             ScrapePageUrls();
             ScrapePageInfos();
            new ScrapePageUrls(_unitOfWork, _analyser, _scraper, _httpClient).Do(JobPortals.CvBankas);
-           
+           new ScrapePageInfos(_unitOfWork, _scrapeClient).Do(JobPortals.CvBankas);
            new ProcessSalaries(_unitOfWork, _analyser).Do(JobPortals.CvBankas);
         }
 
