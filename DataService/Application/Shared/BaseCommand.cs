@@ -56,7 +56,16 @@ namespace WebScraper.Application.Shared
 			}
 		}
 
-		public List<JobUrl> ExtractPageUrls() => _scrapeClient.ExtractPageUrls();
+		/// <summary>
+		/// If Database is empty it does a full scrape - if not
+		/// is run only for the first 3 pages
+		/// </summary>
+		public List<JobUrl> ExtractPageUrls() 
+		=> _unitOfWork.JobUrlRepository.GetAll().Any() ? 
+				_scrapeClient.ExtractPageUrls(3) : _scrapeClient.ExtractPageUrls();
+			
+		
+
 
 		public void ScrapePageInfos(string elementId, JobPortals jobPortal)
 		{

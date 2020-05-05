@@ -5,8 +5,6 @@ namespace WebScraper.Core.Shared
 {
     public interface IParser
     {
-        JobInfo ParseInfo(string html);
-
         List<TagCategory> ParseTags(string html, IEnumerable<TagCategory> tagsToSearch);
     }
 }

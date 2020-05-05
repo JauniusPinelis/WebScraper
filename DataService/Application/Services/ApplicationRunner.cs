@@ -18,7 +18,6 @@ namespace WebScraper.Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IScraperFactory _scraperFactory;
-        private readonly IMapper _mapper;
         private readonly IHttpClientFactory _httpClientFactory;
 
         public ApplicationRunner(IUnitOfWork unitOfWork, IScraperFactory factory, 
@@ -26,7 +25,6 @@ namespace WebScraper.Application.Services
         {
             _unitOfWork = unitOfWork;
             _scraperFactory = factory;
-            _mapper = mapper;
             _httpClientFactory = clientFactory;
         }
 

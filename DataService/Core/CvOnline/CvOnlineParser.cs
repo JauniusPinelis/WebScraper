@@ -7,7 +7,6 @@ namespace WebScraper.Core.CvOnline
 {
     public class CvOnlineParser : BaseParser
     {
-
         private string ParseTitle(string html)
         {
 
@@ -29,16 +28,6 @@ namespace WebScraper.Core.CvOnline
 
             //a[contains(text(), 'About us') or contains(text(), 'about us')]
             return String.Empty;
-        }
-
-        public JobInfo ParseInfo(string html)
-        {
-            return new JobInfo()
-            {
-                Title = ParseTitle(html),
-                SalaryText = ParseSalary(html)
-            };
-
         }
     }
 }
