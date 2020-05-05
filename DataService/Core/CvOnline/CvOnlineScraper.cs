@@ -23,7 +23,9 @@ namespace WebScraper.Core.CvOnline
                 TitleAttribute = "title",
                 Salary = "//span[contains(@class, 'salary-blue')]",
                 Location = "//a[contains(@itemprop, 'address')]",
-                Company = "//a[contains(@itemprop, 'name')]"
+                Company = "//a[contains(@itemprop, 'name')]",
+                Logo = "//img/@src",
+                LogoAttribute = "src"
             };
             return ScrapeJobUrlInfo(html, scrapeInfo, 1);
         }

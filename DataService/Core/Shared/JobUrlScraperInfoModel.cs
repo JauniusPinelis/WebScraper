@@ -14,5 +14,8 @@ namespace WebScraper.Core.Shared
         public string? LocationAttribute { get; set; }
         public string Company { get; set; }
 
+        public string? LogoAttribute { get; set; }
+        public string Logo { get; set; }
+
     }
 }

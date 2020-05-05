@@ -44,8 +44,8 @@ namespace WebScraper.Application
                     pageCounter += 1;
                     Log.Information("Scraping page {pageIndex}", pageCounter);
 
-					// _httpClient.BaseAddress.ToString() to be fixed 
-					html = _httpClient.GetStringAsync(_httpClient.BaseAddress.ToString() + pageCounter).Result;
+					// make this async
+					html =  _httpClient.GetStringAsync(_httpClient.BaseAddress.ToString() + pageCounter).Result;
                 }
                 catch (Exception ex)
                 {

@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Application\WebScraper.Application.csproj" />
     <ProjectReference Include="..\..\Core\WebScraper.Core.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\WebScraper.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -2,7 +2,6 @@
 using Moq.Protected;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -18,8 +17,6 @@ namespace Webscraper.Application.UnitTests
         protected readonly DataContext _context;
         protected readonly IUnitOfWork _unitOfWork;
         protected IHttpClientFactory _httpClientFactory;
-
-        
 
         public TestBase()
         {
@@ -51,11 +48,8 @@ namespace Webscraper.Application.UnitTests
             _httpClientFactory = GenerateTestHttpClientFactory(content);
         }
             
-        
-
         private IHttpClientFactory GenerateTestHttpClientFactory(string content)
         {
-            
 
             var mockFactory = new Mock<IHttpClientFactory>();
 
