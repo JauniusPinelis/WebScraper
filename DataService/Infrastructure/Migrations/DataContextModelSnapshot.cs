@@ -120,6 +120,10 @@ namespace WebScraper.Infrastructure.Migrations
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Logo")
+                        .HasColumnType("nvarchar(300)")
+                        .HasMaxLength(300);
+
                     b.Property<int?>("SalaryId")
                         .HasColumnType("int");
 

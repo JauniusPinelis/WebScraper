@@ -10,8 +10,8 @@ using WebScraper.Infrastructure.Db;
 namespace WebScraper.Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200130104127_main-migration")]
-    partial class mainmigration
+    [Migration("20200505203909_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -121,6 +121,10 @@ namespace WebScraper.Infrastructure.Migrations
 
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Logo")
+                        .HasColumnType("nvarchar(300)")
+                        .HasMaxLength(300);
 
                     b.Property<int?>("SalaryId")
                         .HasColumnType("int");

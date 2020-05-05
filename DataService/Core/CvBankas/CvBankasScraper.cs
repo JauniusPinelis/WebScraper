@@ -23,7 +23,10 @@ namespace WebScraper.Core.CvBankas
                 Title = "//h3[contains(@class, 'list_h3')]",
                 Salary = "//span[contains(@class, 'salary_amount')]",
                 Location = "//span[contains(@class, 'list_city')]",
-                Company = "//span[contains(@class, 'dib mt5')]"
+                Company = "//span[contains(@class, 'dib mt5')]",
+                Logo = "//img/@src",
+                LogoAttribute = "src"
+
             };
             return ScrapeJobUrlInfo(html, scrapeInfo, 2);
         }

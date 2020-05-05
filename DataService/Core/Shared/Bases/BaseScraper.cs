@@ -76,6 +76,7 @@ namespace WebScraper.Core.Shared
             var salary = resultHtml.DocumentNode.SelectSingleNode(scrapeInfo.Salary);
             var location = resultHtml.DocumentNode.SelectSingleNode(scrapeInfo.Location);
             var company = resultHtml.DocumentNode.SelectSingleNode(scrapeInfo.Company);
+            var logo = resultHtml.DocumentNode.SelectSingleNode(scrapeInfo.Logo);
 
             return new JobUrl()
             {
@@ -86,7 +87,8 @@ namespace WebScraper.Core.Shared
                 //Location = location?.GetAttributeValue("content", string.Empty),
                 Location = scrapeInfo.LocationAttribute != null ? location?.GetAttributeValue("content", string.Empty) :  location?.InnerHtml,
                 Company = company?.InnerText,
-                JobPortalId = websiteType
+                JobPortalId = websiteType,
+                Logo = scrapeInfo.LogoAttribute != null ? logo?.GetAttributeValue(scrapeInfo.LogoAttribute, string.Empty) : logo?.InnerText
             };
         }
 

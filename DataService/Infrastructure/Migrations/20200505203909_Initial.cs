@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebScraper.Infrastructure.Migrations
 {
-    public partial class mainmigration : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -69,7 +69,8 @@ namespace WebScraper.Infrastructure.Migrations
                     Company = table.Column<string>(nullable: true),
                     JobInfoId = table.Column<int>(nullable: true),
                     JobPortalId = table.Column<int>(nullable: true),
-                    SalaryId = table.Column<int>(nullable: true)
+                    SalaryId = table.Column<int>(nullable: true),
+                    Logo = table.Column<string>(maxLength: 300, nullable: true)
                 },
                 constraints: table =>
                 {
