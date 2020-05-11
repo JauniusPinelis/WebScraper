@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using System;
 using WebScraper.Core.Entities;
 using WebScraper.Infrastructure.Services;
 
@@ -16,11 +18,10 @@ namespace WebScraper.Infrastructure.Db
 
         private readonly IDateTime _dateTime;
 
-        public DataContext()
+        public DataContext() : base()
         {
 
         }
-       
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
@@ -61,6 +62,19 @@ namespace WebScraper.Infrastructure.Db
             );
 
             
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                IConfigurationRoot configuration = new ConfigurationBuilder()
+                 .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                 .AddJsonFile("appsettings.json")
+                 .Build();
+
+                optionsBuilder.UseSqlServer(configuration["DefaultConnection"]);
+            }
         }
 
         public override int SaveChanges()

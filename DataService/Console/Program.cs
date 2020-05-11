@@ -23,7 +23,7 @@ namespace WebScraper.Console
             var app = new Application(scrapeService);
             app.Run();
            
-            DisposeServices();
+           
         }
 
         private static void RegisterServices()
@@ -45,18 +45,6 @@ namespace WebScraper.Console
 
            
             _serviceProvider = collection.BuildServiceProvider();
-        }
-
-        private static void DisposeServices()
-        {
-            if (_serviceProvider == null)
-            {
-                return;
-            }
-            if (_serviceProvider is IDisposable)
-            {
-                ((IDisposable)_serviceProvider).Dispose();
-            }
         }
 
         private static void ConfigureSerilog()

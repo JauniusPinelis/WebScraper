@@ -8,7 +8,7 @@ namespace WebScraper.Infrastructure.Repositories
 {
     public class UnitOfWork : IDisposable, IUnitOfWork
     {
-        private DataContext context = new DataContext();
+        private DataContext context;
         private GenericRepository<JobUrl> jobUrlRepository;
         private GenericRepository<JobInfo> jobInfoRepository;
         private GenericRepository<JobPortal> jobPortalRepository;
