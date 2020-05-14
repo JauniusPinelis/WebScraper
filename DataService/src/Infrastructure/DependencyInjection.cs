@@ -16,11 +16,19 @@ namespace Infrastructure
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration,
              string connectionString)
         {
-            services.AddDbContext<DataContext>(options =>
-                options.UseSqlServer(connectionString));
+
+            if (configuration.GetValue<bool>("UseInMemoryDatabase"))
+            {
+                services.AddDbContext<DataContext>(options =>
+                    options.UseInMemoryDatabase("cleanDb"));
+            }
+            else
+            {
+                services.AddDbContext<DataContext>(options =>
+                    options.UseSqlServer(connectionString));
+            }
 
             services.AddTransient<IDateTime, MachineDateTime>();
-            services.AddSingleton<IDataContext>(provider => provider.GetService<DataContext>());
             services.AddSingleton<IUnitOfWork, UnitOfWork>();
 
             return services;

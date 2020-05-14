@@ -42,7 +42,7 @@ namespace ConsoleApp
             var collection = new ServiceCollection();
             collection.ConfigureMapper();
             collection.AddApplication(configuration);
-            collection.AddPersistence(configuration, configuration["DefaultConnection"]);
+            collection.AddPersistence(configuration, configuration.GetConnectionString("DefaultConnection"));
 
            
             _serviceProvider = collection.BuildServiceProvider();

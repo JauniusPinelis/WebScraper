@@ -6,7 +6,7 @@ using Infrastructure.Services;
 
 namespace Infrastructure.Db
 {
-    public class DataContext : DbContext, IDataContext
+    public class DataContext : DbContext
     {
 
         public DbSet<JobUrl> JobUrls { get; set; }
@@ -73,7 +73,7 @@ namespace Infrastructure.Db
                  .AddJsonFile("appsettings.json")
                  .Build();
 
-                optionsBuilder.UseSqlServer(configuration["DefaultConnection"]);
+                optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             }
         }
 
