@@ -10,7 +10,7 @@ namespace Application.CvOnline
 {
 	public class ScrapePageInfos : BaseCommand
 	{
-		public ScrapePageInfos(IUnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient) :
+		public ScrapePageInfos(UnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient) :
 			base(unitOfWork, analyser, scrapeClient)
 		{
 			

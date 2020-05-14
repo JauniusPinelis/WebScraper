@@ -14,12 +14,12 @@ namespace Application.Shared
 {
 	public abstract class BaseCommand
 	{
-		private IUnitOfWork _unitOfWork;
+		private UnitOfWork _unitOfWork;
 		private IAnalyser _analyser;
 		private ScrapeClient _scrapeClient;
 
 
-		public BaseCommand(IUnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient)
+		public BaseCommand(UnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient)
 		{
 			_unitOfWork = unitOfWork;
 			_analyser = analyser;

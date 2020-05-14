@@ -6,7 +6,7 @@ using Infrastructure.Db;
 
 namespace Infrastructure.Repositories
 {
-    public class UnitOfWork : IDisposable, IUnitOfWork
+    public class UnitOfWork : IDisposable
     {
         private DataContext context;
         private GenericRepository<JobUrl> jobUrlRepository;

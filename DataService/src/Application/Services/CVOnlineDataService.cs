@@ -18,14 +18,14 @@ namespace Application.Services
     {
         private readonly IParser _parser;
 
-        private IUnitOfWork _unitOfWork;
+        private UnitOfWork _unitOfWork;
         private IAnalyser _analyser;
         private IScraper _scraper;
         private IUrlFilter _filter;
         private HttpClient _httpClient;
         private ScrapeClient _scrapeClient;
 
-        public CvOnlineDataService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
+        public CvOnlineDataService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, UnitOfWork unitOfWork) 
         {
             _parser = new CvOnlineParser();
 

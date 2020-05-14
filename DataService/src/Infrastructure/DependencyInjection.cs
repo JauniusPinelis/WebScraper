@@ -29,7 +29,7 @@ namespace Infrastructure
             }
 
             services.AddTransient<IDateTime, MachineDateTime>();
-            services.AddSingleton<IUnitOfWork, UnitOfWork>();
+            services.AddSingleton<UnitOfWork, UnitOfWork>();
 
             return services;
         }

@@ -19,14 +19,14 @@ namespace Application.Services
 {
     public class CvLtScrapeService : IDataService
     {
-        private IUnitOfWork _unitOfWork;
+        private UnitOfWork _unitOfWork;
         private IAnalyser _analyser;
         private IScraper _scraper;
         private HttpClient _httpClient;
         private ScrapeClient _scrapeClient;
 
 
-        public CvLtScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, IUnitOfWork unitOfWork) 
+        public CvLtScrapeService(IHttpClientFactory httpClientFactory, IScraperFactory scraperFactory, UnitOfWork unitOfWork) 
         {
             _unitOfWork = unitOfWork;
             _analyser = scraperFactory.BuildAnalyser(JobPortals.CvLt);

@@ -13,11 +13,11 @@ namespace Application.CvBankas
 {
 	public class ScrapePageInfos : BaseCommand
 	{
-		private IUnitOfWork _unitOfWork;
+		private UnitOfWork _unitOfWork;
 
 		private ScrapeClient _scrapeClient;
 
-		public ScrapePageInfos(IUnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient)
+		public ScrapePageInfos(UnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient)
 			: base(unitOfWork, analyser, scrapeClient)
 		{
 			_unitOfWork = unitOfWork;

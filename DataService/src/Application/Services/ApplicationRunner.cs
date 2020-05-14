@@ -16,11 +16,11 @@ namespace Application.Services
 {
     public class ApplicationRunner : IDataService
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly UnitOfWork _unitOfWork;
         private readonly IScraperFactory _scraperFactory;
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public ApplicationRunner(IUnitOfWork unitOfWork, IScraperFactory factory, 
+        public ApplicationRunner(UnitOfWork unitOfWork, IScraperFactory factory, 
              IMapper mapper, IHttpClientFactory clientFactory)
         {
             _unitOfWork = unitOfWork;

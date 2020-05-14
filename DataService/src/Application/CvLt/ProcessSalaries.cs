@@ -7,7 +7,7 @@ namespace Application.CvLt
 {
 	public class ProcessSalaries : BaseCommand
 	{
-		public ProcessSalaries(IUnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient)
+		public ProcessSalaries(UnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient)
 		: base(unitOfWork, analyser, scrapeClient)
 		{
 

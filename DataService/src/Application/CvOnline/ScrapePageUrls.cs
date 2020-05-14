@@ -11,7 +11,7 @@ namespace Application.CvOnline
 {
 	public class ScrapePageUrls : BaseCommand
 	{
-		public ScrapePageUrls(IUnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient)
+		public ScrapePageUrls(UnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient)
 			: base(unitOfWork, analyser, scrapeClient)
 		{
 

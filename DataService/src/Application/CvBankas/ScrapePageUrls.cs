@@ -14,12 +14,11 @@ namespace Application.CvBankas
 {
 	public class ScrapePageUrls : BaseCommand
 	{
-		private ScrapeClient _scrapeClient;
 
-		public ScrapePageUrls(IUnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient)
+		public ScrapePageUrls(UnitOfWork unitOfWork, IAnalyser analyser, ScrapeClient scrapeClient)
 			:base(unitOfWork, analyser, scrapeClient)
 		{
-			_scrapeClient = scrapeClient;
+
 		}
 
 		public void Do(JobPortals jobPortal)
