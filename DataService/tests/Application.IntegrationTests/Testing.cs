@@ -1,4 +1,5 @@
-﻿using Infrastructure.Db;
+﻿using Console;
+using Infrastructure.Db;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,9 +32,11 @@ namespace Application.IntegrationTests
 
             _configuration = builder.Build();
 
+            var services = new ServiceCollection();
+
             //Start setup services
 
-            var services = new ServiceCollection();
+            var app = new App(services, _configuration);
 
             _scopeFactory = services.BuildServiceProvider().GetService<IServiceScopeFactory>();
 
@@ -49,6 +52,14 @@ namespace Application.IntegrationTests
             var context = scope.ServiceProvider.GetService<DataContext>();
 
             context.Database.Migrate();
+        }
+
+        public static DataContext GetDbContext()
+        {
+            using var scope = _scopeFactory.CreateScope();
+            var context = scope.ServiceProvider.GetService<DataContext>();
+
+            return context;
         }
 
 

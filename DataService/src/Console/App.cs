@@ -13,11 +13,20 @@ namespace Console
     {
         private IServiceProvider _serviceProvider;
 
-        private IConfigurationRoot _configuration;
-
         public App()
         {
             RegisterServices();
+        }
+
+        public App(IServiceCollection services, IConfigurationRoot configuration)
+        {
+            RegisterServices(services, configuration);
+        }
+
+        public void RegisterServices(IServiceCollection services, IConfigurationRoot configuration)
+        {
+            ConfigureSerilog();
+            ConfigureServices(services, configuration);
         }
 
         public void RegisterServices()
@@ -28,18 +37,18 @@ namespace Console
            .SetBasePath(Directory.GetCurrentDirectory())
            .AddJsonFile("appsettings.json");
 
-            _configuration = builder.Build();
+            var configuration = builder.Build();
 
             var services = new ServiceCollection();
 
-            ConfigureServices(services);
+            ConfigureServices(services, configuration);
         }
 
-        public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services, IConfigurationRoot configuration)
         {
             services.ConfigureMapper();
-            services.AddApplication(_configuration);
-            services.AddPersistence(_configuration, _configuration.GetConnectionString("DefaultConnection"));
+            services.AddApplication(configuration);
+            services.AddPersistence(configuration, configuration.GetConnectionString("DefaultConnection"));
 
             _serviceProvider = services.BuildServiceProvider();
         }

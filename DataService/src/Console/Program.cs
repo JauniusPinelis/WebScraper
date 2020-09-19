@@ -16,7 +16,6 @@ namespace ConsoleApp
         {
             var app = new App();
 
-            app.RegisterServices();
             app.Run();
         }  
     }
